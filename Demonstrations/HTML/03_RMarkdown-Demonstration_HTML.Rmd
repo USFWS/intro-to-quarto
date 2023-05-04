@@ -1,0 +1,281 @@
+---
+title: "Dynamic-Reporting-with-R-Markdown"
+subtitle: "Knit to HTML Demonstration"
+author: "Jason Ross, Jacob Cochran, and Jonah Withers (contact: Jonah_Withers@fws.gov for issues)"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    toc_collapsed: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r libraries, echo=FALSE}
+library(packrat)
+library(tidyverse)
+library(waterData)
+library(kableExtra)
+library(reactable)
+library(flextable)
+library(leaflet)
+library(dygraphs)
+library(mapview)
+library(sf)
+```
+
+```{r Import data, echo = FALSE}
+# Import Atlantic salmon data from Winooski River lift
+LLS_0 <- read.csv("../../Datasets/Demonstrations/LLS_WinooskiLift.csv",
+                  header = TRUE,
+                  stringsAsFactors = FALSE)
+
+# Summarize Atlantic salmon data from Winooski River lift
+LLS_Sum <- LLS_0 %>% 
+  
+  dplyr::mutate(SampDate = as.Date(SampDate),
+         TL_mm = as.numeric(TL_mm),
+         WT_g = as.numeric(WT_g)) %>% 
+  
+  dplyr::group_by(SampDate) %>% 
+  
+  dplyr::summarise(Count = n(),
+                   MeanTL_mm = mean(TL_mm, 
+                                    na.rm = TRUE),
+                   Mean_Wt_g	= mean(WT_g, 
+                                    na.rm = TRUE))
+
+# Import Boquet River water level data from USGS gauge 
+Boquet_River_0 <- waterData::importDVs(staid = "04276500", 
+                     code = "00060",
+                     sdate = "2023-01-01",
+                     edate = as.Date(Sys.Date(), 
+                                     format = "%Y-%m-%d"))
+
+# Create waypoint for NCTC 
+NCTC <- tibble::tibble(name = "National Conservation Training Center",
+                       latitude = 39.48737293408041,
+                       longitude = -77.8054947317046)
+```
+
+# Introduction
+
+This document demonstrates how to render a HTML document using **RMarkdown** 
+([RMarkdown Cheat Sheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)) 
+and provides a few helpful links. Unlike Word and PDF documents which are static, 
+rendering HTML files allows you the the ability to incorporate interactive 
+figures, tables, and widgets. 
+
+
+# Tables
+Rendered HTML documents support a number of print engines. In this section, 
+we'll review review and compare several of the more popular table types used. 
+
+
+## Knitr (kable) Package
+
+
+  * Knitr (Kable) Resources:
+    + <https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html>
+    + <https://bookdown.org/yihui/rmarkdown-cookbook/kable.html>
+    + <https://www.rdocumentation.org/packages/knitr/versions/1.42/topics/kable>
+
+```{r Knitr kable, echo = FALSE}
+knitr::kable(mtcars, 
+             format = "simple", 
+             align = 'lccc',
+             caption = "Table 1. This is a nice table using knitr::kable.")
+
+knitr::kable(LLS_Sum, 
+             format = "simple", 
+             align = 'lccc',
+             caption = "Table 1. This is a nice table using knitr::kable.")
+
+```
+
+## KableExtra Package
+
+  * KableExtra Resources:
+    + <https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html>
+    + <https://bookdown.org/yihui/rmarkdown-cookbook/kableextra.html>
+    + <https://www.rdocumentation.org/packages/kableExtra/versions/1.3.4>
+
+
+```{r KableExtra, echo = FALSE}
+kableExtra::kbl(mtcars) %>%
+  
+  kableExtra::kable_styling()
+
+kableExtra::kbl(LLS_Sum) %>%
+  
+  kableExtra::kable_styling()
+```
+
+## Reactable Package
+
+* Reactable Resources:
+    + <https://glin.github.io/reactable/index.html>
+    + <https://cran.r-project.org/web/packages/reactable/index.html>
+
+```{r Reactable, echo = FALSE}
+reactable::reactable(mtcars,
+                     searchable = TRUE,
+                     filterable = TRUE)
+
+reactable::reactable(LLS_Sum,
+                     searchable = TRUE,
+                     filterable = TRUE)
+```
+
+## Flextable Package
+
+  * Flextable Resources:
+    + <https://ardata-fr.github.io/flextable-book/>
+    + <https://davidgohel.github.io/flextable/reference/index.html>
+
+```{r Flextable, echo = FALSE}
+flextable::flextable(mtcars)
+
+flextable::flextable(LLS_Sum)
+```
+
+
+
+# Figures
+
+Similar to tables, figures rendered in HTML documents can provide more user 
+capabilities than PDF and Word documents. In this section, we'll review and 
+compare a few of popular figure types. 
+
+## Line graphs
+
+Lets start with a basic line graph using the ggplot2 package to see what the 
+figure would look like if we produced it for a PDF or Word document.
+
+### ggplot2
+
+  * ggplot2 Resources:
+    + <https://ggplot2.tidyverse.org/reference/aes.html>
+    + <https://ggplot2-book.org/toolbox.html>
+    + <https://bookdown.dongzhuoer.com/hadley/ggplot2-book/aes.html>
+
+```{r ggplot, echo=FALSE}
+ggplot2::ggplot(data = Boquet_River_0,
+                aes(x = dates,
+                    y = val)) +
+  
+  ggplot2::geom_point() +
+  
+  ggplot2::geom_line() +
+  
+  ggplot2::labs(x = "Month",
+                y = "Water velocity (cfs)") +
+  
+  ggplot2::theme_bw() 
+```
+
+### Dygraphs
+
+The dygraphs R package <https://rstudio.github.io/dygraphs/> provides allows you
+to build figures with interactive capabilities which can improve the experience
+of the user.  
+ 
+
+  * Dygraphs Resource:
+    + <https://rstudio.github.io/dygraphs/>
+    + <https://r-graph-gallery.com/316-possible-inputs-for-the-dygraphs-library.html>
+
+
+```{r Dygraphs, echo=FALSE}
+dygraphs::dygraph(
+  data.frame(time = Boquet_River_0 %>%
+                              
+               dplyr::select(dates),
+             
+             value = Boquet_River_0 %>%
+               
+               dplyr::select(val))) %>%
+  
+  dygraphs::dyRangeSelector() %>%
+  
+  dygraphs::dyAxis("x", 
+                  label = "Date") %>%
+  
+  dygraphs::dyAxis("y", 
+                  label = "Water velocity (cfs)") %>% 
+
+  dygraphs::dyOptions(drawPoints = TRUE,
+                     pointSize = 2,
+                     fillGraph = TRUE)
+```
+
+# Maps
+
+## ggplot2
+
+  * ggplot2 Resources:
+    + <https://ggplot2.tidyverse.org/reference/aes.html>
+    + <https://ggplot2-book.org/maps.html>
+    + <https://bookdown.dongzhuoer.com/hadley/ggplot2-book/aes.html>
+    
+```{r ggplot2, echo=FALSE}
+ggplot() + 
+  
+  ggplot2::geom_polygon(data = ggplot2::map_data("state"),
+               aes(x = long, 
+                   y = lat, 
+                   group = group),
+                color = "black", 
+               fill = "#D55E00") +
+  
+  ggplot2::geom_point(data = NCTC,
+             aes(x = longitude, 
+                 y = latitude),
+             color = "black",
+             shape = 21,
+             fill = "#999999",
+             size = 4) +
+  
+  ggplot2::labs(x = "Longitude",
+                y = "Latitude") +
+  
+  ggplot2::theme_bw()
+```
+
+## Leaflet
+
+We can also create interactive maps with R Markdown when rendering HTML. We'll
+use the **Leaflet** package <https://rstudio.github.io/leaflet/> as an example 
+but know there are others out there (plotly, highcharter, ggiraph, tmap, mapdeck, 
+etc.). 
+
+
+```{r Leaflet, echo=FALSE}
+leaflet() %>%
+  
+  leaflet::addMarkers(data = NCTC,
+                      lng = ~ longitude,
+                      lat = ~ latitude,
+                      label = ~ name,
+                      popup = ~ as.character("NCTC")) %>% 
+  
+  leaflet::addProviderTiles("Esri.WorldTopoMap",  
+                   group = "Satellite") %>%
+  
+  leaflet::addScaleBar(position = "topright")
+```
+
+
+
+## mapview
+
+
+```{r mapview, echo=FALSE}
+NCTC_spatial <- sf::st_as_sf(NCTC, coords = c("longitude", "latitude"), 
+                crs = 4326)
+
+mapview::mapview(x = NCTC_spatial)
+```
