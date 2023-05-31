@@ -51,7 +51,7 @@ Catch <- read_csv("C:/Users/jross/OneDrive - DOI/Documents/Data Management/2022 
 
 This document demonstrates how to render a Word document using **RMarkdown** ([RMarkdown Cheat Sheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)) and provides a few helpful links. Rendering a Word document can be challenging to format in R, especially when trying to format a table. Unlike rendering a PDF where you can format the document in the R script, it is better to format a reference document that can be used to format the document you are rendering ([Formating a Word document article](https://rmarkdown.rstudio.com/articles_docx.html)). We will step through the process to generate and use the reference document today. For more complex documents, I would recommend checking out the following packages:
 
-Other packages that may help:
+Other packages that may help you:
 
   1. [Bookdown](https://bookdown.org/)
   2. [officedown](https://ardata-fr.github.io/flextable-book/index.html)
