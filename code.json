@@ -1,0 +1,46 @@
+[
+  {
+    "name": "DynamicReportingWithRMarkdown",
+    "organization": "U.S. Fish & Wildlife Service",
+    "description": "Hosting course material for Dynamic Reporting with R Markdown",
+    "version": "0.1.0",
+    "status": "Development",
+
+    "permissions": {
+      "usageType": "openSource",
+      "licenses": [
+        {
+          "name": "Public Domain, CC0-1.0",
+          "URL": "https://github.com/JonahWithers-USFWS/DynamicReportingWithRMarkdown/blob/main/LICENSE.md"
+        }
+      ]
+    },
+
+    "homepageURL": "https://github.com/JonahWithers-USFWS/DynamicReportingWithRMarkdown",
+    "downloadURL": "https://github.com/JonahWithers-USFWS/DynamicReportingWithRMarkdown/archive/refs/heads/main.zip",
+    "disclaimerURL": "https://github.com/JonahWithers-USFWS/DynamicReportingWithRMarkdown/blob/main/DISCLAIMER.md",
+    "repositoryURL": "https://github.com/JonahWithers-USFWS/DynamicReportingWithRMarkdown/tree/main",
+    "vcs": "git",
+
+    "laborHours": 1,
+
+    "tags": [
+      "usfws"
+    ],
+
+    "languages": [
+      "r",
+      "json",
+      "md",
+    ],
+
+    "contact": {
+      "name": "Jonah Withers",
+      "email": "jonah_withers@fws.gov"
+    },
+
+    "date": {
+      "metadataLastUpdated": "2023-05-24"
+    }
+  }
+]
