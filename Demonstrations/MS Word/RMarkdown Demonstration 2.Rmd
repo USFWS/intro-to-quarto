@@ -1,21 +1,23 @@
 ---
-title: "2022 Data Management Workshop: RMarkdown"
-subtitle: "Knit to Word Demonstration"
+title: '2022 Data Management Workshop: RMarkdown'
 author: "Jason Ross & Jacob Cochran"
 date: "`r format(Sys.time(), '%B %d %Y')`"
 output:
   word_document:
-   reference_docx: word-styles-reference-01.docx
-   toc: yes
+    reference_docx: "word-styles-reference-01.docx"
+    toc: yes
+  html_document:
+    toc: yes
+    df_print: paged
+subtitle: Knit to Word Demonstration
 params:
-  SPECIES: 
+  SPECIES:
     choices:
     - Black Crappie
     - Common Carp
     input: select
     value: Species
   YEAR: 2018
-  
 ---
 
 \newpage  
@@ -65,7 +67,7 @@ There are a few packages that can handle tables in word ([Comparison of Packages
     + <https://davidgohel.github.io/flextable/reference/index.html>
 
 ## Kable Package
-```{r Effort Summary Kable}
+```{r Effort Summary Kable,echo=TRUE}
 
 # Summarize data of effort by gear and year
 EffortSum<- Effort %>%
@@ -81,7 +83,7 @@ knitr::kable(EffortSum, format="simple", align = 'lccc',caption = "Table 1. This
 
 ## Flextable Package
 
-```{r EffortSummaryFlextable}
+```{r EffortSummaryFlextable,echo=TRUE}
 ### Chunk Name must not have special characters or spaces
 library(flextable)
 
@@ -122,7 +124,7 @@ Embedding a figure is more straight forward than generating tables. The same pac
 
 ## ggplot counts
 
-```{r CatchSummary, fig.height=4.0, fig.width=7.0, fig.cap="Figure 1. An example of a figure that was created using ggplot."}
+```{r CatchSummary, fig.height=4.0, fig.width=7.0, fig.cap="Figure 1. An example of a figure that was created using ggplot.",echo=TRUE}
 
 ## Summarize data to be total number of individuals by gear and year.
 catchsummary<- Effort %>% 
@@ -147,7 +149,7 @@ Catchplot
 
 ## ggplot with parameters
 
-```{r ggplotparameters, fig.height=4.0, fig.width=7.0, fig.cap= paste("Figure 2. An example of a figure that was created using ggplot with parameters",": ", params$SPECIES," ", "during"," ", params$YEAR,".",sep="")}
+```{r ggplotparameters,echo=TRUE, fig.height=4.0, fig.width=7.0, fig.cap= paste("Figure 2. An example of a figure that was created using ggplot with parameters",": ", params$SPECIES," ", "during"," ", params$YEAR,".",sep="")}
 
 ## Creates a data frame to summarize catch of a species by gear  
 catchsummary2<- Catch %>% 
