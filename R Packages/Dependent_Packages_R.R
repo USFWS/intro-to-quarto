@@ -3,7 +3,7 @@
 # Create vector of packages
 
 requiredPackages <- c("tidyverse", "knitr", "officedown", "officer", "lubridate", "readxl", "janitor", 
-                      "kableExtra", "flextable", "rmarkdown", "mapview", "sf", "gt", "purrr", "english")
+                      "kableExtra", "flextable", "rmarkdown", "mapview", "sf", "gt", "purrr", "english", "maps")
 
 # Function to install and load any packages not installed
 
