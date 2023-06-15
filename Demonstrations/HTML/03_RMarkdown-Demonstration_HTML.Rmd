@@ -8,6 +8,7 @@ output:
     toc: true
     toc_float: true
     toc_collapsed: true
+    # runtime: shiny
 ---
 
 ```{r setup, include=FALSE}
@@ -27,6 +28,7 @@ library(dygraphs)
 library(mapview)
 library(sf)
 library(shiny)
+library(maps)
 ```
 
 ```{r Import data, echo = FALSE, warning = FALSE}
@@ -262,7 +264,7 @@ Before rendering our code, we need to change our YAML to include
     + <https://www.rstudio.com/products/shiny/>
 
 ```{r RShiny, echo = FALSE}
-# # Define UI for app that draws a histogram ----
+# # Define UI for app that draws a scatter plot ----
 # ui <- fluidPage(
 # 
 #   # App title ----
