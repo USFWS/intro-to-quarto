@@ -1,0 +1,202 @@
+---
+fontsize: 11pt
+geometry: margin=0.75in
+header-includes:
+- \usepackage{fancyhdr}
+- \pagenumbering{gobble}
+- \usepackage{helvet}
+- \usepackage{tcolorbox}
+- \usepackage{pdflscape}
+- \usepackage{float}
+
+output:
+  pdf_document:
+    df_print: paged
+params:
+  Year: "2022" 
+  Project: "Downeast Maine"
+---
+
+```{r Package Install and Import, echo=FALSE, message=FALSE, error=FALSE, warning=FALSE, results = 'hide'}
+
+## Install and load packages
+
+# Create vector of packages
+
+requiredPackages <- c("tidyverse", "lubridate", "janitor", "arcgisbinding", "kableExtra", "magrittr")
+
+# Function to install and load any packages not installed
+
+ipak <- function(pkg){
+  new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
+  if (length(new.pkg))
+  install.packages(new.pkg, dependencies = TRUE)
+  sapply(pkg, require, character.only = TRUE)
+}
+
+# Load packages
+
+ipak(requiredPackages)
+
+# Set table option
+
+options(knitr.kable.NA = '', knitr.table.format = "latex")
+```
+
+```{r Data Fetch, echo=FALSE, message=FALSE, error=FALSE, warning=FALSE, results = 'hide', cache=FALSE}
+
+arc.check_product() ### Checks ArcGIS licensing ---> Must have a offline version of this license
+
+### Pull data from AGOL Feature Layer
+
+eDNA_Site_AGOL <- arc.open("https://services.arcgis.com/QVENGdaPbd4LUkLV/arcgis/rest/services/service_e3946187cb074dc38dcd019e63bce517/FeatureServer/0")
+
+eDNA_Sample_AGOL <- arc.open("https://services.arcgis.com/QVENGdaPbd4LUkLV/arcgis/rest/services/service_e3946187cb074dc38dcd019e63bce517/FeatureServer/1") 
+
+eDNA_ID_AGOL <- arc.open("https://services.arcgis.com/QVENGdaPbd4LUkLV/arcgis/rest/services/service_e3946187cb074dc38dcd019e63bce517/FeatureServer/2")
+
+### Create Data Frames
+
+eDNA_Site_tbl <- arc.select(eDNA_Site_AGOL, names(eDNA_Site_AGOL@fields)) %>% 
+  mutate(Year = year(DateTime))
+
+eDNA_Sample_tbl <- arc.select(eDNA_Sample_AGOL, names(eDNA_Sample_AGOL@fields)) 
+
+eDNA_ID_tbl <- arc.select(eDNA_ID_AGOL, names(eDNA_ID_AGOL@fields)) 
+  
+```
+
+\newcommand{\fon}[1]{\fontfamily{#1}\selectfont} 
+
+\begin{tcolorbox}[colback=black,colframe=black,coltext=white,left*=2mm,height=11mm, sharp corners,fontupper=\LARGE\fon{phv}\bfseries]
+U.S. Fish \& Wildlife Service
+\end{tcolorbox}\vspace{-.1cm}
+
+\Large\textbf{\fontfamily{phv}\selectfont eDNA Metabarcoding Results Summary Report}\vspace{-.85cm}
+\section{\Large\textmd{\textit{`r params$Project`, `r params$Year`}}}\vspace{-.15cm}
+\raggedright\selectfont\large This report is intended to provide a general summary of the `r params$Year` `r params$Project` eDNA metabarcoding project results. A total of `r eDNA_Site_tbl %>% filter(Project == params$Project & Year == params$Year) %>% nrow()` sites were surveyed and `r eDNA_Site_tbl %>%  left_join(., eDNA_Sample_tbl, by = c("globalid" = "parentglobalid")) %>% filter(Project == params$Project & Year == params$Year) %>% filter(Sample_Type == "Filter") %>% select(SiteID, Agency, Project, Sample_Barcode) %>% group_by(Project) %>% summarise(Samples_Collected = n_distinct(Sample_Barcode)) %>% extract2(2)` water filtration samples were collected (Table 1). The mitochondrial 12s gene, a commonly used sequence for biodiversity monitoring, was used for this analysis. Reads, copies of DNA sequences, and other sample processing information is retained in the metadata and associated with each identification. The primers, which amplify rRNA barcoding genes, used for this analysis are also recorded in the metadata and presented below (Table 2).          
+
+Samples analyzed from this project resulted in a total richness of `r eDNA_ID_tbl %>% filter(ID_Project == params$Project & str_detect(SiteID_ID, params$Year) & Threshold_Value == 0.01) %>% group_by(Common_Name) %>% summarise() %>%  nrow()` taxa. Taxa was separated into categories (Dominant, Common, Occasional, and Rare) based on their presence across all sampling to provide a simple assessment of the identification results (Table 3). Identification results that exceeded a threshold value of 0.001 or 0.01% of the total sample reads is reported within this summary to mitigate false positives.  
+
+\vspace{.8cm}
+
+```{r Data Manipulation WO Controls, echo=FALSE, message=FALSE, error=FALSE, warning=FALSE, results = 'hide'} 
+
+Results_data_NC <- eDNA_Site_tbl %>% 
+  left_join(., eDNA_Sample_tbl, by = c("globalid" = "parentglobalid")) %>% 
+  select(SiteID, Agency, Project, DateTime, Year, globalid.y, Sample_Method, Sample_Type, Sample_Barcode) %>% 
+  filter(Sample_Type == "Filter") %>% # Removes Control related results
+  left_join(., eDNA_ID_tbl, by = c("globalid.y" = "parentglobalid")) %>% 
+  filter(Project == params$Project & Year == params$Year) %>% 
+  filter(Threshold_Value == 0.01) %>% 
+  select(SiteID, Agency, Project, DateTime, Sample_Type, Sample_Barcode, Common_Name, Scientific_Name, Forward_Primer, Forward_Primer_Sequence, Reverse_Primer, Reverse_Primer_Sequence, Gene_Target, Read_Count, Read_Frequency)
+
+```
+
+```{r Effort Table, echo=FALSE, message=FALSE, error=FALSE, warning=FALSE, results = 'asis'} 
+
+Rich_tbl <- Results_data_NC %>% 
+  select(SiteID, Agency, Project, Sample_Barcode, Read_Count, Common_Name) %>% 
+  group_by(Project, Sample_Barcode) %>% 
+  summarise(Taxa_Richness =  n_distinct(Common_Name)/n_distinct(Sample_Barcode), Read_Total =  sum(Read_Count)/n_distinct(Sample_Barcode)) %>% 
+  ungroup() %>% 
+  group_by(Project) %>% 
+  summarise(`Taxa` =  round(sum(Taxa_Richness)/n_distinct(Sample_Barcode), 1), `Reads` =  round(sum(
+  Read_Total)/n_distinct(Sample_Barcode), 0))
+  
+Site_tbl <- eDNA_Site_tbl %>% 
+  filter(Project == params$Project & Year == params$Year) %>% 
+  select(SiteID, Agency, Project) %>%
+  group_by(Project) %>% 
+  summarise(`Sites Surveyed` = n_distinct(SiteID))
+  
+Sample_tbl <- eDNA_Site_tbl %>% 
+  left_join(., eDNA_Sample_tbl, by = c("globalid" = "parentglobalid")) %>% 
+  filter(Project == params$Project & Year == params$Year) %>% 
+  filter(Sample_Type == "Filter") %>% # Removes Control related results
+  select(SiteID, Agency, Project, Sample_Barcode) %>%
+  group_by(Project) %>% 
+  summarise(`Samples Collected` = n_distinct(Sample_Barcode))
+
+## Generate Table
+
+General_tbl <- Rich_tbl %>%
+  left_join(Site_tbl, by =join_by(Project)) %>% 
+  left_join(Sample_tbl, by =join_by(Project)) %>% 
+  select(1, 4, 5, 2, 3) %>% 
+  kbl(., booktabs = T, longtable = T, align = "lccc", linesep = "", escape = FALSE, caption = "Total sample effort and average taxa richness.", format.args = list(big.mark = ",")) %>% # Creates a table of the DF
+  add_header_above(., c(" " = 1, "Number of" = 2, "Average per Sample" = 2))
+
+General_tbl
+```
+
+\vspace{.6cm}
+
+```{r Primer Table, echo=FALSE, message=FALSE, error=FALSE, warning=FALSE, results = 'asis'} 
+
+Primer <- Results_data_NC %>% 
+  group_by(Project, Forward_Primer, Forward_Primer_Sequence, Reverse_Primer, Reverse_Primer_Sequence) %>% 
+  summarise() %>% 
+  ungroup() %>% 
+  pivot_longer(cols = c('Forward_Primer', 'Reverse_Primer'), names_to = "Direction", values_to = "Primer") %>% 
+  mutate(Sequence = if_else(Direction == "Forward_Primer", Forward_Primer_Sequence, Reverse_Primer_Sequence), Direction = if_else(Direction == "Forward_Primer", "Forward", "Reverse")) %>% 
+  select(Direction, Primer, Sequence) %>% 
+  rename(Name = Primer)
+
+## primer Table
+
+Primer_tbl <- Primer %>%
+  kbl(., booktabs = T, align = "lcc", linesep = "", escape = FALSE, caption = "Primer and primer sequence information.") %>% # Creates a table of the DF
+  add_header_above(., c(" " = 1, "Primer Information" = 2)) %>%
+  kable_styling(latex_options = "HOLD_position")
+
+Primer_tbl
+```
+
+\vspace{1.2cm}
+
+\noindent
+\color{black}\rule{\linewidth}{0.2mm}\vspace{.2cm}
+\normalsize\textbf{\textit{Questions related to this summary report or the metabarcoding results can be directed to:}}\vspace{.3cm}
+\newline\textit{Aaron Maloy, Geneticist, Northeast Fishery Center, Phone: 570-726-4247, Email: aaron\_maloy$@$fws.gov}
+
+\newpage
+
+```{r Detection Table, echo=FALSE, message=FALSE, error=FALSE, warning=FALSE, results = 'asis'} 
+
+Read_Freq_tbl <- Results_data_NC %>% 
+  group_by(Common_Name) %>% 
+  summarise(Tot_Read_Freq = sum(Read_Frequency, na.rm = T)) 
+
+Cat_Order <- c("Dominant", "Common", "Occasional", "Rare")
+
+Detections_tbl <- Results_data_NC %>% 
+  count(Common_Name, Scientific_Name, name = "Detections") %>% 
+  mutate(Common_Name = str_to_title(Common_Name)) %>% 
+  mutate(Total = n_distinct(Results_data_NC$Sample_Barcode)) %>% 
+  mutate(Proportion = round((Detections/Total), 2)) %>% 
+  mutate(`Read Frequency` = round(Read_Freq_tbl$Tot_Read_Freq/Detections, 2)) %>%  
+  select(-Total) %>% 
+  rename(`Common Name` = Common_Name, `Scientific Name` = Scientific_Name) %>% 
+  mutate(PropCat = if_else(Proportion <= 0.24, "Rare", if_else(Proportion >= 0.25 & Proportion <= 0.50, "Occasional", if_else(Proportion >= 0.51 & Proportion <= 0.75, "Common", "Dominant")))) %>% 
+  select(PropCat, `Common Name`, `Scientific Name`, Detections, Proportion, `Read Frequency`) %>% 
+  mutate(PropCat = factor(PropCat, levels = Cat_Order)) %>% 
+  arrange(PropCat)
+  
+
+colnames(Detections_tbl)[4] <- paste0("Detections", footnote_marker_alphabet(1))
+colnames(Detections_tbl)[5] <- paste0("Proportion", footnote_marker_alphabet(2))
+colnames(Detections_tbl)[6] <- paste0("Read Frequency", footnote_marker_alphabet(3))
+
+## Generate Table
+
+Conditional_tbl <- Detections_tbl %>% 
+  select(2, 3, 4, 5, 6) %>% 
+  kbl(., booktabs = T, longtable = T, align = "llccc", linesep = "", escape = FALSE, caption = "eDNA metabarcoding identification results.") %>% # Creates a table of the DF
+  column_spec(2, italic = T) %>% 
+  pack_rows(colnum = 1, index = table(Detections_tbl$PropCat), hline_after = T, bold = T) %>% 
+  kable_styling(latex_options = c("repeat_header")) %>% 
+  footnote(general = "The bolded categories are general thresholds that denote whether that taxas presence was Dominant (>75%), Common (75-50%), Occasional (50-25%), or Rare (<25%) across the entirity of sampling.", alphabet = c("Detections refer to samples where eDNA of the specified taxa was present.", "The proportion is the fraction of samples which eDNA was present across the entirety of sampling.", "Read Frequency represents the mean read frequency per positive detection sample."), threeparttable = T)
+
+Conditional_tbl
+```
