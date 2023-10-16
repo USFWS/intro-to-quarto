@@ -58,6 +58,12 @@ Other packages that may help you:
   1. [Bookdown](https://bookdown.org/)
   2. [officedown](https://ardata-fr.github.io/flextable-book/index.html)
 
+:::{custom-style="Punt1"}
+
+This section needs to follow a unique format to allow us to highlight a very important statement!
+
+:::
+
 # Tables
 
 There are a few packages that can handle tables in word ([Comparison of Packages](https://cran.r-project.org/web/packages/gtsummary/vignettes/rmarkdown.html)) with varying capabilities.  The kable package can be used for simple tables while the huxtable package uses the flextable package.  Therefore, the flextable package is best suited for formatting a table when rendering a document to word. Here are a few links that are helpful when using the flextable package:  
