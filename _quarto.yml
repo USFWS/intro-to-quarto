@@ -22,7 +22,7 @@ website:
       - text: "References"
         href: references.qmd
       - icon: github
-        href: https://github.com/USFWS/quarto-intro
+        href: https://github.com/USFWS/intro-to-quarto
         aria-label: GitHub
   sidebar:
     - title: "Materials"

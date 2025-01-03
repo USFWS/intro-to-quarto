@@ -41,4 +41,4 @@ McCrea is a supervisory biometrician with the FWS Refuge Inventory and Monitorin
 
 ## Source code
 
-This source code and license for all of the materials found on this website can be found on [Github](https://github.com/USFWS/quarto-intro) [{{< fa brands github >}}](https://github.com/USFWS/quarto-intro).
+This source code and license for all of the materials found on this website can be found on [Github](https://github.com/USFWS/intro-to-quarto) [{{< fa brands github >}}](https://github.com/USFWS/intro-to-quarto).
