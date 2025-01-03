@@ -1,0 +1,66 @@
+[
+  {
+    "objectID": "materials/2-creating-documents/slides.html#creating-documents",
+    "href": "materials/2-creating-documents/slides.html#creating-documents",
+    "title": "Creating Documents",
+    "section": "Creating Documents",
+    "text": "Creating Documents\nHere’s how.."
+  },
+  {
+    "objectID": "materials/1-welcome-to-quarto/slides.html#introductions",
+    "href": "materials/1-welcome-to-quarto/slides.html#introductions",
+    "title": "Welcome to Quarto",
+    "section": "Introductions",
+    "text": "Introductions\nTake ~2 minutes to introduce yourself to your neighbors."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Dynamic Reporting with Quarto",
+    "section": "",
+    "text": "Dynamic Reporting with Quarto\nA workshop at the  FWS Data Management Workshop\n\n\n\n\n\nThe intent of this course is to provide an introduction of Quarto for intermediate to advanced R users that are seeking to develop automated reports. We will present on the basics of Quarto. After an introduction, we will walk through demonstrations in which participants will use an example dataset to create a Quarto report by rendering to a Word, PDF, and HTML documents. It is our hope that participants will leave with the foundational skills required to create a Quarto report.\nSchedule\n\nX-XX am Welcome to Quarto\nX-XX pm Creating Documents"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About the Workshop",
+    "section": "",
+    "text": "Location: Virtual\nTime: X - X pm, February 11th"
+  },
+  {
+    "objectID": "about.html#teaching-team",
+    "href": "about.html#teaching-team",
+    "title": "About the Workshop",
+    "section": "Teaching Team",
+    "text": "Teaching Team\n\nJonah Withers\nShort bio..\n\n\nJacob Cochran\nShort bio..\n\n\nJason Ross\nShort bio..\n\n\nMcCrea Cobb\nShort bio.."
+  },
+  {
+    "objectID": "about.html#source-code",
+    "href": "about.html#source-code",
+    "title": "About the Workshop",
+    "section": "Source code",
+    "text": "Source code\nThis source code and license for all of the materials found on this website can be found on Github ."
+  },
+  {
+    "objectID": "materials/1-welcome-to-quarto/index.html",
+    "href": "materials/1-welcome-to-quarto/index.html",
+    "title": "Welcome to Quarto",
+    "section": "",
+    "text": "An overview of Quarto…\n\nFull Screen\n\n\nExercises\nusethis::use_course(\"https://github.com/USFWS/intro-quarto-exercises/archive/refs/heads/master.zip\")",
+    "crumbs": [
+      "Presentations",
+      "1. Welcome to Quarto"
+    ]
+  },
+  {
+    "objectID": "materials/2-creating-documents/index.html",
+    "href": "materials/2-creating-documents/index.html",
+    "title": "Creating Documents",
+    "section": "",
+    "text": "How to create documents using Quarto…\n\nFull Screen\n\n\nExercises\nusethis::use_course(\"https://github.com/USFWS/intro-quarto-exercises/archive/refs/heads/master.zip\")",
+    "crumbs": [
+      "Presentations",
+      "2. Creating Documents"
+    ]
+  }
+]

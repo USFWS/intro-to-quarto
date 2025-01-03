@@ -1,24 +1,55 @@
-<!-- badges: start -->
+# Dynamic Reporting with Quarto
 
-<!-- For more info: https://usethis.r-lib.org/reference/badges.html -->
+### FWS Data Workshop, 2025
 
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+------------------------------------------------------------------------
 
-<!-- badges: end -->
+:spiral_calendar: February 11, 2025\
+:alarm_clock: TBD\
+:hotel: Virtual\
+:writing_hand: [FWS Data Workshop](https://doimspp.sharepoint.com/sites/fws-data/SitePages/2025-Data-Management-Workshop.aspx)
 
-# Dynamic Reporting with R Markdown
+------------------------------------------------------------------------
 
-## Overview
+## Description
 
-This [Dynamic Reporting with R Markdown repository](https://github.com/JonahWithers-USFWS/DynamicReportingWithRMarkdown) is used to host course materials for the "Dyanmic reporting with R Markdown" course. 
+The intent of this course is to provide an introduction of Quarto for intermediate to advanced R users that are seeking to develop automated reports. We will present on the basics of Quarto. After an introduction, we will walk through demonstrations in which participants will use an example dataset to create a Quarto report by rendering to a Word, PDF, and HTML documents. It is our hope that participants will leave with the foundational skills required to create a Quarto report.
 
-## Installation
+The learning goals are to:
 
-No installation is necessary. 
+- Introduction to Quarto and it’s applications.
+- Example reports using different rendering outputs.
+-	Create your own report participant exercise.
+-	Discussion session to address questions or report ideas of participants.
 
-## Usage
+## Audience
 
-Users should contact course instructors for current usage details. 
+Learners with experience using R who are curious to learn how to author Quarto documents.
 
-# USFWS Disclaimer
-The United States Fish and Wildlife Service (FWS) GitHub project code is provided on an "as is" basis and the user assumes responsibility for its use. FWS has relinquished control of the information and no longer has responsibility to protect the integrity, confidentiality, or availability of the information. Any reference to specific commercial products, processes, or services by service mark, trademark, manufacturer, or otherwise, does not constitute or imply their endorsement, recommendation or favoring by FWS. The FWS seal and logo shall not be used in any manner to imply endorsement of any commercial product or activity by FWS or the United States Government.
+## Prework
+
+-   Download workshop materials
+
+## Outline
+
+| Time | Activity               |
+|:------|:------------------------|
+|      | Introduction           |
+|      | Overview of Quarto     |
+|      | Example Quarto reports |
+|      | Break                  |
+|      | Exercise               |
+|      | Q&A                    |
+|      |                        |
+|      |                        |
+
+## Instructors
+
+[Jonah Withers](mailto:jonah_withers@fws.gov), Fisheries and Ecological Services, Alaska\
+[Jacob Cochran](mailto:jacob_cochran@fws.gov),\
+[Jason Ross](mailto:jason_ross@fws.gov), Fish and Aquatic Conservation Program\
+[McCrea Cobb](mailto:mccrea_cobb@fws.gov), Refuge Inventory and Monitoring Program, Alaska
+
+------------------------------------------------------------------------
+
+![](https://i.creativecommons.org/l/by/4.0/88x31.png) This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).

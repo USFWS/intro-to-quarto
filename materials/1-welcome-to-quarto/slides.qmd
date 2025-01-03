@@ -1,0 +1,13 @@
+---
+title: "Welcome to Quarto"
+format: revealjs
+---
+
+```{r}
+#| echo: false
+library(countdown)
+```
+
+## Introductions
+
+Take \~2 minutes to introduce yourself to your neighbors.

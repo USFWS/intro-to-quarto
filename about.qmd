@@ -1,0 +1,30 @@
+---
+title: "About the Workshop"
+sidebar: false
+---
+
+- [Location:]{.smallcaps} Virtual
+- [Time:]{.smallcaps} X - X pm, February 11^th^
+
+
+## Teaching Team
+
+#### Jonah Withers
+
+Short bio..
+
+#### Jacob Cochran
+
+Short bio..
+
+#### Jason Ross
+
+Short bio..
+
+#### McCrea Cobb
+
+Short bio..
+
+## Source code
+
+This source code and license for all of the materials found on this website can be found on Github [{{< fa brands github >}}](https://github.com/USFWS/quarto-intro).

@@ -1,0 +1,44 @@
+project:
+  type: website
+  render:
+    - "*.qmd"
+    - "!materials/*/exercises/"
+    - "!materials/Demonstrations/"
+    - "!materials/Exercise/"
+    - "!materials/Presentation/"
+  output-dir: docs
+
+from: markdown+emoji
+
+website:
+  title: "Dynamic Reporting with Quarto"
+  page-navigation: true
+  navbar:
+    background: light
+    foreground: dark
+    right:
+      - text: "About"
+        href: about.qmd
+      - icon: github
+        href: https://github.com/USFWS/quarto-intro
+        aria-label: GitHub
+  sidebar:
+    - title: "Materials"
+      style: docked
+      align: left
+      contents:
+          - section: "Presentations"
+            contents:
+            - text: "1. Welcome to Quarto"
+              href: materials/1-welcome-to-quarto/index.qmd
+            - text: "2. Creating Documents"
+              href: materials/2-creating-documents/index.qmd
+  page-footer:
+    right: "This page is built with [Quarto](https://quarto.org/)."
+
+format: 
+  html:
+    theme: [default, assets/custom.scss]
+    toc: false
+
+  

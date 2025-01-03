@@ -1,0 +1,30 @@
+---
+anchor-sections: false
+section-divs: false
+css: assets/index.css
+---
+
+::: {.grid}
+
+::: {.g-col-4}
+\
+
+# Dynamic Reporting with Quarto
+
+#### A workshop at the <br> FWS Data Management Workshop
+:::
+
+::: {.g-col-8}
+
+![](assets/images/quarto_logo.png){fig-alt="Quarto logo."}
+
+:::
+
+:::
+
+The intent of this course is to provide an introduction of Quarto for intermediate to advanced R users that are seeking to develop automated reports. We will present on the basics of Quarto. After an introduction, we will walk through demonstrations in which participants will use an example dataset to create a Quarto report by rendering to a Word, PDF, and HTML documents. It is our hope that participants will leave with the foundational skills required to create a Quarto report.
+
+### Schedule
+
+-   X-XX am [Welcome to Quarto](materials/1-welcome-to-quarto)
+-   X-XX pm [Creating Documents](materials/2-creating-documents)

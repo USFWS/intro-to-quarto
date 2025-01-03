@@ -1,0 +1,13 @@
+---
+title: "Creating Documents"
+format: revealjs
+---
+
+```{r}
+#| echo: false
+library(countdown)
+```
+
+## Creating Documents
+
+Here's how..
