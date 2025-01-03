@@ -1,45 +1,21 @@
 [
   {
-    "objectID": "materials/2-creating-documents/slides.html#creating-documents",
-    "href": "materials/2-creating-documents/slides.html#creating-documents",
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "Quarto References",
+    "section": "",
+    "text": "Getting Started with Quarto\n\nTutorial: Hello, Quarto\n\nQuarto chapter in “R for Data Science”\n\nGetting Started With Quarto (video)\nIntroduction to Quarto, Klajdi Puka\n\nIntroduction to Working with Quarto documents, Carpentries Incubator\n\nGallery of Quarto report examples\n\n\n\nAutomating Quarto Reports\n\nHow to automate your reporting with Quarto Dashboards and Posit Connect (video)\n\nQuarto: Elevating R Markdown for Advanced Publishing (video)\n\n\n\nQuarto Websites and Dashboard\n\nCreating a website using Quarto\n\nCreating your personal website using Quarto\n\nQuarto Dashboards (video)\n\nGallery of Quarto website examples\n\nGallery of Quarto dashboard examples"
+  },
+  {
+    "objectID": "materials/2-creating-documents/index.html",
+    "href": "materials/2-creating-documents/index.html",
     "title": "Creating Documents",
-    "section": "Creating Documents",
-    "text": "Creating Documents\nHere’s how.."
-  },
-  {
-    "objectID": "materials/1-welcome-to-quarto/slides.html#introductions",
-    "href": "materials/1-welcome-to-quarto/slides.html#introductions",
-    "title": "Welcome to Quarto",
-    "section": "Introductions",
-    "text": "Introductions\nTake ~2 minutes to introduce yourself to your neighbors."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Dynamic Reporting with Quarto",
     "section": "",
-    "text": "Dynamic Reporting with Quarto\nA workshop at the  FWS Data Management Workshop\n\n\n\n\n\nThe intent of this course is to provide an introduction of Quarto for intermediate to advanced R users that are seeking to develop automated reports. We will present on the basics of Quarto. After an introduction, we will walk through demonstrations in which participants will use an example dataset to create a Quarto report by rendering to a Word, PDF, and HTML documents. It is our hope that participants will leave with the foundational skills required to create a Quarto report.\nSchedule\n\nX-XX am Welcome to Quarto\nX-XX pm Creating Documents"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About the Workshop",
-    "section": "",
-    "text": "Location: Virtual\nTime: X - X pm, February 11th"
-  },
-  {
-    "objectID": "about.html#teaching-team",
-    "href": "about.html#teaching-team",
-    "title": "About the Workshop",
-    "section": "Teaching Team",
-    "text": "Teaching Team\n\nJonah Withers\nShort bio..\n\n\nJacob Cochran\nShort bio..\n\n\nJason Ross\nShort bio..\n\n\nMcCrea Cobb\nShort bio.."
-  },
-  {
-    "objectID": "about.html#source-code",
-    "href": "about.html#source-code",
-    "title": "About the Workshop",
-    "section": "Source code",
-    "text": "Source code\nThis source code and license for all of the materials found on this website can be found on Github ."
+    "text": "How to create documents using Quarto…\n\nFull Screen\n\n\nExercises\nusethis::use_course(\"https://github.com/USFWS/intro-quarto-exercises/archive/refs/heads/master.zip\")",
+    "crumbs": [
+      "Presentations",
+      "2. Creating Documents"
+    ]
   },
   {
     "objectID": "materials/1-welcome-to-quarto/index.html",
@@ -53,14 +29,122 @@
     ]
   },
   {
-    "objectID": "materials/2-creating-documents/index.html",
-    "href": "materials/2-creating-documents/index.html",
-    "title": "Creating Documents",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About the Workshop",
     "section": "",
-    "text": "How to create documents using Quarto…\n\nFull Screen\n\n\nExercises\nusethis::use_course(\"https://github.com/USFWS/intro-quarto-exercises/archive/refs/heads/master.zip\")",
-    "crumbs": [
-      "Presentations",
-      "2. Creating Documents"
-    ]
+    "text": "Location: Virtual\nTime: X - X pm, February 11th"
+  },
+  {
+    "objectID": "about.html#teaching-team",
+    "href": "about.html#teaching-team",
+    "title": "About the Workshop",
+    "section": "Teaching Team",
+    "text": "Teaching Team\n\nJonah Withers\nShort bio..\n\n\nJacob Cochran\nShort bio..\n\n\nJason Ross\nShort bio..\n\n\nMcCrea Cobb\n\n\n\n\nMcCrea is a supervisory biometrician with the FWS Refuge Inventory and Monitoring Program based in Anchorage, Alaska. He enjoys working with biologists to ensure that surveys are scientifically rigorous and produce data that are findable, accessible, interoperable, and reusable (FAIR). He is an avid R user and enjoys developing script-based workflows. You can learn more about McCrea and the rest of the Alaska I&M Team here."
+  },
+  {
+    "objectID": "about.html#source-code",
+    "href": "about.html#source-code",
+    "title": "About the Workshop",
+    "section": "Source code",
+    "text": "Source code\nThis source code and license for all of the materials found on this website can be found on Github ."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Dynamic Reporting with Quarto",
+    "section": "",
+    "text": "Dynamic Reporting with Quarto\nFWS Data Management Workshop, 2025\n\n\n\n\n\n\nThis workshop provides an introduction to Quarto for intermediate to advanced R users. We present on the basics of using Quarto to generate dynamic reports. After an introduction, we use an example dataset to render a Quarto report to Word, PDF, and HTML documents. Participants will leave with the foundational skills required to create a Quarto report.\nSchedule\n\nX-XX am Welcome to Quarto\nX-XX pm Creating Documents"
+  },
+  {
+    "objectID": "materials/1-welcome-to-quarto/slides.html#course-overview",
+    "href": "materials/1-welcome-to-quarto/slides.html#course-overview",
+    "title": "Welcome to Quarto",
+    "section": "Course Overview",
+    "text": "Course Overview\n\nIntroduction to Quarto\n\nNuts and bolts\n\nYou will have the knowledge to start on your own"
+  },
+  {
+    "objectID": "materials/1-welcome-to-quarto/slides.html#what-is-quarto",
+    "href": "materials/1-welcome-to-quarto/slides.html#what-is-quarto",
+    "title": "Welcome to Quarto",
+    "section": "What is Quarto?",
+    "text": "What is Quarto?"
+  },
+  {
+    "objectID": "materials/1-welcome-to-quarto/slides.html#what-types-of-documents-can-you-render-using-quarto",
+    "href": "materials/1-welcome-to-quarto/slides.html#what-types-of-documents-can-you-render-using-quarto",
+    "title": "Welcome to Quarto",
+    "section": "What types of documents can you render using Quarto?",
+    "text": "What types of documents can you render using Quarto?"
+  },
+  {
+    "objectID": "materials/1-welcome-to-quarto/slides.html#when-to-use-an-automated-report",
+    "href": "materials/1-welcome-to-quarto/slides.html#when-to-use-an-automated-report",
+    "title": "Welcome to Quarto",
+    "section": "When to use an automated report?",
+    "text": "When to use an automated report?\n\nIf you have a document that you are generating frequently\nIf you have duplicated reports for multiple factors (species, watershed, state)"
+  },
+  {
+    "objectID": "materials/1-welcome-to-quarto/slides.html#anatomy-of-a-quarto-file",
+    "href": "materials/1-welcome-to-quarto/slides.html#anatomy-of-a-quarto-file",
+    "title": "Welcome to Quarto",
+    "section": "Anatomy of a Quarto file",
+    "text": "Anatomy of a Quarto file"
+  },
+  {
+    "objectID": "materials/1-welcome-to-quarto/slides.html#anatomy-of-a-quarto-file-yml-header",
+    "href": "materials/1-welcome-to-quarto/slides.html#anatomy-of-a-quarto-file-yml-header",
+    "title": "Welcome to Quarto",
+    "section": "Anatomy of a Quarto file: YML header",
+    "text": "Anatomy of a Quarto file: YML header"
+  },
+  {
+    "objectID": "materials/1-welcome-to-quarto/slides.html#anatomy-of-a-quarto-file-yml-options",
+    "href": "materials/1-welcome-to-quarto/slides.html#anatomy-of-a-quarto-file-yml-options",
+    "title": "Welcome to Quarto",
+    "section": "Anatomy of a Quarto file: YML options",
+    "text": "Anatomy of a Quarto file: YML options"
+  },
+  {
+    "objectID": "materials/1-welcome-to-quarto/slides.html#anatomy-of-a-quarto-file-document-body",
+    "href": "materials/1-welcome-to-quarto/slides.html#anatomy-of-a-quarto-file-document-body",
+    "title": "Welcome to Quarto",
+    "section": "Anatomy of a Quarto file: document body",
+    "text": "Anatomy of a Quarto file: document body"
+  },
+  {
+    "objectID": "materials/1-welcome-to-quarto/slides.html#document-styling",
+    "href": "materials/1-welcome-to-quarto/slides.html#document-styling",
+    "title": "Welcome to Quarto",
+    "section": "Document styling",
+    "text": "Document styling"
+  },
+  {
+    "objectID": "materials/1-welcome-to-quarto/slides.html#code-chunks",
+    "href": "materials/1-welcome-to-quarto/slides.html#code-chunks",
+    "title": "Welcome to Quarto",
+    "section": "Code chunks",
+    "text": "Code chunks"
+  },
+  {
+    "objectID": "materials/1-welcome-to-quarto/slides.html#considerations",
+    "href": "materials/1-welcome-to-quarto/slides.html#considerations",
+    "title": "Welcome to Quarto",
+    "section": "Considerations",
+    "text": "Considerations\n\nKISS\n\nLess chance for package failures\n\nStrive for full automation\n\nSet up document for success\nReduce errors by manually making updates\nGeneralize where you can\n\nGold standard for automation\n\nUpdate YML and hit run"
+  },
+  {
+    "objectID": "materials/1-welcome-to-quarto/slides.html#best-practices",
+    "href": "materials/1-welcome-to-quarto/slides.html#best-practices",
+    "title": "Welcome to Quarto",
+    "section": "Best practices",
+    "text": "Best practices\n\nFolder structure\nCreate an R Project\nKeep cody tidy and well-documented"
+  },
+  {
+    "objectID": "materials/2-creating-documents/slides.html#creating-documents",
+    "href": "materials/2-creating-documents/slides.html#creating-documents",
+    "title": "Creating Documents",
+    "section": "Creating Documents",
+    "text": "Creating Documents\nHere’s how.."
   }
 ]

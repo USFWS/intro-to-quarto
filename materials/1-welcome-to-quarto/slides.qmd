@@ -1,13 +1,51 @@
 ---
 title: "Welcome to Quarto"
 format: revealjs
+editor: source
 ---
 
-```{r}
-#| echo: false
-library(countdown)
-```
+## Course Overview
 
-## Introductions
+- Introduction to Quarto
+  - Nuts and bolts
+- You will have the knowledge to start on your own
 
-Take \~2 minutes to introduce yourself to your neighbors.
+## What is Quarto?
+
+
+## What types of documents can you render using Quarto?
+
+
+## When to use an automated report?
+
+- If you have a document that you are generating frequently
+- If you have duplicated reports for multiple factors (species, watershed, state)
+
+## Anatomy of a Quarto file
+
+## Anatomy of a Quarto file: YML header
+
+## Anatomy of a Quarto file: YML options
+
+## Anatomy of a Quarto file: document body
+
+## Document styling
+
+## Code chunks
+
+## Considerations
+
+- KISS
+  - Less chance for package failures
+- Strive for full automation
+  - Set up document for success
+  - Reduce errors by manually making updates
+  - Generalize where you can
+- Gold standard for automation
+  - Update YML and hit run
+  
+## Best practices
+
+- Folder structure
+- Create an R Project
+- Keep cody tidy and well-documented

@@ -1,0 +1,26 @@
+---
+title: "Quarto References"
+sidebar: false
+---
+
+### Getting Started with Quarto
+
+- [Tutorial: Hello, Quarto](https://quarto.org/docs/get-started/hello/rstudio.html)  
+- [Quarto chapter in "R for Data Science"](https://r4ds.hadley.nz/quarto.html)  
+- [Getting Started With Quarto (video)](https://www.youtube.com/watch?v=_f3latmOhew)
+- [Introduction to Quarto, Klajdi Puka](https://kpuka.ca/resources/quarto_intro.html)  
+- [Introduction to Working with Quarto documents, Carpentries Incubator](https://carpentries-incubator.github.io/reproducible-publications-quarto/02-quarto/03-quarto-documents/index.html)  
+- [Gallery of Quarto report examples](https://quarto.org/docs/gallery/#articles-reports)  
+
+### Automating Quarto Reports
+
+- [How to automate your reporting with Quarto Dashboards and Posit Connect (video)](https://www.youtube.com/watch?v=xnJuXOw7iu8)  
+- [Quarto: Elevating R Markdown for Advanced Publishing (video)](https://www.youtube.com/watch?v=8qR0wtJEDX4)  
+
+### Quarto Websites and Dashboard  
+
+- [Creating a website using Quarto](https://quarto.org/docs/websites/)  
+- [Creating your personal website using Quarto](https://ucsb-meds.github.io/creating-quarto-websites/)  
+- [Quarto Dashboards (video)](https://www.youtube.com/watch?v=_VGJIPRGTy4)  
+- [Gallery of Quarto website examples](https://quarto.org/docs/gallery/#websites)  
+- [Gallery of Quarto dashboard examples](https://quarto.org/docs/gallery/#dashboards)  

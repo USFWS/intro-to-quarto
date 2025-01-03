@@ -19,6 +19,8 @@ website:
     right:
       - text: "About"
         href: about.qmd
+      - text: "References"
+        href: references.qmd
       - icon: github
         href: https://github.com/USFWS/quarto-intro
         aria-label: GitHub
@@ -34,7 +36,8 @@ website:
             - text: "2. Creating Documents"
               href: materials/2-creating-documents/index.qmd
   page-footer:
-    right: "This page is built with [Quarto](https://quarto.org/)."
+    right: "This website was built with ![](assets/images/quarto_logo.png){fig-alt='Quarto' width=25}."
+    left: "![](assets/images/fws_logo.png){fig-alt='FWS' width=25} [Data Management](https://doimspp.sharepoint.com/sites/fws-data/SitePages/Home.aspx)"
 
 format: 
   html:

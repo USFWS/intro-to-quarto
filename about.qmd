@@ -23,8 +23,22 @@ Short bio..
 
 #### McCrea Cobb
 
-Short bio..
+::: columns
+
+::: {.column width="25%"}
+
+![](assets/images/photo_placeholder.png){fig-alt="Photo of McCrea Cobb." width=150} 
+
+:::
+
+::: {.column width="75%"}
+
+McCrea is a supervisory biometrician with the FWS Refuge Inventory and Monitoring Program based in Anchorage, Alaska. He enjoys working with biologists to ensure that surveys are scientifically rigorous and produce data that are findable, accessible, interoperable, and reusable (FAIR). He is an avid R user and enjoys developing script-based workflows. You can learn more about McCrea and the rest of the Alaska I&M Team [here](https://doimspp.sharepoint.com/sites/AlaskaInventoryandMonitoring2/SitePages/Home-Alaska-Inventory-and-Monitoring.aspx). 
+
+:::
+
+:::
 
 ## Source code
 
-This source code and license for all of the materials found on this website can be found on Github [{{< fa brands github >}}](https://github.com/USFWS/quarto-intro).
+This source code and license for all of the materials found on this website can be found on [Github](https://github.com/USFWS/quarto-intro) [{{< fa brands github >}}](https://github.com/USFWS/quarto-intro).
