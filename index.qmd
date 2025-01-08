@@ -4,19 +4,21 @@ section-divs: false
 css: assets/index.css
 ---
 
+
 ::: {.grid}
 
-::: {.g-col-4}
-\
+::: {.g-col-5}
 
-# Dynamic Reporting with Quarto
+## Dynamic Reporting <br> with Quarto
 
-#### FWS Data Management Workshop, 2025
+#### A workshop at the <br> FWS Data Management Workshop
+
+
 :::
 
-::: {.g-col-8}
+::: {.g-col-7}
 
-![](assets/images/quarto_logo.png){fig-alt="Quarto logo." width=200}
+![](assets/images/plover_long.png){fig-alt="A snowy plover." width=450}
 
 :::
 
@@ -28,5 +30,4 @@ This workshop provides an introduction to Quarto for intermediate to advanced R 
 
 ### Schedule
 
--   X-XX am [Welcome to Quarto](materials/1-welcome-to-quarto/index.html)
--   X-XX pm [Creating Documents](materials/2-creating-documents/index.html)
+-   X-XX am [Introduction to Quarto](materials/1-intro-to-quarto/index.html)

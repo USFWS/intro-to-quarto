@@ -1,0 +1,13 @@
+
+[Full Screen](slides.qmd)
+
+```{=html}
+<iframe class="slide-deck" src="slides.html" height="500" width="900" style="border: 1px solid #2e3846;"></iframe>
+```
+
+
+### Exercises
+
+```r
+usethis::use_course("https://github.com/USFWS/intro-quarto-exercises/archive/refs/heads/main.zip") 
+```

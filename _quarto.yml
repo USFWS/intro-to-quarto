@@ -29,15 +29,13 @@ website:
       style: docked
       align: left
       contents:
-          - section: "Presentations"
-            contents:
-            - text: "1. Welcome to Quarto"
-              href: materials/1-welcome-to-quarto/index.qmd
-            - text: "2. Creating Documents"
-              href: materials/2-creating-documents/index.qmd
+        - text: "- Slides"
+          href: materials/1-intro-to-quarto/index.qmd
+        - text: "- References"
+          href: references.qmd
   page-footer:
-    right: "This website was built with ![](assets/images/quarto_logo.png){fig-alt='Quarto' width=25}."
-    left: "![](assets/images/fws_logo.png){fig-alt='FWS' width=25} [Data Management](https://doimspp.sharepoint.com/sites/fws-data/SitePages/Home.aspx)"
+    right: "This website was built with [Quarto](https://quarto.org/)."
+    left: "[FWS Data Management](https://doimspp.sharepoint.com/sites/fws-data/SitePages/Home.aspx)"
 
 format: 
   html:

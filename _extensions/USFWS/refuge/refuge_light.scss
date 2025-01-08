@@ -1,0 +1,425 @@
+/*-- scss:defaults --*/
+
+// Define colors (https://doimspp.sharepoint.com/sites/fws-FF09R00000/SitePages/Comms-Visual-Identity-Landing.aspx)
+$blue: #02426D;
+$white: #FFFFFF;
+$light-blue: #4e7b99;
+$accent-blue: #007AC2;
+$accent-light-blue: #D1EDFF;
+$accent-yellow: #FFC94F;
+$accent-dark-blue: #012137;
+$accent-orange: #F7885A;
+$accent-yellow2: #FFE4A7;
+$accent-champagne: #E9D3AD;
+$accent-green: #265D3A;
+$accent-light-green: #BACF8C;
+$accent-brown: #A09B81;
+$accent-dark-grey: #666666;
+$transparent: #00000000;
+$right-arrow: "\2192"; // Unicode character for right arrow
+
+
+// Import fonts (https://doimspp.sharepoint.com/sites/fws-FF09R00000/SitePages/Comms-Visual-Identity-Landing.aspx)
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Cabin:600,600i&display=swap);
+
+
+// Define fonts
+$Lato: "Lato", sans-serif;
+$Cabin: "Cabin" san-serif;
+
+// Colors
+$body-bg: $white !default;
+$body-color: $blue !default;
+$link-color: $light-blue !default;
+$selection-bg: $accent-green !default;
+$presentation-heading-color: $blue !default;
+
+// Fonts
+$font-family-sans-serif: $Lato !default;
+$presentation-heading-font: $Lato !default;
+$presentation-font-size-root: 46px;
+
+// Code block styling
+$code-block-font-size: 0.5em;
+$code-block-border-left: $light-blue;
+
+
+/*-- scss:rules --*/
+
+// Hyperlinks
+.reveal a {
+  line-height: 1.5em;
+}
+
+
+// Paragraphs
+.reveal p {
+  font-weight: 400;
+  margin-top: 1.2em;
+}
+
+// Footnotes
+.reveal .slide aside .aside-footnotes {
+    font-size: 0.5em;
+    font-weight: 300;
+}
+
+// Font sizes
+.small {
+  font-size: 0.8em;
+  }
+.smaller {
+  font-size: 0.5em;
+  }
+.tiny {
+  font-size: 0.2em;
+}
+.large {
+  font-size: 1.50em;
+}
+.larger {
+  font-size: 3.0em;
+}
+
+span.gray-bold {
+  font-weight: 800;
+  color: $accent-dark-grey;
+  text-align: center;
+}
+
+// Title slide formatting
+#title-slide {
+  text-align: left;
+  .title {
+    color: $body-color;
+    font-size: 2.5em;
+    font-weight: bold;
+  }
+  .subtitle {
+    color: $light-blue;
+    font-size: 1.2em;
+    margin-top: 0.5em;
+    font-weight: 400;
+  }
+  .date {
+    color: $body-color;
+    font-weight: 300;
+    margin-top: 2em;
+    font-size: 0.6em;
+  }
+  .institute,
+  .quarto-title-affiliation,
+  .quarto-title-author-email {
+    font-weight: 300;
+    color: $body-color;
+  }
+  .author,
+  .quarto-title-author-name {
+    margin-top: 1.8em;
+    font-size: 0.8em;
+    color: $body-color;
+  }
+  .quarto-title-authors {
+    display: flex;
+    justify-content: left;
+    .quarto-title-author {
+      padding-left: 0em;
+      padding-right: 0em;
+      width: 100%;
+    }
+  }
+}
+
+// Remove slide numbering from title slide
+.reveal .slide-number > a[href*='title-slide'] {
+  display: none;
+}
+
+
+// Headers
+.reveal .slide h1 {
+  font-family: $Lato, serif;
+}
+
+.reveal .slide h2 {
+  font-weight: 600;
+  font-size: 1.8em;
+}
+.reveal .slide h3 {
+  color: $light-blue;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.95em;
+}
+.reveal .slide h4 {
+  color: $light-blue;
+  font-weight: 300;
+  margin-top: 1.25em;
+}
+
+
+// Custom alert text
+.alert {
+  color: $accent-orange;
+}
+
+// Custom font color
+.fg {
+  color: var(--col, $accent-dark-blue);
+}
+
+// Custom text highlight
+.bg {
+  background-color: var(--col, $accent-dark-grey);
+  padding: 0.1em;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+
+// Lists
+// Unordered lists
+.reveal ul {
+  font-weight: 300;
+  padding-left: 16px;
+}
+.reveal ul ul {
+  list-style: none;
+  li:before {
+    content: $right-arrow;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    margin-right: 0.5em;
+  }
+}
+
+
+// Ordered lists
+.reveal ol {
+  font-weight: 300;
+  padding-left: 16px;
+}
+
+
+// Move "hamburger" menu button to top right
+.reveal .slide-menu-button {
+  position: fixed;
+  top: 6px;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  pointer-events: none;
+}
+
+.reveal .slide-menu-button > * {
+  pointer-events: auto;
+}
+
+// Move chalkboard buttons to top right (with an offset)
+.reveal .slide-chalkboard-buttons {
+  position: fixed;
+  top: 12px;
+  right: 24px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  pointer-events: none;
+}
+
+.reveal .slide-chalkboard-buttons > * {
+  pointer-events: auto;
+}
+
+
+// Beamer-style button link environment
+.button {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: $light-blue;
+  border: 1px solid $blue;
+  color: $white !important;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+.button:hover {
+  background-color: $accent-dark-blue;
+  border-color: $accent-dark-blue;
+}
+.button::before {
+  content: "▶";
+  margin-right: 5px;
+}
+
+
+// Tables
+// Headers for DT::datatable()
+.custom-header {
+  color: black;
+  background-color: white;
+  font-size: 0.5em;
+}
+
+// Table body
+.reveal table {
+  // height: auto; /* Adjust table width to fit content up to the available slide space */
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 0.8em;
+}
+
+.reveal table th,
+.reveal table td {
+  border: none; /* Remove internal row lines */
+  padding: .23em; /* Adjust padding as needed */
+  text-align: left; /* Adjust text alignment as needed */
+  font-weight: lighter; /* Lighter font weight for main table text */
+}
+
+/* Add a bottom border to the table header row for distinction */
+.reveal table thead th,
+.reveal .slides table tr:last-child td,
+.reveal .slides table {
+  border-bottom: 2px solid #D3D3D3; /* Dark grey color for the bottom border */
+}
+
+/* Make column headers bold */
+.reveal table thead th {
+  font-weight: bold;
+}
+
+/* Styling table captions */
+.reveal table caption {
+  color: $accent-dark-grey; /* Dark grey color for the caption */
+  font-variant: small-caps; /* Use small caps for the caption text */
+}
+
+// Special catch for etable environment to ensure these table images don't overflow the slide.
+// See: https://lrberge.github.io/fixest/articles/etable_new_features.html
+.etable {
+  width: 100%;
+  height: calc(100% - 3em); /* Adjust 3em based on the height of your header, if necessary */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.etable img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+
+// Centering text and figures
+// Center text
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+// Center an inline image horizontally
+.center-inline {
+  margin: 0!important;}
+
+// Center text vertically and horizontally
+.center-xy {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateY(-50%), translateX(-50%);
+  transform: translateY(-50%), translateX(-50%);
+}
+
+// Center text in a column
+.center-xy-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+}
+
+
+// Add drop shadow to images 
+img.drop {    
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 0.75rem);
+}
+
+
+// Template slides
+
+// Dark
+.reveal .dark {
+  color: $white;
+  .slide-background-content {
+    background: $blue;
+  }
+  code {
+    color: $white;
+  }
+  h1 {
+    color: $accent-light-blue;
+    font-family: $Lato, serif;
+  }
+  h2 {
+    color: $accent-light-blue;
+    font-family: $Lato, serif;
+  }
+}
+
+// Exercises
+.reveal .exercise {
+  color: $white;
+  .slide-background-content {
+    background: $accent-green;
+  }
+  code {
+    color: $white;
+  }
+  h1 {
+    color: $white;
+    font-family: $Lato, serif;
+  }
+  h2 {
+    color: $white;
+    font-family: $Lato, serif;
+  }
+}
+
+
+// Slide number and footer formatting
+.reveal .footer {
+  color:$light-blue;
+}
+.reveal .slide-number {
+  color: $light-blue;
+}
+
+// Remove slide number and footer from title slide
+.reveal .slide-number > a[href*='title-slide'] {
+  display: none;
+}
+.reveal .footer > a[href*='title-slide'] {
+  display: none;
+}
+
+
+

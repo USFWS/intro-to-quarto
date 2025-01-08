@@ -4,28 +4,21 @@
     "href": "references.html",
     "title": "Quarto References",
     "section": "",
-    "text": "Getting Started with Quarto\n\nTutorial: Hello, Quarto\n\nQuarto chapter in “R for Data Science”\n\nGetting Started With Quarto (video)\nIntroduction to Quarto, Klajdi Puka\n\nIntroduction to Working with Quarto documents, Carpentries Incubator\n\nGallery of Quarto report examples\n\n\n\nAutomating Quarto Reports\n\nHow to automate your reporting with Quarto Dashboards and Posit Connect (video)\n\nQuarto: Elevating R Markdown for Advanced Publishing (video)\n\n\n\nQuarto Websites and Dashboard\n\nCreating a website using Quarto\n\nCreating your personal website using Quarto\n\nQuarto Dashboards (video)\n\nGallery of Quarto website examples\n\nGallery of Quarto dashboard examples"
-  },
-  {
-    "objectID": "materials/2-creating-documents/index.html",
-    "href": "materials/2-creating-documents/index.html",
-    "title": "Creating Documents",
-    "section": "",
-    "text": "How to create documents using Quarto…\n\nFull Screen\n\n\nExercises\nusethis::use_course(\"https://github.com/USFWS/intro-quarto-exercises/archive/refs/heads/master.zip\")",
+    "text": "Getting Started with Quarto\n\nTutorial: Hello, Quarto\n\nQuarto chapter in “R for Data Science”\n\nGetting Started With Quarto (video)\nIntroduction to Quarto, Klajdi Puka\n\nIntroduction to Working with Quarto documents, Carpentries Incubator\n\nGallery of Quarto report examples\n\n\n\nAutomating Quarto Reports\n\nHow to automate your reporting with Quarto Dashboards and Posit Connect (video)\n\nQuarto: Elevating R Markdown for Advanced Publishing (video)\n\n\n\nQuarto Websites and Dashboard\n\nCreating a website using Quarto\n\nCreating your personal website using Quarto\n\nQuarto Dashboards (video)\n\nGallery of Quarto website examples\n\nGallery of Quarto dashboard examples",
     "crumbs": [
-      "Presentations",
-      "2. Creating Documents"
+      "References",
+      "- References"
     ]
   },
   {
-    "objectID": "materials/1-welcome-to-quarto/index.html",
-    "href": "materials/1-welcome-to-quarto/index.html",
-    "title": "Welcome to Quarto",
+    "objectID": "materials/1-intro-to-quarto/index.html",
+    "href": "materials/1-intro-to-quarto/index.html",
+    "title": "Dynamic Reporting with Quarto",
     "section": "",
-    "text": "An overview of Quarto…\n\nFull Screen\n\n\nExercises\nusethis::use_course(\"https://github.com/USFWS/intro-quarto-exercises/archive/refs/heads/master.zip\")",
+    "text": "Full Screen\n\n\nExercises\nusethis::use_course(\"https://github.com/USFWS/intro-quarto-exercises/archive/refs/heads/main.zip\")",
     "crumbs": [
-      "Presentations",
-      "1. Welcome to Quarto"
+      "References",
+      "- Slides"
     ]
   },
   {
@@ -54,97 +47,174 @@
     "href": "index.html",
     "title": "Dynamic Reporting with Quarto",
     "section": "",
-    "text": "Dynamic Reporting with Quarto\nFWS Data Management Workshop, 2025\n\n\n\n\n\n\nThis workshop provides an introduction to Quarto for intermediate to advanced R users. We present on the basics of using Quarto to generate dynamic reports. After an introduction, we use an example dataset to render a Quarto report to Word, PDF, and HTML documents. Participants will leave with the foundational skills required to create a Quarto report.\nSchedule\n\nX-XX am Welcome to Quarto\nX-XX pm Creating Documents"
+    "text": "Dynamic Reporting  with Quarto\nA workshop at the  FWS Data Management Workshop\n\n\n\n\n\n\nThis workshop provides an introduction to Quarto for intermediate to advanced R users. We present on the basics of using Quarto to generate dynamic reports. After an introduction, we use an example dataset to render a Quarto report to Word, PDF, and HTML documents. Participants will leave with the foundational skills required to create a Quarto report.\nSchedule\n\nX-XX am Introduction to Quarto"
   },
   {
-    "objectID": "materials/1-welcome-to-quarto/slides.html#course-overview",
-    "href": "materials/1-welcome-to-quarto/slides.html#course-overview",
-    "title": "Welcome to Quarto",
-    "section": "Course Overview",
-    "text": "Course Overview\n\nIntroduction to Quarto\n\nNuts and bolts\n\nYou will have the knowledge to start on your own"
+    "objectID": "materials/1-intro-to-quarto/slides.html#section",
+    "href": "materials/1-intro-to-quarto/slides.html#section",
+    "title": "Dynamic Reporting  with Quarto",
+    "section": "",
+    "text": "Course materials can be found at:\nhttps://github.com/USFWS/intro-to-quarto ."
   },
   {
-    "objectID": "materials/1-welcome-to-quarto/slides.html#what-is-quarto",
-    "href": "materials/1-welcome-to-quarto/slides.html#what-is-quarto",
-    "title": "Welcome to Quarto",
-    "section": "What is Quarto?",
-    "text": "What is Quarto?"
+    "objectID": "materials/1-intro-to-quarto/slides.html#outline",
+    "href": "materials/1-intro-to-quarto/slides.html#outline",
+    "title": "Dynamic Reporting  with Quarto",
+    "section": "Outline",
+    "text": "Outline\n\nOverview of Quarto\nComponents of a Quarto document\n\nYAML metadata\nDocument body\nCode blocks"
   },
   {
-    "objectID": "materials/1-welcome-to-quarto/slides.html#what-types-of-documents-can-you-render-using-quarto",
-    "href": "materials/1-welcome-to-quarto/slides.html#what-types-of-documents-can-you-render-using-quarto",
-    "title": "Welcome to Quarto",
-    "section": "What types of documents can you render using Quarto?",
-    "text": "What types of documents can you render using Quarto?"
+    "objectID": "materials/1-intro-to-quarto/slides.html#documents",
+    "href": "materials/1-intro-to-quarto/slides.html#documents",
+    "title": "Dynamic Reporting  with Quarto",
+    "section": "Documents",
+    "text": "Documents"
   },
   {
-    "objectID": "materials/1-welcome-to-quarto/slides.html#when-to-use-an-automated-report",
-    "href": "materials/1-welcome-to-quarto/slides.html#when-to-use-an-automated-report",
-    "title": "Welcome to Quarto",
+    "objectID": "materials/1-intro-to-quarto/slides.html#websites",
+    "href": "materials/1-intro-to-quarto/slides.html#websites",
+    "title": "Dynamic Reporting  with Quarto",
+    "section": "Websites",
+    "text": "Websites"
+  },
+  {
+    "objectID": "materials/1-intro-to-quarto/slides.html#presentations",
+    "href": "materials/1-intro-to-quarto/slides.html#presentations",
+    "title": "Dynamic Reporting  with Quarto",
+    "section": "Presentations",
+    "text": "Presentations"
+  },
+  {
+    "objectID": "materials/1-intro-to-quarto/slides.html#books",
+    "href": "materials/1-intro-to-quarto/slides.html#books",
+    "title": "Dynamic Reporting  with Quarto",
+    "section": "Books",
+    "text": "Books"
+  },
+  {
+    "objectID": "materials/1-intro-to-quarto/slides.html#when-to-use-an-automated-report",
+    "href": "materials/1-intro-to-quarto/slides.html#when-to-use-an-automated-report",
+    "title": "Dynamic Reporting  with Quarto",
     "section": "When to use an automated report?",
-    "text": "When to use an automated report?\n\nIf you have a document that you are generating frequently\nIf you have duplicated reports for multiple factors (species, watershed, state)"
+    "text": "When to use an automated report?\n\n\nIf you have a document that you are generating frequently\nIf you have duplicated reports for multiple factors (species, watershed, state)"
   },
   {
-    "objectID": "materials/1-welcome-to-quarto/slides.html#anatomy-of-a-quarto-file",
-    "href": "materials/1-welcome-to-quarto/slides.html#anatomy-of-a-quarto-file",
-    "title": "Welcome to Quarto",
-    "section": "Anatomy of a Quarto file",
-    "text": "Anatomy of a Quarto file"
+    "objectID": "materials/1-intro-to-quarto/slides.html#the-yaml-header",
+    "href": "materials/1-intro-to-quarto/slides.html#the-yaml-header",
+    "title": "Dynamic Reporting  with Quarto",
+    "section": "The YAML header",
+    "text": "The YAML header"
   },
   {
-    "objectID": "materials/1-welcome-to-quarto/slides.html#anatomy-of-a-quarto-file-yml-header",
-    "href": "materials/1-welcome-to-quarto/slides.html#anatomy-of-a-quarto-file-yml-header",
-    "title": "Welcome to Quarto",
-    "section": "Anatomy of a Quarto file: YML header",
-    "text": "Anatomy of a Quarto file: YML header"
+    "objectID": "materials/1-intro-to-quarto/slides.html#yaml-options",
+    "href": "materials/1-intro-to-quarto/slides.html#yaml-options",
+    "title": "Dynamic Reporting  with Quarto",
+    "section": "YAML options",
+    "text": "YAML options\n\n\n\n\n\n\nNot sure of your options? Use your friendly assistant!\n\n\n\nStart a word and hit tab to complete or …\nType Ctrl+space to see available options."
   },
   {
-    "objectID": "materials/1-welcome-to-quarto/slides.html#anatomy-of-a-quarto-file-yml-options",
-    "href": "materials/1-welcome-to-quarto/slides.html#anatomy-of-a-quarto-file-yml-options",
-    "title": "Welcome to Quarto",
-    "section": "Anatomy of a Quarto file: YML options",
-    "text": "Anatomy of a Quarto file: YML options"
+    "objectID": "materials/1-intro-to-quarto/slides.html#yaml-metadata-exercise",
+    "href": "materials/1-intro-to-quarto/slides.html#yaml-metadata-exercise",
+    "title": "Dynamic Reporting  with Quarto",
+    "section": "YAML metadata: exercise",
+    "text": "YAML metadata: exercise\n\n\n\n\nFirst this\nThen this\nthen this\nFinally this\n\n\n\n\n\n−+\n10:00"
   },
   {
-    "objectID": "materials/1-welcome-to-quarto/slides.html#anatomy-of-a-quarto-file-document-body",
-    "href": "materials/1-welcome-to-quarto/slides.html#anatomy-of-a-quarto-file-document-body",
-    "title": "Welcome to Quarto",
-    "section": "Anatomy of a Quarto file: document body",
-    "text": "Anatomy of a Quarto file: document body"
+    "objectID": "materials/1-intro-to-quarto/slides.html#the-document-body-markdown",
+    "href": "materials/1-intro-to-quarto/slides.html#the-document-body-markdown",
+    "title": "Dynamic Reporting  with Quarto",
+    "section": "The document body: Markdown",
+    "text": "The document body: Markdown\nInline and Block elements"
   },
   {
-    "objectID": "materials/1-welcome-to-quarto/slides.html#document-styling",
-    "href": "materials/1-welcome-to-quarto/slides.html#document-styling",
-    "title": "Welcome to Quarto",
-    "section": "Document styling",
-    "text": "Document styling"
+    "objectID": "materials/1-intro-to-quarto/slides.html#inline-elements-text",
+    "href": "materials/1-intro-to-quarto/slides.html#inline-elements-text",
+    "title": "Dynamic Reporting  with Quarto",
+    "section": "Inline elements: Text",
+    "text": "Inline elements: Text"
   },
   {
-    "objectID": "materials/1-welcome-to-quarto/slides.html#code-chunks",
-    "href": "materials/1-welcome-to-quarto/slides.html#code-chunks",
-    "title": "Welcome to Quarto",
+    "objectID": "materials/1-intro-to-quarto/slides.html#inline-elements-math",
+    "href": "materials/1-intro-to-quarto/slides.html#inline-elements-math",
+    "title": "Dynamic Reporting  with Quarto",
+    "section": "Inline elements: Math",
+    "text": "Inline elements: Math"
+  },
+  {
+    "objectID": "materials/1-intro-to-quarto/slides.html#inline-elements-images-and-hyperlinks",
+    "href": "materials/1-intro-to-quarto/slides.html#inline-elements-images-and-hyperlinks",
+    "title": "Dynamic Reporting  with Quarto",
+    "section": "Inline elements: Images and hyperlinks",
+    "text": "Inline elements: Images and hyperlinks"
+  },
+  {
+    "objectID": "materials/1-intro-to-quarto/slides.html#inline-elements-references",
+    "href": "materials/1-intro-to-quarto/slides.html#inline-elements-references",
+    "title": "Dynamic Reporting  with Quarto",
+    "section": "Inline elements: References",
+    "text": "Inline elements: References"
+  },
+  {
+    "objectID": "materials/1-intro-to-quarto/slides.html#inline-elements-footnotes",
+    "href": "materials/1-intro-to-quarto/slides.html#inline-elements-footnotes",
+    "title": "Dynamic Reporting  with Quarto",
+    "section": "Inline elements: Footnotes",
+    "text": "Inline elements: Footnotes"
+  },
+  {
+    "objectID": "materials/1-intro-to-quarto/slides.html#block-elements",
+    "href": "materials/1-intro-to-quarto/slides.html#block-elements",
+    "title": "Dynamic Reporting  with Quarto",
+    "section": "Block elements",
+    "text": "Block elements"
+  },
+  {
+    "objectID": "materials/1-intro-to-quarto/slides.html#block-elements-paragraphs",
+    "href": "materials/1-intro-to-quarto/slides.html#block-elements-paragraphs",
+    "title": "Dynamic Reporting  with Quarto",
+    "section": "Block elements: Paragraphs",
+    "text": "Block elements: Paragraphs"
+  },
+  {
+    "objectID": "materials/1-intro-to-quarto/slides.html#block-elements-headers",
+    "href": "materials/1-intro-to-quarto/slides.html#block-elements-headers",
+    "title": "Dynamic Reporting  with Quarto",
+    "section": "Block elements: Headers",
+    "text": "Block elements: Headers"
+  },
+  {
+    "objectID": "materials/1-intro-to-quarto/slides.html#block-elements-lists",
+    "href": "materials/1-intro-to-quarto/slides.html#block-elements-lists",
+    "title": "Dynamic Reporting  with Quarto",
+    "section": "Block elements: Lists",
+    "text": "Block elements: Lists"
+  },
+  {
+    "objectID": "materials/1-intro-to-quarto/slides.html#block-elements-math",
+    "href": "materials/1-intro-to-quarto/slides.html#block-elements-math",
+    "title": "Dynamic Reporting  with Quarto",
+    "section": "Block elements: Math",
+    "text": "Block elements: Math"
+  },
+  {
+    "objectID": "materials/1-intro-to-quarto/slides.html#document-body-exercise",
+    "href": "materials/1-intro-to-quarto/slides.html#document-body-exercise",
+    "title": "Dynamic Reporting  with Quarto",
+    "section": "Document body: exercise",
+    "text": "Document body: exercise\n\n\n\n\nFirst this\nThen this\nthen this\nFinally this\n\n\n\n\n\n−+\n07:00"
+  },
+  {
+    "objectID": "materials/1-intro-to-quarto/slides.html#code-chunks",
+    "href": "materials/1-intro-to-quarto/slides.html#code-chunks",
+    "title": "Dynamic Reporting  with Quarto",
     "section": "Code chunks",
     "text": "Code chunks"
   },
   {
-    "objectID": "materials/1-welcome-to-quarto/slides.html#considerations",
-    "href": "materials/1-welcome-to-quarto/slides.html#considerations",
-    "title": "Welcome to Quarto",
-    "section": "Considerations",
-    "text": "Considerations\n\nKISS\n\nLess chance for package failures\n\nStrive for full automation\n\nSet up document for success\nReduce errors by manually making updates\nGeneralize where you can\n\nGold standard for automation\n\nUpdate YML and hit run"
-  },
-  {
-    "objectID": "materials/1-welcome-to-quarto/slides.html#best-practices",
-    "href": "materials/1-welcome-to-quarto/slides.html#best-practices",
-    "title": "Welcome to Quarto",
-    "section": "Best practices",
-    "text": "Best practices\n\nFolder structure\nCreate an R Project\nKeep cody tidy and well-documented"
-  },
-  {
-    "objectID": "materials/2-creating-documents/slides.html#creating-documents",
-    "href": "materials/2-creating-documents/slides.html#creating-documents",
-    "title": "Creating Documents",
-    "section": "Creating Documents",
-    "text": "Creating Documents\nHere’s how.."
+    "objectID": "materials/1-intro-to-quarto/slides.html#code-chunk-exercise",
+    "href": "materials/1-intro-to-quarto/slides.html#code-chunk-exercise",
+    "title": "Dynamic Reporting  with Quarto",
+    "section": "Code chunk: exercise",
+    "text": "Code chunk: exercise\n\n\n\n\nFirst this\nThen this\nthen this\nFinally this\n\n\n\n\n\n−+\n10:00"
   }
 ]

@@ -1,0 +1,146 @@
+---
+title: "Dynamic Reporting <br> with Quarto"
+format: refuge-revealjs
+editor: source
+---
+
+```{r}
+#| echo: false
+library(countdown)
+```
+
+# Overview {.dark}
+
+## {.center}
+
+[Course materials can be found at:]{.large}  
+[https://github.com/USFWS/intro-to-quarto](https://github.com/USFWS/intro-to-quarto) [{{< fa brands github >}}](https://github.com/USFWS/intro-to-quarto).
+
+## Outline {.center}
+
+- Overview of Quarto
+- Components of a Quarto document
+  - YAML metadata
+  - Document body
+  - Code blocks
+
+# The powers of Quarto <br> ![](images/super_quarto2.png){width=600} {.dark}
+
+## Documents
+
+
+
+## Websites
+
+
+
+## Presentations
+
+
+
+## Books
+
+
+
+## When to use an automated report? 
+
+::: {.incremental}
+- If you have a document that you are generating frequently
+- If you have duplicated reports for multiple factors (species, watershed, state)
+:::
+
+# Anatomy of a Quarto file {.dark}
+
+
+
+## The YAML header
+
+## YAML options
+
+
+
+::: {.callout-tip}
+## Not sure of your options? Use your friendly assistant!
+- Start a word and hit <kbd>`tab`</kbd> to complete or ...
+- Type <kbd>`Ctrl+space`</kbd> to see available options.
+:::
+
+
+## YAML metadata: exercise {.exercise}
+
+\
+
+::: {.center}
+
+1. First this
+2. Then this
+3. then this
+4. Finally this
+
+:::
+
+```{r}
+countdown::countdown(10)
+```
+
+## The document body: Markdown
+
+Inline and Block elements
+
+## Inline elements: [Text]{.gray-bold}
+
+## Inline elements: [Math]{.gray-bold}
+
+## Inline elements: [Images and hyperlinks]{.gray-bold}
+
+## Inline elements: [References]{.gray-bold}
+
+## Inline elements: [Footnotes]{.gray-bold}
+
+## Block elements
+
+## Block elements: [Paragraphs]{.gray-bold}
+
+## Block elements: [Headers]{.gray-bold} 
+
+## Block elements: [Lists]{.gray-bold}
+
+## Block elements: [Math]{.gray-bold}
+
+
+## Document body: exercise {.exercise}
+
+\
+
+::: {.center}
+
+1. First this
+2. Then this
+3. then this
+4. Finally this
+
+:::
+
+```{r}
+countdown::countdown(7)
+```
+
+## Code chunks
+
+## Code chunk: exercise {.exercise}
+
+\
+
+::: {.center}
+
+1. First this
+2. Then this
+3. then this
+4. Finally this
+
+:::
+
+```{r}
+countdown::countdown(10)
+```
+
