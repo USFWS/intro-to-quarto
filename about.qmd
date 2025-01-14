@@ -10,8 +10,22 @@ sidebar: false
 ## Teaching Team
 
 #### Jonah Withers
-
-Short bio..
+ 
+::: columns
+ 
+::: {.column width="25%"}
+ 
+![](assets/images/Jonah_Boquet_20221006.jpg){fig-alt="Photo of Jonah Withers." width=150}
+ 
+:::
+ 
+::: {.column width="75%"}
+ 
+Jonah is a data manager with the USFWS Fisheries and Ecological Services program in the Alaska region. He is passionate about fostering a data-centric culture and works closely with biologists and managers to ensure stakeholders have reliable access to data following [FAIR principles](https://www.go-fair.org/fair-principles/) that lead to informed conservation decisions. Jonah is a strong advocate for the use of R and developing reproducible workflows. Find more information about Jonah and the rest of the Alaska Data Management Team [here](https://doimspp.sharepoint.com/sites/fws-FF07S00000-data/SitePages/Alaska-Region-Data-Management.aspx).
+ 
+:::
+ 
+:::
 
 #### Jacob Cochran
 
