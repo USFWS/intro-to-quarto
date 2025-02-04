@@ -2,15 +2,12 @@
 
 # Dynamic Reporting with Quarto
 
-### FWS Data Workshop, 2025
-
 ------------------------------------------------------------------------
 
-:spiral_calendar: February 11, 2025  
-:alarm_clock: TBD  
+:spiral_calendar:  
+:alarm_clock:  
 :hotel: Virtual  
-:writing_hand: [FWS Data
-Workshop](https://doimspp.sharepoint.com/sites/fws-data/SitePages/2025-Data-Management-Workshop.aspx)
+:writing_hand:  
 
 ------------------------------------------------------------------------
 
@@ -77,7 +74,8 @@ usethis::use_course("https://github.com/USFWS/intro-quarto-exercises/archive/ref
 
 [Jonah Withers](mailto:jonah_withers@fws.gov), Fisheries and Ecological
 Services, Alaska  
-[Jacob Cochran](mailto:jacob_cochran@fws.gov),  
+[Jacob Cochran](mailto:jacob_cochran@fws.gov), Lower Great Lakes Fish and 
+Wildlife Conservation Office  
 [Jason Ross](mailto:jason_ross@fws.gov), Fish and Aquatic Conservation
 Program  
 [McCrea Cobb](mailto:mccrea_cobb@fws.gov), Refuge Inventory and
