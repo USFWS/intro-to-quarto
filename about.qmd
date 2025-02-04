@@ -10,16 +10,57 @@ sidebar: false
 ## Teaching Team
 
 #### Jonah Withers
+ 
+::: columns
+ 
+::: {.column width="25%"}
+ 
+![](assets/images/jonah.png){fig-alt="Photo of Jonah Withers." width=150}
+:::
+ 
+::: {.column width="75%"}
 
-Short bio..
+Jonah is a data manager with the USFWS Fisheries and Ecological Services program in the Alaska region. He is passionate about fostering a data-centric culture and works closely with biologists and managers to ensure stakeholders have reliable access to data following [FAIR principles](https://www.go-fair.org/fair-principles/) that lead to informed conservation decisions. Jonah is a strong advocate for the use of R and developing reproducible workflows. Find more information about Jonah and the rest of the Alaska Data Management Team [here](https://doimspp.sharepoint.com/sites/fws-FF07S00000-data/SitePages/Alaska-Region-Data-Management.aspx).
+
+:::
+
+:::
 
 #### Jacob Cochran
 
-Short bio..
+::: columns
+
+::: {.column width="25%"}
+
+![](assets/images/jacob.png){fig-alt="Photo of Jacob Cochran." width=150} 
+
+:::
+
+::: {.column width="75%"}
+
+Jacob is a fish biologist with the FWS Lower Great Lakes Fish and Wildlife Conservation Office in Basom, NY. He leads the Aquatic Invasive Species programs early detection and monitoring efforts across the lower Great Lakes. Along with managing fieldwork operations, Jacob emphasizes efficiency through workflows and automation to improve program capacity and data availability. You can learn more about the work his office is involved with [here](https://www.fws.gov/office/lower-great-lakes-fish-and-wildlife-conservation/about-us).
+
+:::
+
+:::
 
 #### Jason Ross
 
-Short bio..
+::: columns
+
+::: {.column width="25%"}
+
+![](assets/images/jason.png){fig-alt="Photo of Jason Ross." width=150} 
+
+:::
+
+::: {.column width="75%"}
+
+Jason is a Data Manager with the FWS Midwest Fisheries Center Data Branch that provides data support to staff in FWS Midwest Region’s Fisheries and Aquatic Conservation program. You can learn more about Jason and the rest of the Data Branch [here](https://doimspp.sharepoint.com/sites/doi-R3FACdata/SitePages/Staff-Biographies.aspx?CT=1736981247035&OR=OWA-NTB-Mail&CID=6a716ac7-9010-6927-9185-fdeb54e2e0dd).
+
+:::
+
+:::
 
 #### McCrea Cobb
 
@@ -27,7 +68,7 @@ Short bio..
 
 ::: {.column width="25%"}
 
-![](assets/images/photo_placeholder.png){fig-alt="Photo of McCrea Cobb." width=150} 
+![](assets/images/mccrea.png){fig-alt="Photo of McCrea Cobb." width=150} 
 
 :::
 

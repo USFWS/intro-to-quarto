@@ -2,10 +2,7 @@ project:
   type: website
   render:
     - "*.qmd"
-    - "!materials/*/exercises/"
-    - "!materials/Demonstrations/"
-    - "!materials/Exercise/"
-    - "!materials/Presentation/"
+    - "!materials/*/images/"
   output-dir: docs
 
 from: markdown+emoji
@@ -13,6 +10,7 @@ from: markdown+emoji
 website:
   title: "Dynamic Reporting with Quarto"
   page-navigation: true
+  favicon: assets/images/favicon.png
   navbar:
     background: light
     foreground: dark

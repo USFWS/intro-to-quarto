@@ -13,21 +13,42 @@ css: assets/index.css
 
 #### A workshop at the <br> FWS Data Management Workshop
 
-
 :::
-
 ::: {.g-col-7}
 
 ![](assets/images/plover_long.png){fig-alt="A snowy plover." width=450}
-
 :::
-
 :::
 
 <br>
 
 This workshop provides an introduction to Quarto for intermediate to advanced R users. We present on the basics of using Quarto to generate dynamic reports. After an introduction, we use an example dataset to render a Quarto report to Word, PDF, and HTML documents. Participants will leave with the foundational skills required to create a Quarto report.
 
-### Schedule
+### Prework
 
--   X-XX am [Introduction to Quarto](materials/1-intro-to-quarto/index.html)
+- From FWS Apps-To-Go, install:
+  - R 4.4.2
+  - RStudio 2024.09.1
+- Install R package dependencies:
+
+:::{.small}
+``` r
+required_packages <- c("tidyverse", "readxl", "gt", 
+    "sf", "ggrepel", "knitr", "magrittr", "usethis")
+new_packages <- packages[!(required_packages %in% installed.packages()[,"Package"])]
+if(length(new_packages)) install.packages(new_packages)
+update.packages(oldPkgs = required_packages)
+```
+:::
+
+- Download the exercise materials:
+
+::: {.small}
+``` r
+usethis::use_course("https://github.com/USFWS/intro-to-quarto-exercises/archive/refs/heads/main.zip")
+```
+:::
+
+### Materials
+
+- [Introduction to Quarto](materials/1-intro-to-quarto/index.html)

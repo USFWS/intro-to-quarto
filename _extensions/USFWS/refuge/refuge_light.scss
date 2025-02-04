@@ -23,7 +23,6 @@ $right-arrow: "\2192"; // Unicode character for right arrow
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import url(https://fonts.googleapis.com/css?family=Cabin:600,600i&display=swap);
 
-
 // Define fonts
 $Lato: "Lato", sans-serif;
 $Cabin: "Cabin" san-serif;
@@ -41,7 +40,7 @@ $presentation-heading-font: $Lato !default;
 $presentation-font-size-root: 46px;
 
 // Code block styling
-$code-block-font-size: 0.5em;
+//$code-block-font-size: 0.5em;
 $code-block-border-left: $light-blue;
 
 
@@ -49,14 +48,14 @@ $code-block-border-left: $light-blue;
 
 // Hyperlinks
 .reveal a {
-  line-height: 1.5em;
+  line-height: 1em;
 }
 
 
 // Paragraphs
 .reveal p {
-  font-weight: 400;
-  margin-top: 1.2em;
+  //font-weight: 400;
+  //margin-top: 1em;
 }
 
 // Footnotes
@@ -82,9 +81,15 @@ $code-block-border-left: $light-blue;
   font-size: 3.0em;
 }
 
+// Custom font colors
 span.gray-bold {
   font-weight: 800;
   color: $accent-dark-grey;
+  text-align: center;
+}
+
+span.light-blue {
+  color: $light-blue;
   text-align: center;
 }
 
@@ -141,16 +146,14 @@ span.gray-bold {
 .reveal .slide h1 {
   font-family: $Lato, serif;
 }
-
 .reveal .slide h2 {
   font-weight: 600;
   font-size: 1.8em;
 }
 .reveal .slide h3 {
   color: $light-blue;
-  font-style: normal;
   font-weight: 600;
-  font-size: 0.95em;
+  font-size: 1.2em;
 }
 .reveal .slide h4 {
   color: $light-blue;
@@ -189,7 +192,7 @@ span.gray-bold {
   li:before {
     content: $right-arrow;
     display: inline-block;
-    width: 1em;
+    //width: 1em;
     margin-left: -1em;
     margin-right: 0.5em;
   }
@@ -202,17 +205,6 @@ span.gray-bold {
   padding-left: 16px;
 }
 
-
-// Move "hamburger" menu button to top right
-.reveal .slide-menu-button {
-  position: fixed;
-  top: 6px;
-  right: 0;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-  pointer-events: none;
-}
 
 .reveal .slide-menu-button > * {
   pointer-events: auto;
@@ -285,7 +277,7 @@ span.gray-bold {
   border: none; /* Remove internal row lines */
   padding: .23em; /* Adjust padding as needed */
   text-align: left; /* Adjust text alignment as needed */
-  font-weight: lighter; /* Lighter font weight for main table text */
+  //font-weight: lighter; /* Lighter font weight for main table text */
 }
 
 /* Add a bottom border to the table header row for distinction */
@@ -377,7 +369,7 @@ img.drop {
   }
   h1 {
     color: $accent-light-blue;
-    font-family: $Lato, serif;
+    font-family: $Cabin;
   }
   h2 {
     color: $accent-light-blue;
@@ -421,5 +413,8 @@ img.drop {
   display: none;
 }
 
-
-
+// Move slide logo
+//.reveal .slide-logo {
+//  top: 1;
+//  left: 12px
+//}

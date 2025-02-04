@@ -1,0 +1,1726 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)http://localhost:4903/materials/1-intro-to-quarto/slides.html#/code-chunks -->
+<html lang="en" class="reveal-full-page"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="http://localhost:4903/assets/images/favicon.png" rel="icon" type="image/png">
+<script src="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/clipboard.min.js.download"></script>
+<script src="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/tabby.min.js.download"></script>
+<script src="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/popper.min.js.download"></script>
+<script src="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/tippy.umd.min.js.download"></script>
+<link href="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/tippy.css" rel="stylesheet">
+<link href="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/light-border.css" rel="stylesheet">
+<link href="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/quarto-syntax-highlighting-0626ff4d7a71b55c8707dcae1d04a9b6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/all.min.css" rel="stylesheet">
+<link href="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/latex-fontsize.css" rel="stylesheet">
+  <meta name="generator" content="quarto-1.6.39">
+
+  <title>Dynamic Reporting with Quarto – Dynamic Reporting   with Quarto</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/reset.css">
+  <link rel="stylesheet" href="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #24292e;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #24292e; } /* Normal */
+    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
+    code span.an { color: #6a737d; } /* Annotation */
+    code span.at { color: #d73a49; } /* Attribute */
+    code span.bn { color: #005cc5; } /* BaseN */
+    code span.bu { color: #d73a49; } /* BuiltIn */
+    code span.cf { color: #d73a49; } /* ControlFlow */
+    code span.ch { color: #032f62; } /* Char */
+    code span.cn { color: #005cc5; } /* Constant */
+    code span.co { color: #6a737d; } /* Comment */
+    code span.cv { color: #6a737d; } /* CommentVar */
+    code span.do { color: #6a737d; } /* Documentation */
+    code span.dt { color: #d73a49; } /* DataType */
+    code span.dv { color: #005cc5; } /* DecVal */
+    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
+    code span.ex { color: #d73a49; font-weight: bold; } /* Extension */
+    code span.fl { color: #005cc5; } /* Float */
+    code span.fu { color: #6f42c1; } /* Function */
+    code span.im { color: #032f62; } /* Import */
+    code span.in { color: #6a737d; } /* Information */
+    code span.kw { color: #d73a49; } /* Keyword */
+    code span.op { color: #24292e; } /* Operator */
+    code span.ot { color: #6f42c1; } /* Other */
+    code span.pp { color: #d73a49; } /* Preprocessor */
+    code span.re { color: #6a737d; } /* RegionMarker */
+    code span.sc { color: #005cc5; } /* SpecialChar */
+    code span.ss { color: #032f62; } /* SpecialString */
+    code span.st { color: #032f62; } /* String */
+    code span.va { color: #e36209; } /* Variable */
+    code span.vs { color: #032f62; } /* VerbatimString */
+    code span.wa { color: #ff5555; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/quarto-6ecf611ff12f3bf615fe24024aaa4a8f.css">
+  <link href="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/line-highlight.css" rel="stylesheet">
+  <link href="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/menu.css" rel="stylesheet">
+  <link href="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/quarto-menu.css" rel="stylesheet">
+  <link href="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <link href="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/countdown.css" rel="stylesheet">
+
+  <script src="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/countdown.js.download"></script>
+
+<script type="text/javascript" src="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/MathJax.js.download"></script><style>.ansi-display{font-family:monospace;white-space:pre-wrap;--ansiBlack: #000000;--ansiRed: #cd3131;--ansiGreen: #00BC00;--ansiYellow: #949800;--ansiBlue: #0451a5;--ansiMagenta: #bc05bc;--ansiCyan: #0598bc;--ansiWhite: #555555;--ansiBrightBlack: #666666;--ansiBrightRed: #cd3131;--ansiBrightGreen: #14CE14;--ansiBrightYellow: #b5ba00;--ansiBrightBlue: #0451a5;--ansiBrightMagenta: #bc05bc;--ansiBrightCyan: #0598bc;--ansiBrightWhite: #a5a5a5}.dark-mode .ansi-display{--ansiBlack: #000000;--ansiRed: #cd3131;--ansiGreen: #0DBC79;--ansiYellow: #e5e510;--ansiBlue: #2472c8;--ansiMagenta: #bc3fbc;--ansiCyan: #11a8cd;--ansiWhite: #e5e5e5;--ansiBrightBlack: #666666;--ansiBrightRed: #f14c4c;--ansiBrightGreen: #23d18b;--ansiBrightYellow: #f5f543;--ansiBrightBlue: #3b8eea;--ansiBrightMagenta: #d670d6;--ansiBrightCyan: #29b8db;--ansiBrightWhite: #e5e5e5}@keyframes ansi-displaly-run-blink{50%{opacity:0}}.fui-FluentProvider h2{border-bottom:none;padding-bottom:0}</style><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888; display: contents}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style data-make-styles-bucket="d" data-priority="0"></style><style id="fui-FluentProviderr0"></style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MathJax .MJX-monospace {font-family: monospace}
+.MathJax .MJX-sans-serif {font-family: sans-serif}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax:focus, body :focus .MathJax {display: inline-table}
+.MathJax.MathJax_FullWidth {text-align: center; display: table-cell!important; width: 10000em!important}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!important; vertical-align: 0!important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none; box-sizing: content-box}
+.MathJax nobr {white-space: nowrap!important}
+.MathJax img {display: inline!important; float: none!important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_test {font-style: normal; font-weight: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow: hidden; height: 1px}
+.MathJax_test.mjx-test-display {display: table!important}
+.MathJax_test.mjx-test-inline {display: inline!important; margin-right: -1px}
+.MathJax_test.mjx-test-default {display: block!important; clear: both}
+.MathJax_ex_box {display: inline-block!important; position: absolute; overflow: hidden; min-height: 0; max-height: none; padding: 0; border: 0; margin: 0; width: 1px; height: 60ex}
+.MathJax_em_box {display: inline-block!important; position: absolute; overflow: hidden; min-height: 0; max-height: none; padding: 0; border: 0; margin: 0; width: 1px; height: 60em}
+.mjx-test-inline .MathJax_left_box {display: inline-block; width: 0; float: left}
+.mjx-test-inline .MathJax_right_box {display: inline-block; width: 0; float: right}
+.mjx-test-display .MathJax_right_box {display: table-cell!important; width: 10000em!important; min-width: 0; max-width: none; padding: 0; border: 0; margin: 0}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Main; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff?V=2.7.9') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf?V=2.7.9') format('opentype')}
+@font-face {font-family: MathJax_Main-bold; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff?V=2.7.9') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf?V=2.7.9') format('opentype')}
+@font-face {font-family: MathJax_Main-italic; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff?V=2.7.9') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf?V=2.7.9') format('opentype')}
+@font-face {font-family: MathJax_Math-italic; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff?V=2.7.9') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf?V=2.7.9') format('opentype')}
+@font-face {font-family: MathJax_Caligraphic; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff?V=2.7.9') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf?V=2.7.9') format('opentype')}
+@font-face {font-family: MathJax_Size1; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff?V=2.7.9') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf?V=2.7.9') format('opentype')}
+@font-face {font-family: MathJax_Size2; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff?V=2.7.9') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf?V=2.7.9') format('opentype')}
+@font-face {font-family: MathJax_Size3; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff?V=2.7.9') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf?V=2.7.9') format('opentype')}
+@font-face {font-family: MathJax_Size4; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff?V=2.7.9') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf?V=2.7.9') format('opentype')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+<body class="quarto-light reveal-viewport" data-tabster="{&quot;root&quot;:{}}" style="transition: transform 0.8s; --slide-width: 1600px; --slide-height: 900px; --slide-scale: 0.8530000000000001; --viewport-width: 1756px; --viewport-height: 853px;"><i tabindex="0" role="none" data-tabster-dummy="" aria-hidden="true" style="position: fixed; height: 1px; width: 1px; opacity: 0.001; z-index: -1; content-visibility: hidden; top: 0px; left: 0px;"></i><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"><br></div></div><div id="MathJax_Message" style="display: none;"></div>
+  <div class="reveal has-logo fade focused is-vertical-slide has-vertical-slides has-horizontal-slides ready" role="application" data-transition-speed="default" data-background-transition="none" data-navigation-mode="linear" style="">
+    <div class="slides" style="width: 1600px; height: 900px; inset: 50% auto auto 50%; transform: translate(-50%, -50%) scale(0.853);">
+
+<section id="title-slide" data-background-image="images/plover_title.png" data-background-position="75% 50%, center" data-background-size="20%, cover" class="quarto-title-block center past" style="top: 450px; display: none;" hidden="" aria-hidden="true">
+  <h1 class="title">Dynamic Reporting <br> with Quarto</h1>
+  <p class="subtitle">FWS Data Management Workshop</p>
+
+<div class="quarto-title-authors">
+</div>
+
+</section>
+<section hidden="" aria-hidden="true" class="stack past" style="display: block;">
+<section id="overview" class="title-slide slide level1 dark center" style="top: 381px; display: block;">
+<h1>Overview</h1>
+
+</section>
+<section id="section" class="slide level2 center future" aria-hidden="true" style="top: 450px; display: none;">
+<h2></h2>
+<p><span class="large">Course materials can be found at:</span><br>
+<a href="https://github.com/USFWS/intro-to-quarto">https://github.com/USFWS/intro-to-quarto</a> <a href="https://github.com/USFWS/intro-to-quarto"><i class="fa-brands fa-github" aria-label="github"></i></a>.</p>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="outline" class="slide level2 center future" aria-hidden="true" style="top: 450px; display: none;">
+<h2>Outline</h2>
+<ul>
+<li>Overview of Quarto</li>
+<li>Components of a Quarto document
+<ul>
+<li>YAML metadata</li>
+<li>Document body</li>
+<li>Code blocks</li>
+</ul></li>
+</ul>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section hidden="" aria-hidden="true" class="stack past" style="display: block;">
+<section id="the-powers-of-quarto" class="title-slide slide level1 dark center" style="top: 50.5px; display: block;">
+<h1>The powers of Quarto <br> <img width="600" src="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/super_quarto.png" data-lazy-loaded=""></h1>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="outputs-documents" class="slide level2 future" aria-hidden="true" style="display: block;">
+<h2>Outputs: <span class="gray-bold">Documents</span></h2>
+<div class="center">
+<p><object data="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/example_report.html" type="application/pdf" width="75%" height="775"><a href="http://localhost:4903/materials/1-intro-to-quarto/images/example_report.pdf" download="">Download PDF file.</a></object></p>
+</div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="output-websites" class="slide level2 future" aria-hidden="true" style="display: none;">
+<h2>Output: <span class="gray-bold">Websites</span></h2>
+<iframe width="1600" height="800" src="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/saved_resource.html" title="USFWS Science Applications Metadata Guidance"></iframe>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="outputs-presentations" class="slide level2 future" aria-hidden="true" style="display: none;">
+<h2>Outputs: <span class="gray-bold">Presentations</span></h2>
+<iframe width="1600" height="800" src="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/saved_resource(1).html" title="Presentation slides from a Reproducible Data Workflow presentation"></iframe>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="outputs-books" class="slide level2 future" aria-hidden="true" style="display: none;">
+<h2>Outputs: <span class="gray-bold">Books</span></h2>
+<iframe width="1600" height="800" src="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/saved_resource(2).html" title="R for Data Science ebook"></iframe>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-is-quarto" class="slide level2 future" aria-hidden="true" style="display: none;">
+<h2>What is Quarto?</h2>
+<div class="fragment visible" data-fragment-index="0">
+<p><img alt="A diagram showing the process of rendering a document using R Markdown." height="800" src="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/render1.png" data-lazy-loaded=""></p>
+</div>
+<aside class="notes">
+<ul>
+<li>Quarto is an open-source scientific and technical publishing system built on Pandoc.</li>
+<li>Instead of writing a report or presentation in Word, PowerPoint, etc.; then running code in an R script; then saving output and visualizations; and then pasting them in the report or the presentation</li>
+<li>We can do it all in Quarto, a free system especially tailored to scientific and technical publishing.</li>
+<li>If you are familiar with R Markdown, you are probably familiar with this pipeline.</li>
+<li>When you knit an R Markdown .rmd file, the R package knitr converts your text and R code into a Markdown file and then uses Pandoc to produce whatever output you’ve specified.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-is-quarto-1" class="slide level2 future" aria-hidden="true" style="display: none;">
+<h2>What is Quarto?</h2>
+<p><img alt="A diagram showing the process of rendering a document using Quarto." height="800" src="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/render2.png" data-lazy-loaded=""></p>
+<aside class="notes">
+<ul>
+<li>A Quarto .qmd file on the other hand can be composed of text and R, Python, and/or Julia code.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-is-quarto-2" class="slide level2 future" aria-hidden="true" style="display: none;">
+<h2>What is Quarto?</h2>
+<p><img alt="A diagram showing the process of rendering a document using Quarto." height="800" src="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/render3.png" data-lazy-loaded=""></p>
+<aside class="notes">
+<ul>
+<li>Either the knitr or jupyter engines will then render your text and code into a Markdown file followed by Pandoc producing whatever output you’ve specified. Quarto accomplishes this by being fully separate from the R ecosystem. You can even run it from the command-line interface (i.e., the shell or terminal), if you want to.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-is-quarto-3" class="slide level2 future" aria-hidden="true" style="display: none;">
+<h2>What is Quarto?</h2>
+<div class="fragment visible" data-fragment-index="0">
+<p><img alt="A diagram showing the process of rendering a document using Quarto." height="800" src="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/render4.png" data-lazy-loaded=""></p>
+</div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-is-quarto-4" class="slide level2 future" aria-hidden="true" style="display: none;">
+<h2>What is Quarto?</h2>
+<p><img alt="A diagram showing the process of rendering a document using Quarto." height="800" src="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/render5.png" data-lazy-loaded=""></p>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-is-quarto-5" class="slide level2 future" aria-hidden="true" style="display: none;">
+<h2>What is Quarto?</h2>
+<p><img alt="A diagram showing the process of rendering a document using Quarto." height="800" src="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/render6.png" data-lazy-loaded=""></p>
+<aside class="notes">
+<ul>
+<li><p>Embedding code and output from Python, R, and JavaScript via integration with Jupyter, Knitr, and Observable.</p></li>
+<li><p>A variety of extensions to Pandoc markdown useful for technical writing including cross-references, sub-figures, layout panels, hoverable citations and footnotes, callouts, and more.</p></li>
+<li><p>A project system for rendering groups of documents at once, sharing options across documents, and producing aggregate output like websites and books.</p></li>
+<li><p>Authoring using a wide variety of editors and notebooks including JupyterLab, RStudio, and VS Code.</p></li>
+<li><p>A visual markdown editor that provides a productive writing interface for composing long-form documents.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="when-to-use-quarto" class="slide level2 future" aria-hidden="true" style="display: none;">
+<h2>When to use Quarto?</h2>
+<div class="columns"><div class="column" style="width:40%;">
+<p><br>
+</p>
+<div>
+<ul>
+<li class="fragment visible" data-fragment-index="0">Weave together text, plots, tables, and statistics</li>
+<li class="fragment visible" data-fragment-index="1">Frequently re-create a standardized document</li>
+<li class="fragment visible" data-fragment-index="2">Reproduce your analyses</li>
+<li class="fragment visible" data-fragment-index="3">Generate comparable reports across multiple parameters (species, watershed, state)</li>
+</ul>
+</div>
+</div><div class="column" style="width:60%;">
+<p><img alt="An cartoon of a snowy plover thinking. There is a question mark above it&#39;s head." height="800" src="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/plover_thinking.png" data-lazy-loaded=""></p>
+</div></div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-1" class="slide level2 future" data-background-image="images/plover_decision.png" data-background-size="contain" aria-hidden="true" style="display: none;">
+<h2></h2>
+<aside class="notes">
+<p>You’re at a crossroads! How do you decide whether to move from R Markdown to Quarto?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="advantage-of-r-markdown" class="slide level2 future" aria-hidden="true" style="display: none;">
+<h2>Advantage of R Markdown</h2>
+<div class="{columns}">
+<div class="column" style="width:40%;">
+<p><br>
+</p>
+<ul>
+<li>Many custom tools built around R Markdown that are not available (yet) in Quarto</li>
+</ul>
+</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img class="drop quarto-figure quarto-figure-center" height="750" src="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/rmarkdown_packages.png" data-lazy-loaded=""></p>
+</figure>
+</div>
+</div></div>
+<aside class="notes">
+<ul>
+<li>If you like using R Markdown, there’s no need to switch! R Markdown will continue to be supported and work as it always has been. You’re welcome to try Quarto if you like, but there’s no need to switch.</li>
+<li>If you have a R Markdown file that includes custom tools, there is a chance that they might not yet in available in Quarto. If this is the case, you’re of course welcome to stick with R Markdown. As they say, if it ain’t broke, don’t fix it.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="advantages-of-quarto" class="slide level2 future" aria-hidden="true" style="display: none;">
+<h2>Advantages of Quarto</h2>
+<div class="columns"><div class="column" style="width:60%;">
+<div>
+<ul>
+<li class="fragment visible" data-fragment-index="0">No requirement for R</li>
+<li class="fragment visible" data-fragment-index="1">Fewer package dependencies</li>
+<li class="fragment visible" data-fragment-index="2">revealjs slides are easier to work with</li>
+<li class="fragment visible" data-fragment-index="3">Better cross referencing of figures, tables, and citations</li>
+<li class="fragment visible" data-fragment-index="4">Quarto extensions allow for easier customization</li>
+<li class="fragment visible" data-fragment-index="5">Quarto projects make it easier to customize websites and collaborate</li>
+<li class="fragment visible" data-fragment-index="6">The future</li>
+</ul>
+</div>
+</div><div class="column" style="width:40%;">
+<p><img class="drop" src="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/quarto.png" data-lazy-loaded=""></p>
+</div></div>
+<aside class="notes">
+<ul>
+<li>That said, there are a number of advantage to using Quarto, including:
+<ul>
+<li>No requirement for R (multilingual)
+<ul>
+<li>R, Python, Julia, Javascript</li>
+</ul></li>
+<li>More streamline and less R package dependencies
+<ul>
+<li>Use revealjs directly for pretty slides, rather than relying on R packages.</li>
+</ul></li>
+<li>Cross referencing tables and tables in the text is more straightforward, as is inserting and managing citations.</li>
+<li>A growing number of Quarto extensions add functionality
+<ul>
+<li>Allow you use customized templates and</li>
+</ul></li>
+<li>Quarto projects
+<ul>
+<li>Easier to create websites, books, collaborate on projects, etc.</li>
+</ul></li>
+<li>Most active development has moved from R Markdown to Quarto. It will only get better with time.</li>
+</ul></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section class="stack present" style="display: block;" data-previous-indexv="17">
+<section id="anatomy-of-a-quarto-file" class="title-slide slide level1 dark center past" style="top: 450px; display: none;" hidden="" aria-hidden="true">
+<h1>Anatomy of a Quarto file</h1>
+<ol type="1">
+<li>YAML (metadata)</li>
+<li>Text</li>
+<li>Code Chunks</li>
+</ol>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="anatomy-of-a-quarto-file-overview" class="slide level2 past" aria-hidden="true" hidden="" style="display: none;">
+<h2>Anatomy of a Quarto file: <span class="gray-bold">Overview</span></h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a></a><span class="co">---</span></span>
+<span id="cb1-2"><a></a><span class="an">title:</span><span class="co"> "My Really Cool FWS Scientific Report"</span></span>
+<span id="cb1-3"><a></a><span class="an">author:</span><span class="co"> FWS Biologist</span></span>
+<span id="cb1-4"><a></a><span class="an">editor:</span><span class="co"> source</span></span>
+<span id="cb1-5"><a></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb1-6"><a></a><span class="co">---</span></span>
+<span id="cb1-7"><a></a></span>
+<span id="cb1-8"><a></a>Some markdown content can go here. This could include inline code like <span class="in">`1+1`</span>. Alternative, you can add the code in a code chunk:</span>
+<span id="cb1-9"><a></a></span>
+<span id="cb1-10"><a></a><span class="in">```{r}</span></span>
+<span id="cb1-11"><a></a><span class="in">1 + 1</span></span>
+<span id="cb1-12"><a></a><span class="in">```</span></span>
+<span id="cb1-13"><a></a></span>
+<span id="cb1-14"><a></a>Some additional text.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="the-yaml-header" class="slide level2 past" aria-hidden="true" hidden="" style="display: none;">
+<h2>The YAML header</h2>
+<p><strong>Y</strong>et <strong>A</strong>nother <strong>M</strong>arkup <strong>L</strong>anguage = document metadata!</p>
+<div class="{columns}">
+<div class="column" style="width:50%;">
+<div class="fragment visible" data-fragment-index="0">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource yml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a></a><span class="pp">---</span></span>
+<span id="cb2-2"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Dynamic Reporting with Quarto"</span></span>
+<span id="cb2-3"><a></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"Jacob Cochran &amp; Jason Ross"</span></span>
+<span id="cb2-4"><a></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb2-5"><a></a><span class="at">  </span><span class="fu">revealjs</span><span class="kw">:</span></span>
+<span id="cb2-6"><a></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">default</span><span class="kw">,</span><span class="at"> refuge_light.scss</span><span class="kw">]</span></span>
+<span id="cb2-7"><a></a><span class="at">    </span><span class="fu">subtitle</span><span class="kw">:</span><span class="at"> </span><span class="st">"FWS Data Management Workshop"</span></span>
+<span id="cb2-8"><a></a><span class="at">    </span><span class="fu">height</span><span class="kw">:</span><span class="at"> </span><span class="dv">900</span></span>
+<span id="cb2-9"><a></a><span class="at">    </span><span class="fu">width</span><span class="kw">:</span><span class="at"> </span><span class="dv">1600</span></span>
+<span id="cb2-10"><a></a><span class="fu">editor</span><span class="kw">:</span><span class="at"> source</span></span>
+<span id="cb2-11"><a></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div><div class="column small" style="width:50%;">
+<ul>
+<li class="fragment visible" data-fragment-index="1">Starts and ends with “---”</li>
+<li class="fragment visible" data-fragment-index="2">Uses key-value pairs: <code>key: value</code>
+<ul>
+<li class="fragment visible" data-fragment-index="3"><em>Picky about spacing and indentations!</em></li>
+</ul></li>
+<li class="fragment visible" data-fragment-index="4">Processed during rendering</li>
+<li class="fragment visible" data-fragment-index="5">Including info about:
+<ul>
+<li class="fragment visible" data-fragment-index="6">Title, authors, date</li>
+<li class="fragment visible" data-fragment-index="7">File output(s) (e.g., <code>html</code>, <code>docx</code>)</li>
+<li class="fragment visible" data-fragment-index="8">Styling (e.g., <code>theme</code>, <code>fig-width</code>)</li>
+<li class="fragment visible" data-fragment-index="9">Parameters</li>
+</ul></li>
+</ul>
+</div></div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="yaml-options" class="slide level2 past" aria-hidden="true" hidden="" style="display: none;">
+<h2>YAML options</h2>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Not sure of your options? Use your friendly assistant!</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>Start a word and hit <kbd><code>tab</code></kbd> to complete or …</li>
+<li>Type <kbd><code>Ctrl+space</code></kbd> to see available options.</li>
+</ul>
+</div>
+</div>
+</div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="exercise-yaml-metadata" class="slide level2 exercise past" aria-hidden="true" hidden="" style="display: none;">
+<h2>Exercise: YAML metadata</h2>
+<div class="center-xy-container">
+<ol type="1">
+<li>First this</li>
+<li>Then this</li>
+<li>then this</li>
+<li>Finally this</li>
+</ol>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_03b79549" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-document-body-markdown" class="slide level2 past" aria-hidden="true" hidden="" style="display: none;">
+<h2>The document body: Markdown</h2>
+<p>Inline and Block elements</p>
+</section>
+<section id="inline-elements-text" class="slide level2 past" style="display: none;" hidden="" aria-hidden="true">
+<h2>Inline elements: <span class="gray-bold">Text</span></h2>
+<p><br>
+</p>
+<div class="columns"><div class="column" style="width:50%;">
+<h3 id="markdown">Markdown</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a></a>This is an example of how you could write  </span>
+<span id="cb3-2"><a></a>Markdown in a FWS report. You can make a  </span>
+<span id="cb3-3"><a></a>word *italicized* or **bold**. You can also  </span>
+<span id="cb3-4"><a></a>display code, such as <span class="in">`exp(10) + 1`</span>. You  </span>
+<span id="cb3-5"><a></a>can even ~~strikethrough~~ and make  </span>
+<span id="cb3-6"><a></a>something a superscript^1^.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<h3 id="output">Output</h3>
+<div class="small">
+<p>This is an example of how you could write Markdown in a FWS report. You can make a word <em>italicized</em> or <strong>bold</strong>. You can also display code, such as <code>exp(10) + 1</code>. You can even <del>strikethrough</del> and make something a superscript<sup>1</sup>.</p>
+</div>
+</div></div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="inline-elements-math" class="slide level2 past" style="display: none;" hidden="" aria-hidden="true">
+<h2>Inline elements: <span class="gray-bold">Math</span></h2>
+<p><br>
+</p>
+<div class="columns"><div class="column" style="width:50%;">
+<h3 id="markdown-1">Markdown</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a></a>The solution to $sqrt(x) = 26$ is $x = 676$ and  </span>
+<span id="cb4-2"><a></a>$\pi = 3.1415...$.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<h3 id="output-1">Output</h3>
+<div class="small">
+<p>The solution to <span class="math inline"><span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-1-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mi&gt;q&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;26&lt;/mn&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-1" style="width: 6.365em; display: inline-block;"><span style="display: inline-block; position: relative; width: 5.436em; height: 0px; font-size: 117%;"><span style="position: absolute; clip: rect(1.441em, 1005.39em, 2.579em, -999.999em); top: -2.252em; left: 0em;"><span class="mrow" id="MathJax-Span-2"><span class="mi" id="MathJax-Span-3" style="font-family: MathJax_Math-italic;">s</span><span class="mi" id="MathJax-Span-4" style="font-family: MathJax_Math-italic;">q<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.024em;"></span></span><span class="mi" id="MathJax-Span-5" style="font-family: MathJax_Math-italic;">r</span><span class="mi" id="MathJax-Span-6" style="font-family: MathJax_Math-italic;">t</span><span class="mo" id="MathJax-Span-7" style="font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-8" style="font-family: MathJax_Math-italic;">x</span><span class="mo" id="MathJax-Span-9" style="font-family: MathJax_Main;">)</span><span class="mo" id="MathJax-Span-10" style="font-family: MathJax_Main; padding-left: 0.28em;">=</span><span class="mn" id="MathJax-Span-11" style="font-family: MathJax_Main; padding-left: 0.28em;">26</span></span><span style="display: inline-block; width: 0px; height: 2.254em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.325em; border-left: 0px solid; width: 0px; height: 1.224em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>s</mi><mi>q</mi><mi>r</mi><mi>t</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>26</mn></math></span></span><script type="math/tex" id="MathJax-Element-1">sqrt(x) = 26</script></span> is <span class="math inline"><span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-2-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;676&lt;/mn&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-12" style="width: 3.996em; display: inline-block;"><span style="display: inline-block; position: relative; width: 3.415em; height: 0px; font-size: 117%;"><span style="position: absolute; clip: rect(1.511em, 1003.37em, 2.347em, -999.999em); top: -2.252em; left: 0em;"><span class="mrow" id="MathJax-Span-13"><span class="mi" id="MathJax-Span-14" style="font-family: MathJax_Math-italic;">x</span><span class="mo" id="MathJax-Span-15" style="font-family: MathJax_Main; padding-left: 0.28em;">=</span><span class="mn" id="MathJax-Span-16" style="font-family: MathJax_Main; padding-left: 0.28em;">676</span></span><span style="display: inline-block; width: 0px; height: 2.254em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.053em; border-left: 0px solid; width: 0px; height: 0.871em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>676</mn></math></span></span><script type="math/tex" id="MathJax-Element-2">x = 676</script></span> and <span class="math inline"><span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-3-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;&amp;#x03C0;&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;3.1415...&lt;/mn&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-17" style="width: 6.481em; display: inline-block;"><span style="display: inline-block; position: relative; width: 5.529em; height: 0px; font-size: 117%;"><span style="position: absolute; clip: rect(1.511em, 1005.46em, 2.347em, -999.999em); top: -2.252em; left: 0em;"><span class="mrow" id="MathJax-Span-18"><span class="mi" id="MathJax-Span-19" style="font-family: MathJax_Math-italic;">π<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.001em;"></span></span><span class="mo" id="MathJax-Span-20" style="font-family: MathJax_Main; padding-left: 0.28em;">=</span><span class="mn" id="MathJax-Span-21" style="font-family: MathJax_Main; padding-left: 0.28em;">3.1415...</span></span><span style="display: inline-block; width: 0px; height: 2.254em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.053em; border-left: 0px solid; width: 0px; height: 0.871em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>π</mi><mo>=</mo><mn>3.1415...</mn></math></span></span><script type="math/tex" id="MathJax-Element-3">\pi = 3.1415...</script></span>.</p>
+</div>
+</div></div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="inline-elements-hyperlinks-and-images" class="slide level2 past" style="display: none;" data-fragment="1" hidden="" aria-hidden="true">
+<h2>Inline elements: <span class="gray-bold">Hyperlinks and images</span></h2>
+<p><br>
+</p>
+<div class="columns"><div class="column" style="width:50%;">
+<h3 id="markdown-2">Markdown</h3>
+<div class="fragment visible" data-fragment-index="0">
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a></a>For more information on how to use Quarto,  </span>
+<span id="cb5-2"><a></a>check out the <span class="co">[</span><span class="ot">Quarto webpage</span><span class="co">](www.quarto.com)</span>.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>&nbsp;</p>
+<div class="fragment visible" data-fragment-index="1">
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a></a>Here's an image that is inline with  </span>
+<span id="cb6-2"><a></a>my text <span class="al">![icon](images/favicon.png)</span>.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<h3 id="output-2">Output</h3>
+<div class="fragment visible" data-fragment-index="0">
+<p>For more information on how to use Quarto,<br>
+check out the <a href="http://localhost:4903/materials/1-intro-to-quarto/www.quarto.com">Quarto webpage</a>.</p>
+</div>
+<p><br>
+</p>
+<div class="fragment visible" data-fragment-index="1">
+<p>Here’s an image that is inline with<br>
+my text <img class="center-inline" alt="icon" src="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/favicon.png" data-lazy-loaded="">.</p>
+</div>
+</div></div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="inline-elements-footnotes" class="slide level2 past" style="display: none;" hidden="" aria-hidden="true">
+<h2>Inline elements: <span class="gray-bold">Footnotes</span></h2>
+<div class="columns"><div class="column" style="width:50;">
+
+</div><div class="column" style="width:50;">
+
+</div></div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="block-elements" class="slide level2 past" style="display: none;" hidden="" aria-hidden="true">
+<h2>Block elements</h2>
+</section>
+<section id="block-elements-paragraphs" class="slide level2 past" style="display: none;" hidden="" aria-hidden="true">
+<h2>Block elements: <span class="gray-bold">Paragraphs</span></h2>
+</section>
+<section id="block-elements-headers" class="slide level2 past" style="display: none;" hidden="" aria-hidden="true">
+<h2>Block elements: <span class="gray-bold">Headers</span></h2>
+<p><br>
+</p>
+<table class="caption-top" style="width:81%;">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Markdown Syntax</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><pre><code># Header 1</code></pre></td>
+<td><h1 id="header-1" class="heading-output">Header 1</h1></td>
+</tr>
+<tr class="even">
+<td><pre><code>## Header 2</code></pre></td>
+<td><h2 id="header-2" class="heading-output">Header 2</h2></td>
+</tr>
+<tr class="odd">
+<td><pre><code>### Header 3</code></pre></td>
+<td><h3 id="header-3" class="heading-output">Header 3</h3></td>
+</tr>
+<tr class="even">
+<td><pre><code>#### Header 4</code></pre></td>
+<td><h4 id="header-4" class="heading-output">Header 4</h4></td>
+</tr>
+<tr class="odd">
+<td><pre><code>##### Header 5</code></pre></td>
+<td><h5 id="header-5" class="heading-output">Header 5</h5></td>
+</tr>
+<tr class="even">
+<td><pre><code>###### Header 6</code></pre></td>
+<td><h6 id="header-6" class="heading-output">Header 6</h6></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="block-elements-lists" class="slide level2 past" style="display: none;" data-fragment="1" hidden="" aria-hidden="true">
+<h2>Block elements: <span class="gray-bold">Lists</span></h2>
+<div class="columns"><div class="column" style="width:50%;">
+<h3 id="markdown-3">Markdown</h3>
+<div class="fragment visible" data-fragment-index="0">
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a></a>**Ordered List**</span>
+<span id="cb13-2"><a></a></span>
+<span id="cb13-3"><a></a><span class="ss">1. </span>This item first</span>
+<span id="cb13-4"><a></a><span class="ss">2. </span>Then this one</span>
+<span id="cb13-5"><a></a><span class="ss">3. </span>And finally this</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>&nbsp;</p>
+<div class="fragment visible" data-fragment-index="1">
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a></a>**Unordered List**</span>
+<span id="cb14-2"><a></a></span>
+<span id="cb14-3"><a></a><span class="ss">- </span>Kodiak Refuge</span>
+<span id="cb14-4"><a></a><span class="ss">- </span>Togiak Refuge</span>
+<span id="cb14-5"><a></a><span class="ss">- </span>Arctic Refuge</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<h3 id="output-3">Output</h3>
+<div class="small">
+<div class="fragment visible" data-fragment-index="0">
+<p><strong>Ordered List</strong></p>
+<ol type="1">
+<li>This item first</li>
+<li>Then this one</li>
+<li>And finally this</li>
+</ol>
+</div>
+<div class="fragment visible" data-fragment-index="1">
+<p><strong>Unordered List</strong></p>
+<ul>
+<li>Kodiak Refuge</li>
+<li>Togiak Refuge</li>
+<li>Arctic Refuge</li>
+</ul>
+</div>
+</div>
+</div></div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="block-elements-math" class="slide level2 past" style="display: block;" hidden="" aria-hidden="true">
+<h2>Block elements: <span class="gray-bold">Math</span></h2>
+<p><br>
+</p>
+<div class="columns"><div class="column" style="width:50%;">
+<h3 id="markdown-4">Markdown</h3>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a></a>The Cauchy-Schwarz Inequality</span>
+<span id="cb15-2"><a></a></span>
+<span id="cb15-3"><a></a>$$</span>
+<span id="cb15-4"><a></a>\left( \sum_{k=1}^n a_k b_k \right)^2 </span>
+<span id="cb15-5"><a></a>\leq </span>
+<span id="cb15-6"><a></a>\left( \sum_{k=1}^n a_k^2 \right) </span>
+<span id="cb15-7"><a></a>\left( \sum_{k=1}^n b_k^2 \right)</span>
+<span id="cb15-8"><a></a>$$</span>
+<span id="cb15-9"><a></a>is an upper bound on the inner product between  </span>
+<span id="cb15-10"><a></a>two vectors in an inner product space in terms  </span>
+<span id="cb15-11"><a></a>of the product of the vector norms.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<h3 id="output-4">Output</h3>
+<div class="small">
+<p>The Cauchy-Schwarz Inequality</p>
+<p><span class="math display"><span class="MathJax_Preview" style="color: inherit;"></span><div class="MathJax_Display" style="text-align: center;"><span class="MathJax" id="MathJax-Element-4-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;msup&gt;&lt;mrow&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;munderover&gt;&lt;mo&gt;&amp;#x2211;&lt;/mo&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/munderover&gt;&lt;msub&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;/msub&gt;&lt;msub&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;/msub&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;&lt;mo&gt;&amp;#x2264;&lt;/mo&gt;&lt;mrow&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;munderover&gt;&lt;mo&gt;&amp;#x2211;&lt;/mo&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/munderover&gt;&lt;msubsup&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msubsup&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;munderover&gt;&lt;mo&gt;&amp;#x2211;&lt;/mo&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/munderover&gt;&lt;msubsup&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msubsup&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/math&gt;" role="presentation" style="text-align: center; position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-22" style="width: 15.84em; display: inline-block;"><span style="display: inline-block; position: relative; width: 15.355em; height: 0px; font-size: 103%;"><span style="position: absolute; clip: rect(1.823em, 1015.11em, 5.404em, -999.997em); top: -3.941em; left: 0em;"><span class="mrow" id="MathJax-Span-23"><span class="msubsup" id="MathJax-Span-24"><span style="display: inline-block; position: relative; width: 5.464em; height: 0px;"><span style="position: absolute; clip: rect(2.066em, 1004.8em, 5.464em, -999.997em); top: -4.002em; left: 0em;"><span class="mrow" id="MathJax-Span-25"><span class="mo" id="MathJax-Span-26" style="vertical-align: 0em;"><span style="font-family: MathJax_Size4;">(</span></span><span class="munderover" id="MathJax-Span-27"><span style="display: inline-block; position: relative; width: 1.459em; height: 0px;"><span style="position: absolute; clip: rect(2.855em, 1001.4em, 4.615em, -999.997em); top: -4.002em; left: 0em;"><span class="mo" id="MathJax-Span-28" style="font-family: MathJax_Size2; vertical-align: 0em;">∑</span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span><span style="position: absolute; clip: rect(3.34em, 1001.22em, 4.311em, -999.997em); top: -2.91em; left: 0.064em;"><span class="texatom" id="MathJax-Span-29"><span class="mrow" id="MathJax-Span-30"><span class="mi" id="MathJax-Span-31" style="font-size: 70.7%; font-family: MathJax_Math-italic;">k</span><span class="mo" id="MathJax-Span-32" style="font-size: 70.7%; font-family: MathJax_Main;">=</span><span class="mn" id="MathJax-Span-33" style="font-size: 70.7%; font-family: MathJax_Main;">1</span></span></span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span><span style="position: absolute; clip: rect(3.401em, 1000.43em, 4.19em, -999.997em); top: -5.155em; left: 0.488em;"><span class="mi" id="MathJax-Span-34" style="font-size: 70.7%; font-family: MathJax_Math-italic;">n</span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span></span></span><span class="msubsup" id="MathJax-Span-35" style="padding-left: 0.185em;"><span style="display: inline-block; position: relative; width: 0.974em; height: 0px;"><span style="position: absolute; clip: rect(3.401em, 1000.49em, 4.19em, -999.997em); top: -4.002em; left: 0em;"><span class="mi" id="MathJax-Span-36" style="font-family: MathJax_Math-italic;">a</span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span><span style="position: absolute; top: -3.88em; left: 0.549em;"><span class="mi" id="MathJax-Span-37" style="font-size: 70.7%; font-family: MathJax_Math-italic;">k</span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span></span></span><span class="msubsup" id="MathJax-Span-38"><span style="display: inline-block; position: relative; width: 0.853em; height: 0px;"><span style="position: absolute; clip: rect(3.158em, 1000.43em, 4.19em, -999.997em); top: -4.002em; left: 0em;"><span class="mi" id="MathJax-Span-39" style="font-family: MathJax_Math-italic;">b</span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span><span style="position: absolute; top: -3.88em; left: 0.428em;"><span class="mi" id="MathJax-Span-40" style="font-size: 70.7%; font-family: MathJax_Math-italic;">k</span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span></span></span><span class="mo" id="MathJax-Span-41" style="vertical-align: 0em;"><span style="font-family: MathJax_Size4;">)</span></span></span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span><span style="position: absolute; top: -5.458em; left: 5.039em;"><span class="mn" id="MathJax-Span-42" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span></span></span><span class="mo" id="MathJax-Span-43" style="font-family: MathJax_Main; padding-left: 0.306em;">≤</span><span class="mrow" id="MathJax-Span-44" style="padding-left: 0.306em;"><span class="mo" id="MathJax-Span-45" style="vertical-align: 0em;"><span style="font-family: MathJax_Size4;">(</span></span><span class="munderover" id="MathJax-Span-46"><span style="display: inline-block; position: relative; width: 1.459em; height: 0px;"><span style="position: absolute; clip: rect(2.855em, 1001.4em, 4.615em, -999.997em); top: -4.002em; left: 0em;"><span class="mo" id="MathJax-Span-47" style="font-family: MathJax_Size2; vertical-align: 0em;">∑</span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span><span style="position: absolute; clip: rect(3.34em, 1001.22em, 4.311em, -999.997em); top: -2.91em; left: 0.064em;"><span class="texatom" id="MathJax-Span-48"><span class="mrow" id="MathJax-Span-49"><span class="mi" id="MathJax-Span-50" style="font-size: 70.7%; font-family: MathJax_Math-italic;">k</span><span class="mo" id="MathJax-Span-51" style="font-size: 70.7%; font-family: MathJax_Main;">=</span><span class="mn" id="MathJax-Span-52" style="font-size: 70.7%; font-family: MathJax_Main;">1</span></span></span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span><span style="position: absolute; clip: rect(3.401em, 1000.43em, 4.19em, -999.997em); top: -5.155em; left: 0.488em;"><span class="mi" id="MathJax-Span-53" style="font-size: 70.7%; font-family: MathJax_Math-italic;">n</span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span></span></span><span class="msubsup" id="MathJax-Span-54" style="padding-left: 0.185em;"><span style="display: inline-block; position: relative; width: 0.974em; height: 0px;"><span style="position: absolute; clip: rect(3.401em, 1000.49em, 4.19em, -999.997em); top: -4.002em; left: 0em;"><span class="mi" id="MathJax-Span-55" style="font-family: MathJax_Math-italic;">a</span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span><span style="position: absolute; clip: rect(3.34em, 1000.43em, 4.19em, -999.997em); top: -4.366em; left: 0.549em;"><span class="mn" id="MathJax-Span-56" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span><span style="position: absolute; clip: rect(3.34em, 1000.43em, 4.19em, -999.997em); top: -3.698em; left: 0.549em;"><span class="mi" id="MathJax-Span-57" style="font-size: 70.7%; font-family: MathJax_Math-italic;">k</span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span></span></span><span class="mo" id="MathJax-Span-58" style="vertical-align: 0em;"><span style="font-family: MathJax_Size4;">)</span></span></span><span class="mrow" id="MathJax-Span-59" style="padding-left: 0.185em;"><span class="mo" id="MathJax-Span-60" style="vertical-align: 0em;"><span style="font-family: MathJax_Size4;">(</span></span><span class="munderover" id="MathJax-Span-61"><span style="display: inline-block; position: relative; width: 1.459em; height: 0px;"><span style="position: absolute; clip: rect(2.855em, 1001.4em, 4.615em, -999.997em); top: -4.002em; left: 0em;"><span class="mo" id="MathJax-Span-62" style="font-family: MathJax_Size2; vertical-align: 0em;">∑</span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span><span style="position: absolute; clip: rect(3.34em, 1001.22em, 4.311em, -999.997em); top: -2.91em; left: 0.064em;"><span class="texatom" id="MathJax-Span-63"><span class="mrow" id="MathJax-Span-64"><span class="mi" id="MathJax-Span-65" style="font-size: 70.7%; font-family: MathJax_Math-italic;">k</span><span class="mo" id="MathJax-Span-66" style="font-size: 70.7%; font-family: MathJax_Main;">=</span><span class="mn" id="MathJax-Span-67" style="font-size: 70.7%; font-family: MathJax_Main;">1</span></span></span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span><span style="position: absolute; clip: rect(3.401em, 1000.43em, 4.19em, -999.997em); top: -5.155em; left: 0.488em;"><span class="mi" id="MathJax-Span-68" style="font-size: 70.7%; font-family: MathJax_Math-italic;">n</span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span></span></span><span class="msubsup" id="MathJax-Span-69" style="padding-left: 0.185em;"><span style="display: inline-block; position: relative; width: 0.853em; height: 0px;"><span style="position: absolute; clip: rect(3.158em, 1000.43em, 4.19em, -999.997em); top: -4.002em; left: 0em;"><span class="mi" id="MathJax-Span-70" style="font-family: MathJax_Math-italic;">b</span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span><span style="position: absolute; clip: rect(3.34em, 1000.43em, 4.19em, -999.997em); top: -4.366em; left: 0.428em;"><span class="mn" id="MathJax-Span-71" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span><span style="position: absolute; clip: rect(3.34em, 1000.43em, 4.19em, -999.997em); top: -3.698em; left: 0.428em;"><span class="mi" id="MathJax-Span-72" style="font-size: 70.7%; font-family: MathJax_Math-italic;">k</span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span></span></span><span class="mo" id="MathJax-Span-73" style="vertical-align: 0em;"><span style="font-family: MathJax_Size4;">)</span></span></span></span><span style="display: inline-block; width: 0px; height: 3.947em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -1.372em; border-left: 0px solid; width: 0px; height: 3.441em;"></span></span></nobr><span class="MJX_Assistive_MathML MJX_Assistive_MathML_Block" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><msup><mrow><mo>(</mo><munderover><mo>∑</mo><mrow class="MJX-TeXAtom-ORD"><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>a</mi><mi>k</mi></msub><msub><mi>b</mi><mi>k</mi></msub><mo>)</mo></mrow><mn>2</mn></msup><mo>≤</mo><mrow><mo>(</mo><munderover><mo>∑</mo><mrow class="MJX-TeXAtom-ORD"><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>a</mi><mi>k</mi><mn>2</mn></msubsup><mo>)</mo></mrow><mrow><mo>(</mo><munderover><mo>∑</mo><mrow class="MJX-TeXAtom-ORD"><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>b</mi><mi>k</mi><mn>2</mn></msubsup><mo>)</mo></mrow></math></span></span></div><script type="math/tex; mode=display" id="MathJax-Element-4">
+\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
+</script></span> is an upper bound on the inner product between two vectors in an inner product space in terms of the product of the vector norms.</p>
+</div>
+</div></div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="exercise-document-body" class="slide level2 exercise past" style="display: block;" hidden="" aria-hidden="true">
+<h2><i class="fa-solid fa-play" aria-label="play"></i> Exercise: Document body</h2>
+<div class="center-xy-container">
+<ol type="1">
+<li>First this</li>
+<li>Then this</li>
+<li>then this</li>
+<li>Finally this</li>
+</ol>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_f285f4f3" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">07</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+</section>
+<section id="code-chunks" class="slide level2 present" style="display: block;">
+<h2>Code chunks</h2>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="exercise-code-chunks" class="slide level2 exercise future" style="display: block;" hidden="" aria-hidden="true">
+<h2>Exercise: Code chunks</h2>
+<div class="center-xy-container">
+<ul>
+<li>Chunk Label:
+<ul>
+<li>Add “Plot” to the chunk label to help you differentiate from other chunks</li>
+</ul></li>
+<li>Figure Caption:
+<ul>
+<li>Add “Mean” to beginning of caption to read “Mean monthly Western………”</li>
+</ul></li>
+<li>Plot:
+<ul>
+<li>Add “+ theme_classic()” to end of ggplot script to clean up plot</li>
+</ul></li>
+<li>Chunk Options:
+<ul>
+<li>Change include option to false to remove it from report</li>
+</ul></li>
+</ul>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_a1093085" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+
+
+</section></section>
+    </div>
+  <div class="slide-menu-button"><a href="http://localhost:4903/materials/1-intro-to-quarto/slides.html#"><i class="fas fa-bars"></i></a></div><img src="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/fws_logo.png" class="slide-logo"><div class="footer footer-default" style="display: block;">
+<p><a href="http://localhost:4903/materials/1-intro-to-quarto/index.html" class="small">Dynamic Reporting with Quarto</a></p>
+</div><div class="backgrounds"><div class="slide-background quarto-title-block center past" data-background-hash="null20%, coverimages/plover_title.pngnullnullnullnullnull75% 50%, centernullnull" data-background-size="20%, cover" style="display: none;"><div class="slide-background-content" style="background-size: 20%, cover; background-position: 75% 50%, center center;"></div></div><div class="slide-background stack past" data-loaded="true" style="display: block;"><div class="slide-background-content"></div><div class="slide-background title-slide slide level1 dark center present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background slide level2 center future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background slide level2 center future" style="display: none;"><div class="slide-background-content"></div></div></div><div class="slide-background stack past" data-loaded="true" style="display: block;"><div class="slide-background-content"></div><div class="slide-background title-slide slide level1 dark center present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background slide level2 future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background slide level2 future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background slide level2 future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background slide level2 future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background slide level2 future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background slide level2 future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background slide level2 future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background slide level2 future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background slide level2 future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background slide level2 future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background slide level2 future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background slide level2 future" data-background-hash="nullcontainimages/plover_decision.pngnullnullnullnullnullnullnullnull" data-background-size="contain" style="display: none;"><div class="slide-background-content" style="background-size: contain;"></div></div><div class="slide-background slide level2 future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background slide level2 future" style="display: none;"><div class="slide-background-content"></div></div></div><div class="slide-background stack present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div><div class="slide-background title-slide slide level1 dark center past" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background slide level2 past" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background slide level2 past" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background slide level2 past" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background slide level2 exercise past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background slide level2 past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background slide level2 past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background slide level2 past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background slide level2 past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background slide level2 past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background slide level2 past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background slide level2 past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background slide level2 past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background slide level2 past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background slide level2 past" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background slide level2 exercise past" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background slide level2 present" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background slide level2 exercise future" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div></div></div><div class="slide-number" style="display: block;"><a href="http://localhost:4903/materials/1-intro-to-quarto/slides.html#/code-chunks">
+					<span class="slide-number-a">36</span>
+					</a></div><aside class="controls" data-controls-layout="edges" data-controls-back-arrows="faded" style="display: none;"><button class="navigate-left enabled" aria-label="previous slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-right enabled" aria-label="next slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-up enabled" aria-label="above slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-down enabled" aria-label="below slide"><div class="controls-arrow"></div></button></aside><div class="progress" style="display: block;"><span style="transform: scaleX(0.972222);"></span></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"></div><div class="aria-status" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">Code chunks </div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/reveal.js.download"></script>
+  <!-- reveal.js plugins -->
+  <script src="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/line-highlight.js.download"></script>
+  <script src="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/pdfexport.js.download"></script>
+  <script src="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/menu.js.download"></script>
+  <script src="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/quarto-menu.js.download"></script>
+  <script src="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/support.js.download"></script>
+  
+
+  <script src="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/notes.js.download"></script>
+  <script src="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/search.js.download"></script>
+  <script src="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/zoom.js.download"></script>
+  <script src="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/math.js.download"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1600,
+
+        height: 900,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script><div class="slide-menu-wrapper"><nav class="slide-menu slide-menu--left" style="font-family: Lato, sans-serif;"><ol class="slide-menu-toolbar"><li data-button="0" class="toolbar-panel-button active-toolbar-button" data-panel="Slides"><i class="fas fa-images"></i><br><span class="slide-menu-toolbar-label">Slides</span></li><li data-button="1" class="toolbar-panel-button" data-panel="Custom0"><i class="fas fa-gear"></i><br><span class="slide-menu-toolbar-label">Tools</span></li><li id="close" class="toolbar-panel-button"><i class="fas fa-times"></i><br><span class="slide-menu-toolbar-label">Close</span></li></ol><div data-panel="Slides" class="slide-menu-panel active-menu-panel"><ul class="slide-menu-items"><li class="slide-menu-item past" data-item="0" data-slide-h="0" data-slide-v="0"><span class="slide-menu-item-title">Dynamic Reporting  with Quarto</span></li><li class="slide-menu-item past" data-item="1" data-slide-h="1" data-slide-v="0"><span class="slide-menu-item-title">Overview</span></li><li class="slide-menu-item-vertical past" data-item="2" data-slide-h="1" data-slide-v="1"><span class="slide-menu-item-title">Course materials...</span></li><li class="slide-menu-item-vertical past" data-item="3" data-slide-h="1" data-slide-v="2"><span class="slide-menu-item-title">Outline</span></li><li class="slide-menu-item past" data-item="4" data-slide-h="2" data-slide-v="0"><span class="slide-menu-item-title">The powers of Quarto  </span></li><li class="slide-menu-item-vertical past" data-item="5" data-slide-h="2" data-slide-v="1"><span class="slide-menu-item-title">Outputs: Documents</span></li><li class="slide-menu-item-vertical past" data-item="6" data-slide-h="2" data-slide-v="2"><span class="slide-menu-item-title">Output: Websites</span></li><li class="slide-menu-item-vertical past" data-item="7" data-slide-h="2" data-slide-v="3"><span class="slide-menu-item-title">Outputs: Presentations</span></li><li class="slide-menu-item-vertical past" data-item="8" data-slide-h="2" data-slide-v="4"><span class="slide-menu-item-title">Outputs: Books</span></li><li class="slide-menu-item-vertical past" data-item="9" data-slide-h="2" data-slide-v="5"><span class="slide-menu-item-title">What is Quarto?</span></li><li class="slide-menu-item-vertical past" data-item="10" data-slide-h="2" data-slide-v="6"><span class="slide-menu-item-title">What is Quarto?</span></li><li class="slide-menu-item-vertical past" data-item="11" data-slide-h="2" data-slide-v="7"><span class="slide-menu-item-title">What is Quarto?</span></li><li class="slide-menu-item-vertical past" data-item="12" data-slide-h="2" data-slide-v="8"><span class="slide-menu-item-title">What is Quarto?</span></li><li class="slide-menu-item-vertical past" data-item="13" data-slide-h="2" data-slide-v="9"><span class="slide-menu-item-title">What is Quarto?</span></li><li class="slide-menu-item-vertical past" data-item="14" data-slide-h="2" data-slide-v="10"><span class="slide-menu-item-title">What is Quarto?</span></li><li class="slide-menu-item-vertical past" data-item="15" data-slide-h="2" data-slide-v="11"><span class="slide-menu-item-title">When to use Quarto?</span></li><li class="slide-menu-item-vertical past" data-item="16" data-slide-h="2" data-slide-v="12"><span class="slide-menu-item-title">You’re at a crossroads!...</span></li><li class="slide-menu-item-vertical past" data-item="17" data-slide-h="2" data-slide-v="13"><span class="slide-menu-item-title">Advantage of R Markdown</span></li><li class="slide-menu-item-vertical past" data-item="18" data-slide-h="2" data-slide-v="14"><span class="slide-menu-item-title">Advantages of Quarto</span></li><li class="slide-menu-item past" data-item="19" data-slide-h="3" data-slide-v="0"><span class="slide-menu-item-title">Anatomy of a Quarto file</span></li><li class="slide-menu-item-vertical past" data-item="20" data-slide-h="3" data-slide-v="1"><span class="slide-menu-item-title">Anatomy of a Quarto file: Overview</span></li><li class="slide-menu-item-vertical past" data-item="21" data-slide-h="3" data-slide-v="2"><span class="slide-menu-item-title">The YAML header</span></li><li class="slide-menu-item-vertical past" data-item="22" data-slide-h="3" data-slide-v="3"><span class="slide-menu-item-title">YAML options</span></li><li class="slide-menu-item-vertical past" data-item="23" data-slide-h="3" data-slide-v="4"><span class="slide-menu-item-title">Exercise: YAML metadata</span></li><li class="slide-menu-item-vertical past" data-item="24" data-slide-h="3" data-slide-v="5"><span class="slide-menu-item-title">The document body: Markdown</span></li><li class="slide-menu-item-vertical past" data-item="25" data-slide-h="3" data-slide-v="6"><span class="slide-menu-item-title">Inline elements: Text</span></li><li class="slide-menu-item-vertical past" data-item="26" data-slide-h="3" data-slide-v="7"><span class="slide-menu-item-title">Inline elements: Math</span></li><li class="slide-menu-item-vertical past" data-item="27" data-slide-h="3" data-slide-v="8"><span class="slide-menu-item-title">Inline elements: Hyperlinks and images</span></li><li class="slide-menu-item-vertical past" data-item="28" data-slide-h="3" data-slide-v="9"><span class="slide-menu-item-title">Inline elements: Footnotes</span></li><li class="slide-menu-item-vertical past" data-item="29" data-slide-h="3" data-slide-v="10"><span class="slide-menu-item-title">Block elements</span></li><li class="slide-menu-item-vertical past" data-item="30" data-slide-h="3" data-slide-v="11"><span class="slide-menu-item-title">Block elements: Paragraphs</span></li><li class="slide-menu-item-vertical past" data-item="31" data-slide-h="3" data-slide-v="12"><span class="slide-menu-item-title">Block elements: Headers</span></li><li class="slide-menu-item-vertical past" data-item="32" data-slide-h="3" data-slide-v="13"><span class="slide-menu-item-title">Block elements: Lists</span></li><li class="slide-menu-item-vertical past" data-item="33" data-slide-h="3" data-slide-v="14"><span class="slide-menu-item-title">Block elements: Math</span></li><li class="slide-menu-item-vertical past" data-item="34" data-slide-h="3" data-slide-v="15"><span class="slide-menu-item-title"> Exercise: Document body</span></li><li class="slide-menu-item-vertical active" data-item="35" data-slide-h="3" data-slide-v="16"><span class="slide-menu-item-title">Code chunks</span></li><li class="slide-menu-item-vertical future" data-item="36" data-slide-h="3" data-slide-v="17"><span class="slide-menu-item-title">Exercise: Code chunks</span></li></ul></div><div data-panel="Custom0" class="slide-menu-panel slide-menu-custom-panel"><ul class="slide-menu-items">
+<li class="slide-tool-item active" data-item="0"><a href="http://localhost:4903/materials/1-intro-to-quarto/slides.html#" onclick="RevealMenuToolHandlers.fullscreen(event)"><kbd>f</kbd> Fullscreen</a></li>
+<li class="slide-tool-item" data-item="1"><a href="http://localhost:4903/materials/1-intro-to-quarto/slides.html#" onclick="RevealMenuToolHandlers.speakerMode(event)"><kbd>s</kbd> Speaker View</a></li>
+<li class="slide-tool-item" data-item="2"><a href="http://localhost:4903/materials/1-intro-to-quarto/slides.html#" onclick="RevealMenuToolHandlers.overview(event)"><kbd>o</kbd> Slide Overview</a></li>
+<li class="slide-tool-item" data-item="3"><a href="http://localhost:4903/materials/1-intro-to-quarto/slides.html#" onclick="RevealMenuToolHandlers.togglePdfExport(event)"><kbd>e</kbd> PDF Export Mode</a></li>
+<li class="slide-tool-item" data-item="4"><a href="http://localhost:4903/materials/1-intro-to-quarto/slides.html#" onclick="RevealMenuToolHandlers.toggleScrollView(event)"><kbd>r</kbd> Scroll View Mode</a></li>
+<li class="slide-tool-item" data-item="5"><a href="http://localhost:4903/materials/1-intro-to-quarto/slides.html#" onclick="RevealMenuToolHandlers.keyboardHelp(event)"><kbd>?</kbd> Keyboard Help</a></li>
+</ul></div></nav><div class="slide-menu-overlay"></div></div>
+    
+
+    <script>
+
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
+      // slide changes (different for each slide format).
+
+      (function () {
+
+        // dispatch for htmlwidgets
+
+        function fireSlideEnter() {
+
+          const event = window.document.createEvent("Event");
+
+          event.initEvent("slideenter", true, true);
+
+          window.document.dispatchEvent(event);
+
+        }
+
+    
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          fireSlideEnter();
+
+    
+
+          // dispatch for shiny
+
+          if (window.jQuery) {
+
+            if (previousSlide) {
+
+              window.jQuery(previousSlide).trigger("hidden");
+
+            }
+
+            if (currentSlide) {
+
+              window.jQuery(currentSlide).trigger("shown");
+
+            }
+
+          }
+
+        }
+
+    
+
+        // hookup for slidy
+
+        if (window.w3c_slidy) {
+
+          window.w3c_slidy.add_observer(function (slide_num) {
+
+            // slide_num starts at position 1
+
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
+          });
+
+        }
+
+    
+
+      })();
+
+    </script>
+
+    
+
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+
+<script>window.backupDefine = window.define; window.define = undefined;</script>
+<script type="text/javascript" src="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/quarto-preview.js.download"></script>
+<script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+<script type="text/javascript">
+  const options = {
+    origin: "",
+    search: "",
+    inputFile: "C:\Users\mcobb\OneDrive - DOI\products\training\intro_to_quarto\materials\1-intro-to-quarto\slides.qmd",
+    isPresentation: false
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    window.QuartoPreview.init(options);
+  });
+</script>
+<div><div dir="ltr" class="fui-FluentProvider fui-FluentProviderr0 ___jdtuxv0 f19n0e5 fxugw4r f1o700av fk6fouc fkhj508 figsok6 f1i3iumi"></div></div><div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;"><div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; min-width: 0px; max-width: none; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-size-adjust: none; font-family: MathJax_Size4, sans-serif;"></div></div><iframe id="8n82eY9j" frameborder="0" src="./Dynamic Reporting with Quarto – Dynamic Reporting with Quarto_files/translateSandbox.html" style="width: 0px; height: 0px; display: none;"></iframe><i tabindex="0" role="none" data-tabster-dummy="" aria-hidden="true" style="position: fixed; height: 1px; width: 1px; opacity: 0.001; z-index: -1; content-visibility: hidden; top: 0px; left: 0px;"></i></body></html>

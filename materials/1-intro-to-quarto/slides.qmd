@@ -1,6 +1,13 @@
 ---
-title: "Dynamic Reporting <br> with Quarto"
-format: refuge-revealjs
+title: "Intro to Quarto"
+subtitle: "Overview"
+format: 
+  refuge-revealjs:
+    title-slide-attributes:
+      data-background-image: "images/plover_title.png"
+      data-background-size: 20%, cover
+      data-background-position: "75% 50%, center"
+    footer: "[Intro to Quarto](index.html){.small}"
 editor: source
 ---
 
@@ -9,12 +16,16 @@ editor: source
 library(countdown)
 ```
 
-# Overview {.dark}
 
 ## {.center}
 
 [Course materials can be found at:]{.large}  
 [https://github.com/USFWS/intro-to-quarto](https://github.com/USFWS/intro-to-quarto) [{{< fa brands github >}}](https://github.com/USFWS/intro-to-quarto).
+
+::: {.notes}
+
+:::
+
 
 ## Outline {.center}
 
@@ -24,123 +35,1132 @@ library(countdown)
   - Document body
   - Code blocks
 
-# The powers of Quarto <br> ![](images/super_quarto2.png){width=600} {.dark}
+::: {.notes}
 
-## Documents
-
-
-
-## Websites
-
-
-
-## Presentations
-
-
-
-## Books
-
-
-
-## When to use an automated report? 
-
-::: {.incremental}
-- If you have a document that you are generating frequently
-- If you have duplicated reports for multiple factors (species, watershed, state)
-:::
-
-# Anatomy of a Quarto file {.dark}
-
-
-
-## The YAML header
-
-## YAML options
-
-
-
-::: {.callout-tip}
-## Not sure of your options? Use your friendly assistant!
-- Start a word and hit <kbd>`tab`</kbd> to complete or ...
-- Type <kbd>`Ctrl+space`</kbd> to see available options.
 :::
 
 
-## YAML metadata: exercise {.exercise}
+# The powers of <br> ![](images/super_quarto.png){width=600 fig-alt="Superman holding a pencil with city buildings in the background and Quarto below him"} {.dark}
+
+::: {.notes}
+
+:::
+
+
+## Outputs: [Documents]{.gray-bold}
+
+::: {.center}
+{{< pdf images/example_report.pdf width=75% height=775 >}}
+:::
+
+::: {.notes}
+
+:::
+
+
+## Output: [Websites]{.gray-bold}
+
+```{=html}
+<iframe width="1600" height="800" src="https://usfws.github.io/Science_Applications_Metadata_Guidance/" title="USFWS Science Applications Metadata Guidance"></iframe>
+```
+
+::: {.notes}
+
+:::
+
+
+## Outputs: [Presentations]{.gray-bold}
+
+```{=html}
+<iframe width="1600" height="800" src="https://usfws.github.io/data-workflow-presentation/#/a-reproducible-data-workflow/" title="Presentation slides from a Reproducible Data Workflow presentation"></iframe>
+```
+
+::: {.notes}
+
+:::
+
+
+## Outputs: [Books]{.gray-bold}
+
+```{=html}
+<iframe width="1600" height="800" src="https://r4ds.hadley.nz/" title="R for Data Science ebook"></iframe>
+```
+
+::: {.notes}
+
+:::
+
+
+## Quarto and R Markdown
+
+:::{.fragment}
+![](images/render1.png){height=800 fig-alt="A diagram showing the process of rendering a document using R Markdown."}
+:::
+
+::: {.notes}
+- Quarto is an open-source scientific and technical publishing system built on Pandoc.
+- Instead of writing a report or presentation in Word, PowerPoint, etc.; then running code in an R script; then saving output and visualizations; and then pasting them in the report or the presentation
+- We can do it all in Quarto, a free system especially tailored to scientific and technical publishing. 
+- If you are familiar with R Markdown, you are probably familiar with this pipeline.
+- When you knit an R Markdown .rmd file, the R package knitr converts your text and R code into a Markdown file and then uses Pandoc to produce whatever output you’ve specified.
+:::
+
+
+## Quarto and R Markdown
+
+![](images/render2.png){height=800 fig-alt="A diagram showing the process of rendering a document using Quarto."}  
+
+::: {.notes}
+- A Quarto .qmd file on the other hand can be composed of text and R, Python, and/or Julia code. 
+:::
+
+## Quarto and R Markdown
+
+![](images/render3.png){height=800 fig-alt="A diagram showing the process of rendering a document using Quarto."}  
+
+::: {.notes}
+- Either the knitr or jupyter engines will then render your text and code into a Markdown file followed by Pandoc producing whatever output you’ve specified.
+Quarto accomplishes this by being fully separate from the R ecosystem. You can even run it from the command-line interface (i.e., the shell or terminal), if you want to. 
+:::
+
+
+## Quarto and R Markdown
+
+:::{.fragment}
+![](images/render4.png){height=800 fig-alt="A diagram showing the process of rendering a document using Quarto."}  
+:::
+
+::: {.notes}
+
+:::
+
+
+## Quarto and R Markdown
+
+![](images/render5.png){height=800 fig-alt="A diagram showing the process of rendering a document using Quarto."}  
+
+::: {.notes}
+
+:::
+
+
+## Quarto and R Markdown
+
+![](images/render6.png){height=800 fig-alt="A diagram showing the process of rendering a document using Quarto."}  
+
+::: {.notes}
+
+- Embedding code and output from Python, R, and JavaScript via integration with Jupyter, Knitr, and Observable.
+
+- A variety of extensions to Pandoc markdown useful for technical writing including cross-references, sub-figures, layout panels, hoverable citations and footnotes, callouts, and more.
+
+- A project system for rendering groups of documents at once, sharing options across documents, and producing aggregate output like websites and books.
+
+- Authoring using a wide variety of editors and notebooks including JupyterLab, RStudio, and VS Code.
+
+- A visual markdown editor that provides a productive writing interface for composing long-form documents.
+:::
+
+
+## When to use Quarto and R Markdown? 
+
+::: columns
+
+::: {.column width="40%"}
 
 \
 
-::: {.center}
+::: {.incremental}
+- Weave together text, plots, tables, and statistics
+- Frequently re-create a standardized document
+- Reproduce your analyses
+- Generate comparable reports across multiple parameters (species, watershed, state)
+:::
 
+:::
+
+::: {.column width="60%"}
+![](images/plover_thinking.png){height=800 fig-alt="An cartoon of a snowy plover thinking. There is a question mark above it's head."}
+:::
+
+:::
+
+::: {.notes}
+
+:::
+
+
+## {background-image="images/plover_decision.png" background-size=contain}
+
+::: {.notes}
+You're at a crossroads! How do you decide whether to move from R Markdown to Quarto?
+:::
+
+## Advantage of R Markdown
+
+::: {columns}
+
+::: {.column width="40%" .incremental}
+\
+
+- You have existing R Markdown code that works for you.
+- Many custom tools built around R Markdown that are not available (yet) in Quarto.
+:::
+
+::: {.column width="60%"}
+![](images/rmarkdown_packages.png){fig-align=center height=750 .drop}
+:::
+
+:::
+
+::: {.notes}
+- If you like using R Markdown, there’s no need to switch! R Markdown will continue to be supported and work as it always has been. You’re welcome to try Quarto if you like, but there’s no need to switch. 
+- If you have a R Markdown file that includes custom tools, there is a chance that they might not yet in available in Quarto. If this is the case, you're of course welcome to stick with R Markdown. As they say, if it ain't broke, don't fix it.
+:::
+
+
+## Advantages of Quarto
+
+::: columns
+
+::: {.column width="60%"}
+
+:::{.incremental}
+- No requirement for R
+- Fewer package dependencies
+- revealjs slides are easier to work with
+- Better cross referencing of figures, tables, and citations
+- Quarto extensions allow for easier customization
+- Quarto projects make it easier to customize websites and collaborate
+- The future
+:::
+
+:::
+
+::: {.column width="40%"}
+![](images/quarto.png){.drop}
+:::
+
+:::
+
+::: {.notes}
+- That said, there are a number of advantage to using Quarto, including:
+  - No requirement for R (multilingual)
+    - R, Python, Julia, Javascript
+  - More streamline and less R package dependencies
+    - Use revealjs directly for pretty slides, rather than relying on R packages.
+  - Cross referencing tables and tables in the text is more straightforward, as is inserting and managing citations.
+  - A growing number of Quarto extensions add functionality
+    - Allow you use customized templates and 
+  - Quarto projects
+    - Easier to create websites, books, collaborate on projects, etc.
+  - Most active development has moved from R Markdown to Quarto. It will only get better with time.
+:::
+
+
+## Three ways to render Quarto
+
+\
+
+::: columns
+
+::: {.column width="33%" .center}
+::: {.fragment fragment-index=1}
+### 1.  
+**RStudio GUI**
+![](images/quarto_render1.png){fig-alt="A screenshot of a Quarto document in RStudio. The Render button is circled in red"}
+:::
+:::
+
+::: {.column width="34%" .center}
+::: {.fragment fragment-index=2}
+### 2.   
+**Quarto command line interface (CLI)**
+![](images/quarto_render2.png){fig-alt="A screenshot of the command line terminal in RStudio. quarto render is typed in."}
+:::
+:::
+
+::: {.column width="33%" .center}
+::: {.fragment fragment-index=3}
+### 3. 
+**Quarto R package**
+
+::: {.small}
+```r
+quarto::quarto_render(input = ___, 
+                      output_format = ___)
+```
+:::
+
+:::
+:::
+
+:::
+
+::: {.notes}
+
+:::
+
+
+# Anatomy of a Quarto File {.dark}
+
+::: {.notes}
+
+:::
+
+
+## ![](images/quarto_example1.png)
+
+::: {.notes}
+
+:::
+
+
+## YAML header
+
+**Y**et **A**nother **M**arkup **L**anguage = document metadata!
+
+::: {columns}
+
+::: {.column width="50%"}
+
+::: {.fragment}
+```{yml}
+#| echo: TRUE
+#| eval: FALSE
+
+---
+title: "Dynamic Reporting with Quarto"
+author: "Jacob Cochran & Jason Ross"
+format: 
+  revealjs:
+    theme: [default, refuge_light.scss]
+    subtitle: "FWS Data Management Workshop"
+    height: 900
+    width: 1600
+editor: source
+---
+```
+:::
+
+:::
+
+::: {.column width="50%" .small .incremental}
+- Starts and ends with "\-\-\-"
+- Uses key-value pairs: `key: value`
+  - *Picky about spacing and indentations!*
+- Processed during rendering
+- Including options for:
+  - Title, authors, date
+  - File output(s) (e.g., `html`, `docx`)
+  - Styling (e.g., `theme`, `fig-width`)
+  - Parameters
+:::
+
+:::
+
+
+::: {.notes}
+
+:::
+
+
+## YAML header: [Options]{.gray-bold} 
+
+::: {.incremental}
+- Options are dependent on the file output (**many** options {{< fa face-flushed >}})  
+- Search Quarto guidance within your specified file format:
+
+::: {.fragment}
+```{=html}
+<iframe width="1600" height="500" src="https://quarto.org/docs/reference/formats/docx.html" title="Quarto HTML Options guidance"></iframe>
+```
+:::
+
+:::
+
+::: {.notes}
+
+:::
+
+
+## YAML header: [Options]{.gray-bold}
+
+::: columns
+
+::: {.column width="50%"}
+::: {.callout-tip}
+## Another option: Use your friendly assistant!
+- Start a word and hit <kbd>`tab`</kbd> to complete or ...
+- Type <kbd>`Ctrl+space`</kbd> to see available options.
+:::
+:::
+
+::: {.column width=50%"}
+
+[insert gif/screenshoot of autocompletion]
+
+:::
+
+:::
+
+::: {.notes}
+
+:::
+
+
+## Exercise: YAML metadata {.exercise}
+
+::: {.center-xy-container}
 1. First this
 2. Then this
 3. then this
 4. Finally this
-
 :::
 
 ```{r}
 countdown::countdown(10)
 ```
 
-## The document body: Markdown
+::: {.notes}
 
-Inline and Block elements
+:::
+
+
+## Text body: Markdown
+
+::: columns
+
+::: {.column width="50%"}
+![](images/markdown.png){height="90%"}
+:::
+
+::: {.column width="50%" .incremental}
+- Markdown is a markup language (e.g., HTML, teX, XML)
+  - Add syntax to the text to change it's look
+  - Mix text with markup instructions
+- Quarto uses Pandoc Markdown
+    - Inline or block elements
+:::
+
+:::
+
+::: {.notes}
+
+:::
+
+
+## Text body
+
+::: columns
+
+::: {.column width="50%"}
+### Inline elements
+
+- Individual words in a sentence
+- Images, links, equations, or code in a sentence
+:::
+
+::: {.column width="50%"}
+### Block elements 
+
+- Paragraphs or sections of a document
+- Standalone images, figures, or figures
+:::
+
+:::
+
+::: {.notes}
+
+:::
+
 
 ## Inline elements: [Text]{.gray-bold}
 
+\
+ 
+::: columns
+
+::: {.column width="50%"}
+
+### Markdown  
+
+```{.markdown}
+This is an example of how you could change    
+inline elements of text body Markdown in a FWS  
+report. You can make a word *italicized* or  
+**bold**. You can also display code, such as 
+`exp(10) + 1`. You can even ~~strikethrough~~  
+and make something a superscript^1^.
+```
+:::
+
+::: {.column width="50%"}
+
+### Output  
+::: {.fragment}
+::: {.small}
+This is an example of how you could change  
+inline elements of text body Markdown in a FWS 
+report. You can make a word *italicized* or  
+**bold**. You can also display code, such as  
+`exp(10) + 1`. You can even ~~strikethrough~~  
+and make something a superscript^1^.
+:::
+:::
+
+:::
+
+:::
+
+::: {.notes}
+
+:::
+
+
 ## Inline elements: [Math]{.gray-bold}
 
-## Inline elements: [Images and hyperlinks]{.gray-bold}
+\
+ 
+::: columns
 
-## Inline elements: [References]{.gray-bold}
+::: {.column width="50%"}
 
-## Inline elements: [Footnotes]{.gray-bold}
+### Markdown  
+```{.markdown}
+The solution to $sqrt(x) = 26$ is $x = 676$ and  
+$\pi = 3.1415...$.
+```
+:::
 
-## Block elements
+::: {.column width="50%"}
 
-## Block elements: [Paragraphs]{.gray-bold}
+### Output 
+::: {.fragment}
+::: {.small}
+The solution to $sqrt(x) = 26$ is $x = 676$ 
+and $\pi = 3.1415...$.
+:::
+:::
 
-## Block elements: [Headers]{.gray-bold} 
+:::
 
-## Block elements: [Lists]{.gray-bold}
+:::
 
-## Block elements: [Math]{.gray-bold}
+::: {.notes}
+
+:::
 
 
-## Document body: exercise {.exercise}
+## Inline elements: [Hyperlinks and images]{.gray-bold}
+
+\
+ 
+::: columns
+
+::: {.column width="50%"}
+### Markdown  
+  
+```markdown
+For more information on how to use Quarto,  
+check out the [Quarto webpage](www.quarto.com).
+```
+  
+\
+
+::: {.fragment fragment-index=2}
+```markdown
+Here's an image that is inline with  
+my text ![icon](images/favicon.png).
+```
+:::
+
+:::
+
+::: {.column width="50%"}
+### Output
+::: {.small}
+::: {.fragment fragment-index=1}
+For more information on how to use Quarto,  
+check out the [Quarto webpage](www.quarto.com).
+:::
 
 \
 
-::: {.center}
+::: {.fragment fragment-index=3}
+Here's an image that is inline with  
+my text ![icon](images/favicon.png){.center-inline}.
+:::
+:::
 
+:::
+
+:::
+
+::: {.notes}
+
+:::
+
+
+## Block elements: [Paragraphs]{.gray-bold}
+
+\ 
+
+::: columns
+:::{.column width="50%"}
+### Markdown
+
+```markdown
+Here's a paragraph. To seperate it from the next  
+paragraph, you need to add one or more empty lines.
+
+This is a new paragraph. You can format each  
+paragraph independently. A paragraph is an  
+examine  of a block element.
+```
+:::
+
+:::{.column width="50%"}
+### Output
+:::{.small}
+:::{.fragment}
+Here's a paragraph. To seperate it from the next paragraph,
+you need to add one or more empty lines.
+
+This is a new paragraph. You can format each paragraph independently. 
+A paragraph is an examine of a block element.
+:::
+:::
+
+:::
+
+:::
+
+::: {.notes}
+
+:::
+
+## Block elements: [Headers]{.gray-bold} 
+
+\
+
++---------------------+-----------------------------------+
+| Markdown Syntax     | Output                            |
++=====================+===================================+
+|     # Header 1      | # Header 1 {.heading-output}      |
++---------------------+-----------------------------------+
+|     ## Header 2     | ## Header 2 {.heading-output}     |
++---------------------+-----------------------------------+
+|     ### Header 3    | ### Header 3 {.heading-output}    |
++---------------------+-----------------------------------+
+|     #### Header 4   | #### Header 4 {.heading-output}   |
++---------------------+-----------------------------------+
+|     ##### Header 5  | ##### Header 5 {.heading-output}  |
++---------------------+-----------------------------------+
+|     ###### Header 6 | ###### Header 6 {.heading-output} |
++---------------------+-----------------------------------+
+
+
+## Block elements: [Lists]{.gray-bold}
+
+\
+
+::: columns
+
+::: {.column width="50%"}
+### Markdown 
+
+```{.markdown}
+**Ordered List**
+
+1. This item first
+2. Then this one
+3. And finally this
+```
+
+\ 
+
+::: {.fragment fragment-index=2}
+```{.markdown}
+**Unordered List**
+
+- Kodiak Refuge
+- Togiak Refuge
+- Arctic Refuge
+```
+:::
+
+:::
+
+::: {.column width="50%"}
+
+### Output
+
+::: {.small}
+::: {.fragment fragment-index=1}
+**Ordered List**
+
+1. This item first
+2. Then this one
+3. And finally this
+:::
+
+::: {.fragment fragment-index=3}
+**Unordered List**
+
+- Kodiak Refuge
+- Togiak Refuge
+- Arctic Refuge
+:::
+:::
+
+:::
+
+:::
+
+::: {.notes}
+
+:::
+
+
+## Block elements: [Math]{.gray-bold}
+
+\
+ 
+::: columns
+
+::: {.column width="50%"}
+
+### Markdown  
+```{.markdown}
+The Cauchy-Schwarz Inequality
+
+$$
+\left( \sum_{k=1}^n a_k b_k \right)^2 
+\leq 
+\left( \sum_{k=1}^n a_k^2 \right) 
+\left( \sum_{k=1}^n b_k^2 \right)
+$$
+is an upper bound on the inner product between  
+two vectors in an inner product space in terms  
+of the product of the vector norms.
+```
+:::
+
+::: {.column width="50%"}
+
+### Output  
+
+:::{.fragment}
+::: {.small}
+The Cauchy-Schwarz Inequality
+
+$$
+\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
+$$
+is an upper bound on the inner product between two vectors in an inner product space in terms of the product of the vector norms.
+:::
+:::
+
+:::
+
+:::
+
+::: {.notes}
+
+:::
+
+
+## Block elements: [Images]{.gray-bold}
+
+\
+
+::: columns
+
+::: {.column width="50%"}
+### Markdown
+```{.markdown}
+Here's a paragraph of text. We describe
+something of great importance. So great,
+in fact, that we need to also include an image. 
+
+![](images/bear_singing.png)
+
+Moving along, we will describe something else. 
+```
+:::
+
+::: {.column width="50%"}
+### Output
+::: {.small .fragment}
+Here's a paragraph of text. We describe  
+something of great importance. So great,  
+in fact, that we need to also include an image. 
+
+![](images/bear_singing.png){width="30%"}
+
+Moving along, we will describe something else. 
+:::
+:::
+
+:::
+
+::: {.notes}
+
+:::
+
+
+## {{< fa play >}} Exercise: Document body {.exercise}
+
+::: {.center-xy-container}
 1. First this
 2. Then this
 3. then this
 4. Finally this
-
 :::
 
 ```{r}
 countdown::countdown(7)
 ```
 
-## Code chunks
 
-## Code chunk: exercise {.exercise}
+## Code chunks: [Pandoc]{.gray-bold}
+
+::: columns
+
+::: {.column width="50%"}
+````markdown
+```language
+Some code here
+```
+````
+:::
+
+::: {.column width="50%"}
+:::{.small .incremental}
+- Code chunk surrounded by a "fence" of three backticks ` ``` `
+- Specifying the language allows for syntax highlighting.
+- Code is displayed but not executed
+:::
+:::
+
+:::
+
+::: {.notes}
+
+:::
+
+
+## Code chunks: [R Markdown]{.gray-bold} {auto-animate="true"}
+
+::: columns
+
+::: {.column width="50%"}
+    ```{{r, echo=FALSE}}
+    Some code here
+    ```
+:::
+
+::: {.column width="50%"}
+::: {.small}
+- Code chunk surrounded by a "fence" of three backticks ` ``` `  
+- Specifying the language allows for syntax highlighting.
+- ~~Code is displayed but not executed~~ Code executes unless you specify as an option -> brackets`{}`
+- Chunk options are a comma-seperated list (R syntax)
+:::
+:::
+
+:::
+
+::: {.notes}
+
+:::
+
+
+## Code chunks: [Quarto]{.gray-bold} {auto-animate="true"}
+
+::: columns
+
+::: {.column width="50%"}
+    ```{{language}}
+    #| echo: false
+    
+    Some code here
+    ```
+:::
+
+::: {.column width="50%"}
+::: {.small}
+- Code chunk surrounded by a "fence" of three backticks ` ``` `
+- Specifying the language allows for syntax highlighting.
+- ~~Code is displayed but not executed~~ Code executes unless you specify as an option -> brackets`{}`
+- ~~Chunk options are a comma-seperated list (R syntax)~~ Chunk options moved to a YAML in the cell after a hash pipe `#|`
+    + Wider language support
+    + Easier to read
+:::
+:::
+
+:::
+
+::: {.notes}
+
+:::
+
+
+## Code chunks: [Labels]{.gray-bold} {auto-animate="true"}
 
 \
 
-::: {.center}
+::: columns
 
-1. First this
-2. Then this
-3. then this
-4. Finally this
+::: {.column width="50%"}
+- Identifies code chunks
+    - Makes debugging easier
+    - Can reference code chunk outputs in the text
+:::
 
+::: {.column width="50%" .fragment}
+\
+
+```{{r}}
+label: summary-plot
+
+Some code to generate a plot...
+```
+:::
+
+:::
+
+\
+
+::: {.fragment}
+:::{.callout-tip title="Avoid using underscores (_) in labels and IDs."}
+This can cause problems when rendering to PDF with LaTeX. {{< fa face-smile-wink >}}
+:::
+:::
+
+::: {.notes}
+
+:::
+
+
+## Execution options: [Outputs]{.gray-bold}
+
+\
+
+::: {.small}
+| Option    | Description                                                                                                                                                                                       |
+|-----------|------------------------------------------------------------|
+| `eval`    | Evaluate the code chunk (if `false`, just echos the code into the output).                                                                                                                        |
+| `echo`    | Include the source code in output                                                                                                                                                                 |
+| `output`  | Include the results of executing the code in the output (`true`, `false`, or `asis` to indicate that the output is raw markdown and should not have any of Quarto's standard enclosing markdown).  |
+| `warning` | Include warnings in the output.                                                                                                                                                                   |
+| `error`   | Include errors in the output.                                                                                                                                                                     |
+| `include` | Catch all for preventing any output (code or results) from being included (e.g. `include: false` suppresses all output from the code block).                                                  |
+:::
+
+\
+
+:::{.fragment}
+::: {.callout-tip title="Tab Completion is your friend!"}
+
+:::
+:::
+
+
+## Execution options: [Figures]{.gray-bold} {auto-animate="true"}
+
+### Size
+
+::: {columns}
+
+::: {.column width="50%"}
+```{{r}}
+#| fig-width: 3
+#| fig-height: 2
+
+library(ggplot2)
+
+ggplot(iris, aes(x = Petal.Width, 
+                 y = Petal.Length)) +
+  geom_point() +
+  labs(x = "Petal width",
+       y = "Petal length")
+
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig-width: 3
+#| fig-height: 2
+
+library(ggplot2)
+
+ggplot(iris, aes(x = Petal.Width, 
+                 y = Petal.Length)) +
+  geom_point() +
+  labs(x = "Petal width",
+       y = "Petal length")
+
+```
+:::
+
+:::
+
+
+::: {.notes}
+
+:::
+
+
+
+## Execution options: [Figures]{.gray-bold} {auto-animate="true"}
+
+### Size
+
+::: {columns}
+
+::: {.column width="50%"}
+```{{r}}
+#| fig-width: 6
+#| fig-height: 6
+
+library(ggplot2)
+
+ggplot(iris, aes(x = Petal.Width, 
+                 y = Petal.Length)) +
+  geom_point() +
+  labs(x = "Petal width",
+       y = "Petal length")
+
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig-width: 6
+#| fig-height: 6
+
+library(ggplot2)
+
+ggplot(iris, aes(x = Petal.Width, 
+                 y = Petal.Length)) +
+  geom_point() +
+  labs(x = "Petal width",
+       y = "Petal length")
+
+```
+:::
+
+:::
+
+
+::: {.notes}
+
+:::
+
+
+## Execution options: [Figures]{.gray-bold} {auto-animate="true"}
+
+### Size
+
+::: {columns}
+
+::: {.column width="50%"}
+```{{r}}
+#| fig-width: 6
+#| fig-height: 6
+#| fig-cap: "This is my really neat plot."
+#| fig-alt: "This is my detailed description."
+
+library(ggplot2)
+
+ggplot(iris, aes(x = Petal.Width, 
+                 y = Petal.Length)) +
+  geom_point() +
+  labs(x = "Petal width",
+       y = "Petal length")
+
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig-width: 6
+#| fig-height: 6
+#| fig-cap: "This is my really neat plot."
+#| fig-alt: "This is my detailed description."
+
+library(ggplot2)
+
+ggplot(iris, aes(x = Petal.Width, 
+                 y = Petal.Length)) +
+  geom_point() +
+  labs(x = "Petal width",
+       y = "Petal length")
+
+```
+:::
+
+:::
+
+::: {.notes}
+
+:::
+
+
+## Execution options: [YAML]{.gray-bold} {auto-animate="true"}
+
+\
+
+::: columns
+
+::: {.column width="60%"}
+::: {.callout-tip title="Execution options at the document level in the YAML
+"}
+Avoids having to reapply options for each code chunk! {{< fa thumbs-up >}}
+:::
+:::
+
+::: {.column width="40%"}
+```yaml
+---
+title: "My FWS Report"
+author: Jane Biologist
+execute:
+  echo: false
+format:
+  html:
+    fig-width: 8
+    fig-height: 6
+---
+```
+:::
+
+:::
+
+:::{.notes}
+
+:::
+
+
+## Exercise: Code chunks {.exercise}
+
+::: {.center-xy-container}
+- Chunk Label: 
+  - Add "Plot" to the chunk label to help you differentiate from other chunks
+- Figure Caption: 
+  - Add "Mean" to beginning of caption to read "Mean monthly Western..."
+- Plot: 
+  - Add "+  theme_classic() " to end of ggplot script to clean up plot
+- Chunk Options: 
+  - Change include option to false to remove it from report 
 :::
 
 ```{r}
 countdown::countdown(10)
 ```
+
+## {.center background-image="images/plover_question.png" background-size="contain"}
 
