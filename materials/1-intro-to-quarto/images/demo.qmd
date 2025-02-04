@@ -1,0 +1,52 @@
+---
+title: "Alaska Moose Survey Results"
+author: "Jane Biologist"
+date: "`r Sys.Date()`"
+format: docx
+---
+
+# Introduction
+
+Togiak Wildlife Refuge conducts regular moose surveys to monitor population dynamics and inform management decisions. This report summarizes the findings from the most recent survey conducted during the fall of 2023.
+
+# Methods
+
+The survey employed an aerial to estimate moose abundance and distribution. A stratified sampling approach was utilized, focusing on high-density areas identified in previous studies. 
+
+```{r}
+#| echo: false
+#| message: false
+
+# Load necessary libraries
+library(dplyr)
+library(ggplot2)
+```
+
+```{r}
+
+# Summarizing moose counts by area
+summary_data <- moose_data %>%
+  group_by(area) %>%
+  summarise(mean_count = mean(count), sd_count = sd(count))
+```
+
+## Results
+
+The survey revealed significant findings regarding moose populations across different survey areas.
+
+```{r}
+ggplot(summary_data, aes(x = area, y = mean_count, fill = area)) +
+  geom_bar(stat = "identity") +
+  geom_errorbar(aes(ymin = mean_count - sd_count, ymax = mean_count + sd_count), width = 0.2) +
+  labs(title = "Mean Moose Count by Area", x = "Survey Area", y = "Mean Count") +
+  theme_minimal()
+```
+
+## Discussion
+
+The results indicate variation in moose counts across the survey areas. Area A shows a robust population, whereas Area B presents lower numbers, suggesting potential habitat or seasonal use differences. The data will inform management strategies to address any conservation needs.
+
+## Conclusion
+
+Continued monitoring of moose populations is crucial for effective management. Future surveys will aim to refine these methods and further investigate the factors influencing moose distribution and abundance.
+

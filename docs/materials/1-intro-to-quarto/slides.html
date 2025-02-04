@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en"><head>
+<link href="../../assets/images/favicon.png" rel="icon" type="image/png">
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-html/tabby.min.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-0626ff4d7a71b55c8707dcae1d04a9b6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-05fe91a66cf75bbbb8c9664867fe5124.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.39">
 
-  <title>Dynamic Reporting with Quarto – Dynamic Reporting   with Quarto</title>
+  <title>Dynamic Reporting with Quarto – Intro to Quarto</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -29,8 +30,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {  background-color: #f8f8f8; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ef2929; } /* Alert */
+    code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #204a87; } /* Attribute */
+    code span.bn { color: #0000cf; } /* BaseN */
+    code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4e9a06; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #8f5902; font-style: italic; } /* Comment */
+    code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+    code span.dt { color: #204a87; } /* DataType */
+    code span.dv { color: #0000cf; } /* DecVal */
+    code span.er { color: #a40000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #0000cf; } /* Float */
+    code span.fu { color: #204a87; font-weight: bold; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+    code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+    code span.ot { color: #8f5902; } /* Other */
+    code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+    code span.sc { color: #ce5c00; font-weight: bold; } /* SpecialChar */
+    code span.ss { color: #4e9a06; } /* SpecialString */
+    code span.st { color: #4e9a06; } /* String */
+    code span.va { color: #000000; } /* Variable */
+    code span.vs { color: #4e9a06; } /* VerbatimString */
+    code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-766f3545004b9928c4e76a4c14e429fe.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-efb699fc9be5e4f5c68041c8a15329b9.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -131,23 +195,31 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Dynamic Reporting <br> with Quarto</h1>
-  <p class="subtitle">FWS Data Management Workshop</p>
+<section id="title-slide" data-background-image="images/plover_title.png" data-background-position="75% 50%, center" data-background-size="20%, cover" class="quarto-title-block center">
+  <h1 class="title">Intro to Quarto</h1>
+  <p class="subtitle">Overview</p>
 
 <div class="quarto-title-authors">
 </div>
-
-</section>
-<section>
-<section id="overview" class="title-slide slide level1 dark center">
-<h1>Overview</h1>
 
 </section>
 <section id="section" class="slide level2 center">
 <h2></h2>
 <p><span class="large">Course materials can be found at:</span><br>
 <a href="https://github.com/USFWS/intro-to-quarto">https://github.com/USFWS/intro-to-quarto</a> <a href="https://github.com/USFWS/intro-to-quarto"><i class="fa-brands fa-github" aria-label="github"></i></a>.</p>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="outline" class="slide level2 center">
 <h2>Outline</h2>
@@ -160,50 +232,524 @@
 <li>Code blocks</li>
 </ul></li>
 </ul>
-</section></section>
-<section>
-<section id="the-powers-of-quarto" class="title-slide slide level1 dark center">
-<h1>The powers of Quarto <br> <img data-src="images/super_quarto2.png" width="600"></h1>
+<aside class="notes">
 
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="documents" class="slide level2">
-<h2>Documents</h2>
+<section>
+<section id="the-powers-of" class="title-slide slide level1 dark center">
+<h1>The powers of <br> <img data-src="images/super_quarto.png" alt="Superman holding a pencil with city buildings in the background and Quarto below him" width="600"></h1>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="websites" class="slide level2">
-<h2>Websites</h2>
+<section id="outputs-documents" class="slide level2">
+<h2>Outputs: <span class="gray-bold">Documents</span></h2>
+<div class="center">
+<p><object data="images/example_report.pdf" type="application/pdf" width="75%" height="775"><a href="images/example_report.pdf" download="">Download PDF file.</a></object></p>
+</div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="presentations" class="slide level2">
-<h2>Presentations</h2>
+<section id="output-websites" class="slide level2">
+<h2>Output: <span class="gray-bold">Websites</span></h2>
+<iframe width="1600" height="800" src="https://usfws.github.io/Science_Applications_Metadata_Guidance/" title="USFWS Science Applications Metadata Guidance"></iframe>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="books" class="slide level2">
-<h2>Books</h2>
+<section id="outputs-presentations" class="slide level2">
+<h2>Outputs: <span class="gray-bold">Presentations</span></h2>
+<iframe width="1600" height="800" src="https://usfws.github.io/data-workflow-presentation/#/a-reproducible-data-workflow/" title="Presentation slides from a Reproducible Data Workflow presentation"></iframe>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="when-to-use-an-automated-report" class="slide level2">
-<h2>When to use an automated report?</h2>
+<section id="outputs-books" class="slide level2">
+<h2>Outputs: <span class="gray-bold">Books</span></h2>
+<iframe width="1600" height="800" src="https://r4ds.hadley.nz/" title="R for Data Science ebook"></iframe>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="quarto-and-r-markdown" class="slide level2">
+<h2>Quarto and R Markdown</h2>
+<div class="fragment">
+<p><img data-src="images/render1.png" alt="A diagram showing the process of rendering a document using R Markdown." height="800"></p>
+</div>
+<aside class="notes">
+<ul>
+<li>Quarto is an open-source scientific and technical publishing system built on Pandoc.</li>
+<li>Instead of writing a report or presentation in Word, PowerPoint, etc.; then running code in an R script; then saving output and visualizations; and then pasting them in the report or the presentation</li>
+<li>We can do it all in Quarto, a free system especially tailored to scientific and technical publishing.</li>
+<li>If you are familiar with R Markdown, you are probably familiar with this pipeline.</li>
+<li>When you knit an R Markdown .rmd file, the R package knitr converts your text and R code into a Markdown file and then uses Pandoc to produce whatever output you’ve specified.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="quarto-and-r-markdown-1" class="slide level2">
+<h2>Quarto and R Markdown</h2>
+<p><img data-src="images/render2.png" alt="A diagram showing the process of rendering a document using Quarto." height="800"></p>
+<aside class="notes">
+<ul>
+<li>A Quarto .qmd file on the other hand can be composed of text and R, Python, and/or Julia code.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="quarto-and-r-markdown-2" class="slide level2">
+<h2>Quarto and R Markdown</h2>
+<p><img data-src="images/render3.png" alt="A diagram showing the process of rendering a document using Quarto." height="800"></p>
+<aside class="notes">
+<ul>
+<li>Either the knitr or jupyter engines will then render your text and code into a Markdown file followed by Pandoc producing whatever output you’ve specified. Quarto accomplishes this by being fully separate from the R ecosystem. You can even run it from the command-line interface (i.e., the shell or terminal), if you want to.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="quarto-and-r-markdown-3" class="slide level2">
+<h2>Quarto and R Markdown</h2>
+<div class="fragment">
+<p><img data-src="images/render4.png" alt="A diagram showing the process of rendering a document using Quarto." height="800"></p>
+</div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="quarto-and-r-markdown-4" class="slide level2">
+<h2>Quarto and R Markdown</h2>
+<p><img data-src="images/render5.png" alt="A diagram showing the process of rendering a document using Quarto." height="800"></p>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="quarto-and-r-markdown-5" class="slide level2">
+<h2>Quarto and R Markdown</h2>
+<p><img data-src="images/render6.png" alt="A diagram showing the process of rendering a document using Quarto." height="800"></p>
+<aside class="notes">
+<ul>
+<li><p>Embedding code and output from Python, R, and JavaScript via integration with Jupyter, Knitr, and Observable.</p></li>
+<li><p>A variety of extensions to Pandoc markdown useful for technical writing including cross-references, sub-figures, layout panels, hoverable citations and footnotes, callouts, and more.</p></li>
+<li><p>A project system for rendering groups of documents at once, sharing options across documents, and producing aggregate output like websites and books.</p></li>
+<li><p>Authoring using a wide variety of editors and notebooks including JupyterLab, RStudio, and VS Code.</p></li>
+<li><p>A visual markdown editor that provides a productive writing interface for composing long-form documents.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="when-to-use-quarto-and-r-markdown" class="slide level2">
+<h2>When to use Quarto and R Markdown?</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><br>
+</p>
 <div>
 <ul>
-<li class="fragment">If you have a document that you are generating frequently</li>
-<li class="fragment">If you have duplicated reports for multiple factors (species, watershed, state)</li>
+<li class="fragment">Weave together text, plots, tables, and statistics</li>
+<li class="fragment">Frequently re-create a standardized document</li>
+<li class="fragment">Reproduce your analyses</li>
+<li class="fragment">Generate comparable reports across multiple parameters (species, watershed, state)</li>
 </ul>
 </div>
+</div><div class="column" style="width:60%;">
+<p><img data-src="images/plover_thinking.png" alt="An cartoon of a snowy plover thinking. There is a question mark above it's head." height="800"></p>
+</div></div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-1" class="slide level2" data-background-image="images/plover_decision.png" data-background-size="contain">
+<h2></h2>
+<aside class="notes">
+<p>You’re at a crossroads! How do you decide whether to move from R Markdown to Quarto?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="advantage-of-r-markdown" class="slide level2">
+<h2>Advantage of R Markdown</h2>
+<div class="{columns}">
+<div class="column" style="width:40%;">
+<p><br>
+</p>
+<ul>
+<li class="fragment">You have existing R Markdown code that works for you.</li>
+<li class="fragment">Many custom tools built around R Markdown that are not available (yet) in Quarto.</li>
+</ul>
+</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/rmarkdown_packages.png" class="drop quarto-figure quarto-figure-center" height="750"></p>
+</figure>
+</div>
+</div></div>
+<aside class="notes">
+<ul>
+<li>If you like using R Markdown, there’s no need to switch! R Markdown will continue to be supported and work as it always has been. You’re welcome to try Quarto if you like, but there’s no need to switch.</li>
+<li>If you have a R Markdown file that includes custom tools, there is a chance that they might not yet in available in Quarto. If this is the case, you’re of course welcome to stick with R Markdown. As they say, if it ain’t broke, don’t fix it.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="advantages-of-quarto" class="slide level2">
+<h2>Advantages of Quarto</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div>
+<ul>
+<li class="fragment">No requirement for R</li>
+<li class="fragment">Fewer package dependencies</li>
+<li class="fragment">revealjs slides are easier to work with</li>
+<li class="fragment">Better cross referencing of figures, tables, and citations</li>
+<li class="fragment">Quarto extensions allow for easier customization</li>
+<li class="fragment">Quarto projects make it easier to customize websites and collaborate</li>
+<li class="fragment">The future</li>
+</ul>
+</div>
+</div><div class="column" style="width:40%;">
+<p><img data-src="images/quarto.png" class="drop"></p>
+</div></div>
+<aside class="notes">
+<ul>
+<li>That said, there are a number of advantage to using Quarto, including:
+<ul>
+<li>No requirement for R (multilingual)
+<ul>
+<li>R, Python, Julia, Javascript</li>
+</ul></li>
+<li>More streamline and less R package dependencies
+<ul>
+<li>Use revealjs directly for pretty slides, rather than relying on R packages.</li>
+</ul></li>
+<li>Cross referencing tables and tables in the text is more straightforward, as is inserting and managing citations.</li>
+<li>A growing number of Quarto extensions add functionality
+<ul>
+<li>Allow you use customized templates and</li>
+</ul></li>
+<li>Quarto projects
+<ul>
+<li>Easier to create websites, books, collaborate on projects, etc.</li>
+</ul></li>
+<li>Most active development has moved from R Markdown to Quarto. It will only get better with time.</li>
+</ul></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="three-ways-to-render-quarto" class="slide level2">
+<h2>Three ways to render Quarto</h2>
+<p><br>
+</p>
+<div class="columns">
+<div class="column center" style="width:33%;">
+<div class="fragment" data-fragment-index="1">
+<h3 id="section-2">1.</h3>
+<p><strong>RStudio GUI</strong> <img data-src="images/quarto_render1.png" alt="A screenshot of a Quarto document in RStudio. The Render button is circled in red"></p>
+</div>
+</div><div class="column center" style="width:34%;">
+<div class="fragment" data-fragment-index="2">
+<h3 id="section-3">2.</h3>
+<p><strong>Quarto command line interface (CLI)</strong> <img data-src="images/quarto_render2.png" alt="A screenshot of the command line terminal in RStudio. quarto render is typed in."></p>
+</div>
+</div><div class="column center" style="width:33%;">
+<div class="fragment" data-fragment-index="3">
+<h3 id="section-4">3.</h3>
+<p><strong>Quarto R package</strong></p>
+<div class="small">
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>quarto<span class="sc">::</span><span class="fu">quarto_render</span>(<span class="at">input =</span> ___, </span>
+<span id="cb1-2"><a></a>                      <span class="at">output_format =</span> ___)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div></div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section></section>
 <section>
 <section id="anatomy-of-a-quarto-file" class="title-slide slide level1 dark center">
-<h1>Anatomy of a Quarto file</h1>
+<h1>Anatomy of a Quarto File</h1>
+<aside class="notes">
 
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="the-yaml-header" class="slide level2">
-<h2>The YAML header</h2>
+<section id="section-5" class="slide level2">
+<h2><img data-src="images/quarto_example1.png"></h2>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="yaml-options" class="slide level2">
-<h2>YAML options</h2>
+<section id="yaml-header" class="slide level2">
+<h2>YAML header</h2>
+<p><strong>Y</strong>et <strong>A</strong>nother <strong>M</strong>arkup <strong>L</strong>anguage = document metadata!</p>
+<div class="{columns}">
+<div class="column" style="width:50%;">
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource yml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a></a><span class="pp">---</span></span>
+<span id="cb2-2"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Dynamic Reporting with Quarto"</span></span>
+<span id="cb2-3"><a></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"Jacob Cochran &amp; Jason Ross"</span></span>
+<span id="cb2-4"><a></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb2-5"><a></a><span class="at">  </span><span class="fu">revealjs</span><span class="kw">:</span></span>
+<span id="cb2-6"><a></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">default</span><span class="kw">,</span><span class="at"> refuge_light.scss</span><span class="kw">]</span></span>
+<span id="cb2-7"><a></a><span class="at">    </span><span class="fu">subtitle</span><span class="kw">:</span><span class="at"> </span><span class="st">"FWS Data Management Workshop"</span></span>
+<span id="cb2-8"><a></a><span class="at">    </span><span class="fu">height</span><span class="kw">:</span><span class="at"> </span><span class="dv">900</span></span>
+<span id="cb2-9"><a></a><span class="at">    </span><span class="fu">width</span><span class="kw">:</span><span class="at"> </span><span class="dv">1600</span></span>
+<span id="cb2-10"><a></a><span class="fu">editor</span><span class="kw">:</span><span class="at"> source</span></span>
+<span id="cb2-11"><a></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div><div class="column small" style="width:50%;">
+<ul>
+<li class="fragment">Starts and ends with “---”</li>
+<li class="fragment">Uses key-value pairs: <code>key: value</code>
+<ul>
+<li class="fragment"><em>Picky about spacing and indentations!</em></li>
+</ul></li>
+<li class="fragment">Processed during rendering</li>
+<li class="fragment">Including options for:
+<ul>
+<li class="fragment">Title, authors, date</li>
+<li class="fragment">File output(s) (e.g., <code>html</code>, <code>docx</code>)</li>
+<li class="fragment">Styling (e.g., <code>theme</code>, <code>fig-width</code>)</li>
+<li class="fragment">Parameters</li>
+</ul></li>
+</ul>
+</div></div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="yaml-header-options" class="slide level2">
+<h2>YAML header: <span class="gray-bold">Options</span></h2>
+<div>
+<ul>
+<li class="fragment">Options are dependent on the file output (<strong>many</strong> options <i class="fa-solid fa-face-flushed" aria-label="face-flushed"></i>)<br>
+</li>
+<li class="fragment">Search Quarto guidance within your specified file format:</li>
+</ul>
+<div class="fragment">
+<iframe width="1600" height="500" src="https://quarto.org/docs/reference/formats/docx.html" title="Quarto HTML Options guidance"></iframe>
+</div>
+</div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="yaml-header-options-1" class="slide level2">
+<h2>YAML header: <span class="gray-bold">Options</span></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Not sure of your options? Use your friendly assistant!</strong></p>
+<p><strong>Another option: Use your friendly assistant!</strong></p>
 </div>
 <div class="callout-content">
 <ul>
@@ -213,12 +759,26 @@
 </div>
 </div>
 </div>
+</div><div class="column" style="width:50%&quot;;">
+<p>[insert gif/screenshoot of autocompletion]</p>
+</div></div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="yaml-metadata-exercise" class="slide level2 exercise">
-<h2>YAML metadata: exercise</h2>
-<p><br>
-</p>
-<div class="center">
+<section id="exercise-yaml-metadata" class="slide level2 exercise">
+<h2>Exercise: YAML metadata</h2>
+<div class="center-xy-container">
 <ol type="1">
 <li>First this</li>
 <li>Then this</li>
@@ -228,52 +788,419 @@
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_ceb87677" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_f0fb37b8" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="the-document-body-markdown" class="slide level2">
-<h2>The document body: Markdown</h2>
-<p>Inline and Block elements</p>
+<section id="text-body-markdown" class="slide level2">
+<h2>Text body: Markdown</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="images/markdown.png" style="height:90.0%"></p>
+</div><div class="column" style="width:50%;">
+<ul>
+<li class="fragment">Markdown is a markup language (e.g., HTML, teX, XML)
+<ul>
+<li class="fragment">Add syntax to the text to change it’s look</li>
+<li class="fragment">Mix text with markup instructions</li>
+</ul></li>
+<li class="fragment">Quarto uses Pandoc Markdown
+<ul>
+<li class="fragment">Inline or block elements</li>
+</ul></li>
+</ul>
+</div></div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="text-body" class="slide level2">
+<h2>Text body</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="inline-elements">Inline elements</h3>
+<ul>
+<li>Individual words in a sentence</li>
+<li>Images, links, equations, or code in a sentence</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="block-elements">Block elements</h3>
+<ul>
+<li>Paragraphs or sections of a document</li>
+<li>Standalone images, figures, or figures</li>
+</ul>
+</div></div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="inline-elements-text" class="slide level2">
 <h2>Inline elements: <span class="gray-bold">Text</span></h2>
+<p><br>
+</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="markdown">Markdown</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a></a>This is an example of how you could change    </span>
+<span id="cb3-2"><a></a>inline elements of text body Markdown in a FWS  </span>
+<span id="cb3-3"><a></a>report. You can make a word *italicized* or  </span>
+<span id="cb3-4"><a></a>**bold**. You can also display code, such as </span>
+<span id="cb3-5"><a></a><span class="in">`exp(10) + 1`</span>. You can even ~~strikethrough~~  </span>
+<span id="cb3-6"><a></a>and make something a superscript^1^.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<h3 id="output">Output</h3>
+<div class="fragment">
+<div class="small">
+<p>This is an example of how you could change<br>
+inline elements of text body Markdown in a FWS report. You can make a word <em>italicized</em> or<br>
+<strong>bold</strong>. You can also display code, such as<br>
+<code>exp(10) + 1</code>. You can even <del>strikethrough</del><br>
+and make something a superscript<sup>1</sup>.</p>
+</div>
+</div>
+</div></div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="inline-elements-math" class="slide level2">
 <h2>Inline elements: <span class="gray-bold">Math</span></h2>
+<p><br>
+</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="markdown-1">Markdown</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a></a>The solution to $sqrt(x) = 26$ is $x = 676$ and  </span>
+<span id="cb4-2"><a></a>$\pi = 3.1415...$.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<h3 id="output-1">Output</h3>
+<div class="fragment">
+<div class="small">
+<p>The solution to <span class="math inline">\(sqrt(x) = 26\)</span> is <span class="math inline">\(x = 676\)</span> and <span class="math inline">\(\pi = 3.1415...\)</span>.</p>
+</div>
+</div>
+</div></div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="inline-elements-images-and-hyperlinks" class="slide level2">
-<h2>Inline elements: <span class="gray-bold">Images and hyperlinks</span></h2>
-</section>
-<section id="inline-elements-references" class="slide level2">
-<h2>Inline elements: <span class="gray-bold">References</span></h2>
-</section>
-<section id="inline-elements-footnotes" class="slide level2">
-<h2>Inline elements: <span class="gray-bold">Footnotes</span></h2>
-</section>
-<section id="block-elements" class="slide level2">
-<h2>Block elements</h2>
+<section id="inline-elements-hyperlinks-and-images" class="slide level2">
+<h2>Inline elements: <span class="gray-bold">Hyperlinks and images</span></h2>
+<p><br>
+</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="markdown-2">Markdown</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a></a>For more information on how to use Quarto,  </span>
+<span id="cb5-2"><a></a>check out the <span class="co">[</span><span class="ot">Quarto webpage</span><span class="co">](www.quarto.com)</span>.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br>
+</p>
+<div class="fragment" data-fragment-index="2">
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a></a>Here's an image that is inline with  </span>
+<span id="cb6-2"><a></a>my text <span class="al">![icon](images/favicon.png)</span>.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<h3 id="output-2">Output</h3>
+<div class="small">
+<div class="fragment" data-fragment-index="1">
+<p>For more information on how to use Quarto,<br>
+check out the <a href="www.quarto.com">Quarto webpage</a>.</p>
+</div>
+<p><br>
+</p>
+<div class="fragment" data-fragment-index="3">
+<p>Here’s an image that is inline with<br>
+my text <img data-src="images/favicon.png" class="center-inline" alt="icon">.</p>
+</div>
+</div>
+</div></div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="block-elements-paragraphs" class="slide level2">
 <h2>Block elements: <span class="gray-bold">Paragraphs</span></h2>
+<p>&nbsp;</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="markdown-3">Markdown</h3>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a></a>Here's a paragraph. To seperate it from the next  </span>
+<span id="cb7-2"><a></a>paragraph, you need to add one or more empty lines.</span>
+<span id="cb7-3"><a></a></span>
+<span id="cb7-4"><a></a>This is a new paragraph. You can format each  </span>
+<span id="cb7-5"><a></a>paragraph independently. A paragraph is an  </span>
+<span id="cb7-6"><a></a>examine  of a block element.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<h3 id="output-3">Output</h3>
+<div class="small">
+<div class="fragment">
+<p>Here’s a paragraph. To seperate it from the next paragraph, you need to add one or more empty lines.</p>
+<p>This is a new paragraph. You can format each paragraph independently. A paragraph is an examine of a block element.</p>
+</div>
+</div>
+</div></div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="block-elements-headers" class="slide level2">
 <h2>Block elements: <span class="gray-bold">Headers</span></h2>
+<p><br>
+</p>
+<table class="caption-top" style="width:81%;">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Markdown Syntax</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><pre><code># Header 1</code></pre></td>
+<td><h1 id="header-1" class="heading-output">Header 1</h1></td>
+</tr>
+<tr class="even">
+<td><pre><code>## Header 2</code></pre></td>
+<td><h2 id="header-2" class="heading-output">Header 2</h2></td>
+</tr>
+<tr class="odd">
+<td><pre><code>### Header 3</code></pre></td>
+<td><h3 id="header-3" class="heading-output">Header 3</h3></td>
+</tr>
+<tr class="even">
+<td><pre><code>#### Header 4</code></pre></td>
+<td><h4 id="header-4" class="heading-output">Header 4</h4></td>
+</tr>
+<tr class="odd">
+<td><pre><code>##### Header 5</code></pre></td>
+<td><h5 id="header-5" class="heading-output">Header 5</h5></td>
+</tr>
+<tr class="even">
+<td><pre><code>###### Header 6</code></pre></td>
+<td><h6 id="header-6" class="heading-output">Header 6</h6></td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="block-elements-lists" class="slide level2">
 <h2>Block elements: <span class="gray-bold">Lists</span></h2>
+<p><br>
+</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="markdown-4">Markdown</h3>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a></a>**Ordered List**</span>
+<span id="cb14-2"><a></a></span>
+<span id="cb14-3"><a></a><span class="ss">1. </span>This item first</span>
+<span id="cb14-4"><a></a><span class="ss">2. </span>Then this one</span>
+<span id="cb14-5"><a></a><span class="ss">3. </span>And finally this</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>&nbsp;</p>
+<div class="fragment" data-fragment-index="2">
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a></a>**Unordered List**</span>
+<span id="cb15-2"><a></a></span>
+<span id="cb15-3"><a></a><span class="ss">- </span>Kodiak Refuge</span>
+<span id="cb15-4"><a></a><span class="ss">- </span>Togiak Refuge</span>
+<span id="cb15-5"><a></a><span class="ss">- </span>Arctic Refuge</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<h3 id="output-4">Output</h3>
+<div class="small">
+<div class="fragment" data-fragment-index="1">
+<p><strong>Ordered List</strong></p>
+<ol type="1">
+<li>This item first</li>
+<li>Then this one</li>
+<li>And finally this</li>
+</ol>
+</div>
+<div class="fragment" data-fragment-index="3">
+<p><strong>Unordered List</strong></p>
+<ul>
+<li>Kodiak Refuge</li>
+<li>Togiak Refuge</li>
+<li>Arctic Refuge</li>
+</ul>
+</div>
+</div>
+</div></div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="block-elements-math" class="slide level2">
 <h2>Block elements: <span class="gray-bold">Math</span></h2>
-</section>
-<section id="document-body-exercise" class="slide level2 exercise">
-<h2>Document body: exercise</h2>
 <p><br>
 </p>
-<div class="center">
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="markdown-5">Markdown</h3>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a></a>The Cauchy-Schwarz Inequality</span>
+<span id="cb16-2"><a></a></span>
+<span id="cb16-3"><a></a>$$</span>
+<span id="cb16-4"><a></a>\left( \sum_{k=1}^n a_k b_k \right)^2 </span>
+<span id="cb16-5"><a></a>\leq </span>
+<span id="cb16-6"><a></a>\left( \sum_{k=1}^n a_k^2 \right) </span>
+<span id="cb16-7"><a></a>\left( \sum_{k=1}^n b_k^2 \right)</span>
+<span id="cb16-8"><a></a>$$</span>
+<span id="cb16-9"><a></a>is an upper bound on the inner product between  </span>
+<span id="cb16-10"><a></a>two vectors in an inner product space in terms  </span>
+<span id="cb16-11"><a></a>of the product of the vector norms.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<h3 id="output-5">Output</h3>
+<div class="fragment">
+<div class="small">
+<p>The Cauchy-Schwarz Inequality</p>
+<p><span class="math display">\[
+\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
+\]</span> is an upper bound on the inner product between two vectors in an inner product space in terms of the product of the vector norms.</p>
+</div>
+</div>
+</div></div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="block-elements-images" class="slide level2">
+<h2>Block elements: <span class="gray-bold">Images</span></h2>
+<p><br>
+</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="markdown-6">Markdown</h3>
+<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb17-1"><a></a>Here's a paragraph of text. We describe</span>
+<span id="cb17-2"><a></a>something of great importance. So great,</span>
+<span id="cb17-3"><a></a>in fact, that we need to also include an image. </span>
+<span id="cb17-4"><a></a></span>
+<span id="cb17-5"><a></a><span class="al">![](images/bear_singing.png)</span></span>
+<span id="cb17-6"><a></a></span>
+<span id="cb17-7"><a></a>Moving along, we will describe something else. </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<h3 id="output-6">Output</h3>
+<div class="small fragment">
+<p>Here’s a paragraph of text. We describe<br>
+something of great importance. So great,<br>
+in fact, that we need to also include an image.</p>
+<p><img data-src="images/bear_singing.png" style="width:30.0%"></p>
+<p>Moving along, we will describe something else.</p>
+</div>
+</div></div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="exercise-document-body" class="slide level2 exercise">
+<h2><i class="fa-solid fa-play" aria-label="play"></i> Exercise: Document body</h2>
+<div class="center-xy-container">
 <ol type="1">
 <li>First this</li>
 <li>Then this</li>
@@ -283,43 +1210,451 @@
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_e9f18991" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_a962b0bb" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">07</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
 </section>
-<section id="code-chunks" class="slide level2">
-<h2>Code chunks</h2>
+<section id="code-chunks-pandoc" class="slide level2">
+<h2>Code chunks: <span class="gray-bold">Pandoc</span></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb18-1"><a></a><span class="in">```language</span></span>
+<span id="cb18-2"><a></a><span class="in">Some code here</span></span>
+<span id="cb18-3"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<div class="small">
+<ul>
+<li class="fragment">Code chunk surrounded by a “fence” of three backticks <code>```</code></li>
+<li class="fragment">Specifying the language allows for syntax highlighting.</li>
+<li class="fragment">Code is displayed but not executed</li>
+</ul>
+</div>
+</div></div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="code-chunk-exercise" class="slide level2 exercise">
-<h2>Code chunk: exercise</h2>
+<section id="code-chunks-r-markdown" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Code chunks: <span class="gray-bold">R Markdown</span></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource markdown number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb19-1" class="hljs-ln-code"><a></a><span class="in">```{r, echo=FALSE}</span></span>
+<span id="cb19-2" class="hljs-ln-code"><a></a><span class="in">Some code here</span></span>
+<span id="cb19-3" class="hljs-ln-code"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<div class="small">
+<ul>
+<li>Code chunk surrounded by a “fence” of three backticks <code>```</code><br>
+</li>
+<li>Specifying the language allows for syntax highlighting.</li>
+<li><del>Code is displayed but not executed</del> Code executes unless you specify as an option -&gt; brackets<code>{}</code></li>
+<li>Chunk options are a comma-seperated list (R syntax)</li>
+</ul>
+</div>
+</div></div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="code-chunks-quarto" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Code chunks: <span class="gray-bold">Quarto</span></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource markdown number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb20-1" class="hljs-ln-code"><a></a><span class="in">```{language}</span></span>
+<span id="cb20-2" class="hljs-ln-code"><a></a><span class="in">#| echo: false</span></span>
+<span id="cb20-3" class="hljs-ln-code"><a></a></span>
+<span id="cb20-4" class="hljs-ln-code"><a></a><span class="in">Some code here</span></span>
+<span id="cb20-5" class="hljs-ln-code"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<div class="small">
+<ul>
+<li>Code chunk surrounded by a “fence” of three backticks <code>```</code></li>
+<li>Specifying the language allows for syntax highlighting.</li>
+<li><del>Code is displayed but not executed</del> Code executes unless you specify as an option -&gt; brackets<code>{}</code></li>
+<li><del>Chunk options are a comma-seperated list (R syntax)</del> Chunk options moved to a YAML in the cell after a hash pipe <code>#|</code>
+<ul>
+<li>Wider language support</li>
+<li>Easier to read</li>
+</ul></li>
+</ul>
+</div>
+</div></div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="code-chunks-labels" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Code chunks: <span class="gray-bold">Labels</span></h2>
 <p><br>
 </p>
-<div class="center">
-<ol type="1">
-<li>First this</li>
-<li>Then this</li>
-<li>then this</li>
-<li>Finally this</li>
-</ol>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Identifies code chunks
+<ul>
+<li>Makes debugging easier</li>
+<li>Can reference code chunk outputs in the text</li>
+</ul></li>
+</ul>
+</div><div class="column fragment" style="width:50%;">
+<p><br>
+</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource markdown number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb21-1" class="hljs-ln-code"><a></a><span class="in">```{r}</span></span>
+<span id="cb21-2" class="hljs-ln-code"><a></a><span class="in">label: summary-plot</span></span>
+<span id="cb21-3" class="hljs-ln-code"><a></a></span>
+<span id="cb21-4" class="hljs-ln-code"><a></a><span class="in">Some code to generate a plot...</span></span>
+<span id="cb21-5" class="hljs-ln-code"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+<p><br>
+</p>
+<div class="fragment">
+<div title="Avoid using underscores (_) in labels and IDs.">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Avoid using underscores (_) in labels and IDs.</strong></p>
+</div>
+<div class="callout-content">
+<p>This can cause problems when rendering to PDF with LaTeX. <i class="fa-solid fa-face-smile-wink" aria-label="face-smile-wink"></i></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="execution-options-outputs" class="slide level2">
+<h2>Execution options: <span class="gray-bold">Outputs</span></h2>
+<p><br>
+</p>
+<div class="small">
+<table class="caption-top">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 84%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>eval</code></td>
+<td>Evaluate the code chunk (if <code>false</code>, just echos the code into the output).</td>
+</tr>
+<tr class="even">
+<td><code>echo</code></td>
+<td>Include the source code in output</td>
+</tr>
+<tr class="odd">
+<td><code>output</code></td>
+<td>Include the results of executing the code in the output (<code>true</code>, <code>false</code>, or <code>asis</code> to indicate that the output is raw markdown and should not have any of Quarto’s standard enclosing markdown).</td>
+</tr>
+<tr class="even">
+<td><code>warning</code></td>
+<td>Include warnings in the output.</td>
+</tr>
+<tr class="odd">
+<td><code>error</code></td>
+<td>Include errors in the output.</td>
+</tr>
+<tr class="even">
+<td><code>include</code></td>
+<td>Catch all for preventing any output (code or results) from being included (e.g.&nbsp;<code>include: false</code> suppresses all output from the code block).</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><br>
+</p>
+<div class="fragment">
+<div title="Tab Completion is your friend!">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tab Completion is your friend!</strong></p>
+</div>
+<div class="callout-content">
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="execution-options-figures" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Execution options: <span class="gray-bold">Figures</span></h2>
+<h3 id="size">Size</h3>
+<div class="{columns}">
+<div class="column" style="width:50%;">
+<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource markdown number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb22-1" class="hljs-ln-code"><a></a><span class="in">```{r}</span></span>
+<span id="cb22-2" class="hljs-ln-code"><a></a><span class="in">#| fig-width: 3</span></span>
+<span id="cb22-3" class="hljs-ln-code"><a></a><span class="in">#| fig-height: 2</span></span>
+<span id="cb22-4" class="hljs-ln-code"><a></a></span>
+<span id="cb22-5" class="hljs-ln-code"><a></a><span class="in">library(ggplot2)</span></span>
+<span id="cb22-6" class="hljs-ln-code"><a></a></span>
+<span id="cb22-7" class="hljs-ln-code"><a></a><span class="in">ggplot(iris, aes(x = Petal.Width, </span></span>
+<span id="cb22-8" class="hljs-ln-code"><a></a><span class="in">                 y = Petal.Length)) +</span></span>
+<span id="cb22-9" class="hljs-ln-code"><a></a><span class="in">  geom_point() +</span></span>
+<span id="cb22-10" class="hljs-ln-code"><a></a><span class="in">  labs(x = "Petal width",</span></span>
+<span id="cb22-11" class="hljs-ln-code"><a></a><span class="in">       y = "Petal length")</span></span>
+<span id="cb22-12" class="hljs-ln-code"><a></a></span>
+<span id="cb22-13" class="hljs-ln-code"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="slides_files/figure-revealjs/unnamed-chunk-5-1.png" width="288"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="execution-options-figures-1" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Execution options: <span class="gray-bold">Figures</span></h2>
+<h3 id="size-1">Size</h3>
+<div class="{columns}">
+<div class="column" style="width:50%;">
+<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource markdown number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb23-1" class="hljs-ln-code"><a></a><span class="in">```{r}</span></span>
+<span id="cb23-2" class="hljs-ln-code"><a></a><span class="in">#| fig-width: 6</span></span>
+<span id="cb23-3" class="hljs-ln-code"><a></a><span class="in">#| fig-height: 6</span></span>
+<span id="cb23-4" class="hljs-ln-code"><a></a></span>
+<span id="cb23-5" class="hljs-ln-code"><a></a><span class="in">library(ggplot2)</span></span>
+<span id="cb23-6" class="hljs-ln-code"><a></a></span>
+<span id="cb23-7" class="hljs-ln-code"><a></a><span class="in">ggplot(iris, aes(x = Petal.Width, </span></span>
+<span id="cb23-8" class="hljs-ln-code"><a></a><span class="in">                 y = Petal.Length)) +</span></span>
+<span id="cb23-9" class="hljs-ln-code"><a></a><span class="in">  geom_point() +</span></span>
+<span id="cb23-10" class="hljs-ln-code"><a></a><span class="in">  labs(x = "Petal width",</span></span>
+<span id="cb23-11" class="hljs-ln-code"><a></a><span class="in">       y = "Petal length")</span></span>
+<span id="cb23-12" class="hljs-ln-code"><a></a></span>
+<span id="cb23-13" class="hljs-ln-code"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="slides_files/figure-revealjs/unnamed-chunk-6-1.png" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="execution-options-figures-2" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Execution options: <span class="gray-bold">Figures</span></h2>
+<h3 id="size-2">Size</h3>
+<div class="{columns}">
+<div class="column" style="width:50%;">
+<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource markdown number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb24-1" class="hljs-ln-code"><a></a><span class="in">```{r}</span></span>
+<span id="cb24-2" class="hljs-ln-code"><a></a><span class="in">#| fig-width: 6</span></span>
+<span id="cb24-3" class="hljs-ln-code"><a></a><span class="in">#| fig-height: 6</span></span>
+<span id="cb24-4" class="hljs-ln-code"><a></a><span class="in">#| fig-cap: "This is my really neat plot."</span></span>
+<span id="cb24-5" class="hljs-ln-code"><a></a><span class="in">#| fig-alt: "This is my detailed description."</span></span>
+<span id="cb24-6" class="hljs-ln-code"><a></a></span>
+<span id="cb24-7" class="hljs-ln-code"><a></a><span class="in">library(ggplot2)</span></span>
+<span id="cb24-8" class="hljs-ln-code"><a></a></span>
+<span id="cb24-9" class="hljs-ln-code"><a></a><span class="in">ggplot(iris, aes(x = Petal.Width, </span></span>
+<span id="cb24-10" class="hljs-ln-code"><a></a><span class="in">                 y = Petal.Length)) +</span></span>
+<span id="cb24-11" class="hljs-ln-code"><a></a><span class="in">  geom_point() +</span></span>
+<span id="cb24-12" class="hljs-ln-code"><a></a><span class="in">  labs(x = "Petal width",</span></span>
+<span id="cb24-13" class="hljs-ln-code"><a></a><span class="in">       y = "Petal length")</span></span>
+<span id="cb24-14" class="hljs-ln-code"><a></a></span>
+<span id="cb24-15" class="hljs-ln-code"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="slides_files/figure-revealjs/unnamed-chunk-7-1.png" alt="This is my detailed description." width="576"></p>
+<figcaption>This is my really neat plot.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="execution-options-yaml" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Execution options: <span class="gray-bold">YAML</span></h2>
+<p><br>
+</p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div title="Execution options at the document level in the YAML ">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Execution options at the document level in the YAML</strong></p>
+</div>
+<div class="callout-content">
+<p>Avoids having to reapply options for each code chunk! <i class="fa-solid fa-thumbs-up" aria-label="thumbs-up"></i></p>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:40%;">
+<div class="sourceCode" id="cb25"><pre class="sourceCode numberSource yaml number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode yaml hljs"><span id="cb25-1" class="hljs-ln-code"><a></a><span class="pp">---</span></span>
+<span id="cb25-2" class="hljs-ln-code"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My FWS Report"</span></span>
+<span id="cb25-3" class="hljs-ln-code"><a></a><span class="fu">author</span><span class="kw">:</span><span class="at"> Jane Biologist</span></span>
+<span id="cb25-4" class="hljs-ln-code"><a></a><span class="fu">execute</span><span class="kw">:</span></span>
+<span id="cb25-5" class="hljs-ln-code"><a></a><span class="at">  </span><span class="fu">echo</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb25-6" class="hljs-ln-code"><a></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb25-7" class="hljs-ln-code"><a></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb25-8" class="hljs-ln-code"><a></a><span class="at">    </span><span class="fu">fig-width</span><span class="kw">:</span><span class="at"> </span><span class="dv">8</span></span>
+<span id="cb25-9" class="hljs-ln-code"><a></a><span class="at">    </span><span class="fu">fig-height</span><span class="kw">:</span><span class="at"> </span><span class="dv">6</span></span>
+<span id="cb25-10" class="hljs-ln-code"><a></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="exercise-code-chunks" class="slide level2 exercise">
+<h2>Exercise: Code chunks</h2>
+<div class="center-xy-container">
+<ul>
+<li>Chunk Label:
+<ul>
+<li>Add “Plot” to the chunk label to help you differentiate from other chunks</li>
+</ul></li>
+<li>Figure Caption:
+<ul>
+<li>Add “Mean” to beginning of caption to read “Mean monthly Western…”</li>
+</ul></li>
+<li>Plot:
+<ul>
+<li>Add “+ theme_classic()” to end of ggplot script to clean up plot</li>
+</ul></li>
+<li>Chunk Options:
+<ul>
+<li>Change include option to false to remove it from report</li>
+</ul></li>
+</ul>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_886521b5" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_82625ff3" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
+</section>
+<section id="section-6" class="slide level2 center" data-background-image="images/plover_question.png" data-background-size="contain">
+<h2></h2>
 
 
 </section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="../../_extensions/USFWS/refuge/fws_logo.png" class="slide-logo"></p>
 <div class="footer footer-default">
-
+<p><a href="index.html" class="small">Intro to Quarto</a></p>
 </div>
 </div></div>
 
@@ -791,30 +2126,6 @@
         }
       }
     });
-    </script>
-    <script type="text/javascript">
-      window.addEventListener('load', function() {
-        var logo = document.querySelector('.slide-logo');
-        var url = 'https://stat20.org';
-        logo.addEventListener('click', function() {
-          window.open(url, '_blank');
-        });
-      });
-      Reveal.on('ready', event => {
-        if (event.indexh === 0) {
-          document.querySelector("div.has-logo > img.slide-logo").style.display = "none";
-        }
-      });
-      Reveal.addEventListener('slidechanged', (event) => {
-        if (event.indexh === 0) {
-          Reveal.configure({ slideNumber: null });
-          document.querySelector("div.has-logo > img.slide-logo").style.display = "none";
-        }
-        if (event.indexh === 1) { 
-          Reveal.configure({ slideNumber: 'c' });
-          document.querySelector("div.has-logo > img.slide-logo").style.display = null;
-        }
-      });
     </script>
     
 

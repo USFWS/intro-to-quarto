@@ -57,7 +57,7 @@ update.packages(oldPkgs = required_packages)
 - Download the exercise materials:
 
 ``` r
-usethis::use_course("https://github.com/USFWS/intro-quarto-exercises/archive/refs/heads/master.zip")
+usethis::use_course("https://github.com/USFWS/intro-quarto-exercises/archive/refs/heads/main.zip")
 ```
 
 ## Outline
