@@ -4,7 +4,7 @@ sidebar: false
 ---
 
 - [Location:]{.smallcaps} Virtual
-- [Time:]{.smallcaps} X - X pm, February 11^th^
+- [Time:]{.smallcaps} TBD
 
 
 ## Teaching Team
