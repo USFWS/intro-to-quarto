@@ -198,7 +198,7 @@ You're at a crossroads! How do you decide whether to move from R Markdown to Qua
 
 ## Advantage of R Markdown
 
-::: {columns}
+::: columns
 
 ::: {.column width="40%" .incremental}
 \
@@ -320,7 +320,7 @@ quarto::quarto_render(input = ___,
 
 **Y**et **A**nother **M**arkup **L**anguage = document metadata!
 
-::: {columns}
+::: columns
 
 ::: {.column width="50%"}
 
@@ -398,8 +398,7 @@ editor: source
 
 ::: {.column width=50%"}
 
-[insert gif/screenshoot of autocompletion]
-
+![](images/yml_assistant.png){fig-alt="A screenshot of a yaml for a quarto document in RStudio showing the drop-down menu with options available."}
 :::
 
 :::
@@ -972,7 +971,7 @@ This can cause problems when rendering to PDF with LaTeX. {{< fa face-smile-wink
 
 ### Size
 
-::: {columns}
+::: columns
 
 ::: {.column width="50%"}
 ```{{r}}
@@ -1019,7 +1018,7 @@ ggplot(iris, aes(x = Petal.Width,
 
 ### Size
 
-::: {columns}
+::: columns
 
 ::: {.column width="50%"}
 ```{{r}}
@@ -1065,7 +1064,7 @@ ggplot(iris, aes(x = Petal.Width,
 
 ### Size
 
-::: {columns}
+::: columns
 
 ::: {.column width="50%"}
 ```{{r}}
