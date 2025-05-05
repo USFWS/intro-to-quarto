@@ -341,7 +341,7 @@
     "href": "materials/1-intro-to-quarto/slides.html#exercise-code-chunks",
     "title": "Introduction\nto Quarto",
     "section": "Exercise: Code chunks",
-    "text": "Exercise: Code chunks\n\n\nChunk Label:\n\nAdd “Plot” to the chunk label to help you differentiate from other chunks\n\nFigure Caption:\n\nAdd “Mean” to beginning of caption to read “Mean monthly Western…”\n\nPlot:\n\nAdd “+ theme_classic()” to end of ggplot script to clean up plot\n\nChunk Options:\n\nChange include option to false to remove it from report\n\n\n\n\n\n\n−+\n10:00"
+    "text": "Exercise: Code chunks\n\nOpen 4_code_chunks.yml and render it.\n\n\nChunk Label:\n\nLabel the plot code chunk to help you differentiate from other chunks.\n\nFigure Caption:\n\nAdd “Mean” to beginning of caption to read “Mean monthly Western…”\n\nPlot:\n\nAdd + theme_classic() to end of ggplot script to clean up plot.\n\nChunk Options:\n\nChange include option to false to remove it from report.\n\n\n\n\n\n−+\n10:00"
   },
   {
     "objectID": "materials/1-intro-to-quarto/slides.html#exercise-1-rendering",
@@ -362,6 +362,13 @@
     "href": "materials/1-intro-to-quarto/slides.html#exercise-3-document-body",
     "title": "Introduction\nto Quarto",
     "section": "Exercise 3: Document body",
-    "text": "Exercise 3: Document body\n\n\nOpen 3-document_body.qmd and render the document\n\n\n\n\n\n\n−+\n07:00"
+    "text": "Exercise 3: Document body\nOpen 3-document_body.qmd and make the following changes to the document:\n\nInline:\n\nItalicize the species name\nMake the refuge name into a hyperlink to the refuge website\n\nBlock:\n\nCreate a new header named “My list”\nMake an ordered and unordered list\nInsert an image\n\n\n\n\n\n−+\n07:00"
+  },
+  {
+    "objectID": "materials/1-intro-to-quarto/slides.html#wrap-up",
+    "href": "materials/1-intro-to-quarto/slides.html#wrap-up",
+    "title": "Introduction\nto Quarto",
+    "section": "Wrap up",
+    "text": "Wrap up\n\n\n\n\n\nQuarto is a powerful tool for creating scientific documents, presentations, and websites.\nThree basic components of a Quarto file control the rendered output:\n\nYAML metadata\nText body\nCode chunks\n\nOnce you understand the basics, the sky’s the limit!"
   }
 ]

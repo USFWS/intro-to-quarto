@@ -433,11 +433,11 @@ editor: source
 ## Exercise 2: YAML metadata {.exercise}
 
 ::: {.center-xy-container}
-1. Open `2_yaml_metadata.qmd` and render the document.
-2. Update the title and replace the author name with your name. Re-render it. 
-3. Change the output to `html` and render it. View it in an editor. 
-4. Now render it as a PDF. What did you notice?
-5. [Bonus] Render the document as both a PDF and HTML.
+- [ ] Open `2_yaml_metadata.qmd` and render the document.
+- [ ] Update the title and replace the author name with your name. Re-render it. 
+- [ ] Change the output to `html` and render it. View it in an editor. 
+- [ ] Now render it as a PDF. What did you notice?
+- [ ] [*Bonus*] Render the document as both a PDF and HTML.
 :::
 
 ```{r}
@@ -834,9 +834,19 @@ Moving along, we will describe something else.
 
 ## Exercise 3: Document body {.exercise}
 
-::: {.center-xy-container}
-1. Open `3-document_body.qmd` and render the document
-2. 
+Open `3-document_body.qmd` and make the following changes to the document:
+
+::: {.small}
+**Inline:**
+
+- [ ] Italicize the species name
+- [ ] Make the refuge name into a hyperlink to the refuge website
+
+**Block:**
+
+- [ ] Create a new header named "My list"
+- [ ] Make an ordered and unordered list
+- [ ] Insert an image
 :::
 
 ```{r}
@@ -1167,20 +1177,49 @@ format:
 
 ## Exercise: Code chunks {.exercise}
 
-::: {.center-xy-container}
-- Chunk Label: 
-  - Add "Plot" to the chunk label to help you differentiate from other chunks
-- Figure Caption: 
-  - Add "Mean" to beginning of caption to read "Mean monthly Western..."
-- Plot: 
-  - Add "+  theme_classic() " to end of ggplot script to clean up plot
-- Chunk Options: 
-  - Change include option to false to remove it from report 
+- Open `4_code_chunks.yml` and render it.
+
+::: {.small}
+**Chunk Label:**
+
+- [ ] Label the plot code chunk to help you differentiate from other chunks.
+
+**Figure Caption:**
+
+- [ ] Add "Mean" to beginning of caption to read "Mean monthly Western..."
+
+**Plot:**
+
+- [ ] Add `+ theme_classic()` to end of ggplot script to clean up plot.
+
+**Chunk Options:** 
+
+- [ ] Change `include` option to `false` to remove it from report.
 :::
 
 ```{r}
 countdown::countdown(10)
 ```
+
+
+## Wrap up
+
+::: columns
+
+::: {.column width="50%"}
+![](images/quarto_space.png){width=700 fig-alt="A Quarto spaceship launching into space with documents and reports floating around it."}
+:::
+
+::: {.column width="50%"}
+- Quarto is a powerful tool for creating scientific documents, presentations, and websites.
+- Three basic components of a Quarto file control the rendered output:
+    - YAML metadata
+    - Text body
+    - Code chunks
+- Once you understand the basics,  the sky's the limit!
+:::
+
+:::
 
 ## {.center background-image="images/plover_question.png" background-size="contain"}
 
