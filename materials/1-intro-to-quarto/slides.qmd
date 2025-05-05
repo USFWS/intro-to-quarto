@@ -1,12 +1,14 @@
 ---
-title: "Intro to Quarto"
+title: |
+   | Introduction 
+   | to Quarto
 subtitle: "Overview"
 format: 
   refuge-revealjs:
     title-slide-attributes:
       data-background-image: "images/plover_title.png"
       data-background-size: 20%, cover
-      data-background-position: "75% 50%, center"
+      data-background-position: "60% 50%, center"
     footer: "[Intro to Quarto](index.html){.small}"
 editor: source
 ---
@@ -305,7 +307,7 @@ quarto::quarto_render(input = ___,
 ## Exercise 1: Rendering {.exercise}
 
 ::: {.center-xy-container}
-1. Open `1-rendering.qmd`. What are three main components of the file?
+1. Open `1_rendering.qmd`. What are three main components of the file?
 2. Render the document using the RStudio GUI.
 3. Render the document using the Quarto CLI.  
     - *Hint*: `quarto render <input file>`
@@ -431,7 +433,7 @@ editor: source
 ## Exercise 2: YAML metadata {.exercise}
 
 ::: {.center-xy-container}
-1. Open `2-yaml-metadata.qmd` and render the document.
+1. Open `2_yaml_metadata.qmd` and render the document.
 2. Update the title and replace the author name with your name. Re-render it. 
 3. Change the output to `html` and render it. View it in an editor. 
 4. Now render it as a PDF. What did you notice?
@@ -833,10 +835,8 @@ Moving along, we will describe something else.
 ## Exercise 3: Document body {.exercise}
 
 ::: {.center-xy-container}
-1. First this
-2. Then this
-3. then this
-4. Finally this
+1. Open `3-document_body.qmd` and render the document
+2. 
 :::
 
 ```{r}
