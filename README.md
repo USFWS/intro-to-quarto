@@ -43,20 +43,16 @@ Quarto documents.
 2. Open a new RStudio session. 
 3. Download the exercise materials. This function creates a new RStudio project called "intro-to-quarto-exercises-main".
 
-::: {.small}
 ``` r
 usethis::use_course("https://github.com/USFWS/intro-to-quarto-exercises/archive/refs/heads/main.zip")
 ```
-:::
 
 4. Open this new RStudio project, if it's not already open. 
 5. Install the R package dependencies:
 
-::: {.small}
 ``` r
 source("install_packages.R")
 ```
-:::
 
 ## Outline
 
