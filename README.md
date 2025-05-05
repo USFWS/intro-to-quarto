@@ -40,7 +40,8 @@ Quarto documents.
 1. From FWS Apps-To-Go, install:
   - R 4.4.2
   - RStudio 2024.09.1
-2. Open RStudio and download the exercise materials as a new project:
+2. Open a new RStudio session. 
+3. Download the exercise materials. This function creates a new RStudio project called "intro-to-quarto-exercises-main".
 
 ::: {.small}
 ``` r
@@ -48,7 +49,8 @@ usethis::use_course("https://github.com/USFWS/intro-to-quarto-exercises/archive/
 ```
 :::
 
-3. From this new RStudio project, install R package dependencies:
+4. Open this new RStudio project, if it's not already open. 
+5. Install the R package dependencies:
 
 ::: {.small}
 ``` r
