@@ -302,6 +302,26 @@ quarto::quarto_render(input = ___,
 :::
 
 
+## Exercise 1: Rendering {.exercise}
+
+::: {.center-xy-container}
+1. Open `1-rendering.qmd`. What are three main components of the file?
+2. Render the document using the RStudio GUI.
+3. Render the document using the Quarto CLI.  
+    - *Hint*: `quarto render <input file>`
+4. Render the document using the `quarto` R package.
+    - *Hint*: `quarto::quarto_render("<input file>")`
+:::
+
+```{r}
+countdown::countdown(10)
+```
+
+::: {.notes}
+
+:::
+
+
 # Anatomy of a Quarto File {.dark}
 
 ::: {.notes}
@@ -408,13 +428,14 @@ editor: source
 :::
 
 
-## Exercise: YAML metadata {.exercise}
+## Exercise 2: YAML metadata {.exercise}
 
 ::: {.center-xy-container}
-1. First this
-2. Then this
-3. then this
-4. Finally this
+1. Open `2-yaml-metadata.qmd` and render the document.
+2. Update the title and replace the author name with your name. Re-render it. 
+3. Change the output to `html` and render it. View it in an editor. 
+4. Now render it as a PDF. What did you notice?
+5. [Bonus] Render the document as both a PDF and HTML.
 :::
 
 ```{r}
@@ -809,7 +830,7 @@ Moving along, we will describe something else.
 :::
 
 
-## {{< fa play >}} Exercise: Document body {.exercise}
+## Exercise 3: Document body {.exercise}
 
 ::: {.center-xy-container}
 1. First this

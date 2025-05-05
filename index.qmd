@@ -11,8 +11,6 @@ css: assets/index.css
 
 ## Dynamic Reporting <br> with Quarto
 
-#### A workshop at the <br> FWS Data Management Workshop
-
 :::
 ::: {.g-col-7}
 
