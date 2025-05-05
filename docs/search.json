@@ -341,7 +341,7 @@
     "href": "materials/1-intro-to-quarto/slides.html#exercise-code-chunks",
     "title": "Introduction\nto Quarto",
     "section": "Exercise: Code chunks",
-    "text": "Exercise: Code chunks\n\nOpen 4_code_chunks.yml and render it.\n\n\nChunk Label:\n\nLabel the plot code chunk to help you differentiate from other chunks.\n\nFigure Caption:\n\nAdd “Mean” to beginning of caption to read “Mean monthly Western…”\n\nPlot:\n\nAdd + theme_classic() to end of ggplot script to clean up plot.\n\nChunk Options:\n\nChange include option to false to remove it from report.\n\n\n\n\n\n−+\n10:00"
+    "text": "Exercise: Code chunks\nOpen 4_code_chunks.yml and render it.\n\nChunk Label:\n\nLabel the plot code chunk to help you differentiate from other chunks.\n\nFigure Caption:\n\nAdd “Mean” to beginning of caption to read “Mean monthly Western…”\n\nPlot:\n\nAdd + theme_classic() to end of ggplot script to clean up plot.\n\nChunk Options:\n\nChange include option to false to remove it from report.\n\n\n\n\n\n−+\n10:00"
   },
   {
     "objectID": "materials/1-intro-to-quarto/slides.html#exercise-1-rendering",
@@ -370,5 +370,12 @@
     "title": "Introduction\nto Quarto",
     "section": "Wrap up",
     "text": "Wrap up\n\n\n\n\n\nQuarto is a powerful tool for creating scientific documents, presentations, and websites.\nThree basic components of a Quarto file control the rendered output:\n\nYAML metadata\nText body\nCode chunks\n\nOnce you understand the basics, the sky’s the limit!"
+  },
+  {
+    "objectID": "materials/1-intro-to-quarto/slides.html#exercise-4-code-chunks",
+    "href": "materials/1-intro-to-quarto/slides.html#exercise-4-code-chunks",
+    "title": "Introduction\nto Quarto",
+    "section": "Exercise 4: Code chunks",
+    "text": "Exercise 4: Code chunks\nOpen 4_code_chunks.yml and render it.\n\nChunk Label:\n\nLabel the plot code chunk to help you differentiate from other chunks.\n\nFigure Caption:\n\nAdd “Mean” to beginning of caption to read “Mean monthly Western…”\n\nPlot:\n\nAdd + theme_classic() to end of ggplot script to clean up plot.\n\nChunk Options:\n\nChange include option to false to remove it from report.\n\n\n\n\n\n−+\n10:00"
   }
 ]

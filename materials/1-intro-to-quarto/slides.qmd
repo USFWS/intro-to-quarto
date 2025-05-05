@@ -1175,9 +1175,9 @@ format:
 :::
 
 
-## Exercise: Code chunks {.exercise}
+## Exercise 4: Code chunks {.exercise}
 
-- Open `4_code_chunks.yml` and render it.
+Open `4_code_chunks.yml` and render it.
 
 ::: {.small}
 **Chunk Label:**
