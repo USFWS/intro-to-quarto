@@ -5,11 +5,3 @@
 <iframe class="slide-deck" src="slides.html" height="450" width="800" style="border: 1px solid #2e3846;"></iframe>
 ```
 
-
-### Exercises
-
-::: {.small}
-```r
-usethis::use_course("https://github.com/USFWS/intro-to-quarto-exercises/archive/refs/heads/main.zip") 
-```
-:::

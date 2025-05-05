@@ -15,7 +15,7 @@
     "href": "materials/1-intro-to-quarto/index.html",
     "title": "Dynamic Reporting with Quarto",
     "section": "",
-    "text": "Full Screen\n\n\nExercises\n\nusethis::use_course(\"https://github.com/USFWS/intro-to-quarto-exercises/archive/refs/heads/main.zip\")",
+    "text": "Full Screen",
     "crumbs": [
       "References",
       "- Slides"
@@ -47,7 +47,7 @@
     "href": "index.html",
     "title": "Dynamic Reporting with Quarto",
     "section": "",
-    "text": "Dynamic Reporting  with Quarto\n\n\n\n\n\n\nThis workshop provides an introduction to Quarto for intermediate to advanced R users. We present on the basics of using Quarto to generate dynamic reports. After an introduction, we use an example dataset to render a Quarto report to Word, PDF, and HTML documents. Participants will leave with the foundational skills required to create a Quarto report.\nPrework\n\nFrom FWS Apps-To-Go, install:\n\nR 4.4.2\nRStudio 2024.09.1\n\nInstall R package dependencies:\n\n\nrequired_packages &lt;- c(\"tidyverse\", \"readxl\", \"gt\", \n    \"sf\", \"ggrepel\", \"knitr\", \"magrittr\", \"usethis\")\nnew_packages &lt;- packages[!(required_packages %in% installed.packages()[,\"Package\"])]\nif(length(new_packages)) install.packages(new_packages)\nupdate.packages(oldPkgs = required_packages)\n\n\nDownload the exercise materials:\n\n\nusethis::use_course(\"https://github.com/USFWS/intro-to-quarto-exercises/archive/refs/heads/main.zip\")\n\nMaterials\n\nIntroduction to Quarto"
+    "text": "Dynamic Reporting  with Quarto\n\n\n\n\n\n\nThis workshop provides an introduction to Quarto for intermediate to advanced R users. We present on the basics of using Quarto to generate dynamic reports. After an introduction, we use an example dataset to render a Quarto report to Word, PDF, and HTML documents. Participants will leave with the foundational skills required to create a Quarto report.\nPrework\n\nFrom FWS Apps-To-Go, install:\n\n\nR 4.4.2\nRStudio 2024.09.1\n\n\nOpen RStudio and download the exercise materials as a new project:\n\n\nusethis::use_course(\"https://github.com/USFWS/intro-to-quarto-exercises/archive/refs/heads/main.zip\")\n\n\nFrom this new RStudio project, install R package dependencies:\n\n\nsource(\"install_packages.R\")\n\nMaterials\n\nIntroduction to Quarto"
   },
   {
     "objectID": "materials/1-intro-to-quarto/slides.html#section",
@@ -169,6 +169,13 @@
     "text": "Three ways to render Quarto\n\n\n\n\n\n1.\nRStudio GUI \n\n\n\n2.\nQuarto command line interface (CLI) \n\n\n\n3.\nQuarto R package\n\nquarto::quarto_render(input = ___, \n                      output_format = ___)"
   },
   {
+    "objectID": "materials/1-intro-to-quarto/slides.html#exercise-1-rendering",
+    "href": "materials/1-intro-to-quarto/slides.html#exercise-1-rendering",
+    "title": "Introduction\nto Quarto",
+    "section": "Exercise 1: Rendering",
+    "text": "Exercise 1: Rendering\n\n\nOpen 1_rendering.qmd. What are three main components of the file?\nRender the document using the RStudio GUI.\nRender the document using the Quarto CLI.\n\nHint: quarto render &lt;input file&gt;\n\nRender the document using the quarto R package.\n\nHint: quarto::quarto_render(\"&lt;input file&gt;\")\n\n\n\n\n\n\n−+\n10:00"
+  },
+  {
     "objectID": "materials/1-intro-to-quarto/slides.html#yaml-header",
     "href": "materials/1-intro-to-quarto/slides.html#yaml-header",
     "title": "Introduction\nto Quarto",
@@ -190,11 +197,11 @@
     "text": "YAML header: Options\n\n\n\n\n\n\n\n\nAnother option: Use your friendly assistant!\n\n\n\nStart a word and hit tab to complete or …\nType Ctrl+space to see available options."
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#exercise-yaml-metadata",
-    "href": "materials/1-intro-to-quarto/slides.html#exercise-yaml-metadata",
-    "title": "Intro to Quarto",
-    "section": "Exercise: YAML metadata",
-    "text": "Exercise: YAML metadata\n\n\nOpen 1-yaml-metadata.qmd and render the document.\nReplace the author name with your name and re-render it.\nChange the output to html and render it. View it in an editor.\nNow render 1-yaml-metadata to a PDF (pdf). What did you notice?\n\n\n\n\n\n−+\n10:00"
+    "objectID": "materials/1-intro-to-quarto/slides.html#exercise-2-yaml-metadata",
+    "href": "materials/1-intro-to-quarto/slides.html#exercise-2-yaml-metadata",
+    "title": "Introduction\nto Quarto",
+    "section": "Exercise 2: YAML metadata",
+    "text": "Exercise 2: YAML metadata\n\n\nOpen 2_yaml_metadata.qmd and render the document.\nUpdate the title and replace the author name with your name. Re-render it.\nChange the output to html and render it. View it in an editor.\nNow render it as a PDF. What did you notice?\n[Bonus] Render the document as both a PDF and HTML.\n\n\n\n\n\n−+\n10:00"
   },
   {
     "objectID": "materials/1-intro-to-quarto/slides.html#text-body-markdown",
@@ -267,11 +274,11 @@
     "text": "Block elements: Images\n\n\n\n\nMarkdown\nHere's a paragraph of text. We describe\nsomething of great importance. So great,\nin fact, that we need to also include an image. \n\n![](images/bear_singing.png)\n\nMoving along, we will describe something else. \n\nOutput\n\nHere’s a paragraph of text. We describe\nsomething of great importance. So great,\nin fact, that we need to also include an image.\n\nMoving along, we will describe something else."
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#exercise-document-body",
-    "href": "materials/1-intro-to-quarto/slides.html#exercise-document-body",
-    "title": "Intro to Quarto",
-    "section": " Exercise: Document body",
-    "text": "Exercise: Document body\n\n\nFirst this\nThen this\nthen this\nFinally this\n\n\n\n\n\n−+\n07:00"
+    "objectID": "materials/1-intro-to-quarto/slides.html#exercise-3-document-body",
+    "href": "materials/1-intro-to-quarto/slides.html#exercise-3-document-body",
+    "title": "Introduction\nto Quarto",
+    "section": "Exercise 3: Document body",
+    "text": "Exercise 3: Document body\nOpen 3-document_body.qmd and make the following changes to the document:\n\nInline:\n\nItalicize the species name\nMake the refuge name into a hyperlink to the refuge website\n\nBlock:\n\nCreate a new header named “My list”\nMake an ordered and unordered list\nInsert an image\n\n\n\n\n\n−+\n07:00"
   },
   {
     "objectID": "materials/1-intro-to-quarto/slides.html#code-chunks-pandoc",
@@ -337,32 +344,11 @@
     "text": "Execution options: YAML\n\n\n\n\n\n\n\n\n\n\n\nExecution options at the document level in the YAML\n\n\nAvoids having to reapply options for each code chunk! \n\n\n\n\n\n---\ntitle: \"My FWS Report\"\nauthor: Jane Biologist\nexecute:\n  echo: false\nformat:\n  html:\n    fig-width: 8\n    fig-height: 6\n---"
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#exercise-code-chunks",
-    "href": "materials/1-intro-to-quarto/slides.html#exercise-code-chunks",
+    "objectID": "materials/1-intro-to-quarto/slides.html#exercise-4-code-chunks",
+    "href": "materials/1-intro-to-quarto/slides.html#exercise-4-code-chunks",
     "title": "Introduction\nto Quarto",
-    "section": "Exercise: Code chunks",
-    "text": "Exercise: Code chunks\nOpen 4_code_chunks.yml and render it.\n\nChunk Label:\n\nLabel the plot code chunk to help you differentiate from other chunks.\n\nFigure Caption:\n\nAdd “Mean” to beginning of caption to read “Mean monthly Western…”\n\nPlot:\n\nAdd + theme_classic() to end of ggplot script to clean up plot.\n\nChunk Options:\n\nChange include option to false to remove it from report.\n\n\n\n\n\n−+\n10:00"
-  },
-  {
-    "objectID": "materials/1-intro-to-quarto/slides.html#exercise-1-rendering",
-    "href": "materials/1-intro-to-quarto/slides.html#exercise-1-rendering",
-    "title": "Introduction\nto Quarto",
-    "section": "Exercise 1: Rendering",
-    "text": "Exercise 1: Rendering\n\n\nOpen 1_rendering.qmd. What are three main components of the file?\nRender the document using the RStudio GUI.\nRender the document using the Quarto CLI.\n\nHint: quarto render &lt;input file&gt;\n\nRender the document using the quarto R package.\n\nHint: quarto::quarto_render(\"&lt;input file&gt;\")\n\n\n\n\n\n\n−+\n10:00"
-  },
-  {
-    "objectID": "materials/1-intro-to-quarto/slides.html#exercise-2-yaml-metadata",
-    "href": "materials/1-intro-to-quarto/slides.html#exercise-2-yaml-metadata",
-    "title": "Introduction\nto Quarto",
-    "section": "Exercise 2: YAML metadata",
-    "text": "Exercise 2: YAML metadata\n\n\nOpen 2_yaml_metadata.qmd and render the document.\nUpdate the title and replace the author name with your name. Re-render it.\nChange the output to html and render it. View it in an editor.\nNow render it as a PDF. What did you notice?\n[Bonus] Render the document as both a PDF and HTML.\n\n\n\n\n\n−+\n10:00"
-  },
-  {
-    "objectID": "materials/1-intro-to-quarto/slides.html#exercise-3-document-body",
-    "href": "materials/1-intro-to-quarto/slides.html#exercise-3-document-body",
-    "title": "Introduction\nto Quarto",
-    "section": "Exercise 3: Document body",
-    "text": "Exercise 3: Document body\nOpen 3-document_body.qmd and make the following changes to the document:\n\nInline:\n\nItalicize the species name\nMake the refuge name into a hyperlink to the refuge website\n\nBlock:\n\nCreate a new header named “My list”\nMake an ordered and unordered list\nInsert an image\n\n\n\n\n\n−+\n07:00"
+    "section": "Exercise 4: Code chunks",
+    "text": "Exercise 4: Code chunks\nOpen 4_code_chunks.yml and render it.\n\nChunk Label:\n\nLabel the plot code chunk to help you differentiate from other chunks.\n\nFigure Caption:\n\nAdd “Mean” to beginning of caption to read “Mean monthly Western…”\n\nPlot:\n\nAdd + theme_classic() to end of ggplot script to clean up plot.\n\nChunk Options:\n\nChange include option to false to remove it from report.\n\n\n\n\n\n−+\n10:00"
   },
   {
     "objectID": "materials/1-intro-to-quarto/slides.html#wrap-up",
@@ -370,12 +356,5 @@
     "title": "Introduction\nto Quarto",
     "section": "Wrap up",
     "text": "Wrap up\n\n\n\n\n\nQuarto is a powerful tool for creating scientific documents, presentations, and websites.\nThree basic components of a Quarto file control the rendered output:\n\nYAML metadata\nText body\nCode chunks\n\nOnce you understand the basics, the sky’s the limit!"
-  },
-  {
-    "objectID": "materials/1-intro-to-quarto/slides.html#exercise-4-code-chunks",
-    "href": "materials/1-intro-to-quarto/slides.html#exercise-4-code-chunks",
-    "title": "Introduction\nto Quarto",
-    "section": "Exercise 4: Code chunks",
-    "text": "Exercise 4: Code chunks\nOpen 4_code_chunks.yml and render it.\n\nChunk Label:\n\nLabel the plot code chunk to help you differentiate from other chunks.\n\nFigure Caption:\n\nAdd “Mean” to beginning of caption to read “Mean monthly Western…”\n\nPlot:\n\nAdd + theme_classic() to end of ggplot script to clean up plot.\n\nChunk Options:\n\nChange include option to false to remove it from report.\n\n\n\n\n\n−+\n10:00"
   }
 ]

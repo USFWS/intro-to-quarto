@@ -37,25 +37,24 @@ Quarto documents.
 
 ## Prework
 
-- [ ] From FWS Apps-To-Go, install:
+1. From FWS Apps-To-Go, install:
   - R 4.4.2
   - RStudio 2024.09.1
-- [ ] Install R package dependencies:
+2. Open RStudio and download the exercise materials as a new project:
 
+::: {.small}
 ``` r
-required_packages <- c("tidyverse", "knitr", "officedown", "officer", "lubridate",
-                      "readxl", "janitor", "kableExtra", "flextable", "mapview", 
-                      "sf", "gt", "purrr", "english", "maps", "quarto", "usethis")
-new_packages <- required_packages[!(required_packages %in% installed.packages()[,"Package"])]
-if(length(new_packages)) install.packages(new_packages)
-update.packages(oldPkgs = required_packages)
+usethis::use_course("https://github.com/USFWS/intro-to-quarto-exercises/archive/refs/heads/main.zip")
 ```
+:::
 
-- [ ] Download the exercise materials:
+3. From this new RStudio project, install R package dependencies:
 
+::: {.small}
 ``` r
-usethis::use_course("https://github.com/USFWS/intro-quarto-exercises/archive/refs/heads/main.zip")
+source("install_packages.R")
 ```
+:::
 
 ## Outline
 
