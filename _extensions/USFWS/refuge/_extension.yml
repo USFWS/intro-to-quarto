@@ -15,7 +15,6 @@ contributes:
       menu:
         side: left
       slide-number: c
-      logo: images/fws_logo.png
       date-format: long
             
 
