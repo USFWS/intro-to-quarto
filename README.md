@@ -1,6 +1,6 @@
 
 
-# Dynamic Reporting with Quarto
+# Introduction to Quarto
 
 ------------------------------------------------------------------------
 
@@ -24,11 +24,11 @@ will leave with foundational skills required to create a Quarto report.
 
 The learning goals are to:
 
-- Introduce Quarto and it’s applications.
+- Introduce Quarto and it’s applications
 - Describe the three components of a Quarto file: QML metadata, text,
-  and code blocks.
+  and code blocks
 - Provide opportunities to explore the components of a Quarto file
-  through in-class exercises.
+  through in-class exercises
 
 ## Audience
 
@@ -37,10 +37,10 @@ Quarto documents.
 
 ## Prework
 
-- From FWS Apps-To-Go, install:
+- [ ] From FWS Apps-To-Go, install:
   - R 4.4.2
   - RStudio 2024.09.1
-- Install R package dependencies:
+- [ ] Install R package dependencies:
 
 ``` r
 required_packages <- c("tidyverse", "knitr", "officedown", "officer", "lubridate",
@@ -51,7 +51,7 @@ if(length(new_packages)) install.packages(new_packages)
 update.packages(oldPkgs = required_packages)
 ```
 
-- Download the exercise materials:
+- [ ] Download the exercise materials:
 
 ``` r
 usethis::use_course("https://github.com/USFWS/intro-quarto-exercises/archive/refs/heads/main.zip")
@@ -62,24 +62,26 @@ usethis::use_course("https://github.com/USFWS/intro-quarto-exercises/archive/ref
 | Time   | Activity           |
 |:-------|:-------------------|
 | 15 min | Overview of Quarto |
-| 10 min | Metadata: YML      |
 | 10 min | **Exercise 1**     |
-| 15 min | Text               |
+| 10 min | YAML metadata      |
 | 10 min | **Exercise 2**     |
-| 15 min | Code cells         |
+| 15 min | Document body      |
+| 10 min | **Exercise 2**     |
+| 15 min | Code chunks        |
 | 10 min | **Exercise 3**     |
 | 5 min  | Wrap up            |
 
 ## Instructors
 
-[Jonah Withers](mailto:jonah_withers@fws.gov), Fisheries and Ecological
-Services, Alaska  
-[Jacob Cochran](mailto:jacob_cochran@fws.gov), Lower Great Lakes Fish and 
+[Jacob Cochran](mailto:jacob_cochran@fws.gov), Lower Great Lakes Fish and
 Wildlife Conservation Office  
+[McCrea Cobb](mailto:mccrea_cobb@fws.gov), Refuge Inventory and
+Monitoring Program, Alaska  
 [Jason Ross](mailto:jason_ross@fws.gov), Fish and Aquatic Conservation
 Program  
-[McCrea Cobb](mailto:mccrea_cobb@fws.gov), Refuge Inventory and
-Monitoring Program, Alaska
+[Emma Schillerstrom](mailto:emma_schillerstrom@fws.gov), Refuge Inventory and Monitoring Program, Alaska  
+[Jonah Withers](mailto:jonah_withers@fws.gov), Fisheries and Ecological
+Services, Alaska 
 
 ------------------------------------------------------------------------
 
