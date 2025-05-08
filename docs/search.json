@@ -152,7 +152,7 @@
     "href": "materials/1-intro-to-quarto/slides.html#advantage-of-r-markdown",
     "title": "Introduction\nto Quarto",
     "section": "Advantage of R Markdown",
-    "text": "Advantage of R Markdown\n\n\n\n\n\nYou have existing R Markdown code that works for you.\nMany custom tools built around R Markdown that are not available (yet) in Quarto.\n\n\n\n\n\n\n\n\n\n\nIf you like using R Markdown, there’s no need to switch! R Markdown will continue to be supported and work as it always has been. You’re welcome to try Quarto if you like, but there’s no need to switch.\nIf you have a R Markdown file that includes custom tools, there is a chance that they might not yet in available in Quarto. If this is the case, you’re of course welcome to stick with R Markdown. As they say, if it ain’t broke, don’t fix it."
+    "text": "Advantage of R Markdown\n\n\n\n\n\nHave existing R Markdown code that works for you\nCustom tools built around R Markdown that are not yet available in Quarto\n\n\n\n\n\n\n\n\n\n\nIf you like using R Markdown, there’s no need to switch! R Markdown will continue to be supported and work as it always has been. You’re welcome to try Quarto if you like, but there’s no need to switch.\nIf you have a R Markdown file that includes custom tools, there is a chance that they might not yet in available in Quarto. If this is the case, you’re of course welcome to stick with R Markdown. As they say, if it ain’t broke, don’t fix it."
   },
   {
     "objectID": "materials/1-intro-to-quarto/slides.html#advantages-of-quarto",
@@ -187,7 +187,7 @@
     "href": "materials/1-intro-to-quarto/slides.html#yaml-header-options",
     "title": "Introduction\nto Quarto",
     "section": "YAML header: Options",
-    "text": "YAML header: Options\n\n\nOptions are dependent on the file output (many options )\n\nSearch Quarto guidance within your specified file format:"
+    "text": "YAML header: Options\n\n\nOptions are dependent on the file output (many options )\n\nSearch the Quarto guidance within your specified file format:"
   },
   {
     "objectID": "materials/1-intro-to-quarto/slides.html#yaml-header-options-1",
@@ -243,14 +243,14 @@
     "href": "materials/1-intro-to-quarto/slides.html#block-elements-paragraphs",
     "title": "Introduction\nto Quarto",
     "section": "Block elements: Paragraphs",
-    "text": "Block elements: Paragraphs\n \n\n\nMarkdown\nHere's a paragraph. To seperate it from the next  \nparagraph, you need to add one or more empty lines.\n\nThis is a new paragraph. You can format each  \nparagraph independently. A paragraph is an  \nexamine  of a block element.\n\nOutput\n\n\nHere’s a paragraph. To seperate it from the next paragraph, you need to add one or more empty lines.\nThis is a new paragraph. You can format each paragraph independently. A paragraph is an examine of a block element."
+    "text": "Block elements: Paragraphs\n\n\nMarkdown\nHere's a paragraph. To seperate it from the next  \nparagraph, you need to add one or more empty lines.\n\nThis is a new paragraph. You can format each  \nparagraph independently. A paragraph is an  \nexamine  of a block element.\n\n::: {.callout-tip}\n## Custom block element  \n\nHere's an example of a block with custom \nformatting. Everything in this block has \nthis format.\n:::\n\nOutput\n\n\nHere’s a paragraph. To seperate it from the next paragraph, you need to add one or more empty lines.\nThis is a new paragraph. You can format each paragraph independently. A paragraph is an examine of a block element.\n\n\n\n\n\n\nCustom block element\n\n\nHere’s an example of a block with custom formatting. Everything in this block has this format."
   },
   {
     "objectID": "materials/1-intro-to-quarto/slides.html#block-elements-headers",
     "href": "materials/1-intro-to-quarto/slides.html#block-elements-headers",
     "title": "Introduction\nto Quarto",
     "section": "Block elements: Headers",
-    "text": "Block elements: Headers\n\n\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n# Header 1\nHeader 1\n\n\n## Header 2\nHeader 2\n\n\n### Header 3\nHeader 3\n\n\n#### Header 4\nHeader 4\n\n\n##### Header 5\nHeader 5\n\n\n###### Header 6\nHeader 6"
+    "text": "Block elements: Headers\n\n\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n# Header 1\nHeader 1\n\n\n## Header 2\nHeader 2\n\n\n### Header 3\nHeader 3\n\n\n#### Header 4\nHeader 4"
   },
   {
     "objectID": "materials/1-intro-to-quarto/slides.html#block-elements-lists",
@@ -278,7 +278,7 @@
     "href": "materials/1-intro-to-quarto/slides.html#exercise-3-document-body",
     "title": "Introduction\nto Quarto",
     "section": "Exercise 3: Document body",
-    "text": "Exercise 3: Document body\nOpen 3-document_body.qmd and make the following changes to the document:\n\nInline:\n\nItalicize the species name\nMake the refuge name into a hyperlink to the refuge website\n\nBlock:\n\nCreate a new header named “My list”\nMake an ordered and unordered list\nInsert an image\n\n\n\n\n\n−+\n07:00"
+    "text": "Exercise 3: Document body\nOpen 3-document_body.qmd and make the following changes to the document:\n\nInline:\n\nItalicize the species name\nMake the refuge name into a hyperlink to the refuge website\n\nBlock:\n\nCreate a new header named “My list”\nMake an ordered and unordered list\nInsert an image\n\n\n\n\n\n−+\n10:00"
   },
   {
     "objectID": "materials/1-intro-to-quarto/slides.html#code-chunks-pandoc",

@@ -12,7 +12,7 @@
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.39">
 
-  <title>Dynamic Reporting with Quarto – quarto-input452ef03b0ca8aca6</title>
+  <title>Dynamic Reporting with Quarto – quarto-input5caa739dada70dfc</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -94,7 +94,7 @@
     code span.vs { color: #4e9a06; } /* VerbatimString */
     code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-efb699fc9be5e4f5c68041c8a15329b9.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-9cda6c9c948a1a44a8d5ead4304947c8.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -510,8 +510,8 @@ to Quarto</div></h1>
 <p><br>
 </p>
 <ul>
-<li class="fragment">You have existing R Markdown code that works for you.</li>
-<li class="fragment">Many custom tools built around R Markdown that are not available (yet) in Quarto.</li>
+<li class="fragment">Have existing R Markdown code that works for you</li>
+<li class="fragment">Custom tools built around R Markdown that are not yet available in Quarto</li>
 </ul>
 </div><div class="column" style="width:60%;">
 <div class="quarto-figure quarto-figure-center">
@@ -648,7 +648,7 @@ to Quarto</div></h1>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_f762eada" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_718cbd54" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -758,7 +758,7 @@ to Quarto</div></h1>
 <ul>
 <li class="fragment">Options are dependent on the file output (<strong>many</strong> options <i class="fa-solid fa-face-flushed" aria-label="face-flushed"></i>)<br>
 </li>
-<li class="fragment">Search Quarto guidance within your specified file format:</li>
+<li class="fragment">Search the <a href="https://quarto.org/docs/reference/">Quarto guidance</a> within your specified file format:</li>
 </ul>
 <div class="fragment">
 <iframe width="1600" height="500" src="https://quarto.org/docs/reference/formats/docx.html" title="Quarto HTML Options guidance"></iframe>
@@ -828,7 +828,7 @@ to Quarto</div></h1>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_302bc9c2" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_b72e5ced" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1026,7 +1026,6 @@ my text <img data-src="images/favicon.png" class="center-inline" alt="icon">.</p
 </section>
 <section id="block-elements-paragraphs" class="slide level2">
 <h2>Block elements: <span class="gray-bold">Paragraphs</span></h2>
-<p>&nbsp;</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <h3 id="markdown-3">Markdown</h3>
@@ -1035,13 +1034,34 @@ my text <img data-src="images/favicon.png" class="center-inline" alt="icon">.</p
 <span id="cb7-3"><a></a></span>
 <span id="cb7-4"><a></a>This is a new paragraph. You can format each  </span>
 <span id="cb7-5"><a></a>paragraph independently. A paragraph is an  </span>
-<span id="cb7-6"><a></a>examine  of a block element.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-6"><a></a>examine  of a block element.</span>
+<span id="cb7-7"><a></a></span>
+<span id="cb7-8"><a></a>::: {.callout-tip}</span>
+<span id="cb7-9"><a></a><span class="fu">## Custom block element  </span></span>
+<span id="cb7-10"><a></a></span>
+<span id="cb7-11"><a></a>Here's an example of a block with custom </span>
+<span id="cb7-12"><a></a>formatting. Everything in this block has </span>
+<span id="cb7-13"><a></a>this format.</span>
+<span id="cb7-14"><a></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
 <h3 id="output-3">Output</h3>
 <div class="small">
 <div class="fragment">
 <p>Here’s a paragraph. To seperate it from the next paragraph, you need to add one or more empty lines.</p>
 <p>This is a new paragraph. You can format each paragraph independently. A paragraph is an examine of a block element.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Custom block element</strong></p>
+</div>
+<div class="callout-content">
+<p>Here’s an example of a block with custom formatting. Everything in this block has this format.</p>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div></div>
@@ -1091,14 +1111,6 @@ my text <img data-src="images/favicon.png" class="center-inline" alt="icon">.</p
 <td><pre><code>#### Header 4</code></pre></td>
 <td><h4 id="header-4" class="heading-output">Header 4</h4></td>
 </tr>
-<tr class="odd">
-<td><pre><code>##### Header 5</code></pre></td>
-<td><h5 id="header-5" class="heading-output">Header 5</h5></td>
-</tr>
-<tr class="even">
-<td><pre><code>###### Header 6</code></pre></td>
-<td><h6 id="header-6" class="heading-output">Header 6</h6></td>
-</tr>
 </tbody>
 </table>
 </section>
@@ -1109,18 +1121,18 @@ my text <img data-src="images/favicon.png" class="center-inline" alt="icon">.</p
 <div class="columns">
 <div class="column" style="width:50%;">
 <h3 id="markdown-4">Markdown</h3>
-<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a></a>**Ordered List**</span>
-<span id="cb14-2"><a></a></span>
-<span id="cb14-3"><a></a><span class="ss">1. </span>This item first</span>
-<span id="cb14-4"><a></a><span class="ss">2. </span>Then this one</span>
-<span id="cb14-5"><a></a><span class="ss">3. </span>And finally this</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a></a>**Ordered List**</span>
+<span id="cb12-2"><a></a></span>
+<span id="cb12-3"><a></a><span class="ss">1. </span>This item first</span>
+<span id="cb12-4"><a></a><span class="ss">2. </span>Then this one</span>
+<span id="cb12-5"><a></a><span class="ss">3. </span>And finally this</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>&nbsp;</p>
 <div class="fragment" data-fragment-index="2">
-<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a></a>**Unordered List**</span>
-<span id="cb15-2"><a></a></span>
-<span id="cb15-3"><a></a><span class="ss">- </span>Kodiak Refuge</span>
-<span id="cb15-4"><a></a><span class="ss">- </span>Togiak Refuge</span>
-<span id="cb15-5"><a></a><span class="ss">- </span>Arctic Refuge</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a></a>**Unordered List**</span>
+<span id="cb13-2"><a></a></span>
+<span id="cb13-3"><a></a><span class="ss">- </span>Kodiak Refuge</span>
+<span id="cb13-4"><a></a><span class="ss">- </span>Togiak Refuge</span>
+<span id="cb13-5"><a></a><span class="ss">- </span>Arctic Refuge</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <h3 id="output-4">Output</h3>
@@ -1164,17 +1176,17 @@ my text <img data-src="images/favicon.png" class="center-inline" alt="icon">.</p
 <div class="columns">
 <div class="column" style="width:50%;">
 <h3 id="markdown-5">Markdown</h3>
-<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a></a>The Cauchy-Schwarz Inequality</span>
-<span id="cb16-2"><a></a></span>
-<span id="cb16-3"><a></a>$$</span>
-<span id="cb16-4"><a></a>\left( \sum_{k=1}^n a_k b_k \right)^2 </span>
-<span id="cb16-5"><a></a>\leq </span>
-<span id="cb16-6"><a></a>\left( \sum_{k=1}^n a_k^2 \right) </span>
-<span id="cb16-7"><a></a>\left( \sum_{k=1}^n b_k^2 \right)</span>
-<span id="cb16-8"><a></a>$$</span>
-<span id="cb16-9"><a></a>is an upper bound on the inner product between  </span>
-<span id="cb16-10"><a></a>two vectors in an inner product space in terms  </span>
-<span id="cb16-11"><a></a>of the product of the vector norms.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a></a>The Cauchy-Schwarz Inequality</span>
+<span id="cb14-2"><a></a></span>
+<span id="cb14-3"><a></a>$$</span>
+<span id="cb14-4"><a></a>\left( \sum_{k=1}^n a_k b_k \right)^2 </span>
+<span id="cb14-5"><a></a>\leq </span>
+<span id="cb14-6"><a></a>\left( \sum_{k=1}^n a_k^2 \right) </span>
+<span id="cb14-7"><a></a>\left( \sum_{k=1}^n b_k^2 \right)</span>
+<span id="cb14-8"><a></a>$$</span>
+<span id="cb14-9"><a></a>is an upper bound on the inner product between  </span>
+<span id="cb14-10"><a></a>two vectors in an inner product space in terms  </span>
+<span id="cb14-11"><a></a>of the product of the vector norms.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
 <h3 id="output-5">Output</h3>
 <div class="fragment">
@@ -1207,13 +1219,13 @@ my text <img data-src="images/favicon.png" class="center-inline" alt="icon">.</p
 <div class="columns">
 <div class="column" style="width:50%;">
 <h3 id="markdown-6">Markdown</h3>
-<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb17-1"><a></a>Here's a paragraph of text. We describe</span>
-<span id="cb17-2"><a></a>something of great importance. So great,</span>
-<span id="cb17-3"><a></a>in fact, that we need to also include an image. </span>
-<span id="cb17-4"><a></a></span>
-<span id="cb17-5"><a></a><span class="al">![](images/bear_singing.png)</span></span>
-<span id="cb17-6"><a></a></span>
-<span id="cb17-7"><a></a>Moving along, we will describe something else. </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a></a>Here's a paragraph of text. We describe</span>
+<span id="cb15-2"><a></a>something of great importance. So great,</span>
+<span id="cb15-3"><a></a>in fact, that we need to also include an image. </span>
+<span id="cb15-4"><a></a></span>
+<span id="cb15-5"><a></a><span class="al">![](images/bear_singing.png)</span></span>
+<span id="cb15-6"><a></a></span>
+<span id="cb15-7"><a></a>Moving along, we will describe something else. </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
 <h3 id="output-6">Output</h3>
 <div class="small fragment">
@@ -1256,9 +1268,9 @@ in fact, that we need to also include an image.</p>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_849cb381" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_01fe2af7" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">07</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
@@ -1267,9 +1279,9 @@ in fact, that we need to also include an image.</p>
 <h2>Code chunks: <span class="gray-bold">Pandoc</span></h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb18-1"><a></a><span class="in">```language</span></span>
-<span id="cb18-2"><a></a><span class="in">Some code here</span></span>
-<span id="cb18-3"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a></a><span class="in">```language</span></span>
+<span id="cb16-2"><a></a><span class="in">Some code here</span></span>
+<span id="cb16-3"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
 <div class="small">
 <ul>
@@ -1297,9 +1309,9 @@ in fact, that we need to also include an image.</p>
 <h2 data-id="quarto-animate-title">Code chunks: <span class="gray-bold">R Markdown</span></h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource markdown number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb19-1" class="hljs-ln-code"><a></a><span class="in">```{r, echo=FALSE}</span></span>
-<span id="cb19-2" class="hljs-ln-code"><a></a><span class="in">Some code here</span></span>
-<span id="cb19-3" class="hljs-ln-code"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource markdown number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb17-1" class="hljs-ln-code"><a></a><span class="in">```{r, echo=FALSE}</span></span>
+<span id="cb17-2" class="hljs-ln-code"><a></a><span class="in">Some code here</span></span>
+<span id="cb17-3" class="hljs-ln-code"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
 <div class="small">
 <ul>
@@ -1329,11 +1341,11 @@ in fact, that we need to also include an image.</p>
 <h2 data-id="quarto-animate-title">Code chunks: <span class="gray-bold">Quarto</span></h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource markdown number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb20-1" class="hljs-ln-code"><a></a><span class="in">```{language}</span></span>
-<span id="cb20-2" class="hljs-ln-code"><a></a><span class="in">#| echo: false</span></span>
-<span id="cb20-3" class="hljs-ln-code"><a></a></span>
-<span id="cb20-4" class="hljs-ln-code"><a></a><span class="in">Some code here</span></span>
-<span id="cb20-5" class="hljs-ln-code"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource markdown number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb18-1" class="hljs-ln-code"><a></a><span class="in">```{language}</span></span>
+<span id="cb18-2" class="hljs-ln-code"><a></a><span class="in">#| echo: false</span></span>
+<span id="cb18-3" class="hljs-ln-code"><a></a></span>
+<span id="cb18-4" class="hljs-ln-code"><a></a><span class="in">Some code here</span></span>
+<span id="cb18-5" class="hljs-ln-code"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
 <div class="small">
 <ul>
@@ -1378,11 +1390,11 @@ in fact, that we need to also include an image.</p>
 </div><div class="column fragment" style="width:50%;">
 <p><br>
 </p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource markdown number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb21-1" class="hljs-ln-code"><a></a><span class="in">```{r}</span></span>
-<span id="cb21-2" class="hljs-ln-code"><a></a><span class="in">label: summary-plot</span></span>
-<span id="cb21-3" class="hljs-ln-code"><a></a></span>
-<span id="cb21-4" class="hljs-ln-code"><a></a><span class="in">Some code to generate a plot...</span></span>
-<span id="cb21-5" class="hljs-ln-code"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource markdown number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb19-1" class="hljs-ln-code"><a></a><span class="in">```{r}</span></span>
+<span id="cb19-2" class="hljs-ln-code"><a></a><span class="in">label: summary-plot</span></span>
+<span id="cb19-3" class="hljs-ln-code"><a></a></span>
+<span id="cb19-4" class="hljs-ln-code"><a></a><span class="in">Some code to generate a plot...</span></span>
+<span id="cb19-5" class="hljs-ln-code"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
 <p><br>
 </p>
@@ -1481,24 +1493,24 @@ in fact, that we need to also include an image.</p>
 </div>
 </div>
 </section>
-<section id="execution-options-figures" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Execution options: <span class="gray-bold">Figures</span></h2>
+<section id="execution-options-figures" class="slide level2">
+<h2>Execution options: <span class="gray-bold">Figures</span></h2>
 <h3 id="size">Size</h3>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource markdown number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb22-1" class="hljs-ln-code"><a></a><span class="in">```{r}</span></span>
-<span id="cb22-2" class="hljs-ln-code"><a></a><span class="in">#| fig-width: 3</span></span>
-<span id="cb22-3" class="hljs-ln-code"><a></a><span class="in">#| fig-height: 2</span></span>
-<span id="cb22-4" class="hljs-ln-code"><a></a></span>
-<span id="cb22-5" class="hljs-ln-code"><a></a><span class="in">library(ggplot2)</span></span>
-<span id="cb22-6" class="hljs-ln-code"><a></a></span>
-<span id="cb22-7" class="hljs-ln-code"><a></a><span class="in">ggplot(iris, aes(x = Petal.Width, </span></span>
-<span id="cb22-8" class="hljs-ln-code"><a></a><span class="in">                 y = Petal.Length)) +</span></span>
-<span id="cb22-9" class="hljs-ln-code"><a></a><span class="in">  geom_point() +</span></span>
-<span id="cb22-10" class="hljs-ln-code"><a></a><span class="in">  labs(x = "Petal width",</span></span>
-<span id="cb22-11" class="hljs-ln-code"><a></a><span class="in">       y = "Petal length")</span></span>
-<span id="cb22-12" class="hljs-ln-code"><a></a></span>
-<span id="cb22-13" class="hljs-ln-code"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a></a><span class="in">```{r}</span></span>
+<span id="cb20-2"><a></a><span class="in">#| fig-width: 3</span></span>
+<span id="cb20-3"><a></a><span class="in">#| fig-height: 2</span></span>
+<span id="cb20-4"><a></a></span>
+<span id="cb20-5"><a></a><span class="in">library(ggplot2)</span></span>
+<span id="cb20-6"><a></a></span>
+<span id="cb20-7"><a></a><span class="in">ggplot(iris, aes(x = Petal.Width, </span></span>
+<span id="cb20-8"><a></a><span class="in">                 y = Petal.Length)) +</span></span>
+<span id="cb20-9"><a></a><span class="in">  geom_point() +</span></span>
+<span id="cb20-10"><a></a><span class="in">  labs(x = "Petal width",</span></span>
+<span id="cb20-11"><a></a><span class="in">       y = "Petal length")</span></span>
+<span id="cb20-12"><a></a></span>
+<span id="cb20-13"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
@@ -1524,24 +1536,24 @@ in fact, that we need to also include an image.</p>
           display:block!important;
       }</style></aside>
 </section>
-<section id="execution-options-figures-1" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Execution options: <span class="gray-bold">Figures</span></h2>
+<section id="execution-options-figures-1" class="slide level2">
+<h2>Execution options: <span class="gray-bold">Figures</span></h2>
 <h3 id="size-1">Size</h3>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource markdown number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb23-1" class="hljs-ln-code"><a></a><span class="in">```{r}</span></span>
-<span id="cb23-2" class="hljs-ln-code"><a></a><span class="in">#| fig-width: 6</span></span>
-<span id="cb23-3" class="hljs-ln-code"><a></a><span class="in">#| fig-height: 6</span></span>
-<span id="cb23-4" class="hljs-ln-code"><a></a></span>
-<span id="cb23-5" class="hljs-ln-code"><a></a><span class="in">library(ggplot2)</span></span>
-<span id="cb23-6" class="hljs-ln-code"><a></a></span>
-<span id="cb23-7" class="hljs-ln-code"><a></a><span class="in">ggplot(iris, aes(x = Petal.Width, </span></span>
-<span id="cb23-8" class="hljs-ln-code"><a></a><span class="in">                 y = Petal.Length)) +</span></span>
-<span id="cb23-9" class="hljs-ln-code"><a></a><span class="in">  geom_point() +</span></span>
-<span id="cb23-10" class="hljs-ln-code"><a></a><span class="in">  labs(x = "Petal width",</span></span>
-<span id="cb23-11" class="hljs-ln-code"><a></a><span class="in">       y = "Petal length")</span></span>
-<span id="cb23-12" class="hljs-ln-code"><a></a></span>
-<span id="cb23-13" class="hljs-ln-code"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb21-1"><a></a><span class="in">```{r}</span></span>
+<span id="cb21-2"><a></a><span class="in">#| fig-width: 6</span></span>
+<span id="cb21-3"><a></a><span class="in">#| fig-height: 6</span></span>
+<span id="cb21-4"><a></a></span>
+<span id="cb21-5"><a></a><span class="in">library(ggplot2)</span></span>
+<span id="cb21-6"><a></a></span>
+<span id="cb21-7"><a></a><span class="in">ggplot(iris, aes(x = Petal.Width, </span></span>
+<span id="cb21-8"><a></a><span class="in">                 y = Petal.Length)) +</span></span>
+<span id="cb21-9"><a></a><span class="in">  geom_point() +</span></span>
+<span id="cb21-10"><a></a><span class="in">  labs(x = "Petal width",</span></span>
+<span id="cb21-11"><a></a><span class="in">       y = "Petal length")</span></span>
+<span id="cb21-12"><a></a></span>
+<span id="cb21-13"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
@@ -1572,21 +1584,21 @@ in fact, that we need to also include an image.</p>
 <h3 id="size-2">Size</h3>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource markdown number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb24-1" class="hljs-ln-code"><a></a><span class="in">```{r}</span></span>
-<span id="cb24-2" class="hljs-ln-code"><a></a><span class="in">#| fig-width: 6</span></span>
-<span id="cb24-3" class="hljs-ln-code"><a></a><span class="in">#| fig-height: 6</span></span>
-<span id="cb24-4" class="hljs-ln-code"><a></a><span class="in">#| fig-cap: "This is my really neat plot."</span></span>
-<span id="cb24-5" class="hljs-ln-code"><a></a><span class="in">#| fig-alt: "This is my detailed description."</span></span>
-<span id="cb24-6" class="hljs-ln-code"><a></a></span>
-<span id="cb24-7" class="hljs-ln-code"><a></a><span class="in">library(ggplot2)</span></span>
-<span id="cb24-8" class="hljs-ln-code"><a></a></span>
-<span id="cb24-9" class="hljs-ln-code"><a></a><span class="in">ggplot(iris, aes(x = Petal.Width, </span></span>
-<span id="cb24-10" class="hljs-ln-code"><a></a><span class="in">                 y = Petal.Length)) +</span></span>
-<span id="cb24-11" class="hljs-ln-code"><a></a><span class="in">  geom_point() +</span></span>
-<span id="cb24-12" class="hljs-ln-code"><a></a><span class="in">  labs(x = "Petal width",</span></span>
-<span id="cb24-13" class="hljs-ln-code"><a></a><span class="in">       y = "Petal length")</span></span>
-<span id="cb24-14" class="hljs-ln-code"><a></a></span>
-<span id="cb24-15" class="hljs-ln-code"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource markdown number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb22-1" class="hljs-ln-code"><a></a><span class="in">```{r}</span></span>
+<span id="cb22-2" class="hljs-ln-code"><a></a><span class="in">#| fig-width: 6</span></span>
+<span id="cb22-3" class="hljs-ln-code"><a></a><span class="in">#| fig-height: 6</span></span>
+<span id="cb22-4" class="hljs-ln-code"><a></a><span class="in">#| fig-cap: "This is my really neat plot."</span></span>
+<span id="cb22-5" class="hljs-ln-code"><a></a><span class="in">#| fig-alt: "This is my detailed description."</span></span>
+<span id="cb22-6" class="hljs-ln-code"><a></a></span>
+<span id="cb22-7" class="hljs-ln-code"><a></a><span class="in">library(ggplot2)</span></span>
+<span id="cb22-8" class="hljs-ln-code"><a></a></span>
+<span id="cb22-9" class="hljs-ln-code"><a></a><span class="in">ggplot(iris, aes(x = Petal.Width, </span></span>
+<span id="cb22-10" class="hljs-ln-code"><a></a><span class="in">                 y = Petal.Length)) +</span></span>
+<span id="cb22-11" class="hljs-ln-code"><a></a><span class="in">  geom_point() +</span></span>
+<span id="cb22-12" class="hljs-ln-code"><a></a><span class="in">  labs(x = "Petal width",</span></span>
+<span id="cb22-13" class="hljs-ln-code"><a></a><span class="in">       y = "Petal length")</span></span>
+<span id="cb22-14" class="hljs-ln-code"><a></a></span>
+<span id="cb22-15" class="hljs-ln-code"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
@@ -1635,16 +1647,16 @@ in fact, that we need to also include an image.</p>
 </div>
 </div>
 </div><div class="column" style="width:40%;">
-<div class="sourceCode" id="cb25"><pre class="sourceCode numberSource yaml number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode yaml hljs"><span id="cb25-1" class="hljs-ln-code"><a></a><span class="pp">---</span></span>
-<span id="cb25-2" class="hljs-ln-code"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My FWS Report"</span></span>
-<span id="cb25-3" class="hljs-ln-code"><a></a><span class="fu">author</span><span class="kw">:</span><span class="at"> Jane Biologist</span></span>
-<span id="cb25-4" class="hljs-ln-code"><a></a><span class="fu">execute</span><span class="kw">:</span></span>
-<span id="cb25-5" class="hljs-ln-code"><a></a><span class="at">  </span><span class="fu">echo</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
-<span id="cb25-6" class="hljs-ln-code"><a></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb25-7" class="hljs-ln-code"><a></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
-<span id="cb25-8" class="hljs-ln-code"><a></a><span class="at">    </span><span class="fu">fig-width</span><span class="kw">:</span><span class="at"> </span><span class="dv">8</span></span>
-<span id="cb25-9" class="hljs-ln-code"><a></a><span class="at">    </span><span class="fu">fig-height</span><span class="kw">:</span><span class="at"> </span><span class="dv">6</span></span>
-<span id="cb25-10" class="hljs-ln-code"><a></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource yaml number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode yaml hljs"><span id="cb23-1" class="hljs-ln-code"><a></a><span class="pp">---</span></span>
+<span id="cb23-2" class="hljs-ln-code"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My FWS Report"</span></span>
+<span id="cb23-3" class="hljs-ln-code"><a></a><span class="fu">author</span><span class="kw">:</span><span class="at"> Jane Biologist</span></span>
+<span id="cb23-4" class="hljs-ln-code"><a></a><span class="fu">execute</span><span class="kw">:</span></span>
+<span id="cb23-5" class="hljs-ln-code"><a></a><span class="at">  </span><span class="fu">echo</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb23-6" class="hljs-ln-code"><a></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb23-7" class="hljs-ln-code"><a></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb23-8" class="hljs-ln-code"><a></a><span class="at">    </span><span class="fu">fig-width</span><span class="kw">:</span><span class="at"> </span><span class="dv">8</span></span>
+<span id="cb23-9" class="hljs-ln-code"><a></a><span class="at">    </span><span class="fu">fig-height</span><span class="kw">:</span><span class="at"> </span><span class="dv">6</span></span>
+<span id="cb23-10" class="hljs-ln-code"><a></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
 <aside class="notes">
 
@@ -1683,7 +1695,7 @@ in fact, that we need to also include an image.</p>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_623bb831" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_e72667d7" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>

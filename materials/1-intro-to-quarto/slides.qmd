@@ -205,8 +205,8 @@ You're at a crossroads! How do you decide whether to move from R Markdown to Qua
 ::: {.column width="40%" .incremental}
 \
 
-- You have existing R Markdown code that works for you.
-- Many custom tools built around R Markdown that are not available (yet) in Quarto.
+- Have existing R Markdown code that works for you
+- Custom tools built around R Markdown that are not yet available in Quarto
 :::
 
 ::: {.column width="60%"}
@@ -391,7 +391,7 @@ editor: source
 
 ::: {.incremental}
 - Options are dependent on the file output (**many** options {{< fa face-flushed >}})  
-- Search Quarto guidance within your specified file format:
+- Search the [Quarto guidance](https://quarto.org/docs/reference/) within your specified file format:
 
 ::: {.fragment}
 ```{=html}
@@ -626,41 +626,58 @@ my text ![icon](images/favicon.png){.center-inline}.
 
 ## Block elements: [Paragraphs]{.gray-bold}
 
-\ 
-
 ::: columns
 :::{.column width="50%"}
 ### Markdown
 
-```markdown
+``` markdown
 Here's a paragraph. To seperate it from the next  
 paragraph, you need to add one or more empty lines.
 
 This is a new paragraph. You can format each  
 paragraph independently. A paragraph is an  
 examine  of a block element.
+
+::: {.callout-tip}
+## Custom block element  
+
+Here's an example of a block with custom 
+formatting. Everything in this block has 
+this format.
+:::
 ```
 :::
 
 :::{.column width="50%"}
-### Output
+
+### Output  
+
 :::{.small}
 :::{.fragment}
+
 Here's a paragraph. To seperate it from the next paragraph,
 you need to add one or more empty lines.
 
 This is a new paragraph. You can format each paragraph independently. 
 A paragraph is an examine of a block element.
+
+::: {.callout-tip}
+## Custom block element
+
+Here's an example of a block with custom formatting. Everything in this block has this format.
+:::
+
 :::
 :::
 
 :::
-
 :::
+
 
 ::: {.notes}
 
 :::
+
 
 ## Block elements: [Headers]{.gray-bold} 
 
@@ -676,10 +693,6 @@ A paragraph is an examine of a block element.
 |     ### Header 3    | ### Header 3 {.heading-output}    |
 +---------------------+-----------------------------------+
 |     #### Header 4   | #### Header 4 {.heading-output}   |
-+---------------------+-----------------------------------+
-|     ##### Header 5  | ##### Header 5 {.heading-output}  |
-+---------------------+-----------------------------------+
-|     ###### Header 6 | ###### Header 6 {.heading-output} |
 +---------------------+-----------------------------------+
 
 
@@ -850,7 +863,7 @@ Open `3-document_body.qmd` and make the following changes to the document:
 :::
 
 ```{r}
-countdown::countdown(7)
+countdown::countdown(10)
 ```
 
 
@@ -998,7 +1011,7 @@ This can cause problems when rendering to PDF with LaTeX. {{< fa face-smile-wink
 :::
 
 
-## Execution options: [Figures]{.gray-bold} {auto-animate="true"}
+## Execution options: [Figures]{.gray-bold} 
 
 ### Size
 
@@ -1045,7 +1058,7 @@ ggplot(iris, aes(x = Petal.Width,
 
 
 
-## Execution options: [Figures]{.gray-bold} {auto-animate="true"}
+## Execution options: [Figures]{.gray-bold} 
 
 ### Size
 
