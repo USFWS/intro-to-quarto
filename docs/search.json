@@ -365,6 +365,16 @@
     ]
   },
   {
+    "objectID": "materials/1-overview/exercises.html#exercise-5-your-turn",
+    "href": "materials/1-overview/exercises.html#exercise-5-your-turn",
+    "title": "Overview Exercises",
+    "section": "Exercise 5: Your turn!",
+    "text": "Exercise 5: Your turn!\nYou have now learned how to render a Quarto document and how to change the look and feel of a Quarto document by customizing the YAML metadata, inline and block elements of the text body, and code chunks. Now it is time to apply these skills by creating a Quarto document from scratch.\n\nTasks\n\nCreate a Quarto document\nAdd this..\nand..\nthis…\nand..\nthis.",
+    "crumbs": [
+      "- Exercises"
+    ]
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About the Workshop",
@@ -397,7 +407,7 @@
     "href": "materials/1-overview/index.html",
     "title": "Introduction to Quarto",
     "section": "",
-    "text": "Full Screen\n\n\nLearning goals\n\nIntroduce Quarto and it’s applications\nDescribe the three components of a Quarto file: QML metadata, text, and code blocks\nProvide opportunities to explore the components of a Quarto file through in-class exercises",
+    "text": "Full Screen\n\n\nLearning goals\n\nIntroduce Quarto and it’s applications\nDescribe the three components of a Quarto file: QML metadata, text body, and code blocks\nProvide opportunities to explore the components of a Quarto file through in-class exercises",
     "crumbs": [
       "- Slides"
     ]
@@ -408,15 +418,5 @@
     "title": "Prework",
     "section": "",
     "text": "From FWS Apps-To-Go, install:\n\nR 4.4.2 or newer\nRStudio 2024.09.1 or newer\n\nOpen a new RStudio session.\nDownload the exercise materials. This function creates a new RStudio project called “intro-to-quarto-exercises-main”.\n\n\nusethis::use_course(\"https://github.com/USFWS/intro-to-quarto-exercises/archive/refs/heads/main.zip\")\n\n\nOpen this new RStudio project, if it’s not already open.\nInstall the R package dependencies:\n\n\nsource(\"install_packages.R\")"
-  },
-  {
-    "objectID": "materials/1-overview/exercises.html#exercise-5-your-turn",
-    "href": "materials/1-overview/exercises.html#exercise-5-your-turn",
-    "title": "Overview Exercises",
-    "section": "Exercise 5: Your turn!",
-    "text": "Exercise 5: Your turn!\nYou have now learned how to render a Quarto document and how to change the look and feel of a Quarto document by customizing the YAML metadata, inline and block elements of the text body, and code chunks. Now it is time to apply these skills by creating a Quarto document from scratch.\n\nTasks\n\nCreate a Quarto document\nAdd this..\nand..\nthis…\nand..\nthis.",
-    "crumbs": [
-      "- Exercises"
-    ]
   }
 ]
