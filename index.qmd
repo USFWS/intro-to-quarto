@@ -9,7 +9,7 @@ css: assets/index.css
 
 ::: {.g-col-5}
 
-## Dynamic Reporting <br> with Quarto
+## Introduction <br> to <br> Quarto {style="text-align: center"}
 
 :::
 ::: {.g-col-7}
@@ -22,29 +22,7 @@ css: assets/index.css
 
 This workshop provides an introduction to Quarto for intermediate to advanced R users. We present on the basics of using Quarto to generate dynamic reports. After an introduction, we use an example dataset to render a Quarto report to Word, PDF, and HTML documents. Participants will leave with the foundational skills required to create a Quarto report.
 
-### Prework {#sec-prework}
-
-1. From FWS Apps-To-Go, install:
-    - R 4.4.2
-    - RStudio 2024.09.1
-2. Open a new RStudio session. 
-3. Download the exercise materials. This function creates a new RStudio project called "intro-to-quarto-exercises-main".
-
-::: {.small}
-``` r
-usethis::use_course("https://github.com/USFWS/intro-to-quarto-exercises/archive/refs/heads/main.zip")
-```
-:::
-
-4. Open this new RStudio project, if it's not already open. 
-5. Install the R package dependencies:
-
-::: {.small}
-``` r
-source("install_packages.R")
-```
-:::
-
 ### Materials
 
-- [Introduction to Quarto](materials/1-intro-to-quarto/index.html)
+- [Prework](prework.html)
+- [Slides and Exercises](materials/1-intro-to-quarto/index.html)

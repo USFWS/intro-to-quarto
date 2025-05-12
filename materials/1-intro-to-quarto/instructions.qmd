@@ -18,7 +18,7 @@ For additional resources on quarto documents, please visit:
 
 ### Set up 
 
-- Complete the [prework](../../index.qmd#sec-prework)
+- Complete the [Prework](../../prework.qmd)
 
 
 ## Exercise 1: Rendering

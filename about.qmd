@@ -3,10 +3,6 @@ title: "About the Workshop"
 sidebar: false
 ---
 
-- [Location:]{.smallcaps} Virtual
-- [Time:]{.smallcaps} TBD
-
-
 ## Teaching Team
 
 #### Jonah Withers

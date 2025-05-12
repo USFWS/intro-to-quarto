@@ -4,13 +4,6 @@
 
 ------------------------------------------------------------------------
 
-:spiral_calendar:  
-:alarm_clock:  
-:hotel: Virtual  
-:writing_hand:  
-
-------------------------------------------------------------------------
-
 ## Description
 
 The intent of this course is to provide an introduction of Quarto for
@@ -62,10 +55,13 @@ source("install_packages.R")
 | 10 min | **Exercise 1**     |
 | 10 min | YAML metadata      |
 | 10 min | **Exercise 2**     |
+| 10 min | *BREAK*            |
 | 15 min | Document body      |
-| 10 min | **Exercise 2**     |
-| 15 min | Code chunks        |
 | 10 min | **Exercise 3**     |
+| 15 min | Code chunks        |
+| 10 min | **Exercise 4**     |
+| 10 min | *BREAK*            |
+| 15 min | **Exercise 5**     |
 | 5 min  | Wrap up            |
 
 ## Instructors
