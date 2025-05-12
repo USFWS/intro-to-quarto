@@ -7,321 +7,361 @@
     "text": "Getting Started with Quarto\n\nTutorial: Hello, Quarto\n\nQuarto chapter in “R for Data Science”\n\nGetting Started With Quarto (video)\nIntroduction to Quarto, Klajdi Puka\n\nIntroduction to Working with Quarto documents, Carpentries Incubator\n\nGallery of Quarto report examples\n\n\n\nAutomating Quarto Reports\n\nHow to automate your reporting with Quarto Dashboards and Posit Connect (video)\n\nQuarto: Elevating R Markdown for Advanced Publishing (video)\n\n\n\nQuarto Websites and Dashboard\n\nCreating a website using Quarto\n\nCreating your personal website using Quarto\n\nQuarto Dashboards (video)\n\nGallery of Quarto website examples\n\nGallery of Quarto dashboard examples"
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#section",
-    "href": "materials/1-intro-to-quarto/slides.html#section",
+    "objectID": "materials/1-overview/slides.html#section",
+    "href": "materials/1-overview/slides.html#section",
     "title": "Introduction\nto Quarto",
     "section": "",
     "text": "Course materials can be found at:\nhttps://github.com/USFWS/intro-to-quarto ."
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#outline",
-    "href": "materials/1-intro-to-quarto/slides.html#outline",
+    "objectID": "materials/1-overview/slides.html#outline",
+    "href": "materials/1-overview/slides.html#outline",
     "title": "Introduction\nto Quarto",
     "section": "Outline",
     "text": "Outline\n\nOverview of Quarto\nComponents of a Quarto document\n\nYAML metadata\nDocument body\nCode blocks"
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#outputs-documents",
-    "href": "materials/1-intro-to-quarto/slides.html#outputs-documents",
+    "objectID": "materials/1-overview/slides.html#outputs-documents",
+    "href": "materials/1-overview/slides.html#outputs-documents",
     "title": "Introduction\nto Quarto",
     "section": "Outputs: Documents",
     "text": "Outputs: Documents\n\nDownload PDF file."
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#output-websites",
-    "href": "materials/1-intro-to-quarto/slides.html#output-websites",
+    "objectID": "materials/1-overview/slides.html#output-websites",
+    "href": "materials/1-overview/slides.html#output-websites",
     "title": "Introduction\nto Quarto",
     "section": "Output: Websites",
     "text": "Output: Websites"
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#outputs-presentations",
-    "href": "materials/1-intro-to-quarto/slides.html#outputs-presentations",
+    "objectID": "materials/1-overview/slides.html#outputs-presentations",
+    "href": "materials/1-overview/slides.html#outputs-presentations",
     "title": "Introduction\nto Quarto",
     "section": "Outputs: Presentations",
     "text": "Outputs: Presentations"
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#outputs-books",
-    "href": "materials/1-intro-to-quarto/slides.html#outputs-books",
+    "objectID": "materials/1-overview/slides.html#outputs-books",
+    "href": "materials/1-overview/slides.html#outputs-books",
     "title": "Introduction\nto Quarto",
     "section": "Outputs: Books",
     "text": "Outputs: Books"
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#quarto-and-r-markdown",
-    "href": "materials/1-intro-to-quarto/slides.html#quarto-and-r-markdown",
+    "objectID": "materials/1-overview/slides.html#quarto-and-r-markdown",
+    "href": "materials/1-overview/slides.html#quarto-and-r-markdown",
     "title": "Introduction\nto Quarto",
     "section": "Quarto and R Markdown",
     "text": "Quarto and R Markdown\n\n\n\n\n\nQuarto is an open-source scientific and technical publishing system built on Pandoc.\nInstead of writing a report or presentation in Word, PowerPoint, etc.; then running code in an R script; then saving output and visualizations; and then pasting them in the report or the presentation\nWe can do it all in Quarto, a free system especially tailored to scientific and technical publishing.\nIf you are familiar with R Markdown, you are probably familiar with this pipeline.\nWhen you knit an R Markdown .rmd file, the R package knitr converts your text and R code into a Markdown file and then uses Pandoc to produce whatever output you’ve specified."
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#quarto-and-r-markdown-1",
-    "href": "materials/1-intro-to-quarto/slides.html#quarto-and-r-markdown-1",
+    "objectID": "materials/1-overview/slides.html#quarto-and-r-markdown-1",
+    "href": "materials/1-overview/slides.html#quarto-and-r-markdown-1",
     "title": "Introduction\nto Quarto",
     "section": "Quarto and R Markdown",
     "text": "Quarto and R Markdown\n\n\n\nA Quarto .qmd file on the other hand can be composed of text and R, Python, and/or Julia code."
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#quarto-and-r-markdown-2",
-    "href": "materials/1-intro-to-quarto/slides.html#quarto-and-r-markdown-2",
+    "objectID": "materials/1-overview/slides.html#quarto-and-r-markdown-2",
+    "href": "materials/1-overview/slides.html#quarto-and-r-markdown-2",
     "title": "Introduction\nto Quarto",
     "section": "Quarto and R Markdown",
     "text": "Quarto and R Markdown\n\n\n\nEither the knitr or jupyter engines will then render your text and code into a Markdown file followed by Pandoc producing whatever output you’ve specified. Quarto accomplishes this by being fully separate from the R ecosystem. You can even run it from the command-line interface (i.e., the shell or terminal), if you want to."
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#quarto-and-r-markdown-3",
-    "href": "materials/1-intro-to-quarto/slides.html#quarto-and-r-markdown-3",
+    "objectID": "materials/1-overview/slides.html#quarto-and-r-markdown-3",
+    "href": "materials/1-overview/slides.html#quarto-and-r-markdown-3",
     "title": "Introduction\nto Quarto",
     "section": "Quarto and R Markdown",
     "text": "Quarto and R Markdown"
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#quarto-and-r-markdown-4",
-    "href": "materials/1-intro-to-quarto/slides.html#quarto-and-r-markdown-4",
+    "objectID": "materials/1-overview/slides.html#quarto-and-r-markdown-4",
+    "href": "materials/1-overview/slides.html#quarto-and-r-markdown-4",
     "title": "Introduction\nto Quarto",
     "section": "Quarto and R Markdown",
     "text": "Quarto and R Markdown"
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#quarto-and-r-markdown-5",
-    "href": "materials/1-intro-to-quarto/slides.html#quarto-and-r-markdown-5",
+    "objectID": "materials/1-overview/slides.html#quarto-and-r-markdown-5",
+    "href": "materials/1-overview/slides.html#quarto-and-r-markdown-5",
     "title": "Introduction\nto Quarto",
     "section": "Quarto and R Markdown",
     "text": "Quarto and R Markdown\n\n\n\nEmbedding code and output from Python, R, and JavaScript via integration with Jupyter, Knitr, and Observable.\nA variety of extensions to Pandoc markdown useful for technical writing including cross-references, sub-figures, layout panels, hoverable citations and footnotes, callouts, and more.\nA project system for rendering groups of documents at once, sharing options across documents, and producing aggregate output like websites and books.\nAuthoring using a wide variety of editors and notebooks including JupyterLab, RStudio, and VS Code.\nA visual markdown editor that provides a productive writing interface for composing long-form documents."
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#when-to-use-quarto-and-r-markdown",
-    "href": "materials/1-intro-to-quarto/slides.html#when-to-use-quarto-and-r-markdown",
+    "objectID": "materials/1-overview/slides.html#when-to-use-quarto-and-r-markdown",
+    "href": "materials/1-overview/slides.html#when-to-use-quarto-and-r-markdown",
     "title": "Introduction\nto Quarto",
     "section": "When to use Quarto and R Markdown?",
     "text": "When to use Quarto and R Markdown?\n\n\n\n\n\n\nWeave together text, plots, tables, and statistics\nFrequently re-create a standardized document\nReproduce your analyses\nGenerate comparable reports across multiple parameters (species, watershed, state)"
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#section-1",
-    "href": "materials/1-intro-to-quarto/slides.html#section-1",
+    "objectID": "materials/1-overview/slides.html#section-1",
+    "href": "materials/1-overview/slides.html#section-1",
     "title": "Introduction\nto Quarto",
     "section": "",
     "text": "You’re at a crossroads! How do you decide whether to move from R Markdown to Quarto?"
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#advantage-of-r-markdown",
-    "href": "materials/1-intro-to-quarto/slides.html#advantage-of-r-markdown",
+    "objectID": "materials/1-overview/slides.html#advantage-of-r-markdown",
+    "href": "materials/1-overview/slides.html#advantage-of-r-markdown",
     "title": "Introduction\nto Quarto",
     "section": "Advantage of R Markdown",
     "text": "Advantage of R Markdown\n\n\n\n\n\nHave existing R Markdown code that works for you\nCustom tools built around R Markdown that are not yet available in Quarto\n\n\n\n\n\n\n\n\n\n\nIf you like using R Markdown, there’s no need to switch! R Markdown will continue to be supported and work as it always has been. You’re welcome to try Quarto if you like, but there’s no need to switch.\nIf you have a R Markdown file that includes custom tools, there is a chance that they might not yet in available in Quarto. If this is the case, you’re of course welcome to stick with R Markdown. As they say, if it ain’t broke, don’t fix it."
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#advantages-of-quarto",
-    "href": "materials/1-intro-to-quarto/slides.html#advantages-of-quarto",
+    "objectID": "materials/1-overview/slides.html#advantages-of-quarto",
+    "href": "materials/1-overview/slides.html#advantages-of-quarto",
     "title": "Introduction\nto Quarto",
     "section": "Advantages of Quarto",
     "text": "Advantages of Quarto\n\n\n\n\nNo requirement for R\nFewer package dependencies\nrevealjs slides are easier to work with\nBetter cross referencing of figures, tables, and citations\nQuarto extensions allow for easier customization\nQuarto projects make it easier to customize websites and collaborate\nThe future\n\n\n\n\n\n\n\nThat said, there are a number of advantage to using Quarto, including:\n\nNo requirement for R (multilingual)\n\nR, Python, Julia, Javascript\n\nMore streamline and less R package dependencies\n\nUse revealjs directly for pretty slides, rather than relying on R packages.\n\nCross referencing tables and tables in the text is more straightforward, as is inserting and managing citations.\nA growing number of Quarto extensions add functionality\n\nAllow you use customized templates and\n\nQuarto projects\n\nEasier to create websites, books, collaborate on projects, etc.\n\nMost active development has moved from R Markdown to Quarto. It will only get better with time."
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#three-ways-to-render-quarto",
-    "href": "materials/1-intro-to-quarto/slides.html#three-ways-to-render-quarto",
+    "objectID": "materials/1-overview/slides.html#three-ways-to-render-quarto",
+    "href": "materials/1-overview/slides.html#three-ways-to-render-quarto",
     "title": "Introduction\nto Quarto",
     "section": "Three ways to render Quarto",
     "text": "Three ways to render Quarto\n\n\n\n\n\n1.\nRStudio GUI \n\n\n\n2.\nQuarto command line interface (CLI) \n\n\n\n3.\nQuarto R package\n\nquarto::quarto_render(input = ___, \n                      output_format = ___)"
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#exercise-1-rendering",
-    "href": "materials/1-intro-to-quarto/slides.html#exercise-1-rendering",
+    "objectID": "materials/1-overview/slides.html#exercise-1-rendering",
+    "href": "materials/1-overview/slides.html#exercise-1-rendering",
     "title": "Introduction\nto Quarto",
     "section": "Exercise 1: Rendering",
     "text": "Exercise 1: Rendering\n\n\nOpen 1_rendering.qmd. What are three main components of the file?\nRender the document using the RStudio GUI.\nRender the document using the Quarto CLI.\n\nHint: quarto render &lt;input file&gt;\n\nRender the document using the quarto R package.\n\nHint: quarto::quarto_render(\"&lt;input file&gt;\")\n\n\n\n\n\n\n−+\n10:00"
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#yaml-header",
-    "href": "materials/1-intro-to-quarto/slides.html#yaml-header",
+    "objectID": "materials/1-overview/slides.html#yaml-header",
+    "href": "materials/1-overview/slides.html#yaml-header",
     "title": "Introduction\nto Quarto",
     "section": "YAML header",
     "text": "YAML header\nYet Another Markup Language = document metadata!\n\n\n\n\n---\ntitle: \"Dynamic Reporting with Quarto\"\nauthor: \"Jacob Cochran & Jason Ross\"\nformat: \n  revealjs:\n    theme: [default, refuge_light.scss]\n    subtitle: \"FWS Data Management Workshop\"\n    height: 900\n    width: 1600\neditor: source\n---\n\n\n\n\nStarts and ends with “---”\nUses key-value pairs: key: value\n\nPicky about spacing and indentations!\n\nProcessed during rendering\nIncluding options for:\n\nTitle, authors, date\nFile output(s) (e.g., html, docx)\nStyling (e.g., theme, fig-width)\nParameters"
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#yaml-header-options",
-    "href": "materials/1-intro-to-quarto/slides.html#yaml-header-options",
+    "objectID": "materials/1-overview/slides.html#yaml-header-options",
+    "href": "materials/1-overview/slides.html#yaml-header-options",
     "title": "Introduction\nto Quarto",
     "section": "YAML header: Options",
     "text": "YAML header: Options\n\n\nOptions are dependent on the file output (many options )\n\nSearch the Quarto guidance within your specified file format:"
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#yaml-header-options-1",
-    "href": "materials/1-intro-to-quarto/slides.html#yaml-header-options-1",
+    "objectID": "materials/1-overview/slides.html#yaml-header-options-1",
+    "href": "materials/1-overview/slides.html#yaml-header-options-1",
     "title": "Introduction\nto Quarto",
     "section": "YAML header: Options",
     "text": "YAML header: Options\n\n\n\n\n\n\n\n\nAnother option: Use your friendly assistant!\n\n\n\nStart a word and hit tab to complete or …\nType Ctrl+space to see available options."
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#exercise-2-yaml-metadata",
-    "href": "materials/1-intro-to-quarto/slides.html#exercise-2-yaml-metadata",
+    "objectID": "materials/1-overview/slides.html#exercise-2-yaml-metadata",
+    "href": "materials/1-overview/slides.html#exercise-2-yaml-metadata",
     "title": "Introduction\nto Quarto",
     "section": "Exercise 2: YAML metadata",
     "text": "Exercise 2: YAML metadata\n\n\nOpen 2_yaml_metadata.qmd and render the document.\nUpdate the title and replace the author name with your name. Re-render it.\nChange the output to html and render it. View it in an editor.\nNow render it as a PDF. What did you notice?\n[Bonus] Render the document as both a PDF and HTML.\n\n\n\n\n\n−+\n10:00"
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#text-body-markdown",
-    "href": "materials/1-intro-to-quarto/slides.html#text-body-markdown",
+    "objectID": "materials/1-overview/slides.html#text-body-markdown",
+    "href": "materials/1-overview/slides.html#text-body-markdown",
     "title": "Introduction\nto Quarto",
     "section": "Text body: Markdown",
     "text": "Text body: Markdown\n\n\n\n\n\nMarkdown is a markup language (e.g., HTML, teX, XML)\n\nAdd syntax to the text to change it’s look\nMix text with markup instructions\n\nQuarto uses Pandoc Markdown\n\nInline or block elements"
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#text-body",
-    "href": "materials/1-intro-to-quarto/slides.html#text-body",
+    "objectID": "materials/1-overview/slides.html#text-body",
+    "href": "materials/1-overview/slides.html#text-body",
     "title": "Introduction\nto Quarto",
     "section": "Text body",
     "text": "Text body\n\n\nInline elements\n\nIndividual words in a sentence\nImages, links, equations, or code in a sentence\n\n\nBlock elements\n\nParagraphs or sections of a document\nStandalone images, figures, or figures"
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#inline-elements-text",
-    "href": "materials/1-intro-to-quarto/slides.html#inline-elements-text",
+    "objectID": "materials/1-overview/slides.html#inline-elements-text",
+    "href": "materials/1-overview/slides.html#inline-elements-text",
     "title": "Introduction\nto Quarto",
     "section": "Inline elements: Text",
     "text": "Inline elements: Text\n\n\n\n\nMarkdown\nThis is an example of how you could change    \ninline elements of text body Markdown in a FWS  \nreport. You can make a word *italicized* or  \n**bold**. You can also display code, such as \n`exp(10) + 1`. You can even ~~strikethrough~~  \nand make something a superscript^1^.\n\nOutput\n\n\nThis is an example of how you could change\ninline elements of text body Markdown in a FWS report. You can make a word italicized or\nbold. You can also display code, such as\nexp(10) + 1. You can even strikethrough\nand make something a superscript1."
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#inline-elements-math",
-    "href": "materials/1-intro-to-quarto/slides.html#inline-elements-math",
+    "objectID": "materials/1-overview/slides.html#inline-elements-math",
+    "href": "materials/1-overview/slides.html#inline-elements-math",
     "title": "Introduction\nto Quarto",
     "section": "Inline elements: Math",
     "text": "Inline elements: Math\n\n\n\n\nMarkdown\nThe solution to $sqrt(x) = 26$ is $x = 676$ and  \n$\\pi = 3.1415...$.\n\nOutput\n\n\nThe solution to \\(sqrt(x) = 26\\) is \\(x = 676\\) and \\(\\pi = 3.1415...\\)."
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#inline-elements-hyperlinks-and-images",
-    "href": "materials/1-intro-to-quarto/slides.html#inline-elements-hyperlinks-and-images",
+    "objectID": "materials/1-overview/slides.html#inline-elements-hyperlinks-and-images",
+    "href": "materials/1-overview/slides.html#inline-elements-hyperlinks-and-images",
     "title": "Introduction\nto Quarto",
     "section": "Inline elements: Hyperlinks and images",
     "text": "Inline elements: Hyperlinks and images\n\n\n\n\nMarkdown\nFor more information on how to use Quarto,  \ncheck out the [Quarto webpage](www.quarto.com).\n\n\n\nHere's an image that is inline with  \nmy text ![icon](images/favicon.png).\n\n\nOutput\n\n\nFor more information on how to use Quarto,\ncheck out the Quarto webpage.\n\n\n\n\nHere’s an image that is inline with\nmy text ."
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#block-elements-paragraphs",
-    "href": "materials/1-intro-to-quarto/slides.html#block-elements-paragraphs",
+    "objectID": "materials/1-overview/slides.html#block-elements-paragraphs",
+    "href": "materials/1-overview/slides.html#block-elements-paragraphs",
     "title": "Introduction\nto Quarto",
     "section": "Block elements: Paragraphs",
     "text": "Block elements: Paragraphs\n\n\nMarkdown\nHere's a paragraph. To seperate it from the next  \nparagraph, you need to add one or more empty lines.\n\nThis is a new paragraph. You can format each  \nparagraph independently. A paragraph is an  \nexamine  of a block element.\n\n::: {.callout-tip}\n## Custom block element  \n\nHere's an example of a block with custom \nformatting. Everything in this block has \nthis format.\n:::\n\nOutput\n\n\nHere’s a paragraph. To seperate it from the next paragraph, you need to add one or more empty lines.\nThis is a new paragraph. You can format each paragraph independently. A paragraph is an examine of a block element.\n\n\n\n\n\n\nCustom block element\n\n\nHere’s an example of a block with custom formatting. Everything in this block has this format."
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#block-elements-headers",
-    "href": "materials/1-intro-to-quarto/slides.html#block-elements-headers",
+    "objectID": "materials/1-overview/slides.html#block-elements-headers",
+    "href": "materials/1-overview/slides.html#block-elements-headers",
     "title": "Introduction\nto Quarto",
     "section": "Block elements: Headers",
     "text": "Block elements: Headers\n\n\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n# Header 1\nHeader 1\n\n\n## Header 2\nHeader 2\n\n\n### Header 3\nHeader 3\n\n\n#### Header 4\nHeader 4"
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#block-elements-lists",
-    "href": "materials/1-intro-to-quarto/slides.html#block-elements-lists",
+    "objectID": "materials/1-overview/slides.html#block-elements-lists",
+    "href": "materials/1-overview/slides.html#block-elements-lists",
     "title": "Introduction\nto Quarto",
     "section": "Block elements: Lists",
     "text": "Block elements: Lists\n\n\n\n\nMarkdown\n**Ordered List**\n\n1. This item first\n2. Then this one\n3. And finally this\n \n\n**Unordered List**\n\n- Kodiak Refuge\n- Togiak Refuge\n- Arctic Refuge\n\n\nOutput\n\n\nOrdered List\n\nThis item first\nThen this one\nAnd finally this\n\n\n\nUnordered List\n\nKodiak Refuge\nTogiak Refuge\nArctic Refuge"
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#block-elements-math",
-    "href": "materials/1-intro-to-quarto/slides.html#block-elements-math",
+    "objectID": "materials/1-overview/slides.html#block-elements-math",
+    "href": "materials/1-overview/slides.html#block-elements-math",
     "title": "Introduction\nto Quarto",
     "section": "Block elements: Math",
     "text": "Block elements: Math\n\n\n\n\nMarkdown\nThe Cauchy-Schwarz Inequality\n\n$$\n\\left( \\sum_{k=1}^n a_k b_k \\right)^2 \n\\leq \n\\left( \\sum_{k=1}^n a_k^2 \\right) \n\\left( \\sum_{k=1}^n b_k^2 \\right)\n$$\nis an upper bound on the inner product between  \ntwo vectors in an inner product space in terms  \nof the product of the vector norms.\n\nOutput\n\n\nThe Cauchy-Schwarz Inequality\n\\[\n\\left( \\sum_{k=1}^n a_k b_k \\right)^2 \\leq \\left( \\sum_{k=1}^n a_k^2 \\right) \\left( \\sum_{k=1}^n b_k^2 \\right)\n\\] is an upper bound on the inner product between two vectors in an inner product space in terms of the product of the vector norms."
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#block-elements-images",
-    "href": "materials/1-intro-to-quarto/slides.html#block-elements-images",
+    "objectID": "materials/1-overview/slides.html#block-elements-images",
+    "href": "materials/1-overview/slides.html#block-elements-images",
     "title": "Introduction\nto Quarto",
     "section": "Block elements: Images",
     "text": "Block elements: Images\n\n\n\n\nMarkdown\nHere's a paragraph of text. We describe\nsomething of great importance. So great,\nin fact, that we need to also include an image. \n\n![](images/bear_singing.png)\n\nMoving along, we will describe something else. \n\nOutput\n\nHere’s a paragraph of text. We describe\nsomething of great importance. So great,\nin fact, that we need to also include an image.\n\nMoving along, we will describe something else."
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#exercise-3-document-body",
-    "href": "materials/1-intro-to-quarto/slides.html#exercise-3-document-body",
+    "objectID": "materials/1-overview/slides.html#exercise-3-document-body",
+    "href": "materials/1-overview/slides.html#exercise-3-document-body",
     "title": "Introduction\nto Quarto",
     "section": "Exercise 3: Document body",
     "text": "Exercise 3: Document body\nOpen 3-document_body.qmd and make the following changes to the document:\n\nInline:\n\nItalicize the species name\nMake the refuge name into a hyperlink to the refuge website\n\nBlock:\n\nCreate a new header named “My list”\nMake an ordered and unordered list\nInsert an image\n\n\n\n\n\n−+\n10:00"
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#code-chunks-pandoc",
-    "href": "materials/1-intro-to-quarto/slides.html#code-chunks-pandoc",
+    "objectID": "materials/1-overview/slides.html#code-chunks-pandoc",
+    "href": "materials/1-overview/slides.html#code-chunks-pandoc",
     "title": "Introduction\nto Quarto",
     "section": "Code chunks: Pandoc",
     "text": "Code chunks: Pandoc\n\n\n```language\nSome code here\n```\n\n\n\nCode chunk surrounded by a “fence” of three backticks ```\nSpecifying the language allows for syntax highlighting.\nCode is displayed but not executed"
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#code-chunks-r-markdown",
-    "href": "materials/1-intro-to-quarto/slides.html#code-chunks-r-markdown",
+    "objectID": "materials/1-overview/slides.html#code-chunks-r-markdown",
+    "href": "materials/1-overview/slides.html#code-chunks-r-markdown",
     "title": "Introduction\nto Quarto",
     "section": "Code chunks: R Markdown",
     "text": "Code chunks: R Markdown\n\n\n```{r, echo=FALSE}\nSome code here\n```\n\n\n\nCode chunk surrounded by a “fence” of three backticks ```\n\nSpecifying the language allows for syntax highlighting.\nCode is displayed but not executed Code executes unless you specify as an option -&gt; brackets{}\nChunk options are a comma-seperated list (R syntax)"
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#code-chunks-quarto",
-    "href": "materials/1-intro-to-quarto/slides.html#code-chunks-quarto",
+    "objectID": "materials/1-overview/slides.html#code-chunks-quarto",
+    "href": "materials/1-overview/slides.html#code-chunks-quarto",
     "title": "Introduction\nto Quarto",
     "section": "Code chunks: Quarto",
     "text": "Code chunks: Quarto\n\n\n```{language}\n#| echo: false\n\nSome code here\n```\n\n\n\nCode chunk surrounded by a “fence” of three backticks ```\nSpecifying the language allows for syntax highlighting.\nCode is displayed but not executed Code executes unless you specify as an option -&gt; brackets{}\nChunk options are a comma-seperated list (R syntax) Chunk options moved to a YAML in the cell after a hash pipe #|\n\nWider language support\nEasier to read"
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#code-chunks-labels",
-    "href": "materials/1-intro-to-quarto/slides.html#code-chunks-labels",
+    "objectID": "materials/1-overview/slides.html#code-chunks-labels",
+    "href": "materials/1-overview/slides.html#code-chunks-labels",
     "title": "Introduction\nto Quarto",
     "section": "Code chunks: Labels",
     "text": "Code chunks: Labels\n\n\n\n\n\nIdentifies code chunks\n\nMakes debugging easier\nCan reference code chunk outputs in the text\n\n\n\n\n\n```{r}\nlabel: summary-plot\n\nSome code to generate a plot...\n```\n\n\n\n\n\n\n\n\n\n\n\nAvoid using underscores (_) in labels and IDs.\n\n\nThis can cause problems when rendering to PDF with LaTeX."
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#execution-options-outputs",
-    "href": "materials/1-intro-to-quarto/slides.html#execution-options-outputs",
+    "objectID": "materials/1-overview/slides.html#execution-options-outputs",
+    "href": "materials/1-overview/slides.html#execution-options-outputs",
     "title": "Introduction\nto Quarto",
     "section": "Execution options: Outputs",
     "text": "Execution options: Outputs\n\n\n\n\n\n\n\n\n\n\nOption\nDescription\n\n\n\n\neval\nEvaluate the code chunk (if false, just echos the code into the output).\n\n\necho\nInclude the source code in output\n\n\noutput\nInclude the results of executing the code in the output (true, false, or asis to indicate that the output is raw markdown and should not have any of Quarto’s standard enclosing markdown).\n\n\nwarning\nInclude warnings in the output.\n\n\nerror\nInclude errors in the output.\n\n\ninclude\nCatch all for preventing any output (code or results) from being included (e.g. include: false suppresses all output from the code block).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTab Completion is your friend!"
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#execution-options-figures",
-    "href": "materials/1-intro-to-quarto/slides.html#execution-options-figures",
+    "objectID": "materials/1-overview/slides.html#execution-options-figures",
+    "href": "materials/1-overview/slides.html#execution-options-figures",
     "title": "Introduction\nto Quarto",
     "section": "Execution options: Figures",
     "text": "Execution options: Figures\nSize\n\n\n```{r}\n#| fig-width: 3\n#| fig-height: 2\n\nlibrary(ggplot2)\n\nggplot(iris, aes(x = Petal.Width, \n                 y = Petal.Length)) +\n  geom_point() +\n  labs(x = \"Petal width\",\n       y = \"Petal length\")\n\n```"
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#execution-options-figures-1",
-    "href": "materials/1-intro-to-quarto/slides.html#execution-options-figures-1",
+    "objectID": "materials/1-overview/slides.html#execution-options-figures-1",
+    "href": "materials/1-overview/slides.html#execution-options-figures-1",
     "title": "Introduction\nto Quarto",
     "section": "Execution options: Figures",
     "text": "Execution options: Figures\nSize\n\n\n```{r}\n#| fig-width: 6\n#| fig-height: 6\n\nlibrary(ggplot2)\n\nggplot(iris, aes(x = Petal.Width, \n                 y = Petal.Length)) +\n  geom_point() +\n  labs(x = \"Petal width\",\n       y = \"Petal length\")\n\n```"
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#execution-options-figures-2",
-    "href": "materials/1-intro-to-quarto/slides.html#execution-options-figures-2",
+    "objectID": "materials/1-overview/slides.html#execution-options-figures-2",
+    "href": "materials/1-overview/slides.html#execution-options-figures-2",
     "title": "Introduction\nto Quarto",
     "section": "Execution options: Figures",
     "text": "Execution options: Figures\nSize\n\n\n```{r}\n#| fig-width: 6\n#| fig-height: 6\n#| fig-cap: \"This is my really neat plot.\"\n#| fig-alt: \"This is my detailed description.\"\n\nlibrary(ggplot2)\n\nggplot(iris, aes(x = Petal.Width, \n                 y = Petal.Length)) +\n  geom_point() +\n  labs(x = \"Petal width\",\n       y = \"Petal length\")\n\n```\n\n\n\n\n\n\nThis is my really neat plot."
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#execution-options-yaml",
-    "href": "materials/1-intro-to-quarto/slides.html#execution-options-yaml",
+    "objectID": "materials/1-overview/slides.html#execution-options-yaml",
+    "href": "materials/1-overview/slides.html#execution-options-yaml",
     "title": "Introduction\nto Quarto",
     "section": "Execution options: YAML",
     "text": "Execution options: YAML\n\n\n\n\n\n\n\n\n\n\n\nExecution options at the document level in the YAML\n\n\nAvoids having to reapply options for each code chunk! \n\n\n\n\n\n---\ntitle: \"My FWS Report\"\nauthor: Jane Biologist\nexecute:\n  echo: false\nformat:\n  html:\n    fig-width: 8\n    fig-height: 6\n---"
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#exercise-4-code-chunks",
-    "href": "materials/1-intro-to-quarto/slides.html#exercise-4-code-chunks",
+    "objectID": "materials/1-overview/slides.html#exercise-4-code-chunks",
+    "href": "materials/1-overview/slides.html#exercise-4-code-chunks",
     "title": "Introduction\nto Quarto",
     "section": "Exercise 4: Code chunks",
     "text": "Exercise 4: Code chunks\nOpen 4_code_chunks.yml and render it.\n\nChunk Label:\n\nLabel the plot code chunk to help you differentiate from other chunks.\n\nFigure Caption:\n\nAdd “Mean” to beginning of caption to read “Mean monthly Western…”\n\nPlot:\n\nAdd + theme_classic() to end of ggplot script to clean up plot.\n\nChunk Options:\n\nChange include option to false to remove it from report.\n\n\n\n\n\n−+\n10:00"
   },
   {
-    "objectID": "materials/1-intro-to-quarto/slides.html#wrap-up",
-    "href": "materials/1-intro-to-quarto/slides.html#wrap-up",
+    "objectID": "materials/1-overview/slides.html#wrap-up",
+    "href": "materials/1-overview/slides.html#wrap-up",
     "title": "Introduction\nto Quarto",
     "section": "Wrap up",
     "text": "Wrap up\n\n\n\n\n\nQuarto is a powerful tool for creating scientific documents, presentations, and websites.\nThree basic components of a Quarto file control the rendered output:\n\nYAML metadata\nText body\nCode chunks\n\nOnce you understand the basics, the sky’s the limit!"
   },
   {
-    "objectID": "materials/1-intro-to-quarto/index.html",
-    "href": "materials/1-intro-to-quarto/index.html",
-    "title": "Introduction to Quarto",
+    "objectID": "materials/1-overview/exercises.html",
+    "href": "materials/1-overview/exercises.html",
+    "title": "Overview Exercises",
     "section": "",
-    "text": "Full Screen",
+    "text": "These exercises introduce you to key elements of Quarto documents. You will have the opportunity to explore how these elements enable you to create quality documents that effectively communicate and document your analyses and findings.\nThere are five exercises to enhance your familiarity with Quarto documents. The first exercise introduces you to options for rendering a Quarto file into a document. The second exercise focuses on understanding YAML headers, where you will learn to customize metadata such as title and author. Next, you will dive into the document body, exploring formatting options to organize your content effectively. During the fourth exercise, you will be introduced to code chunks, allowing you to embed and execute code in R, Python, or Julia, creating dynamic reports that showcase your analysis. The final exercise provides an opportunity to apply your new skills by creating a Quarto report. Through these exercises, you will develop essential skills to create professional Quarto documents.\nFor additional resources on Quarto documents, please visit:",
     "crumbs": [
-      "- Slides"
+      "- Exercises"
+    ]
+  },
+  {
+    "objectID": "materials/1-overview/exercises.html#exercise-1-rendering",
+    "href": "materials/1-overview/exercises.html#exercise-1-rendering",
+    "title": "Overview Exercises",
+    "section": "Exercise 1: Rendering",
+    "text": "Exercise 1: Rendering\nRendering in Quarto documents refers to the process of converting a Quarto file, which is written in a markdown-like syntax, into a final output format such as HTML, PDF, or Word. During rendering, the Quarto system interprets the markdown content, processes embedded R code chunks, and generates the respective output by applying formatting specified in the YAML header. This transformation allows users to produce well-structured and visually appealing documents that incorporate text, data visualizations, and analysis results seamlessly, making it an essential step in creating dynamic reports and presentations.\n\nTasks\n\nOpen 1_rendering.qmd. What are three main components of the file?\nRender the document using the RStudio GUI (  ).\nRender the document using the Quarto CLI.\n\nHint: In the terminal: quarto render &lt;input file&gt;\n\nRender the document using the quarto R package.\n\nHint: In the console: quarto::quarto_render(\"&lt;input file&gt;\")",
+    "crumbs": [
+      "- Exercises"
+    ]
+  },
+  {
+    "objectID": "materials/1-overview/exercises.html#exercise-2-yaml-metadata",
+    "href": "materials/1-overview/exercises.html#exercise-2-yaml-metadata",
+    "title": "Overview Exercises",
+    "section": "Exercise 2: YAML metadata",
+    "text": "Exercise 2: YAML metadata\nA YAML (Yet Another Markup Language) header is a crucial component of Quarto documents that defines metadata for the document, typically enclosed within a pair of triple-dashed lines at the beginning of the file. It allows users to specify important information such as the document’s title, author, date, and output formats (like HTML, PDF, or Word). Additionally, YAML headers can include parameters to control formatting options and customize the behavior of the document, such as including bibliographies or setting specific themes. By using a YAML header, authors can ensure that their documents are well-organized and professionally presented.\n\nTasks\n\nOpen 2_yaml_metadata.qmd and render the document.\nUpdate the title and replace the author name with your name. Re-render it.\nChange the output to html and render it. Open the html to view the results.\nNow render it as a PDF. What did you notice?\n[Bonus] Render the document as both a PDF and HTML.\n\nHint: consider using the quarto::quarto_render(\"&lt;input filepath&gt;\") function\n\n[Bonus] Render the document as a Word document using the MS_Style.docx file in the templates folder.\n\nHint: see example below",
+    "crumbs": [
+      "- Exercises"
+    ]
+  },
+  {
+    "objectID": "materials/1-overview/exercises.html#exercise-3-document-body",
+    "href": "materials/1-overview/exercises.html#exercise-3-document-body",
+    "title": "Overview Exercises",
+    "section": "Exercise 3: Document body",
+    "text": "Exercise 3: Document body\nThe document body of a Quarto document is the main content area where the narrative, analysis, and findings are presented. This section is typically written in markdown format, allowing users to easily incorporate various elements such as headings, paragraphs, lists, tables, and images. The importance of the document body lies in its role as the primary medium for communicating information and insights to the reader; it organizes thoughts and results in a coherent and engaging manner. A well-structured document body enhances readability and comprehension, enabling the audience to grasp complex ideas and data more effectively. By integrating both text and visual elements, the document body plays a critical role in making the overall document informative and visually appealing.\n\nTasks\nOpen 3-document_body.qmd and make the following changes to the document:\nInline:\n\nItalicize the species name\nMake the refuge name into a hyperlink to the refuge website\n\nBlock:\n\nCreate a new header named “My list”\nMake an ordered and unordered list\nInsert an image of the western snow plover below the “U.S. Fish and Wildlife Service” header\n\nHint: image can be found in the images folder",
+    "crumbs": [
+      "- Exercises"
+    ]
+  },
+  {
+    "objectID": "materials/1-overview/exercises.html#exercise-4-code-chunks",
+    "href": "materials/1-overview/exercises.html#exercise-4-code-chunks",
+    "title": "Overview Exercises",
+    "section": "Exercise 4: Code chunks",
+    "text": "Exercise 4: Code chunks\nCode chunks in a Quarto document are sections of embedded code, typically written in R or other programming languages, that allow users to perform data analysis, generate visualizations, and execute computations directly within the document. These chunks are enclosed by specific delimiters, enabling Quarto to recognize and execute the code during the rendering process. The importance of code chunks lies in their ability to integrate dynamic content with narrative text, making it possible to showcase real-time analysis and results alongside explanatory writing. This functionality enhances reproducibility, as the document can simultaneously present the code and its output, facilitating transparency and allowing others to verify or replicate the findings. By incorporating code chunks, Quarto documents become interactive and informative, transforming static reports into live analytical narratives.\n\nTasks\nOpen 4_code_chunks.qmd and make the following changes to the document:\nChunk Label:\n\nLabel the plot code chunk to help you differentiate from other chunks.\n\nFigure Caption:\n\nAdd “Mean” to beginning of caption to read “Mean monthly Western…”\n\nPlot:\n\nAdd + theme_classic() to end of ggplot script to clean up plot.\n\nChunk Options:\n\nChange include option to false to remove it from report.",
+    "crumbs": [
+      "- Exercises"
     ]
   },
   {
@@ -350,66 +390,16 @@
     "href": "index.html",
     "title": "Introduction to Quarto",
     "section": "",
-    "text": "Introduction  to  Quarto\n\n\n\n\n\n\nThis workshop provides an introduction to Quarto for intermediate to advanced R users. We present on the basics of using Quarto to generate dynamic reports. After an introduction, we use an example dataset to render a Quarto report to Word, PDF, and HTML documents. Participants will leave with the foundational skills required to create a Quarto report.\nMaterials\n\nPrework\nSlides and Exercises"
+    "text": "Introduction  to  Quarto\n\n\n\n\n\n\nWelcome! This workshop provides an introduction of Quarto for intermediate to advanced R users seeking to develop automated reports. We present on the basics of Quarto and then walk through the three primary components of a Quarto file: the YML metdata, text, and code blocks. After describing each component, we offer brief exercises that provide participants with time to explore how these components customize documents. Participants will leave with foundational skills required to create a Quarto report.\nMaterials\n\nPrework\nSlides and Exercises"
   },
   {
-    "objectID": "materials/1-intro-to-quarto/instructions.html",
-    "href": "materials/1-intro-to-quarto/instructions.html",
-    "title": "Exercises",
+    "objectID": "materials/1-overview/index.html",
+    "href": "materials/1-overview/index.html",
+    "title": "Introduction to Quarto",
     "section": "",
-    "text": "The objective of this series of exercises is to expose you to the many features of Quarto documents through the example of a Western Snowy Plover survey. The exercises will step you through the key elements of Quarto documents and provide you with an opportunity to explore the various components and features that will enable you to create quality documents that effectively communicate and document your analyses and findings.\nIn this training course, we will guide you through four exercises to enhance your familiarity with Quarto documents. The first exercise introduces you to options for rendering a Quarto file into a document. The second exercise focuses on understanding YAML headers, where you’ll learn to customize metadata such as title and author. Next, you’ll dive into the document body, exploring formatting options to organize your content effectively. Finally, you’ll master code chunks, allowing you to embed and execute code in R, Python, or Julia, creating dynamic reports that showcase your analysis. Through these exercises, you’ll develop essential skills to create professional and polished Quarto documents.\nFor additional resources on quarto documents, please visit:\n\nQuarto Guidance webpage\nQuarto Cheatsheet\n\n\n\n\nComplete the Prework",
+    "text": "Full Screen\n\n\nLearning goals\n\nIntroduce Quarto and it’s applications\nDescribe the three components of a Quarto file: QML metadata, text, and code blocks\nProvide opportunities to explore the components of a Quarto file through in-class exercises",
     "crumbs": [
-      "- Exercises"
-    ]
-  },
-  {
-    "objectID": "materials/1-intro-to-quarto/instructions.html#overview",
-    "href": "materials/1-intro-to-quarto/instructions.html#overview",
-    "title": "Exercises",
-    "section": "",
-    "text": "The objective of this series of exercises is to expose you to the many features of Quarto documents through the example of a Western Snowy Plover survey. The exercises will step you through the key elements of Quarto documents and provide you with an opportunity to explore the various components and features that will enable you to create quality documents that effectively communicate and document your analyses and findings.\nIn this training course, we will guide you through four exercises to enhance your familiarity with Quarto documents. The first exercise introduces you to options for rendering a Quarto file into a document. The second exercise focuses on understanding YAML headers, where you’ll learn to customize metadata such as title and author. Next, you’ll dive into the document body, exploring formatting options to organize your content effectively. Finally, you’ll master code chunks, allowing you to embed and execute code in R, Python, or Julia, creating dynamic reports that showcase your analysis. Through these exercises, you’ll develop essential skills to create professional and polished Quarto documents.\nFor additional resources on quarto documents, please visit:\n\nQuarto Guidance webpage\nQuarto Cheatsheet\n\n\n\n\nComplete the Prework",
-    "crumbs": [
-      "- Exercises"
-    ]
-  },
-  {
-    "objectID": "materials/1-intro-to-quarto/instructions.html#exercise-1-rendering",
-    "href": "materials/1-intro-to-quarto/instructions.html#exercise-1-rendering",
-    "title": "Exercises",
-    "section": "Exercise 1: Rendering",
-    "text": "Exercise 1: Rendering\nRendering in Quarto documents refers to the process of converting a Quarto file, which is written in a markdown-like syntax, into a final output format such as HTML, PDF, or Word. During rendering, the Quarto system interprets the markdown content, processes embedded R code chunks, and generates the respective output by applying formatting specified in the YAML header. This transformation allows users to produce well-structured and visually appealing documents that incorporate text, data visualizations, and analysis results seamlessly, making it an essential step in creating dynamic reports and presentations.\n\nTasks to accomplish\n\nOpen 1_rendering.qmd. What are three main components of the file?\nRender the document using the RStudio GUI (  ).\nRender the document using the Quarto CLI.\n\nHint: In the terminal: quarto render &lt;input file&gt;\n\nRender the document using the quarto R package.\n\nHint: In the console: quarto::quarto_render(\"&lt;input file&gt;\")",
-    "crumbs": [
-      "- Exercises"
-    ]
-  },
-  {
-    "objectID": "materials/1-intro-to-quarto/instructions.html#exercise-2-yaml-metadata",
-    "href": "materials/1-intro-to-quarto/instructions.html#exercise-2-yaml-metadata",
-    "title": "Exercises",
-    "section": "Exercise 2: YAML metadata",
-    "text": "Exercise 2: YAML metadata\nA YAML (Yet Another Markup Language) header is a crucial component of Quarto documents that defines metadata for the document, typically enclosed within a pair of triple-dashed lines at the beginning of the file. It allows users to specify important information such as the document’s title, author, date, and output formats (like HTML, PDF, or Word). Additionally, YAML headers can include parameters to control formatting options and customize the behavior of the document, such as including bibliographies or setting specific themes. By using a YAML header, authors can ensure that their documents are well-organized and professionally presented.\n\nTasks to accomplish\n\nOpen 2_yaml_metadata.qmd and render the document.\nUpdate the title and replace the author name with your name. Re-render it.\nChange the output to html and render it. Open the html to view the results.\nNow render it as a PDF. What did you notice?\n[Bonus] Render the document as both a PDF and HTML.\n\nHint: consider using the quarto::quarto_render(\"&lt;input filepath&gt;\") function\n\n[Bonus] Render the document as a Word document using the MS_Style.docx file in the templates folder.\n\nHint: see example below",
-    "crumbs": [
-      "- Exercises"
-    ]
-  },
-  {
-    "objectID": "materials/1-intro-to-quarto/instructions.html#exercise-3-document-body",
-    "href": "materials/1-intro-to-quarto/instructions.html#exercise-3-document-body",
-    "title": "Exercises",
-    "section": "Exercise 3: Document body",
-    "text": "Exercise 3: Document body\nThe document body of a Quarto document is the main content area where the narrative, analysis, and findings are presented. This section is typically written in markdown format, allowing users to easily incorporate various elements such as headings, paragraphs, lists, tables, and images. The importance of the document body lies in its role as the primary medium for communicating information and insights to the reader; it organizes thoughts and results in a coherent and engaging manner. A well-structured document body enhances readability and comprehension, enabling the audience to grasp complex ideas and data more effectively. By integrating both text and visual elements, the document body plays a critical role in making the overall document informative and visually appealing.\n\nTasks to accomplish\nOpen 3-document_body.qmd and make the following changes to the document:\nInline:\n\nItalicize the species name\nMake the refuge name into a hyperlink to the refuge website\n\nBlock:\n\nCreate a new header named “My list”\nMake an ordered and unordered list\nInsert an image of the western snow plover below the “U.S. Fish and Wildlife Service” header\n\nHint: image can be found in the images folder",
-    "crumbs": [
-      "- Exercises"
-    ]
-  },
-  {
-    "objectID": "materials/1-intro-to-quarto/instructions.html#exercise-4-code-chunks",
-    "href": "materials/1-intro-to-quarto/instructions.html#exercise-4-code-chunks",
-    "title": "Exercises",
-    "section": "Exercise 4: Code chunks",
-    "text": "Exercise 4: Code chunks\nCode chunks in a Quarto document are sections of embedded code, typically written in R or other programming languages, that allow users to perform data analysis, generate visualizations, and execute computations directly within the document. These chunks are enclosed by specific delimiters, enabling Quarto to recognize and execute the code during the rendering process. The importance of code chunks lies in their ability to integrate dynamic content with narrative text, making it possible to showcase real-time analysis and results alongside explanatory writing. This functionality enhances reproducibility, as the document can simultaneously present the code and its output, facilitating transparency and allowing others to verify or replicate the findings. By incorporating code chunks, Quarto documents become interactive and informative, transforming static reports into live analytical narratives.\n\nTask to accomplish\nOpen 4_code_chunks.qmd and make the following changes to the document:\nChunk Label:\n\nLabel the plot code chunk to help you differentiate from other chunks.\n\nFigure Caption:\n\nAdd “Mean” to beginning of caption to read “Mean monthly Western…”\n\nPlot:\n\nAdd + theme_classic() to end of ggplot script to clean up plot.\n\nChunk Options:\n\nChange include option to false to remove it from report.",
-    "crumbs": [
-      "- Exercises"
+      "- Slides"
     ]
   },
   {
@@ -417,6 +407,16 @@
     "href": "prework.html",
     "title": "Prework",
     "section": "",
-    "text": "From FWS Apps-To-Go, install:\n\nR 4.4.2\nRStudio 2024.09.1\n\nOpen a new RStudio session.\nDownload the exercise materials. This function creates a new RStudio project called “intro-to-quarto-exercises-main”.\n\n\nusethis::use_course(\"https://github.com/USFWS/intro-to-quarto-exercises/archive/refs/heads/main.zip\")\n\n\nOpen this new RStudio project, if it’s not already open.\nInstall the R package dependencies:\n\n\nsource(\"install_packages.R\")"
+    "text": "From FWS Apps-To-Go, install:\n\nR 4.4.2 or newer\nRStudio 2024.09.1 or newer\n\nOpen a new RStudio session.\nDownload the exercise materials. This function creates a new RStudio project called “intro-to-quarto-exercises-main”.\n\n\nusethis::use_course(\"https://github.com/USFWS/intro-to-quarto-exercises/archive/refs/heads/main.zip\")\n\n\nOpen this new RStudio project, if it’s not already open.\nInstall the R package dependencies:\n\n\nsource(\"install_packages.R\")"
+  },
+  {
+    "objectID": "materials/1-overview/exercises.html#exercise-5-your-turn",
+    "href": "materials/1-overview/exercises.html#exercise-5-your-turn",
+    "title": "Overview Exercises",
+    "section": "Exercise 5: Your turn!",
+    "text": "Exercise 5: Your turn!\nYou have now learned how to render a Quarto document and how to change the look and feel of a Quarto document by customizing the YAML metadata, inline and block elements of the text body, and code chunks. Now it is time to apply these skills by creating a Quarto document from scratch.\n\nTasks\n\nCreate a Quarto document\nAdd this..\nand..\nthis…\nand..\nthis.",
+    "crumbs": [
+      "- Exercises"
+    ]
   }
 ]

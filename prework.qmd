@@ -4,8 +4,8 @@ sidebar: false
 ---
 
 1. From FWS Apps-To-Go, install:
-    - R 4.4.2
-    - RStudio 2024.09.1
+    - R 4.4.2 or newer
+    - RStudio 2024.09.1 or newer
 2. Open a new RStudio session. 
 3. Download the exercise materials. This function creates a new RStudio project called "intro-to-quarto-exercises-main".
 

@@ -31,9 +31,9 @@ website:
       align: left
       contents:
         - text: "- Slides"
-          href: materials/1-intro-to-quarto/index.qmd
+          href: materials/1-overview/index.qmd
         - text: "- Exercises"
-          href: materials/1-intro-to-quarto/instructions.qmd
+          href: materials/1-overview/exercises.qmd
   page-footer:
     right: "This website was built with [Quarto](https://quarto.org/)."
 format: 

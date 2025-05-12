@@ -1,7 +1,0 @@
-
-[Full Screen](slides.qmd)
-
-```{=html}
-<iframe class="slide-deck" src="slides.html" height="450" width="800" style="border: 1px solid #2e3846;"></iframe>
-```
-
