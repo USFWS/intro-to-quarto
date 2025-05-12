@@ -8,7 +8,7 @@ project:
 from: markdown+emoji
 
 website:
-  title: "Dynamic Reporting with Quarto"
+  title: "Introduction to Quarto"
   page-navigation: true
   favicon: assets/images/favicon.png
   navbar:
@@ -24,17 +24,16 @@ website:
         aria-label: GitHub
   sidebar:
     - title: "Materials"
-      style: docked
+      style: "docked"
+      search: true
       align: left
       contents:
         - text: "- Slides"
           href: materials/1-intro-to-quarto/index.qmd
-        - text: "- References"
-          href: references.qmd
+        - text: "- Exercises"
+          href: materials/1-intro-to-quarto/instructions.qmd
   page-footer:
     right: "This website was built with [Quarto](https://quarto.org/)."
-    left: "[FWS Data Management](https://doimspp.sharepoint.com/sites/fws-data/SitePages/Home.aspx)"
-
 format: 
   html:
     theme: [default, assets/custom.scss]

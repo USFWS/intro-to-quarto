@@ -22,7 +22,7 @@ css: assets/index.css
 
 This workshop provides an introduction to Quarto for intermediate to advanced R users. We present on the basics of using Quarto to generate dynamic reports. After an introduction, we use an example dataset to render a Quarto report to Word, PDF, and HTML documents. Participants will leave with the foundational skills required to create a Quarto report.
 
-### Prework
+### Prework {#sec-prework}
 
 1. From FWS Apps-To-Go, install:
     - R 4.4.2

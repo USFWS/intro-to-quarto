@@ -1,0 +1,97 @@
+---
+title: "Exercises"
+sidebar: true
+toc: true
+---
+
+## Overview
+
+The objective of this series of exercises is to expose you to the many features of Quarto documents through the example of a Western Snowy Plover survey. The exercises will step you through the key elements of Quarto documents and provide you with an opportunity to explore the various components and features that will enable you to create quality documents that effectively communicate and document your analyses and findings.
+
+In this training course, we will guide you through four exercises to enhance your familiarity with Quarto documents. The first exercise introduces you to options for **rendering** a Quarto file into a document. The second exercise focuses on understanding **YAML headers**, where you'll learn to customize metadata such as title and author. Next, you'll dive into the **document body**, exploring formatting options to organize your content effectively. Finally, you'll master **code chunks**, allowing you to embed and execute code in R, Python, or Julia, creating dynamic reports that showcase your analysis. Through these exercises, you'll develop essential skills to create professional and polished Quarto documents.
+
+For additional resources on quarto documents, please visit:
+
+-   [Quarto Guidance webpage](https://quarto.org/docs/guide/)
+
+-   [Quarto Cheatsheet](https://rstudio.github.io/cheatsheets/quarto.pdf)
+
+### Set up 
+
+- Complete the [prework](../../index.qmd#sec-prework)
+
+
+## Exercise 1: Rendering
+
+Rendering in Quarto documents refers to the process of converting a Quarto file, which is written in a markdown-like syntax, into a final output format such as HTML, PDF, or Word. During rendering, the Quarto system interprets the markdown content, processes embedded R code chunks, and generates the respective output by applying formatting specified in the YAML header. This transformation allows users to produce well-structured and visually appealing documents that incorporate text, data visualizations, and analysis results seamlessly, making it an essential step in creating dynamic reports and presentations.
+
+### Tasks to accomplish
+
+- [ ] Open `1_rendering.qmd`. What are three main components of the file?
+- [ ] Render the document using the RStudio GUI ( ![](images/render_icon.png) ).
+- [ ] Render the document using the Quarto CLI.  
+    - *Hint*: In the terminal: `quarto render <input file>`
+- [ ] Render the document using the `quarto` R package.
+    - *Hint*: In the console: `quarto::quarto_render("<input file>")`
+
+
+## Exercise 2: YAML metadata
+
+A **YAML** (**Y**et **A**nother **M**arkup **L**anguage) header is a crucial component of Quarto documents that defines metadata for the document, typically enclosed within a pair of triple-dashed lines at the beginning of the file. It allows users to specify important information such as the document's title, author, date, and output formats (like HTML, PDF, or Word). Additionally, YAML headers can include parameters to control formatting options and customize the behavior of the document, such as including bibliographies or setting specific themes. By using a YAML header, authors can ensure that their documents are well-organized and professionally presented.
+
+### Tasks to accomplish
+
+- [ ] Open `2_yaml_metadata.qmd` and render the document.
+- [ ] Update the title and replace the author name with your name. Re-render it.
+- [ ] Change the output to `html` and render it. Open the html to view the results.
+- [ ] Now render it as a PDF. What did you notice?
+- [ ] \[*Bonus*\] Render the document as both a PDF and HTML.
+    - *Hint*: `consider using the quarto::quarto_render("<input filepath>") function`
+- [ ] \[*Bonus*\] Render the document as a Word document using the MS_Style.docx file in the templates folder.
+    - *Hint*: `see example below`
+
+
+## Exercise 3: Document body
+
+The document body of a Quarto document is the main content area where the narrative, analysis, and findings are presented. This section is typically written in markdown format, allowing users to easily incorporate various elements such as headings, paragraphs, lists, tables, and images. The importance of the document body lies in its role as the primary medium for communicating information and insights to the reader; it organizes thoughts and results in a coherent and engaging manner. A well-structured document body enhances readability and comprehension, enabling the audience to grasp complex ideas and data more effectively. By integrating both text and visual elements, the document body plays a critical role in making the overall document informative and visually appealing.
+
+### Tasks to accomplish
+
+Open `3-document_body.qmd` and make the following changes to the document:
+
+**Inline:**
+
+- [ ] Italicize the species name
+- [ ] Make the refuge name into a hyperlink to the refuge website
+
+**Block:**
+
+- [ ] Create a new header named "My list"
+- [ ] Make an ordered and unordered list
+- [ ] Insert an image of the western snow plover below the "U.S. Fish and Wildlife Service" header
+    - *Hint*: `image can be found in the images folder`
+
+
+## Exercise 4: Code chunks
+
+Code chunks in a Quarto document are sections of embedded code, typically written in R or other programming languages, that allow users to perform data analysis, generate visualizations, and execute computations directly within the document. These chunks are enclosed by specific delimiters, enabling Quarto to recognize and execute the code during the rendering process. The importance of code chunks lies in their ability to integrate dynamic content with narrative text, making it possible to showcase real-time analysis and results alongside explanatory writing. This functionality enhances reproducibility, as the document can simultaneously present the code and its output, facilitating transparency and allowing others to verify or replicate the findings. By incorporating code chunks, Quarto documents become interactive and informative, transforming static reports into live analytical narratives.
+
+### Task to accomplish
+
+Open `4_code_chunks.qmd` and make the following changes to the document:
+
+**Chunk Label:**
+
+- [ ] Label the plot code chunk to help you differentiate from other chunks.
+
+**Figure Caption:**
+
+- [ ] Add "Mean" to beginning of caption to read "Mean monthly Western..."
+
+**Plot:**
+
+- [ ] Add `+ theme_classic()` to end of ggplot script to clean up plot.
+
+**Chunk Options:**
+
+- [ ] Change `include` option to `false` to remove it from report.
