@@ -1014,8 +1014,39 @@ This can cause problems when rendering to PDF with LaTeX. {{< fa face-smile-wink
 :::
 :::
 
+## Execution options: [Figures]{.gray-bold} {auto-animate="true"}
 
-## Execution options: [Figures]{.gray-bold} 
+### Size
+
+::: columns
+
+::: {.column width="50%"}
+```{{r}}
+
+library(ggplot2)
+
+ggplot(iris, aes(x = Petal.Width, 
+                 y = Petal.Length)) +
+  geom_point() +
+  labs(x = "Petal width",
+       y = "Petal length")
+
+```
+:::
+
+::: {.column width="50%"}
+
+:::
+
+:::
+
+
+::: {.notes}
+
+:::
+
+
+## Execution options: [Figures]{.gray-bold} {auto-animate="true"}
 
 ### Size
 
@@ -1037,7 +1068,7 @@ ggplot(iris, aes(x = Petal.Width,
 ```
 :::
 
-::: {.column width="50%"}
+::: {.column width="50%" .fragment}
 ```{r}
 #| fig-width: 3
 #| fig-height: 2
@@ -1062,7 +1093,7 @@ ggplot(iris, aes(x = Petal.Width,
 
 
 
-## Execution options: [Figures]{.gray-bold} 
+## Execution options: [Figures]{.gray-bold} {auto-animate="true"}
 
 ### Size
 
@@ -1084,7 +1115,7 @@ ggplot(iris, aes(x = Petal.Width,
 ```
 :::
 
-::: {.column width="50%"}
+::: {.column width="50%" .fragment}
 ```{r}
 #| fig-width: 6
 #| fig-height: 6
@@ -1132,7 +1163,7 @@ ggplot(iris, aes(x = Petal.Width,
 ```
 :::
 
-::: {.column width="50%"}
+::: {.column width="50%" .fragment}
 ```{r}
 #| fig-width: 6
 #| fig-height: 6
@@ -1157,7 +1188,7 @@ ggplot(iris, aes(x = Petal.Width,
 :::
 
 
-## Execution options: [YAML]{.gray-bold} {auto-animate="true"}
+## Execution options: [YAML]{.gray-bold}
 
 \
 
@@ -1170,7 +1201,7 @@ Avoids having to reapply options for each code chunk! {{< fa thumbs-up >}}
 :::
 :::
 
-::: {.column width="40%"}
+::: {.column width="40%" .fragment}
 ```yaml
 ---
 title: "My FWS Report"

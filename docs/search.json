@@ -277,18 +277,25 @@
     "href": "materials/1-overview/slides.html#execution-options-figures",
     "title": "Introduction\nto Quarto",
     "section": "Execution options: Figures",
-    "text": "Execution options: Figures\nSize\n\n\n```{r}\n#| fig-width: 3\n#| fig-height: 2\n\nlibrary(ggplot2)\n\nggplot(iris, aes(x = Petal.Width, \n                 y = Petal.Length)) +\n  geom_point() +\n  labs(x = \"Petal width\",\n       y = \"Petal length\")\n\n```"
+    "text": "Execution options: Figures\nSize\n\n\n```{r}\n\nlibrary(ggplot2)\n\nggplot(iris, aes(x = Petal.Width, \n                 y = Petal.Length)) +\n  geom_point() +\n  labs(x = \"Petal width\",\n       y = \"Petal length\")\n\n```"
   },
   {
     "objectID": "materials/1-overview/slides.html#execution-options-figures-1",
     "href": "materials/1-overview/slides.html#execution-options-figures-1",
     "title": "Introduction\nto Quarto",
     "section": "Execution options: Figures",
-    "text": "Execution options: Figures\nSize\n\n\n```{r}\n#| fig-width: 6\n#| fig-height: 6\n\nlibrary(ggplot2)\n\nggplot(iris, aes(x = Petal.Width, \n                 y = Petal.Length)) +\n  geom_point() +\n  labs(x = \"Petal width\",\n       y = \"Petal length\")\n\n```"
+    "text": "Execution options: Figures\nSize\n\n\n```{r}\n#| fig-width: 3\n#| fig-height: 2\n\nlibrary(ggplot2)\n\nggplot(iris, aes(x = Petal.Width, \n                 y = Petal.Length)) +\n  geom_point() +\n  labs(x = \"Petal width\",\n       y = \"Petal length\")\n\n```"
   },
   {
     "objectID": "materials/1-overview/slides.html#execution-options-figures-2",
     "href": "materials/1-overview/slides.html#execution-options-figures-2",
+    "title": "Introduction\nto Quarto",
+    "section": "Execution options: Figures",
+    "text": "Execution options: Figures\nSize\n\n\n```{r}\n#| fig-width: 6\n#| fig-height: 6\n\nlibrary(ggplot2)\n\nggplot(iris, aes(x = Petal.Width, \n                 y = Petal.Length)) +\n  geom_point() +\n  labs(x = \"Petal width\",\n       y = \"Petal length\")\n\n```"
+  },
+  {
+    "objectID": "materials/1-overview/slides.html#execution-options-figures-3",
+    "href": "materials/1-overview/slides.html#execution-options-figures-3",
     "title": "Introduction\nto Quarto",
     "section": "Execution options: Figures",
     "text": "Execution options: Figures\nSize\n\n\n```{r}\n#| fig-width: 6\n#| fig-height: 6\n#| fig-cap: \"This is my really neat plot.\"\n#| fig-alt: \"This is my detailed description.\"\n\nlibrary(ggplot2)\n\nggplot(iris, aes(x = Petal.Width, \n                 y = Petal.Length)) +\n  geom_point() +\n  labs(x = \"Petal width\",\n       y = \"Petal length\")\n\n```\n\n\n\n\n\n\nThis is my really neat plot."
