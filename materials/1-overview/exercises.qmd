@@ -1,8 +1,9 @@
 ---
-title: "Overview Exercises"
 sidebar: true
 toc: true
 ---
+
+## Overview {#sec-exercise-overview}
 
 These exercises introduce you to key elements of Quarto documents. You will have the opportunity to explore how these elements enable you to create quality documents that effectively communicate and document your analyses and findings.
 
@@ -14,12 +15,12 @@ For additional resources on Quarto documents, please visit:
 - [Quarto Guidance webpage](https://quarto.org/docs/guide/)
 - [Quarto Cheatsheet](https://rstudio.github.io/cheatsheets/quarto.pdf)
 
-### Set up 
+## Set up 
 
 - Complete the [Prework](../../prework.qmd) steps to download the exercise materials
 
 
-## Exercise 1: Rendering
+## Exercise 1: Rendering {#sec-exercise1}
 
 Rendering in Quarto documents refers to the process of converting a Quarto file, which is written in a markdown-like syntax, into a final output format such as HTML, PDF, or Word. During rendering, the Quarto system interprets the markdown content, processes embedded R code chunks, and generates the respective output by applying formatting specified in the YAML header. This transformation allows users to produce well-structured and visually appealing documents that incorporate text, data visualizations, and analysis results seamlessly, making it an essential step in creating dynamic reports and presentations.
 
@@ -33,7 +34,7 @@ Rendering in Quarto documents refers to the process of converting a Quarto file,
     - *Hint*: In the console: `quarto::quarto_render("<input file>")`
 
 
-## Exercise 2: YAML metadata
+## Exercise 2: YAML metadata {#sec-exercise2}
 
 A **YAML** (**Y**et **A**nother **M**arkup **L**anguage) header is a crucial component of Quarto documents that defines metadata for the document, typically enclosed within a pair of triple-dashed lines at the beginning of the file. It allows users to specify important information such as the document's title, author, date, and output formats (like HTML, PDF, or Word). Additionally, YAML headers can include parameters to control formatting options and customize the behavior of the document, such as including bibliographies or setting specific themes. By using a YAML header, authors can ensure that their documents are well-organized and professionally presented.
 
@@ -49,7 +50,7 @@ A **YAML** (**Y**et **A**nother **M**arkup **L**anguage) header is a crucial com
     - *Hint*: `see example below`
 
 
-## Exercise 3: Document body
+## Exercise 3: Document body {#sec-exercise3}
 
 The document body of a Quarto document is the main content area where the narrative, analysis, and findings are presented. This section is typically written in markdown format, allowing users to easily incorporate various elements such as headings, paragraphs, lists, tables, and images. The importance of the document body lies in its role as the primary medium for communicating information and insights to the reader; it organizes thoughts and results in a coherent and engaging manner. A well-structured document body enhances readability and comprehension, enabling the audience to grasp complex ideas and data more effectively. By integrating both text and visual elements, the document body plays a critical role in making the overall document informative and visually appealing.
 
@@ -70,32 +71,21 @@ Open `3-document_body.qmd` and make the following changes to the document:
     - *Hint*: `image can be found in the images folder`
 
 
-## Exercise 4: Code chunks
+## Exercise 4: Code chunks {#sec-exercise4}
 
 Code chunks in a Quarto document are sections of embedded code, typically written in R or other programming languages, that allow users to perform data analysis, generate visualizations, and execute computations directly within the document. These chunks are enclosed by specific delimiters, enabling Quarto to recognize and execute the code during the rendering process. The importance of code chunks lies in their ability to integrate dynamic content with narrative text, making it possible to showcase real-time analysis and results alongside explanatory writing. This functionality enhances reproducibility, as the document can simultaneously present the code and its output, facilitating transparency and allowing others to verify or replicate the findings. By incorporating code chunks, Quarto documents become interactive and informative, transforming static reports into live analytical narratives.
 
 ### Tasks
 
-Open `4_code_chunks.qmd` and make the following changes to the document:
-
-**Chunk Label:**
+Open `4_code_chunks.qmd` and make the following changes to the rendered document:  
 
 - [ ] Label the plot code chunk to help you differentiate from other chunks.
-
-**Figure Caption:**
-
-- [ ] Add "Mean" to beginning of caption to read "Mean monthly Western..."
-
-**Plot:**
-
-- [ ] Add `+ theme_classic()` to end of ggplot script to clean up plot.
-
-**Chunk Options:**
-
-- [ ] Change `include` option to `false` to remove it from report.
+- [ ] Update the figure caption to read "Mean monthly Western..."
+- [ ] Add `+ theme_classic()` to end of ggplot script to clean up plot. Re-render.
+- [ ] Remove the output of a code chunk. Change `include` option to `false` and re-render.
 
 
-## Exercise 5: Your turn!
+## Exercise 5: Your turn! {#sec-exercise5}
 
 You have now learned how to render a Quarto document and how to change the look and feel of a Quarto document by customizing the YAML metadata, inline and block elements of the text body, and code chunks. Now it is time to apply these skills by creating a Quarto document from scratch.
 

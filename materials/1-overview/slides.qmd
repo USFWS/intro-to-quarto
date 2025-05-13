@@ -307,12 +307,12 @@ quarto::quarto_render(input = ___,
 ## Exercise 1: Rendering {.exercise}
 
 ::: {.center-xy-container}
-1. Open `1_rendering.qmd`. What are three main components of the file?
-2. Render the document using the RStudio GUI.
-3. Render the document using the Quarto CLI.  
-    - *Hint*: `quarto render <input file>`
-4. Render the document using the `quarto` R package.
-    - *Hint*: `quarto::quarto_render("<input file>")`
+- [ ] Open `1_rendering.qmd`. What are three main components of the file?
+- [ ] Render the document using the RStudio GUI ( ![](images/render_icon.png) ).
+- [ ] Render the document using the Quarto CLI.  
+    - *Hint*: In the terminal: `quarto render <input file>`
+- [ ] Render the document using the `quarto` R package.
+    - *Hint*: In the console: `quarto::quarto_render("<input file>")`
 :::
 
 ```{r}
@@ -434,10 +434,13 @@ editor: source
 
 ::: {.center-xy-container}
 - [ ] Open `2_yaml_metadata.qmd` and render the document.
-- [ ] Update the title and replace the author name with your name. Re-render it. 
-- [ ] Change the output to `html` and render it. View it in an editor. 
+- [ ] Update the title and replace the author name with your name. Re-render it.
+- [ ] Change the output to `html` and render it. Open the html to view the results.
 - [ ] Now render it as a PDF. What did you notice?
-- [ ] [*Bonus*] Render the document as both a PDF and HTML.
+- [ ] \[*Bonus*\] Render the document as both a PDF and HTML.
+    - *Hint*: `consider using the quarto::quarto_render("<input filepath>") function`
+- [ ] \[*Bonus*\] Render the document as a Word document using the MS_Style.docx file in the templates folder.
+    - *Hint*: `see example below`
 :::
 
 ```{r}
@@ -631,7 +634,7 @@ my text ![icon](images/favicon.png){.center-inline}.
 ### Markdown
 
 ``` markdown
-Here's a paragraph. To seperate it from the next  
+Here's a paragraph. To separate it from the next  
 paragraph, you need to add one or more empty lines.
 
 This is a new paragraph. You can format each  
@@ -655,7 +658,7 @@ this format.
 :::{.small}
 :::{.fragment}
 
-Here's a paragraph. To seperate it from the next paragraph,
+Here's a paragraph. To separate it from the next paragraph,
 you need to add one or more empty lines.
 
 This is a new paragraph. You can format each paragraph independently. 
@@ -846,7 +849,7 @@ Moving along, we will describe something else.
 
 
 ## Exercise 3: Document body {.exercise}
-
+\
 Open `3-document_body.qmd` and make the following changes to the document:
 
 ::: {.small}
@@ -859,7 +862,8 @@ Open `3-document_body.qmd` and make the following changes to the document:
 
 - [ ] Create a new header named "My list"
 - [ ] Make an ordered and unordered list
-- [ ] Insert an image
+- [ ] Insert an image of the western snow plover below the "U.S. Fish and Wildlife Service" header
+    - *Hint*: `image can be found in the images folder`
 :::
 
 ```{r}
@@ -1189,25 +1193,31 @@ format:
 
 
 ## Exercise 4: Code chunks {.exercise}
-
-Open `4_code_chunks.yml` and render it.
+\
+Open `4_code_chunks.qmd` and make the following changes to the rendered document:  
+\
 
 ::: {.small}
-**Chunk Label:**
-
 - [ ] Label the plot code chunk to help you differentiate from other chunks.
+- [ ] Update the figure caption to read "Mean monthly Western..."
+- [ ] Add `+ theme_classic()` to end of ggplot script to clean up plot. Re-render.
+- [ ] Remove the output of a code chunk. Change `include` option to `false` and re-render.
+:::
 
-**Figure Caption:**
+```{r}
+countdown::countdown(10)
+```
 
-- [ ] Add "Mean" to beginning of caption to read "Mean monthly Western..."
 
-**Plot:**
+## Exercise 5: Your turn! {.exercise}
 
-- [ ] Add `+ theme_classic()` to end of ggplot script to clean up plot.
-
-**Chunk Options:** 
-
-- [ ] Change `include` option to `false` to remove it from report.
+::: {.small}
+- [ ] Create a Quarto document
+- [ ] Add this.. 
+- [ ] and..
+- [ ] this...
+- [ ] and..
+- [ ] this.
 :::
 
 ```{r}

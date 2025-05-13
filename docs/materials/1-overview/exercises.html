@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Overview Exercises – Introduction to Quarto</title>
+<title>exercises – Introduction to Quarto</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -117,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../materials/1-overview/exercises.html">- Exercises</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../materials/1-overview/index.html">Overview of Quarto</a></li><li class="breadcrumb-item"><a href="../../materials/1-overview/exercises.html">- Exercises</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -137,18 +137,29 @@ ul.task-list li input[type="checkbox"] {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Overview of Quarto</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../materials/1-overview/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">- Slides</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../materials/1-overview/exercises.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">- Exercises</span></a>
   </div>
 </li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -159,52 +170,39 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#set-up" id="toc-set-up" class="nav-link active" data-scroll-target="#set-up">Set up</a></li>
-  <li><a href="#exercise-1-rendering" id="toc-exercise-1-rendering" class="nav-link" data-scroll-target="#exercise-1-rendering">Exercise 1: Rendering</a>
+  <li><a href="#sec-exercise-overview" id="toc-sec-exercise-overview" class="nav-link active" data-scroll-target="#sec-exercise-overview">Overview</a></li>
+  <li><a href="#set-up" id="toc-set-up" class="nav-link" data-scroll-target="#set-up">Set up</a></li>
+  <li><a href="#sec-exercise1" id="toc-sec-exercise1" class="nav-link" data-scroll-target="#sec-exercise1">Exercise 1: Rendering</a>
   <ul class="collapse">
   <li><a href="#tasks" id="toc-tasks" class="nav-link" data-scroll-target="#tasks">Tasks</a></li>
   </ul></li>
-  <li><a href="#exercise-2-yaml-metadata" id="toc-exercise-2-yaml-metadata" class="nav-link" data-scroll-target="#exercise-2-yaml-metadata">Exercise 2: YAML metadata</a>
+  <li><a href="#sec-exercise2" id="toc-sec-exercise2" class="nav-link" data-scroll-target="#sec-exercise2">Exercise 2: YAML metadata</a>
   <ul class="collapse">
   <li><a href="#tasks-1" id="toc-tasks-1" class="nav-link" data-scroll-target="#tasks-1">Tasks</a></li>
   </ul></li>
-  <li><a href="#exercise-3-document-body" id="toc-exercise-3-document-body" class="nav-link" data-scroll-target="#exercise-3-document-body">Exercise 3: Document body</a>
+  <li><a href="#sec-exercise3" id="toc-sec-exercise3" class="nav-link" data-scroll-target="#sec-exercise3">Exercise 3: Document body</a>
   <ul class="collapse">
   <li><a href="#tasks-2" id="toc-tasks-2" class="nav-link" data-scroll-target="#tasks-2">Tasks</a></li>
   </ul></li>
-  <li><a href="#exercise-4-code-chunks" id="toc-exercise-4-code-chunks" class="nav-link" data-scroll-target="#exercise-4-code-chunks">Exercise 4: Code chunks</a>
+  <li><a href="#sec-exercise4" id="toc-sec-exercise4" class="nav-link" data-scroll-target="#sec-exercise4">Exercise 4: Code chunks</a>
   <ul class="collapse">
   <li><a href="#tasks-3" id="toc-tasks-3" class="nav-link" data-scroll-target="#tasks-3">Tasks</a></li>
   </ul></li>
-  <li><a href="#exercise-5-your-turn" id="toc-exercise-5-your-turn" class="nav-link" data-scroll-target="#exercise-5-your-turn">Exercise 5: Your turn!</a>
+  <li><a href="#sec-exercise5" id="toc-sec-exercise5" class="nav-link" data-scroll-target="#sec-exercise5">Exercise 5: Your turn!</a>
   <ul class="collapse">
   <li><a href="#tasks-4" id="toc-tasks-4" class="nav-link" data-scroll-target="#tasks-4">Tasks</a></li>
   </ul></li>
   </ul>
-</nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/USFWS/intro-to-quarto/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Overview Exercises</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../materials/1-overview/index.html">Overview of Quarto</a></li><li class="breadcrumb-item"><a href="../../materials/1-overview/exercises.html">- Exercises</a></li></ol></nav></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
+<section id="sec-exercise-overview" class="level2">
+<h2 class="anchored" data-anchor-id="sec-exercise-overview">Overview</h2>
 <p>These exercises introduce you to key elements of Quarto documents. You will have the opportunity to explore how these elements enable you to create quality documents that effectively communicate and document your analyses and findings.</p>
 <p>There are five exercises to enhance your familiarity with Quarto documents. The first exercise introduces you to options for <strong>rendering</strong> a Quarto file into a document. The second exercise focuses on understanding <strong>YAML headers</strong>, where you will learn to customize metadata such as title and author. Next, you will dive into the <strong>document body</strong>, exploring formatting options to organize your content effectively. During the fourth exercise, you will be introduced to <strong>code chunks</strong>, allowing you to embed and execute code in R, Python, or Julia, creating dynamic reports that showcase your analysis. The final exercise provides an opportunity to apply your new skills by creating a Quarto report. Through these exercises, you will develop essential skills to create professional Quarto documents.</p>
 <p>For additional resources on Quarto documents, please visit:</p>
@@ -213,14 +211,15 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://quarto.org/docs/guide/">Quarto Guidance webpage</a></li>
 <li><a href="https://rstudio.github.io/cheatsheets/quarto.pdf">Quarto Cheatsheet</a></li>
 </ul>
-<section id="set-up" class="level3">
-<h3 class="anchored" data-anchor-id="set-up">Set up</h3>
+</section>
+<section id="set-up" class="level2">
+<h2 class="anchored" data-anchor-id="set-up">Set up</h2>
 <ul>
 <li>Complete the <a href="../../prework.html">Prework</a> steps to download the exercise materials</li>
 </ul>
 </section>
-<section id="exercise-1-rendering" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-1-rendering">Exercise 1: Rendering</h2>
+<section id="sec-exercise1" class="level2">
+<h2 class="anchored" data-anchor-id="sec-exercise1">Exercise 1: Rendering</h2>
 <p>Rendering in Quarto documents refers to the process of converting a Quarto file, which is written in a markdown-like syntax, into a final output format such as HTML, PDF, or Word. During rendering, the Quarto system interprets the markdown content, processes embedded R code chunks, and generates the respective output by applying formatting specified in the YAML header. This transformation allows users to produce well-structured and visually appealing documents that incorporate text, data visualizations, and analysis results seamlessly, making it an essential step in creating dynamic reports and presentations.</p>
 <section id="tasks" class="level3">
 <h3 class="anchored" data-anchor-id="tasks">Tasks</h3>
@@ -238,8 +237,8 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="exercise-2-yaml-metadata" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-2-yaml-metadata">Exercise 2: YAML metadata</h2>
+<section id="sec-exercise2" class="level2">
+<h2 class="anchored" data-anchor-id="sec-exercise2">Exercise 2: YAML metadata</h2>
 <p>A <strong>YAML</strong> (<strong>Y</strong>et <strong>A</strong>nother <strong>M</strong>arkup <strong>L</strong>anguage) header is a crucial component of Quarto documents that defines metadata for the document, typically enclosed within a pair of triple-dashed lines at the beginning of the file. It allows users to specify important information such as the document’s title, author, date, and output formats (like HTML, PDF, or Word). Additionally, YAML headers can include parameters to control formatting options and customize the behavior of the document, such as including bibliographies or setting specific themes. By using a YAML header, authors can ensure that their documents are well-organized and professionally presented.</p>
 <section id="tasks-1" class="level3">
 <h3 class="anchored" data-anchor-id="tasks-1">Tasks</h3>
@@ -259,8 +258,8 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="exercise-3-document-body" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-3-document-body">Exercise 3: Document body</h2>
+<section id="sec-exercise3" class="level2">
+<h2 class="anchored" data-anchor-id="sec-exercise3">Exercise 3: Document body</h2>
 <p>The document body of a Quarto document is the main content area where the narrative, analysis, and findings are presented. This section is typically written in markdown format, allowing users to easily incorporate various elements such as headings, paragraphs, lists, tables, and images. The importance of the document body lies in its role as the primary medium for communicating information and insights to the reader; it organizes thoughts and results in a coherent and engaging manner. A well-structured document body enhances readability and comprehension, enabling the audience to grasp complex ideas and data more effectively. By integrating both text and visual elements, the document body plays a critical role in making the overall document informative and visually appealing.</p>
 <section id="tasks-2" class="level3">
 <h3 class="anchored" data-anchor-id="tasks-2">Tasks</h3>
@@ -281,32 +280,22 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="exercise-4-code-chunks" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-4-code-chunks">Exercise 4: Code chunks</h2>
+<section id="sec-exercise4" class="level2">
+<h2 class="anchored" data-anchor-id="sec-exercise4">Exercise 4: Code chunks</h2>
 <p>Code chunks in a Quarto document are sections of embedded code, typically written in R or other programming languages, that allow users to perform data analysis, generate visualizations, and execute computations directly within the document. These chunks are enclosed by specific delimiters, enabling Quarto to recognize and execute the code during the rendering process. The importance of code chunks lies in their ability to integrate dynamic content with narrative text, making it possible to showcase real-time analysis and results alongside explanatory writing. This functionality enhances reproducibility, as the document can simultaneously present the code and its output, facilitating transparency and allowing others to verify or replicate the findings. By incorporating code chunks, Quarto documents become interactive and informative, transforming static reports into live analytical narratives.</p>
 <section id="tasks-3" class="level3">
 <h3 class="anchored" data-anchor-id="tasks-3">Tasks</h3>
-<p>Open <code>4_code_chunks.qmd</code> and make the following changes to the document:</p>
-<p><strong>Chunk Label:</strong></p>
+<p>Open <code>4_code_chunks.qmd</code> and make the following changes to the rendered document:</p>
 <ul class="task-list">
 <li><label><input type="checkbox">Label the plot code chunk to help you differentiate from other chunks.</label></li>
-</ul>
-<p><strong>Figure Caption:</strong></p>
-<ul class="task-list">
-<li><label><input type="checkbox">Add “Mean” to beginning of caption to read “Mean monthly Western…”</label></li>
-</ul>
-<p><strong>Plot:</strong></p>
-<ul class="task-list">
-<li><label><input type="checkbox">Add <code>+ theme_classic()</code> to end of ggplot script to clean up plot.</label></li>
-</ul>
-<p><strong>Chunk Options:</strong></p>
-<ul class="task-list">
-<li><label><input type="checkbox">Change <code>include</code> option to <code>false</code> to remove it from report.</label></li>
+<li><label><input type="checkbox">Update the figure caption to read “Mean monthly Western…”</label></li>
+<li><label><input type="checkbox">Add <code>+ theme_classic()</code> to end of ggplot script to clean up plot. Re-render.</label></li>
+<li><label><input type="checkbox">Remove the output of a code chunk. Change <code>include</code> option to <code>false</code> and re-render.</label></li>
 </ul>
 </section>
 </section>
-<section id="exercise-5-your-turn" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-5-your-turn">Exercise 5: Your turn!</h2>
+<section id="sec-exercise5" class="level2">
+<h2 class="anchored" data-anchor-id="sec-exercise5">Exercise 5: Your turn!</h2>
 <p>You have now learned how to render a Quarto document and how to change the look and feel of a Quarto document by customizing the YAML metadata, inline and block elements of the text body, and code chunks. Now it is time to apply these skills by creating a Quarto document from scratch.</p>
 <section id="tasks-4" class="level3">
 <h3 class="anchored" data-anchor-id="tasks-4">Tasks</h3>
@@ -414,7 +403,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/usfws\.github\.io\/intro-to-quarto\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -758,7 +747,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    </div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/USFWS/intro-to-quarto/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This website was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

@@ -130,7 +130,7 @@
     "href": "materials/1-overview/slides.html#exercise-1-rendering",
     "title": "Introduction\nto Quarto",
     "section": "Exercise 1: Rendering",
-    "text": "Exercise 1: Rendering\n\n\nOpen 1_rendering.qmd. What are three main components of the file?\nRender the document using the RStudio GUI.\nRender the document using the Quarto CLI.\n\nHint: quarto render &lt;input file&gt;\n\nRender the document using the quarto R package.\n\nHint: quarto::quarto_render(\"&lt;input file&gt;\")\n\n\n\n\n\n\n−+\n10:00"
+    "text": "Exercise 1: Rendering\n\n\nOpen 1_rendering.qmd. What are three main components of the file?\nRender the document using the RStudio GUI (  ).\nRender the document using the Quarto CLI.\n\nHint: In the terminal: quarto render &lt;input file&gt;\n\nRender the document using the quarto R package.\n\nHint: In the console: quarto::quarto_render(\"&lt;input file&gt;\")\n\n\n\n\n\n\n−+\n10:00"
   },
   {
     "objectID": "materials/1-overview/slides.html#yaml-header",
@@ -158,7 +158,7 @@
     "href": "materials/1-overview/slides.html#exercise-2-yaml-metadata",
     "title": "Introduction\nto Quarto",
     "section": "Exercise 2: YAML metadata",
-    "text": "Exercise 2: YAML metadata\n\n\nOpen 2_yaml_metadata.qmd and render the document.\nUpdate the title and replace the author name with your name. Re-render it.\nChange the output to html and render it. View it in an editor.\nNow render it as a PDF. What did you notice?\n[Bonus] Render the document as both a PDF and HTML.\n\n\n\n\n\n−+\n10:00"
+    "text": "Exercise 2: YAML metadata\n\n\nOpen 2_yaml_metadata.qmd and render the document.\nUpdate the title and replace the author name with your name. Re-render it.\nChange the output to html and render it. Open the html to view the results.\nNow render it as a PDF. What did you notice?\n[Bonus] Render the document as both a PDF and HTML.\n\nHint: consider using the quarto::quarto_render(\"&lt;input filepath&gt;\") function\n\n[Bonus] Render the document as a Word document using the MS_Style.docx file in the templates folder.\n\nHint: see example below\n\n\n\n\n\n\n−+\n10:00"
   },
   {
     "objectID": "materials/1-overview/slides.html#text-body-markdown",
@@ -200,7 +200,7 @@
     "href": "materials/1-overview/slides.html#block-elements-paragraphs",
     "title": "Introduction\nto Quarto",
     "section": "Block elements: Paragraphs",
-    "text": "Block elements: Paragraphs\n\n\nMarkdown\nHere's a paragraph. To seperate it from the next  \nparagraph, you need to add one or more empty lines.\n\nThis is a new paragraph. You can format each  \nparagraph independently. A paragraph is an  \nexamine  of a block element.\n\n::: {.callout-tip}\n## Custom block element  \n\nHere's an example of a block with custom \nformatting. Everything in this block has \nthis format.\n:::\n\nOutput\n\n\nHere’s a paragraph. To seperate it from the next paragraph, you need to add one or more empty lines.\nThis is a new paragraph. You can format each paragraph independently. A paragraph is an examine of a block element.\n\n\n\n\n\n\nCustom block element\n\n\nHere’s an example of a block with custom formatting. Everything in this block has this format."
+    "text": "Block elements: Paragraphs\n\n\nMarkdown\nHere's a paragraph. To separate it from the next  \nparagraph, you need to add one or more empty lines.\n\nThis is a new paragraph. You can format each  \nparagraph independently. A paragraph is an  \nexamine  of a block element.\n\n::: {.callout-tip}\n## Custom block element  \n\nHere's an example of a block with custom \nformatting. Everything in this block has \nthis format.\n:::\n\nOutput\n\n\nHere’s a paragraph. To separate it from the next paragraph, you need to add one or more empty lines.\nThis is a new paragraph. You can format each paragraph independently. A paragraph is an examine of a block element.\n\n\n\n\n\n\nCustom block element\n\n\nHere’s an example of a block with custom formatting. Everything in this block has this format."
   },
   {
     "objectID": "materials/1-overview/slides.html#block-elements-headers",
@@ -235,7 +235,7 @@
     "href": "materials/1-overview/slides.html#exercise-3-document-body",
     "title": "Introduction\nto Quarto",
     "section": "Exercise 3: Document body",
-    "text": "Exercise 3: Document body\nOpen 3-document_body.qmd and make the following changes to the document:\n\nInline:\n\nItalicize the species name\nMake the refuge name into a hyperlink to the refuge website\n\nBlock:\n\nCreate a new header named “My list”\nMake an ordered and unordered list\nInsert an image\n\n\n\n\n\n−+\n10:00"
+    "text": "Exercise 3: Document body\n\nOpen 3-document_body.qmd and make the following changes to the document:\n\nInline:\n\nItalicize the species name\nMake the refuge name into a hyperlink to the refuge website\n\nBlock:\n\nCreate a new header named “My list”\nMake an ordered and unordered list\nInsert an image of the western snow plover below the “U.S. Fish and Wildlife Service” header\n\nHint: image can be found in the images folder\n\n\n\n\n\n\n−+\n10:00"
   },
   {
     "objectID": "materials/1-overview/slides.html#code-chunks-pandoc",
@@ -305,7 +305,14 @@
     "href": "materials/1-overview/slides.html#exercise-4-code-chunks",
     "title": "Introduction\nto Quarto",
     "section": "Exercise 4: Code chunks",
-    "text": "Exercise 4: Code chunks\nOpen 4_code_chunks.yml and render it.\n\nChunk Label:\n\nLabel the plot code chunk to help you differentiate from other chunks.\n\nFigure Caption:\n\nAdd “Mean” to beginning of caption to read “Mean monthly Western…”\n\nPlot:\n\nAdd + theme_classic() to end of ggplot script to clean up plot.\n\nChunk Options:\n\nChange include option to false to remove it from report.\n\n\n\n\n\n−+\n10:00"
+    "text": "Exercise 4: Code chunks\n\nOpen 4_code_chunks.qmd and make the following changes to the rendered document:\n\n\n\n\nLabel the plot code chunk to help you differentiate from other chunks.\nUpdate the figure caption to read “Mean monthly Western…”\nAdd + theme_classic() to end of ggplot script to clean up plot. Re-render.\nRemove the output of a code chunk. Change include option to false and re-render.\n\n\n\n\n\n−+\n10:00"
+  },
+  {
+    "objectID": "materials/1-overview/slides.html#exercise-5-your-turn",
+    "href": "materials/1-overview/slides.html#exercise-5-your-turn",
+    "title": "Introduction\nto Quarto",
+    "section": "Exercise 5: Your turn!",
+    "text": "Exercise 5: Your turn!\n\n\nCreate a Quarto document\nAdd this..\nand..\nthis…\nand..\nthis.\n\n\n\n\n\n−+\n10:00"
   },
   {
     "objectID": "materials/1-overview/slides.html#wrap-up",
@@ -317,60 +324,88 @@
   {
     "objectID": "materials/1-overview/exercises.html",
     "href": "materials/1-overview/exercises.html",
-    "title": "Overview Exercises",
+    "title": "Introduction to Quarto",
     "section": "",
-    "text": "These exercises introduce you to key elements of Quarto documents. You will have the opportunity to explore how these elements enable you to create quality documents that effectively communicate and document your analyses and findings.\nThere are five exercises to enhance your familiarity with Quarto documents. The first exercise introduces you to options for rendering a Quarto file into a document. The second exercise focuses on understanding YAML headers, where you will learn to customize metadata such as title and author. Next, you will dive into the document body, exploring formatting options to organize your content effectively. During the fourth exercise, you will be introduced to code chunks, allowing you to embed and execute code in R, Python, or Julia, creating dynamic reports that showcase your analysis. The final exercise provides an opportunity to apply your new skills by creating a Quarto report. Through these exercises, you will develop essential skills to create professional Quarto documents.\nFor additional resources on Quarto documents, please visit:",
+    "text": "These exercises introduce you to key elements of Quarto documents. You will have the opportunity to explore how these elements enable you to create quality documents that effectively communicate and document your analyses and findings.\nThere are five exercises to enhance your familiarity with Quarto documents. The first exercise introduces you to options for rendering a Quarto file into a document. The second exercise focuses on understanding YAML headers, where you will learn to customize metadata such as title and author. Next, you will dive into the document body, exploring formatting options to organize your content effectively. During the fourth exercise, you will be introduced to code chunks, allowing you to embed and execute code in R, Python, or Julia, creating dynamic reports that showcase your analysis. The final exercise provides an opportunity to apply your new skills by creating a Quarto report. Through these exercises, you will develop essential skills to create professional Quarto documents.\nFor additional resources on Quarto documents, please visit:\n\nQuarto references\nQuarto Guidance webpage\nQuarto Cheatsheet",
     "crumbs": [
+      "Overview of Quarto",
       "- Exercises"
     ]
   },
   {
-    "objectID": "materials/1-overview/exercises.html#exercise-1-rendering",
-    "href": "materials/1-overview/exercises.html#exercise-1-rendering",
-    "title": "Overview Exercises",
+    "objectID": "materials/1-overview/exercises.html#sec-exercise-overview",
+    "href": "materials/1-overview/exercises.html#sec-exercise-overview",
+    "title": "Introduction to Quarto",
+    "section": "",
+    "text": "These exercises introduce you to key elements of Quarto documents. You will have the opportunity to explore how these elements enable you to create quality documents that effectively communicate and document your analyses and findings.\nThere are five exercises to enhance your familiarity with Quarto documents. The first exercise introduces you to options for rendering a Quarto file into a document. The second exercise focuses on understanding YAML headers, where you will learn to customize metadata such as title and author. Next, you will dive into the document body, exploring formatting options to organize your content effectively. During the fourth exercise, you will be introduced to code chunks, allowing you to embed and execute code in R, Python, or Julia, creating dynamic reports that showcase your analysis. The final exercise provides an opportunity to apply your new skills by creating a Quarto report. Through these exercises, you will develop essential skills to create professional Quarto documents.\nFor additional resources on Quarto documents, please visit:\n\nQuarto references\nQuarto Guidance webpage\nQuarto Cheatsheet",
+    "crumbs": [
+      "Overview of Quarto",
+      "- Exercises"
+    ]
+  },
+  {
+    "objectID": "materials/1-overview/exercises.html#set-up",
+    "href": "materials/1-overview/exercises.html#set-up",
+    "title": "Introduction to Quarto",
+    "section": "Set up",
+    "text": "Set up\n\nComplete the Prework steps to download the exercise materials",
+    "crumbs": [
+      "Overview of Quarto",
+      "- Exercises"
+    ]
+  },
+  {
+    "objectID": "materials/1-overview/exercises.html#sec-exercise1",
+    "href": "materials/1-overview/exercises.html#sec-exercise1",
+    "title": "Introduction to Quarto",
     "section": "Exercise 1: Rendering",
     "text": "Exercise 1: Rendering\nRendering in Quarto documents refers to the process of converting a Quarto file, which is written in a markdown-like syntax, into a final output format such as HTML, PDF, or Word. During rendering, the Quarto system interprets the markdown content, processes embedded R code chunks, and generates the respective output by applying formatting specified in the YAML header. This transformation allows users to produce well-structured and visually appealing documents that incorporate text, data visualizations, and analysis results seamlessly, making it an essential step in creating dynamic reports and presentations.\n\nTasks\n\nOpen 1_rendering.qmd. What are three main components of the file?\nRender the document using the RStudio GUI (  ).\nRender the document using the Quarto CLI.\n\nHint: In the terminal: quarto render &lt;input file&gt;\n\nRender the document using the quarto R package.\n\nHint: In the console: quarto::quarto_render(\"&lt;input file&gt;\")",
     "crumbs": [
+      "Overview of Quarto",
       "- Exercises"
     ]
   },
   {
-    "objectID": "materials/1-overview/exercises.html#exercise-2-yaml-metadata",
-    "href": "materials/1-overview/exercises.html#exercise-2-yaml-metadata",
-    "title": "Overview Exercises",
+    "objectID": "materials/1-overview/exercises.html#sec-exercise2",
+    "href": "materials/1-overview/exercises.html#sec-exercise2",
+    "title": "Introduction to Quarto",
     "section": "Exercise 2: YAML metadata",
     "text": "Exercise 2: YAML metadata\nA YAML (Yet Another Markup Language) header is a crucial component of Quarto documents that defines metadata for the document, typically enclosed within a pair of triple-dashed lines at the beginning of the file. It allows users to specify important information such as the document’s title, author, date, and output formats (like HTML, PDF, or Word). Additionally, YAML headers can include parameters to control formatting options and customize the behavior of the document, such as including bibliographies or setting specific themes. By using a YAML header, authors can ensure that their documents are well-organized and professionally presented.\n\nTasks\n\nOpen 2_yaml_metadata.qmd and render the document.\nUpdate the title and replace the author name with your name. Re-render it.\nChange the output to html and render it. Open the html to view the results.\nNow render it as a PDF. What did you notice?\n[Bonus] Render the document as both a PDF and HTML.\n\nHint: consider using the quarto::quarto_render(\"&lt;input filepath&gt;\") function\n\n[Bonus] Render the document as a Word document using the MS_Style.docx file in the templates folder.\n\nHint: see example below",
     "crumbs": [
+      "Overview of Quarto",
       "- Exercises"
     ]
   },
   {
-    "objectID": "materials/1-overview/exercises.html#exercise-3-document-body",
-    "href": "materials/1-overview/exercises.html#exercise-3-document-body",
-    "title": "Overview Exercises",
+    "objectID": "materials/1-overview/exercises.html#sec-exercise3",
+    "href": "materials/1-overview/exercises.html#sec-exercise3",
+    "title": "Introduction to Quarto",
     "section": "Exercise 3: Document body",
     "text": "Exercise 3: Document body\nThe document body of a Quarto document is the main content area where the narrative, analysis, and findings are presented. This section is typically written in markdown format, allowing users to easily incorporate various elements such as headings, paragraphs, lists, tables, and images. The importance of the document body lies in its role as the primary medium for communicating information and insights to the reader; it organizes thoughts and results in a coherent and engaging manner. A well-structured document body enhances readability and comprehension, enabling the audience to grasp complex ideas and data more effectively. By integrating both text and visual elements, the document body plays a critical role in making the overall document informative and visually appealing.\n\nTasks\nOpen 3-document_body.qmd and make the following changes to the document:\nInline:\n\nItalicize the species name\nMake the refuge name into a hyperlink to the refuge website\n\nBlock:\n\nCreate a new header named “My list”\nMake an ordered and unordered list\nInsert an image of the western snow plover below the “U.S. Fish and Wildlife Service” header\n\nHint: image can be found in the images folder",
     "crumbs": [
+      "Overview of Quarto",
       "- Exercises"
     ]
   },
   {
-    "objectID": "materials/1-overview/exercises.html#exercise-4-code-chunks",
-    "href": "materials/1-overview/exercises.html#exercise-4-code-chunks",
-    "title": "Overview Exercises",
+    "objectID": "materials/1-overview/exercises.html#sec-exercise4",
+    "href": "materials/1-overview/exercises.html#sec-exercise4",
+    "title": "Introduction to Quarto",
     "section": "Exercise 4: Code chunks",
-    "text": "Exercise 4: Code chunks\nCode chunks in a Quarto document are sections of embedded code, typically written in R or other programming languages, that allow users to perform data analysis, generate visualizations, and execute computations directly within the document. These chunks are enclosed by specific delimiters, enabling Quarto to recognize and execute the code during the rendering process. The importance of code chunks lies in their ability to integrate dynamic content with narrative text, making it possible to showcase real-time analysis and results alongside explanatory writing. This functionality enhances reproducibility, as the document can simultaneously present the code and its output, facilitating transparency and allowing others to verify or replicate the findings. By incorporating code chunks, Quarto documents become interactive and informative, transforming static reports into live analytical narratives.\n\nTasks\nOpen 4_code_chunks.qmd and make the following changes to the document:\nChunk Label:\n\nLabel the plot code chunk to help you differentiate from other chunks.\n\nFigure Caption:\n\nAdd “Mean” to beginning of caption to read “Mean monthly Western…”\n\nPlot:\n\nAdd + theme_classic() to end of ggplot script to clean up plot.\n\nChunk Options:\n\nChange include option to false to remove it from report.",
+    "text": "Exercise 4: Code chunks\nCode chunks in a Quarto document are sections of embedded code, typically written in R or other programming languages, that allow users to perform data analysis, generate visualizations, and execute computations directly within the document. These chunks are enclosed by specific delimiters, enabling Quarto to recognize and execute the code during the rendering process. The importance of code chunks lies in their ability to integrate dynamic content with narrative text, making it possible to showcase real-time analysis and results alongside explanatory writing. This functionality enhances reproducibility, as the document can simultaneously present the code and its output, facilitating transparency and allowing others to verify or replicate the findings. By incorporating code chunks, Quarto documents become interactive and informative, transforming static reports into live analytical narratives.\n\nTasks\nOpen 4_code_chunks.qmd and make the following changes to the rendered document:\n\nLabel the plot code chunk to help you differentiate from other chunks.\nUpdate the figure caption to read “Mean monthly Western…”\nAdd + theme_classic() to end of ggplot script to clean up plot. Re-render.\nRemove the output of a code chunk. Change include option to false and re-render.",
     "crumbs": [
+      "Overview of Quarto",
       "- Exercises"
     ]
   },
   {
-    "objectID": "materials/1-overview/exercises.html#exercise-5-your-turn",
-    "href": "materials/1-overview/exercises.html#exercise-5-your-turn",
-    "title": "Overview Exercises",
+    "objectID": "materials/1-overview/exercises.html#sec-exercise5",
+    "href": "materials/1-overview/exercises.html#sec-exercise5",
+    "title": "Introduction to Quarto",
     "section": "Exercise 5: Your turn!",
     "text": "Exercise 5: Your turn!\nYou have now learned how to render a Quarto document and how to change the look and feel of a Quarto document by customizing the YAML metadata, inline and block elements of the text body, and code chunks. Now it is time to apply these skills by creating a Quarto document from scratch.\n\nTasks\n\nCreate a Quarto document\nAdd this..\nand..\nthis…\nand..\nthis.",
     "crumbs": [
+      "Overview of Quarto",
       "- Exercises"
     ]
   },
@@ -405,10 +440,11 @@
   {
     "objectID": "materials/1-overview/index.html",
     "href": "materials/1-overview/index.html",
-    "title": "Introduction to Quarto",
+    "title": "Overview of Quarto",
     "section": "",
     "text": "Full Screen\n\n\nLearning goals\n\nIntroduce Quarto and it’s applications\nDescribe the three components of a Quarto file: QML metadata, text body, and code blocks\nProvide opportunities to explore the components of a Quarto file through in-class exercises",
     "crumbs": [
+      "Overview of Quarto",
       "- Slides"
     ]
   },

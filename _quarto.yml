@@ -9,8 +9,12 @@ from: markdown+emoji
 
 website:
   title: "Introduction to Quarto"
-  page-navigation: true
+  description: "An introduction of Quarto for intermediate to advanced R users seeking to develop automated reports"
   favicon: assets/images/favicon.png
+  site-url: https://usfws.github.io/intro-to-quarto/
+  repo-url: https://github.com/USFWS/intro-to-quarto
+  issue-url: https://github.com/USFWS/intro-to-quarto/issues/new
+  page-navigation: true
   navbar:
     background: light
     foreground: dark
@@ -30,12 +34,15 @@ website:
       search: true
       align: left
       contents:
-        - text: "- Slides"
-          href: materials/1-overview/index.qmd
-        - text: "- Exercises"
-          href: materials/1-overview/exercises.qmd
+        - section: "Overview of Quarto"
+          contents:
+          - text: "- Slides"
+            href: materials/1-overview/index.qmd
+          - text: "- Exercises"
+            href: materials/1-overview/exercises.qmd
   page-footer:
     right: "This website was built with [Quarto](https://quarto.org/)."
+
 format: 
   html:
     theme: [default, assets/custom.scss]
