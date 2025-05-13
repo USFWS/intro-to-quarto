@@ -304,6 +304,23 @@ quarto::quarto_render(input = ___,
 :::
 
 
+## Authoring: Source and Visual panes
+
+::: columns
+::: {.column width="50%" .center}
+![](images/source_pane.png)
+:::
+
+::: {.column width="50%" .center}
+![](images/visual_pane.png)
+:::
+:::
+
+::: {.notes}
+
+:::
+
+
 ## Exercise 1: Rendering {.exercise}
 
 ::: {.center-xy-container}
@@ -438,9 +455,9 @@ editor: source
 - [ ] Change the output to `html` and render it. Open the html to view the results.
 - [ ] Now render it as a PDF. What did you notice?
 - [ ] \[*Bonus*\] Render the document as both a PDF and HTML.
-    - *Hint*: `consider using the quarto::quarto_render("<input filepath>") function`
+    - *Hint*: Consider using the `quarto::quarto_render("<input filepath>")` function.
 - [ ] \[*Bonus*\] Render the document as a Word document using the MS_Style.docx file in the templates folder.
-    - *Hint*: `see example below`
+    - *Hint*: See example below.
 :::
 
 ```{r}
@@ -1014,14 +1031,25 @@ This can cause problems when rendering to PDF with LaTeX. {{< fa face-smile-wink
 :::
 :::
 
+
 ## Execution options: [Figures]{.gray-bold} {auto-animate="true"}
 
-### Size
-
 ::: columns
-
 ::: {.column width="50%"}
 ```{{r}}
+library(ggplot2)
+
+ggplot(iris, aes(x = Petal.Width, 
+                 y = Petal.Length)) +
+  geom_point() +
+  labs(x = "Petal width",
+       y = "Petal length")
+```
+:::
+
+::: {.column width="50%" .fragment}
+```{r}
+#| echo: true
 
 library(ggplot2)
 
@@ -1030,14 +1058,8 @@ ggplot(iris, aes(x = Petal.Width,
   geom_point() +
   labs(x = "Petal width",
        y = "Petal length")
-
 ```
 :::
-
-::: {.column width="50%"}
-
-:::
-
 :::
 
 
@@ -1048,12 +1070,48 @@ ggplot(iris, aes(x = Petal.Width,
 
 ## Execution options: [Figures]{.gray-bold} {auto-animate="true"}
 
-### Size
-
 ::: columns
-
 ::: {.column width="50%"}
 ```{{r}}
+#| echo: false
+
+library(ggplot2)
+
+ggplot(iris, aes(x = Petal.Width, 
+                 y = Petal.Length)) +
+  geom_point() +
+  labs(x = "Petal width",
+       y = "Petal length")
+```
+:::
+
+::: {.column width="50%" .fragment}
+```{r}
+#| echo: false
+
+library(ggplot2)
+
+ggplot(iris, aes(x = Petal.Width, 
+                 y = Petal.Length)) +
+  geom_point() +
+  labs(x = "Petal width",
+       y = "Petal length")
+```
+:::
+:::
+
+
+::: {.notes}
+
+:::
+
+
+## Execution options: [Figures]{.gray-bold} {auto-animate="true"}
+
+::: columns
+::: {.column width="50%"}
+```{{r}}
+#| echo: false
 #| fig-width: 3
 #| fig-height: 2
 
@@ -1070,6 +1128,7 @@ ggplot(iris, aes(x = Petal.Width,
 
 ::: {.column width="50%" .fragment}
 ```{r}
+#| echo: false
 #| fig-width: 3
 #| fig-height: 2
 
@@ -1083,7 +1142,48 @@ ggplot(iris, aes(x = Petal.Width,
 
 ```
 :::
+:::
 
+
+::: {.notes}
+:::
+
+
+## Execution options: [Figures]{.gray-bold} {auto-animate="true"}
+
+::: columns
+::: {.column width="50%"}
+```{{r}}
+#| echo: false
+#| fig-width: 5
+#| fig-height: 5
+
+library(ggplot2)
+
+ggplot(iris, aes(x = Petal.Width, 
+                 y = Petal.Length)) +
+  geom_point() +
+  labs(x = "Petal width",
+       y = "Petal length")
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: false
+#| fig-width: 5
+#| fig-height: 5
+
+library(ggplot2)
+
+ggplot(iris, aes(x = Petal.Width, 
+                 y = Petal.Length)) +
+  geom_point() +
+  labs(x = "Petal width",
+       y = "Petal length")
+
+```
+:::
 :::
 
 
@@ -1092,17 +1192,15 @@ ggplot(iris, aes(x = Petal.Width,
 :::
 
 
-
 ## Execution options: [Figures]{.gray-bold} {auto-animate="true"}
 
-### Size
-
 ::: columns
-
 ::: {.column width="50%"}
 ```{{r}}
-#| fig-width: 6
-#| fig-height: 6
+#| echo: false
+#| fig-width: 5
+#| fig-height: 5
+#| fig-cap: "This is my really neat plot."
 
 library(ggplot2)
 
@@ -1117,40 +1215,10 @@ ggplot(iris, aes(x = Petal.Width,
 
 ::: {.column width="50%" .fragment}
 ```{r}
-#| fig-width: 6
-#| fig-height: 6
-
-library(ggplot2)
-
-ggplot(iris, aes(x = Petal.Width, 
-                 y = Petal.Length)) +
-  geom_point() +
-  labs(x = "Petal width",
-       y = "Petal length")
-
-```
-:::
-
-:::
-
-
-::: {.notes}
-
-:::
-
-
-## Execution options: [Figures]{.gray-bold} {auto-animate="true"}
-
-### Size
-
-::: columns
-
-::: {.column width="50%"}
-```{{r}}
-#| fig-width: 6
-#| fig-height: 6
+#| echo: false
+#| fig-width: 5
+#| fig-height: 5
 #| fig-cap: "This is my really neat plot."
-#| fig-alt: "This is my detailed description."
 
 library(ggplot2)
 
@@ -1162,25 +1230,6 @@ ggplot(iris, aes(x = Petal.Width,
 
 ```
 :::
-
-::: {.column width="50%" .fragment}
-```{r}
-#| fig-width: 6
-#| fig-height: 6
-#| fig-cap: "This is my really neat plot."
-#| fig-alt: "This is my detailed description."
-
-library(ggplot2)
-
-ggplot(iris, aes(x = Petal.Width, 
-                 y = Petal.Length)) +
-  geom_point() +
-  labs(x = "Petal width",
-       y = "Petal length")
-
-```
-:::
-
 :::
 
 ::: {.notes}
@@ -1188,7 +1237,7 @@ ggplot(iris, aes(x = Petal.Width,
 :::
 
 
-## Execution options: [YAML]{.gray-bold}
+## Execution options: [YAML]{.gray-bold} {auto-animate="true"}
 
 \
 
@@ -1206,12 +1255,42 @@ Avoids having to reapply options for each code chunk! {{< fa thumbs-up >}}
 ---
 title: "My FWS Report"
 author: Jane Biologist
-execute:
-  echo: false
+format: html
+---
+```
+:::
+
+:::
+
+:::{.notes}
+
+:::
+
+
+## Execution options: [YAML]{.gray-bold} {auto-animate="true"}
+
+\
+
+::: columns
+
+::: {.column width="60%"}
+::: {.callout-tip title="Execution options at the document level in the YAML
+"}
+Avoids having to reapply options for each code chunk! {{< fa thumbs-up >}}
+:::
+:::
+
+::: {.column width="40%"}
+```yaml
+---
+title: "My FWS Report"
+author: Jane Biologist
 format:
   html:
-    fig-width: 8
-    fig-height: 6
+    fig-width: 5
+    fig-height: 5
+execute:
+  echo: false
 ---
 ```
 :::
@@ -1243,7 +1322,7 @@ countdown::countdown(10)
 ## Exercise 5: Your turn! {.exercise}
 
 ::: {.small}
-- [ ] Create a Quarto document
+- [ ] Create a new Quarto document
 - [ ] Add this.. 
 - [ ] and..
 - [ ] this...

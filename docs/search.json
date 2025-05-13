@@ -158,7 +158,7 @@
     "href": "materials/1-overview/slides.html#exercise-2-yaml-metadata",
     "title": "Introduction\nto Quarto",
     "section": "Exercise 2: YAML metadata",
-    "text": "Exercise 2: YAML metadata\n\n\nOpen 2_yaml_metadata.qmd and render the document.\nUpdate the title and replace the author name with your name. Re-render it.\nChange the output to html and render it. Open the html to view the results.\nNow render it as a PDF. What did you notice?\n[Bonus] Render the document as both a PDF and HTML.\n\nHint: consider using the quarto::quarto_render(\"&lt;input filepath&gt;\") function\n\n[Bonus] Render the document as a Word document using the MS_Style.docx file in the templates folder.\n\nHint: see example below\n\n\n\n\n\n\n−+\n10:00"
+    "text": "Exercise 2: YAML metadata\n\n\nOpen 2_yaml_metadata.qmd and render the document.\nUpdate the title and replace the author name with your name. Re-render it.\nChange the output to html and render it. Open the html to view the results.\nNow render it as a PDF. What did you notice?\n[Bonus] Render the document as both a PDF and HTML.\n\nHint: Consider using the quarto::quarto_render(\"&lt;input filepath&gt;\") function.\n\n[Bonus] Render the document as a Word document using the MS_Style.docx file in the templates folder.\n\nHint: See example below.\n\n\n\n\n\n\n−+\n10:00"
   },
   {
     "objectID": "materials/1-overview/slides.html#text-body-markdown",
@@ -277,35 +277,35 @@
     "href": "materials/1-overview/slides.html#execution-options-figures",
     "title": "Introduction\nto Quarto",
     "section": "Execution options: Figures",
-    "text": "Execution options: Figures\nSize\n\n\n```{r}\n\nlibrary(ggplot2)\n\nggplot(iris, aes(x = Petal.Width, \n                 y = Petal.Length)) +\n  geom_point() +\n  labs(x = \"Petal width\",\n       y = \"Petal length\")\n\n```"
+    "text": "Execution options: Figures\n\n\n```{r}\nlibrary(ggplot2)\n\nggplot(iris, aes(x = Petal.Width, \n                 y = Petal.Length)) +\n  geom_point() +\n  labs(x = \"Petal width\",\n       y = \"Petal length\")\n```\n\n\nlibrary(ggplot2)\n\nggplot(iris, aes(x = Petal.Width, \n                 y = Petal.Length)) +\n  geom_point() +\n  labs(x = \"Petal width\",\n       y = \"Petal length\")"
   },
   {
     "objectID": "materials/1-overview/slides.html#execution-options-figures-1",
     "href": "materials/1-overview/slides.html#execution-options-figures-1",
     "title": "Introduction\nto Quarto",
     "section": "Execution options: Figures",
-    "text": "Execution options: Figures\nSize\n\n\n```{r}\n#| fig-width: 3\n#| fig-height: 2\n\nlibrary(ggplot2)\n\nggplot(iris, aes(x = Petal.Width, \n                 y = Petal.Length)) +\n  geom_point() +\n  labs(x = \"Petal width\",\n       y = \"Petal length\")\n\n```"
+    "text": "Execution options: Figures\n\n\n```{r}\n#| echo: false\n\nlibrary(ggplot2)\n\nggplot(iris, aes(x = Petal.Width, \n                 y = Petal.Length)) +\n  geom_point() +\n  labs(x = \"Petal width\",\n       y = \"Petal length\")\n```"
   },
   {
     "objectID": "materials/1-overview/slides.html#execution-options-figures-2",
     "href": "materials/1-overview/slides.html#execution-options-figures-2",
     "title": "Introduction\nto Quarto",
     "section": "Execution options: Figures",
-    "text": "Execution options: Figures\nSize\n\n\n```{r}\n#| fig-width: 6\n#| fig-height: 6\n\nlibrary(ggplot2)\n\nggplot(iris, aes(x = Petal.Width, \n                 y = Petal.Length)) +\n  geom_point() +\n  labs(x = \"Petal width\",\n       y = \"Petal length\")\n\n```"
+    "text": "Execution options: Figures\n\n\n```{r}\n#| echo: false\n#| fig-width: 3\n#| fig-height: 2\n\nlibrary(ggplot2)\n\nggplot(iris, aes(x = Petal.Width, \n                 y = Petal.Length)) +\n  geom_point() +\n  labs(x = \"Petal width\",\n       y = \"Petal length\")\n\n```"
   },
   {
     "objectID": "materials/1-overview/slides.html#execution-options-figures-3",
     "href": "materials/1-overview/slides.html#execution-options-figures-3",
     "title": "Introduction\nto Quarto",
     "section": "Execution options: Figures",
-    "text": "Execution options: Figures\nSize\n\n\n```{r}\n#| fig-width: 6\n#| fig-height: 6\n#| fig-cap: \"This is my really neat plot.\"\n#| fig-alt: \"This is my detailed description.\"\n\nlibrary(ggplot2)\n\nggplot(iris, aes(x = Petal.Width, \n                 y = Petal.Length)) +\n  geom_point() +\n  labs(x = \"Petal width\",\n       y = \"Petal length\")\n\n```\n\n\n\n\n\n\nThis is my really neat plot."
+    "text": "Execution options: Figures\n\n\n```{r}\n#| echo: false\n#| fig-width: 5\n#| fig-height: 5\n\nlibrary(ggplot2)\n\nggplot(iris, aes(x = Petal.Width, \n                 y = Petal.Length)) +\n  geom_point() +\n  labs(x = \"Petal width\",\n       y = \"Petal length\")\n```"
   },
   {
     "objectID": "materials/1-overview/slides.html#execution-options-yaml",
     "href": "materials/1-overview/slides.html#execution-options-yaml",
     "title": "Introduction\nto Quarto",
     "section": "Execution options: YAML",
-    "text": "Execution options: YAML\n\n\n\n\n\n\n\n\n\n\n\nExecution options at the document level in the YAML\n\n\nAvoids having to reapply options for each code chunk! \n\n\n\n\n\n---\ntitle: \"My FWS Report\"\nauthor: Jane Biologist\nexecute:\n  echo: false\nformat:\n  html:\n    fig-width: 8\n    fig-height: 6\n---"
+    "text": "Execution options: YAML\n\n\n\n\n\n\n\n\n\n\n\nExecution options at the document level in the YAML\n\n\nAvoids having to reapply options for each code chunk! \n\n\n\n\n\n---\ntitle: \"My FWS Report\"\nauthor: Jane Biologist\nformat: html\n---"
   },
   {
     "objectID": "materials/1-overview/slides.html#exercise-4-code-chunks",
@@ -319,7 +319,7 @@
     "href": "materials/1-overview/slides.html#exercise-5-your-turn",
     "title": "Introduction\nto Quarto",
     "section": "Exercise 5: Your turn!",
-    "text": "Exercise 5: Your turn!\n\n\nCreate a Quarto document\nAdd this..\nand..\nthis…\nand..\nthis.\n\n\n\n\n\n−+\n10:00"
+    "text": "Exercise 5: Your turn!\n\n\nCreate a new Quarto document\nAdd this..\nand..\nthis…\nand..\nthis.\n\n\n\n\n\n−+\n10:00"
   },
   {
     "objectID": "materials/1-overview/slides.html#wrap-up",
@@ -460,6 +460,55 @@
     "href": "prework.html",
     "title": "Prework",
     "section": "",
-    "text": "From FWS Apps-To-Go, install:\n\nR 4.4.2 or newer\nRStudio 2024.09.1 or newer\n\nOpen a new RStudio session.\nDownload the exercise materials. This function creates a new RStudio project called “intro-to-quarto-exercises-main”.\n\n\nusethis::use_course(\"https://github.com/USFWS/intro-to-quarto-exercises/archive/refs/heads/main.zip\")\n\n\nOpen this new RStudio project, if it’s not already open.\nInstall the R package dependencies:\n\n\nsource(\"install_packages.R\")"
+    "text": "From FWS Apps-To-Go, install:\n\nR 4.4.2 or newer\nRStudio 2024.09.1 or newer\n\nOpen a new RStudio session.\nDownload the exercise materials. This function creates a new RStudio project called “intro-to-quarto-exercises-main”.\n\n\nif (!require(\"usethis\") install.packages(\"usethis\")\nusethis::use_course(\"https://github.com/USFWS/intro-to-quarto-exercises/archive/refs/heads/main.zip\")"
+  },
+  {
+    "objectID": "prework.html#download-the-exercise-materials",
+    "href": "prework.html#download-the-exercise-materials",
+    "title": "Prework",
+    "section": "",
+    "text": "From FWS Apps-To-Go, install:\n\nR 4.4.2 or newer\nRStudio 2024.09.1 or newer\n\nOpen a new RStudio session.\nDownload the exercise materials. This function creates a new RStudio project called “intro-to-quarto-exercises-main”.\n\n\nif (!require(\"usethis\") install.packages(\"usethis\")\nusethis::use_course(\"https://github.com/USFWS/intro-to-quarto-exercises/archive/refs/heads/main.zip\")"
+  },
+  {
+    "objectID": "prework.html#install-r-package-dependencies",
+    "href": "prework.html#install-r-package-dependencies",
+    "title": "Prework",
+    "section": "2. Install R package dependencies",
+    "text": "2. Install R package dependencies\n\nOpen this new RStudio project, if it’s not already open.\nInstall the R package dependencies:\n\n\nsource(\"install_packages.R\")"
+  },
+  {
+    "objectID": "prework.html#install-tinytex",
+    "href": "prework.html#install-tinytex",
+    "title": "Prework",
+    "section": "3. Install tinyTeX",
+    "text": "3. Install tinyTeX\n\nTo render Quarto documents as a PDF, you will need to install a version of LaTex. You can do this by running the function below:\n\n\ntinytex::install_tinytex()"
+  },
+  {
+    "objectID": "materials/1-overview/slides.html#execution-options-yaml-1",
+    "href": "materials/1-overview/slides.html#execution-options-yaml-1",
+    "title": "Introduction\nto Quarto",
+    "section": "Execution options: YAML",
+    "text": "Execution options: YAML\n\n\n\n\n\n\n\n\n\n\n\nExecution options at the document level in the YAML\n\n\nAvoids having to reapply options for each code chunk! \n\n\n\n\n\n---\ntitle: \"My FWS Report\"\nauthor: Jane Biologist\nformat:\n  html:\n    fig-width: 5\n    fig-height: 5\nexecute:\n  echo: false\n---"
+  },
+  {
+    "objectID": "materials/1-overview/slides.html#execution-options-figures-4",
+    "href": "materials/1-overview/slides.html#execution-options-figures-4",
+    "title": "Introduction\nto Quarto",
+    "section": "Execution options: Figures",
+    "text": "Execution options: Figures\n\n\n```{r}\n#| echo: false\n#| fig-width: 5\n#| fig-height: 5\n#| fig-cap: \"This is my really neat plot.\"\n\nlibrary(ggplot2)\n\nggplot(iris, aes(x = Petal.Width, \n                 y = Petal.Length)) +\n  geom_point() +\n  labs(x = \"Petal width\",\n       y = \"Petal length\")\n\n```\n\n\n\n\n\n\nThis is my really neat plot."
+  },
+  {
+    "objectID": "materials/1-overview/slides.html#authoring",
+    "href": "materials/1-overview/slides.html#authoring",
+    "title": "Introduction\nto Quarto",
+    "section": "Authoring",
+    "text": "Authoring"
+  },
+  {
+    "objectID": "materials/1-overview/slides.html#authoring-source-and-visual-panes",
+    "href": "materials/1-overview/slides.html#authoring-source-and-visual-panes",
+    "title": "Introduction\nto Quarto",
+    "section": "Authoring: Source and Visual panes",
+    "text": "Authoring: Source and Visual panes"
   }
 ]

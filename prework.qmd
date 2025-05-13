@@ -3,23 +3,40 @@ title: "Prework"
 sidebar: false
 ---
 
-1. From FWS Apps-To-Go, install:
+## 1. Download the exercise materials
+
+- From FWS Apps-To-Go, install:
     - R 4.4.2 or newer
     - RStudio 2024.09.1 or newer
-2. Open a new RStudio session. 
-3. Download the exercise materials. This function creates a new RStudio project called "intro-to-quarto-exercises-main".
+- Open a new RStudio session. 
+- Download the exercise materials. This function creates a new RStudio project called "intro-to-quarto-exercises-main".
 
 ::: {.small}
 ``` r
+if (!require("usethis") install.packages("usethis")
 usethis::use_course("https://github.com/USFWS/intro-to-quarto-exercises/archive/refs/heads/main.zip")
 ```
 :::
 
-4. Open this new RStudio project, if it's not already open. 
-5. Install the R package dependencies:
+
+## 2. Install R package dependencies
+
+- Open this new RStudio project, if it's not already open. 
+- Install the R package dependencies:
 
 ::: {.small}
 ``` r
 source("install_packages.R")
+```
+:::
+
+
+## 3. Install [tinyTeX](https://yihui.org/tinytex/)
+
+- To render Quarto documents as a PDF, you will need to install a version of [LaTex](https://www.latex-project.org/). You can do this by running the function below:
+
+::: {.small}
+``` r
+tinytex::install_tinytex()
 ```
 :::

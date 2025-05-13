@@ -10,7 +10,7 @@ contributes:
       width: 1600
       transition: fade
       incremental: false
-      highlight-style: tango
+      highlight-style: github
       code-overflow: wrap
       menu:
         side: left
