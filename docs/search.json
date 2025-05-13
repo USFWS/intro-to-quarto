@@ -126,6 +126,13 @@
     "text": "Three ways to render Quarto\n\n\n\n\n\n1.\nRStudio GUI \n\n\n\n2.\nQuarto command line interface (CLI) \n\n\n\n3.\nQuarto R package\n\nquarto::quarto_render(input = ___, \n                      output_format = ___)"
   },
   {
+    "objectID": "materials/1-overview/slides.html#authoring-source-and-visual-panes",
+    "href": "materials/1-overview/slides.html#authoring-source-and-visual-panes",
+    "title": "Introduction\nto Quarto",
+    "section": "Authoring: Source and Visual panes",
+    "text": "Authoring: Source and Visual panes"
+  },
+  {
     "objectID": "materials/1-overview/slides.html#exercise-1-rendering",
     "href": "materials/1-overview/slides.html#exercise-1-rendering",
     "title": "Introduction\nto Quarto",
@@ -301,11 +308,25 @@
     "text": "Execution options: Figures\n\n\n```{r}\n#| echo: false\n#| fig-width: 5\n#| fig-height: 5\n\nlibrary(ggplot2)\n\nggplot(iris, aes(x = Petal.Width, \n                 y = Petal.Length)) +\n  geom_point() +\n  labs(x = \"Petal width\",\n       y = \"Petal length\")\n```"
   },
   {
+    "objectID": "materials/1-overview/slides.html#execution-options-figures-4",
+    "href": "materials/1-overview/slides.html#execution-options-figures-4",
+    "title": "Introduction\nto Quarto",
+    "section": "Execution options: Figures",
+    "text": "Execution options: Figures\n\n\n```{r}\n#| echo: false\n#| fig-width: 5\n#| fig-height: 5\n#| fig-cap: \"This is my really neat plot.\"\n\nlibrary(ggplot2)\n\nggplot(iris, aes(x = Petal.Width, \n                 y = Petal.Length)) +\n  geom_point() +\n  labs(x = \"Petal width\",\n       y = \"Petal length\")\n\n```\n\n\n\n\n\n\nThis is my really neat plot."
+  },
+  {
     "objectID": "materials/1-overview/slides.html#execution-options-yaml",
     "href": "materials/1-overview/slides.html#execution-options-yaml",
     "title": "Introduction\nto Quarto",
     "section": "Execution options: YAML",
     "text": "Execution options: YAML\n\n\n\n\n\n\n\n\n\n\n\nExecution options at the document level in the YAML\n\n\nAvoids having to reapply options for each code chunk! \n\n\n\n\n\n---\ntitle: \"My FWS Report\"\nauthor: Jane Biologist\nformat: html\n---"
+  },
+  {
+    "objectID": "materials/1-overview/slides.html#execution-options-yaml-1",
+    "href": "materials/1-overview/slides.html#execution-options-yaml-1",
+    "title": "Introduction\nto Quarto",
+    "section": "Execution options: YAML",
+    "text": "Execution options: YAML\n\n\n\n\n\n\n\n\n\n\n\nExecution options at the document level in the YAML\n\n\nAvoids having to reapply options for each code chunk! \n\n\n\n\n\n---\ntitle: \"My FWS Report\"\nauthor: Jane Biologist\nformat:\n  html:\n    fig-width: 5\n    fig-height: 5\nexecute:\n  echo: false\n---"
   },
   {
     "objectID": "materials/1-overview/slides.html#exercise-4-code-chunks",
@@ -460,14 +481,14 @@
     "href": "prework.html",
     "title": "Prework",
     "section": "",
-    "text": "From FWS Apps-To-Go, install:\n\nR 4.4.2 or newer\nRStudio 2024.09.1 or newer\n\nOpen a new RStudio session.\nDownload the exercise materials. This function creates a new RStudio project called “intro-to-quarto-exercises-main”.\n\n\nif (!require(\"usethis\") install.packages(\"usethis\")\nusethis::use_course(\"https://github.com/USFWS/intro-to-quarto-exercises/archive/refs/heads/main.zip\")"
+    "text": "From FWS Apps-To-Go, install:\n\nR 4.4.2 or newer\nRStudio 2024.09.1 or newer\n\nOpen a new RStudio session.\nDownload the exercise materials. This function creates a new RStudio project called “intro-to-quarto-exercises-main”.\n\n\nif (!require(\"usethis\")) install.packages(\"usethis\")\nusethis::use_course(\"https://github.com/USFWS/intro-to-quarto-exercises/archive/refs/heads/main.zip\")"
   },
   {
     "objectID": "prework.html#download-the-exercise-materials",
     "href": "prework.html#download-the-exercise-materials",
     "title": "Prework",
     "section": "",
-    "text": "From FWS Apps-To-Go, install:\n\nR 4.4.2 or newer\nRStudio 2024.09.1 or newer\n\nOpen a new RStudio session.\nDownload the exercise materials. This function creates a new RStudio project called “intro-to-quarto-exercises-main”.\n\n\nif (!require(\"usethis\") install.packages(\"usethis\")\nusethis::use_course(\"https://github.com/USFWS/intro-to-quarto-exercises/archive/refs/heads/main.zip\")"
+    "text": "From FWS Apps-To-Go, install:\n\nR 4.4.2 or newer\nRStudio 2024.09.1 or newer\n\nOpen a new RStudio session.\nDownload the exercise materials. This function creates a new RStudio project called “intro-to-quarto-exercises-main”.\n\n\nif (!require(\"usethis\")) install.packages(\"usethis\")\nusethis::use_course(\"https://github.com/USFWS/intro-to-quarto-exercises/archive/refs/heads/main.zip\")"
   },
   {
     "objectID": "prework.html#install-r-package-dependencies",
@@ -482,33 +503,5 @@
     "title": "Prework",
     "section": "3. Install tinyTeX",
     "text": "3. Install tinyTeX\n\nTo render Quarto documents as a PDF, you will need to install a version of LaTex. You can do this by running the function below:\n\n\ntinytex::install_tinytex()"
-  },
-  {
-    "objectID": "materials/1-overview/slides.html#execution-options-yaml-1",
-    "href": "materials/1-overview/slides.html#execution-options-yaml-1",
-    "title": "Introduction\nto Quarto",
-    "section": "Execution options: YAML",
-    "text": "Execution options: YAML\n\n\n\n\n\n\n\n\n\n\n\nExecution options at the document level in the YAML\n\n\nAvoids having to reapply options for each code chunk! \n\n\n\n\n\n---\ntitle: \"My FWS Report\"\nauthor: Jane Biologist\nformat:\n  html:\n    fig-width: 5\n    fig-height: 5\nexecute:\n  echo: false\n---"
-  },
-  {
-    "objectID": "materials/1-overview/slides.html#execution-options-figures-4",
-    "href": "materials/1-overview/slides.html#execution-options-figures-4",
-    "title": "Introduction\nto Quarto",
-    "section": "Execution options: Figures",
-    "text": "Execution options: Figures\n\n\n```{r}\n#| echo: false\n#| fig-width: 5\n#| fig-height: 5\n#| fig-cap: \"This is my really neat plot.\"\n\nlibrary(ggplot2)\n\nggplot(iris, aes(x = Petal.Width, \n                 y = Petal.Length)) +\n  geom_point() +\n  labs(x = \"Petal width\",\n       y = \"Petal length\")\n\n```\n\n\n\n\n\n\nThis is my really neat plot."
-  },
-  {
-    "objectID": "materials/1-overview/slides.html#authoring",
-    "href": "materials/1-overview/slides.html#authoring",
-    "title": "Introduction\nto Quarto",
-    "section": "Authoring",
-    "text": "Authoring"
-  },
-  {
-    "objectID": "materials/1-overview/slides.html#authoring-source-and-visual-panes",
-    "href": "materials/1-overview/slides.html#authoring-source-and-visual-panes",
-    "title": "Introduction\nto Quarto",
-    "section": "Authoring: Source and Visual panes",
-    "text": "Authoring: Source and Visual panes"
   }
 ]

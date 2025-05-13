@@ -13,7 +13,7 @@ sidebar: false
 
 ::: {.small}
 ``` r
-if (!require("usethis") install.packages("usethis")
+if (!require("usethis")) install.packages("usethis")
 usethis::use_course("https://github.com/USFWS/intro-to-quarto-exercises/archive/refs/heads/main.zip")
 ```
 :::
