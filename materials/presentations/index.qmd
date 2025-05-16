@@ -1,0 +1,17 @@
+---
+title: Presentations with Quarto
+---
+
+[Full Screen](slides.qmd)
+
+```{=html}
+<iframe class="slide-deck" src="slides.html" height="450" width="800" style="border: 1px solid #2e3846;"></iframe>
+```
+
+### Learning goals
+
+- Introduce Revealjs presentations using Quarto
+- Describe YAML options for presentations
+- Describe markdown syntax for creating slides
+- Introduce themes and describe how to customize themes using a SCSS file
+- Introduce advanced features to further customize the look and feel of presentation slides 

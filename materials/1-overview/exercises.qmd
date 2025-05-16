@@ -29,9 +29,15 @@ Rendering in Quarto documents refers to the process of converting a Quarto file,
 - [ ] Open `1_rendering.qmd`. What are three main components of the file?
 - [ ] Render the document using the RStudio GUI ( ![](images/render_icon.png) ).
 - [ ] Render the document using the Quarto CLI.  
-    - *Hint*: In the terminal: `quarto render <input file>`
+    - <details>
+      <summary>**Hint**</summary>
+      In the terminal: `quarto render 1_rendering\<input file name>`
+      </details>  
 - [ ] Render the document using the `quarto` R package.
-    - *Hint*: In the console: `quarto::quarto_render("<input file>")`
+    - <details>
+      <summary>**Hint**</summary>
+      In the console: `quarto::quarto_render("./1_rendering/<input file>")`
+      </details> 
 
 
 ## Exercise 2: YAML metadata {#sec-exercise2}
@@ -41,14 +47,20 @@ A **YAML** (**Y**et **A**nother **M**arkup **L**anguage) header is a crucial com
 ### Tasks
 
 - [ ] Open `2_yaml_metadata.qmd` and render the document.
-- [ ] Update the title and replace the author name with your name. Re-render it.
-- [ ] Change the output to `html` and render it. Open the html to view the results.
-- [ ] Now render it as a PDF. What did you notice?
-- [ ] \[*Bonus*\] Render the document as both a PDF and HTML.
-    - *Hint*: `consider using the quarto::quarto_render("<input filepath>") function`
-- [ ] \[*Bonus*\] Render the document as a Word document using the MS_Style.docx file in the templates folder.
-    - *Hint*: `see example below`
-
+- [ ] Update the subtitle and replace the author name with your name. Re-render it.
+- [ ] Change the output to a PDF and render it. What did you notice?
+- [ ] Now render it as a MS Word document (`docx`). Open the file to view the results.  
+**Bonus tasks**  
+- [ ] Render the document as a Word document using the MS_Style.docx file in the templates folder.
+    - <details>
+      <summary>**Hint**</summary>
+      [Using templates](https://quarto.org/docs/output-formats/ms-word-templates.html#using-templates)
+      </details>  
+- [ ] Render the document simultaneously as a Word document and a PDF.
+    - <details>
+      <summary>**Hint**</summary>
+      Add `output_format = "all"` argument to `quarto::quarto_render()`
+      </details>
 
 ## Exercise 3: Document body {#sec-exercise3}
 
@@ -67,8 +79,7 @@ Open `3-document_body.qmd` and make the following changes to the document:
 
 - [ ] Create a new header named "My list"
 - [ ] Make an ordered and unordered list
-- [ ] Insert an image of the western snow plover below the "U.S. Fish and Wildlife Service" header
-    - *Hint*: `image can be found in the images folder`
+- [ ] Insert an image of the western snow plover below the "U.S. Fish and Wildlife Service" header. The image can be found in the `./images` folder.
 
 
 ## Exercise 4: Code chunks {#sec-exercise4}

@@ -7,81 +7,102 @@
     "text": "Getting Started with Quarto\n\nTutorial: Hello, Quarto\n\nQuarto chapter in “R for Data Science”\n\nGetting Started With Quarto (video)\nIntroduction to Quarto, Klajdi Puka\n\nIntroduction to Working with Quarto documents, Carpentries Incubator\n\nGallery of Quarto report examples\n\n\n\nAutomating Quarto Reports\n\nHow to automate your reporting with Quarto Dashboards and Posit Connect (video)\n\nQuarto: Elevating R Markdown for Advanced Publishing (video)\n\n\n\nQuarto Websites and Dashboard\n\nCreating a website using Quarto\n\nCreating your personal website using Quarto\n\nQuarto Dashboards (video)\n\nGallery of Quarto website examples\n\nGallery of Quarto dashboard examples"
   },
   {
+    "objectID": "materials/presentations/slides.html#outline",
+    "href": "materials/presentations/slides.html#outline",
+    "title": "Introduction\nto Quarto",
+    "section": "Outline",
+    "text": "Outline\n\n\nIntroduce Revealjs presentations using Quarto\nDescribe YAML options for presentations\nDescribe markdown syntax for creating slides\nIntroduce themes and describe how to customize themes using a SCSS file\nIntroduce advanced features to further customize the look and feel of presentation slides"
+  },
+  {
+    "objectID": "materials/presentations/slides.html#presentation-formats",
+    "href": "materials/presentations/slides.html#presentation-formats",
+    "title": "Introduction\nto Quarto",
+    "section": "Presentation formats",
+    "text": "Presentation formats"
+  },
+  {
+    "objectID": "materials/presentations/slides.html#revealjs-format",
+    "href": "materials/presentations/slides.html#revealjs-format",
+    "title": "Introduction\nto Quarto",
+    "section": "Revealjs format",
+    "text": "Revealjs format\n\n\n\nAn open source HTML presentation framework\nChange styles with CSS/SCSS\nCustomize with JavaScript\nMarkdown and LateX support\n\n\n\n\n\n\nAn open source HTML presentation framework\nChange styles with CSS/SCSS\nCustomize with JavaScript\nMarkdown and LateX support"
+  },
+  {
     "objectID": "materials/1-overview/slides.html#section",
     "href": "materials/1-overview/slides.html#section",
     "title": "Introduction\nto Quarto",
     "section": "",
-    "text": "Course materials can be found at:\nhttps://github.com/USFWS/intro-to-quarto ."
+    "text": "Course materials can be found at:\nhttps://github.com/USFWS/intro-to-quarto .\n\n\nYou can find the course materials at the website listed here."
   },
   {
     "objectID": "materials/1-overview/slides.html#outline",
     "href": "materials/1-overview/slides.html#outline",
     "title": "Introduction\nto Quarto",
     "section": "Outline",
-    "text": "Outline\n\nOverview of Quarto\nComponents of a Quarto document\n\nYAML metadata\nDocument body\nCode blocks"
+    "text": "Outline\n\nOverview of Quarto\nComponents of a Quarto document\n\nYAML metadata\nDocument body\nCode blocks\n\n\n\n\nThis workshop serves as an introduction to using Quarto to create reports.\nDuring our time here, we will provide a brief overview of what Quarto is, what it can do for you, and how it compares to R Markdown. We will then dive into the anatomy of a Quarto file, which can be broken into three primary components: the YAML metadata, the document body, and code blocks (or code “chunks”).\nThe workshop is a series of short presentations followed by hand-on exercises to practice what you’ve learned.\nWe will be available to provide help during the exercises, so let us know by raising your hand (in person or virtually!)"
   },
   {
     "objectID": "materials/1-overview/slides.html#outputs-documents",
     "href": "materials/1-overview/slides.html#outputs-documents",
     "title": "Introduction\nto Quarto",
     "section": "Outputs: Documents",
-    "text": "Outputs: Documents\n\nDownload PDF file."
+    "text": "Outputs: Documents\n\nDownload PDF file.\n\n\n\nQuarto can produce high quality documents in HTML, PDF or MS Word\nHas the ability to output content using standardized templates, as shown here for a refuge report."
   },
   {
     "objectID": "materials/1-overview/slides.html#output-websites",
     "href": "materials/1-overview/slides.html#output-websites",
     "title": "Introduction\nto Quarto",
     "section": "Output: Websites",
-    "text": "Output: Websites"
+    "text": "Output: Websites\n\n\n\nQuarto can also create websites, such as this Science Applications Metadata Guidance.\nThe course website that we are using today was created in Quarto."
   },
   {
     "objectID": "materials/1-overview/slides.html#outputs-presentations",
     "href": "materials/1-overview/slides.html#outputs-presentations",
     "title": "Introduction\nto Quarto",
     "section": "Outputs: Presentations",
-    "text": "Outputs: Presentations"
+    "text": "Outputs: Presentations\n\n\n\nQuarto can also output professional-looking presentations as HTML-based Revealjs presentations or as PowerPoint. Templates are available online or with a little CSS code, you can create your own."
   },
   {
     "objectID": "materials/1-overview/slides.html#outputs-books",
     "href": "materials/1-overview/slides.html#outputs-books",
     "title": "Introduction\nto Quarto",
     "section": "Outputs: Books",
-    "text": "Outputs: Books"
+    "text": "Outputs: Books\n\n\nFinally, it’s possible to write books using Quarto, such as the R for Data Science book shown here.\n\nTo summarize, Quarto is an open-source scientific and technical publishing system.\nInstead of writing a report or presentation in Word, PowerPoint, etc.; then running code in an R script; then saving output and visualizations; and then pasting them in the report or the presentation\nWe can do it all in Quarto, a free system especially tailored to scientific and technical publishing."
   },
   {
     "objectID": "materials/1-overview/slides.html#quarto-and-r-markdown",
     "href": "materials/1-overview/slides.html#quarto-and-r-markdown",
     "title": "Introduction\nto Quarto",
     "section": "Quarto and R Markdown",
-    "text": "Quarto and R Markdown\n\n\n\n\n\nQuarto is an open-source scientific and technical publishing system built on Pandoc.\nInstead of writing a report or presentation in Word, PowerPoint, etc.; then running code in an R script; then saving output and visualizations; and then pasting them in the report or the presentation\nWe can do it all in Quarto, a free system especially tailored to scientific and technical publishing.\nIf you are familiar with R Markdown, you are probably familiar with this pipeline.\nWhen you knit an R Markdown .rmd file, the R package knitr converts your text and R code into a Markdown file and then uses Pandoc to produce whatever output you’ve specified."
+    "text": "Quarto and R Markdown\n\n\n\n\n\nHow does it work? If you are familiar with R Markdown, you are probably familiar with this pipeline.\nYou start out with an R Markdown document, which includes text and R code."
   },
   {
     "objectID": "materials/1-overview/slides.html#quarto-and-r-markdown-1",
     "href": "materials/1-overview/slides.html#quarto-and-r-markdown-1",
     "title": "Introduction\nto Quarto",
     "section": "Quarto and R Markdown",
-    "text": "Quarto and R Markdown\n\n\n\nA Quarto .qmd file on the other hand can be composed of text and R, Python, and/or Julia code."
+    "text": "Quarto and R Markdown\n\n\n\nWhen you knit an R Markdown file, a R package “knitr” calls the engine knitr to execute your R code, and create an Markdown file that include and then uses Pandoc to produce whatever output you’ve specified."
   },
   {
     "objectID": "materials/1-overview/slides.html#quarto-and-r-markdown-2",
     "href": "materials/1-overview/slides.html#quarto-and-r-markdown-2",
     "title": "Introduction\nto Quarto",
     "section": "Quarto and R Markdown",
-    "text": "Quarto and R Markdown\n\n\n\nEither the knitr or jupyter engines will then render your text and code into a Markdown file followed by Pandoc producing whatever output you’ve specified. Quarto accomplishes this by being fully separate from the R ecosystem. You can even run it from the command-line interface (i.e., the shell or terminal), if you want to."
+    "text": "Quarto and R Markdown"
   },
   {
     "objectID": "materials/1-overview/slides.html#quarto-and-r-markdown-3",
     "href": "materials/1-overview/slides.html#quarto-and-r-markdown-3",
     "title": "Introduction\nto Quarto",
     "section": "Quarto and R Markdown",
-    "text": "Quarto and R Markdown"
+    "text": "Quarto and R Markdown\n\n\n\n\n\nA Quarto .qmd file on the other hand can be composed of text and R, Python, and/or Julia code."
   },
   {
     "objectID": "materials/1-overview/slides.html#quarto-and-r-markdown-4",
     "href": "materials/1-overview/slides.html#quarto-and-r-markdown-4",
     "title": "Introduction\nto Quarto",
     "section": "Quarto and R Markdown",
-    "text": "Quarto and R Markdown"
+    "text": "Quarto and R Markdown\n\n\n\nEither the knitr or jupyter engines will then render your text and code into a Markdown file followed by Pandoc producing whatever output you’ve specified. Quarto accomplishes this by being fully separate from the R ecosystem. You can even run it from the command-line interface (i.e., the shell or terminal), if you want to."
   },
   {
     "objectID": "materials/1-overview/slides.html#quarto-and-r-markdown-5",
@@ -387,7 +408,7 @@
     "href": "materials/1-overview/exercises.html#sec-exercise1",
     "title": "Introduction to Quarto",
     "section": "Exercise 1: Rendering",
-    "text": "Exercise 1: Rendering\nRendering in Quarto documents refers to the process of converting a Quarto file, which is written in a markdown-like syntax, into a final output format such as HTML, PDF, or Word. During rendering, the Quarto system interprets the markdown content, processes embedded R code chunks, and generates the respective output by applying formatting specified in the YAML header. This transformation allows users to produce well-structured and visually appealing documents that incorporate text, data visualizations, and analysis results seamlessly, making it an essential step in creating dynamic reports and presentations.\n\nTasks\n\nOpen 1_rendering.qmd. What are three main components of the file?\nRender the document using the RStudio GUI (  ).\nRender the document using the Quarto CLI.\n\nHint: In the terminal: quarto render &lt;input file&gt;\n\nRender the document using the quarto R package.\n\nHint: In the console: quarto::quarto_render(\"&lt;input file&gt;\")",
+    "text": "Exercise 1: Rendering\nRendering in Quarto documents refers to the process of converting a Quarto file, which is written in a markdown-like syntax, into a final output format such as HTML, PDF, or Word. During rendering, the Quarto system interprets the markdown content, processes embedded R code chunks, and generates the respective output by applying formatting specified in the YAML header. This transformation allows users to produce well-structured and visually appealing documents that incorporate text, data visualizations, and analysis results seamlessly, making it an essential step in creating dynamic reports and presentations.\n\nTasks\n\nOpen 1_rendering.qmd. What are three main components of the file?\nRender the document using the RStudio GUI (  ).\nRender the document using the Quarto CLI.\n\n\n\nHint\n\nIn the terminal: quarto render 1_rendering\\&lt;input file name&gt;\n\n\nRender the document using the quarto R package.\n\n\n\nHint\n\nIn the console: quarto::quarto_render(\"./1_rendering/&lt;input file&gt;\")",
     "crumbs": [
       "Overview of Quarto",
       "- Exercises"
@@ -398,7 +419,7 @@
     "href": "materials/1-overview/exercises.html#sec-exercise2",
     "title": "Introduction to Quarto",
     "section": "Exercise 2: YAML metadata",
-    "text": "Exercise 2: YAML metadata\nA YAML (Yet Another Markup Language) header is a crucial component of Quarto documents that defines metadata for the document, typically enclosed within a pair of triple-dashed lines at the beginning of the file. It allows users to specify important information such as the document’s title, author, date, and output formats (like HTML, PDF, or Word). Additionally, YAML headers can include parameters to control formatting options and customize the behavior of the document, such as including bibliographies or setting specific themes. By using a YAML header, authors can ensure that their documents are well-organized and professionally presented.\n\nTasks\n\nOpen 2_yaml_metadata.qmd and render the document.\nUpdate the title and replace the author name with your name. Re-render it.\nChange the output to html and render it. Open the html to view the results.\nNow render it as a PDF. What did you notice?\n[Bonus] Render the document as both a PDF and HTML.\n\nHint: consider using the quarto::quarto_render(\"&lt;input filepath&gt;\") function\n\n[Bonus] Render the document as a Word document using the MS_Style.docx file in the templates folder.\n\nHint: see example below",
+    "text": "Exercise 2: YAML metadata\nA YAML (Yet Another Markup Language) header is a crucial component of Quarto documents that defines metadata for the document, typically enclosed within a pair of triple-dashed lines at the beginning of the file. It allows users to specify important information such as the document’s title, author, date, and output formats (like HTML, PDF, or Word). Additionally, YAML headers can include parameters to control formatting options and customize the behavior of the document, such as including bibliographies or setting specific themes. By using a YAML header, authors can ensure that their documents are well-organized and professionally presented.\n\nTasks\n\nOpen 2_yaml_metadata.qmd and render the document.\nUpdate the subtitle and replace the author name with your name. Re-render it.\nChange the output to a PDF and render it. What did you notice?\nNow render it as a MS Word document (docx). Open the file to view the results.\nBonus tasks\n\nRender the document as a Word document using the MS_Style.docx file in the templates folder.\n\n\n\nHint\n\nUsing templates\n\n\nRender the document simultaneously as a Word document and a PDF\n\n\n\nHint\n\nAdd output_format = \"all\" argument to quarto::quarto_render()",
     "crumbs": [
       "Overview of Quarto",
       "- Exercises"
@@ -409,7 +430,7 @@
     "href": "materials/1-overview/exercises.html#sec-exercise3",
     "title": "Introduction to Quarto",
     "section": "Exercise 3: Document body",
-    "text": "Exercise 3: Document body\nThe document body of a Quarto document is the main content area where the narrative, analysis, and findings are presented. This section is typically written in markdown format, allowing users to easily incorporate various elements such as headings, paragraphs, lists, tables, and images. The importance of the document body lies in its role as the primary medium for communicating information and insights to the reader; it organizes thoughts and results in a coherent and engaging manner. A well-structured document body enhances readability and comprehension, enabling the audience to grasp complex ideas and data more effectively. By integrating both text and visual elements, the document body plays a critical role in making the overall document informative and visually appealing.\n\nTasks\nOpen 3-document_body.qmd and make the following changes to the document:\nInline:\n\nItalicize the species name\nMake the refuge name into a hyperlink to the refuge website\n\nBlock:\n\nCreate a new header named “My list”\nMake an ordered and unordered list\nInsert an image of the western snow plover below the “U.S. Fish and Wildlife Service” header\n\nHint: image can be found in the images folder",
+    "text": "Exercise 3: Document body\nThe document body of a Quarto document is the main content area where the narrative, analysis, and findings are presented. This section is typically written in markdown format, allowing users to easily incorporate various elements such as headings, paragraphs, lists, tables, and images. The importance of the document body lies in its role as the primary medium for communicating information and insights to the reader; it organizes thoughts and results in a coherent and engaging manner. A well-structured document body enhances readability and comprehension, enabling the audience to grasp complex ideas and data more effectively. By integrating both text and visual elements, the document body plays a critical role in making the overall document informative and visually appealing.\n\nTasks\nOpen 3-document_body.qmd and make the following changes to the document:\nInline:\n\nItalicize the species name\nMake the refuge name into a hyperlink to the refuge website\n\nBlock:\n\nCreate a new header named “My list”\nMake an ordered and unordered list\nInsert an image of the western snow plover below the “U.S. Fish and Wildlife Service” header. The image can be found in the ./images folder.",
     "crumbs": [
       "Overview of Quarto",
       "- Exercises"
@@ -442,14 +463,14 @@
     "href": "about.html",
     "title": "About the Workshop",
     "section": "",
-    "text": "Jonah is a data manager with the USFWS Fisheries and Ecological Services program in the Alaska region. He is passionate about fostering a data-centric culture and works closely with biologists and managers to ensure stakeholders have reliable access to data following FAIR principles that lead to informed conservation decisions. Jonah is a strong advocate for the use of R and developing reproducible workflows. Find more information about Jonah and the rest of the Alaska Data Management Team here.\n\n\n\n\n\n\n\n\n\nJacob is a fish biologist with the FWS Lower Great Lakes Fish and Wildlife Conservation Office in Basom, NY. He leads the Aquatic Invasive Species programs early detection and monitoring efforts across the lower Great Lakes. Along with managing fieldwork operations, Jacob emphasizes efficiency through workflows and automation to improve program capacity and data availability. You can learn more about the work his office is involved with here.\n\n\n\n\n\n\n\n\n\nJason is a Data Manager with the FWS Midwest Fisheries Center Data Branch that provides data support to staff in FWS Midwest Region’s Fisheries and Aquatic Conservation program. You can learn more about Jason and the rest of the Data Branch here.\n\n\n\n\n\n\n\n\n\nMcCrea is a supervisory biometrician with the FWS Refuge Inventory and Monitoring Program based in Anchorage, Alaska. He enjoys working with biologists to ensure that surveys are scientifically rigorous and produce data that are findable, accessible, interoperable, and reusable (FAIR). He is an avid R user and enjoys developing script-based workflows. You can learn more about McCrea and the rest of the Alaska I&M Team here."
+    "text": "McCrea is a supervisory biometrician with the FWS Refuge Inventory and Monitoring Program based in Anchorage, Alaska. He enjoys working with biologists to ensure that surveys are scientifically rigorous and produce data that are findable, accessible, interoperable, and reusable (FAIR). He is an avid R user and enjoys developing script-based workflows. You can learn more about McCrea and the rest of the Alaska I&M Team here.\n\n\n\n\n\n\n\n\n\nJacob is a fish biologist with the FWS Lower Great Lakes Fish and Wildlife Conservation Office in Basom, NY. He leads the Aquatic Invasive Species programs early detection and monitoring efforts across the lower Great Lakes. Along with managing fieldwork operations, Jacob emphasizes efficiency through workflows and automation to improve program capacity and data availability. You can learn more about the work his office is involved with here.\n\n\n\n\n\n\n\n\n\nJason is a data manager with the FWS Midwest Fisheries Center Data Branch that provides data support to staff in FWS Midwest Region’s Fisheries and Aquatic Conservation program. You can learn more about Jason and the rest of the Data Branch here.\n\n\n\n\n\n\n\n\n\nEmma is a data management technician with the FWS Refuge Inventory and Monitoring Program based in Anchorage, Alaska.\n\n\n\n\n\n\n\n\n\nJonah is a data manager with the USFWS Fisheries and Ecological Services program in the Alaska region. He is passionate about fostering a data-centric culture and works closely with biologists and managers to ensure stakeholders have reliable access to data following FAIR principles that lead to informed conservation decisions. Jonah is a strong advocate for the use of R and developing reproducible workflows. Find more information about Jonah and the rest of the Alaska Data Management Team here."
   },
   {
     "objectID": "about.html#teaching-team",
     "href": "about.html#teaching-team",
     "title": "About the Workshop",
     "section": "",
-    "text": "Jonah is a data manager with the USFWS Fisheries and Ecological Services program in the Alaska region. He is passionate about fostering a data-centric culture and works closely with biologists and managers to ensure stakeholders have reliable access to data following FAIR principles that lead to informed conservation decisions. Jonah is a strong advocate for the use of R and developing reproducible workflows. Find more information about Jonah and the rest of the Alaska Data Management Team here.\n\n\n\n\n\n\n\n\n\nJacob is a fish biologist with the FWS Lower Great Lakes Fish and Wildlife Conservation Office in Basom, NY. He leads the Aquatic Invasive Species programs early detection and monitoring efforts across the lower Great Lakes. Along with managing fieldwork operations, Jacob emphasizes efficiency through workflows and automation to improve program capacity and data availability. You can learn more about the work his office is involved with here.\n\n\n\n\n\n\n\n\n\nJason is a Data Manager with the FWS Midwest Fisheries Center Data Branch that provides data support to staff in FWS Midwest Region’s Fisheries and Aquatic Conservation program. You can learn more about Jason and the rest of the Data Branch here.\n\n\n\n\n\n\n\n\n\nMcCrea is a supervisory biometrician with the FWS Refuge Inventory and Monitoring Program based in Anchorage, Alaska. He enjoys working with biologists to ensure that surveys are scientifically rigorous and produce data that are findable, accessible, interoperable, and reusable (FAIR). He is an avid R user and enjoys developing script-based workflows. You can learn more about McCrea and the rest of the Alaska I&M Team here."
+    "text": "McCrea is a supervisory biometrician with the FWS Refuge Inventory and Monitoring Program based in Anchorage, Alaska. He enjoys working with biologists to ensure that surveys are scientifically rigorous and produce data that are findable, accessible, interoperable, and reusable (FAIR). He is an avid R user and enjoys developing script-based workflows. You can learn more about McCrea and the rest of the Alaska I&M Team here.\n\n\n\n\n\n\n\n\n\nJacob is a fish biologist with the FWS Lower Great Lakes Fish and Wildlife Conservation Office in Basom, NY. He leads the Aquatic Invasive Species programs early detection and monitoring efforts across the lower Great Lakes. Along with managing fieldwork operations, Jacob emphasizes efficiency through workflows and automation to improve program capacity and data availability. You can learn more about the work his office is involved with here.\n\n\n\n\n\n\n\n\n\nJason is a data manager with the FWS Midwest Fisheries Center Data Branch that provides data support to staff in FWS Midwest Region’s Fisheries and Aquatic Conservation program. You can learn more about Jason and the rest of the Data Branch here.\n\n\n\n\n\n\n\n\n\nEmma is a data management technician with the FWS Refuge Inventory and Monitoring Program based in Anchorage, Alaska.\n\n\n\n\n\n\n\n\n\nJonah is a data manager with the USFWS Fisheries and Ecological Services program in the Alaska region. He is passionate about fostering a data-centric culture and works closely with biologists and managers to ensure stakeholders have reliable access to data following FAIR principles that lead to informed conservation decisions. Jonah is a strong advocate for the use of R and developing reproducible workflows. Find more information about Jonah and the rest of the Alaska Data Management Team here."
   },
   {
     "objectID": "about.html#source-code",
@@ -475,6 +496,13 @@
       "Overview of Quarto",
       "- Slides"
     ]
+  },
+  {
+    "objectID": "materials/presentations/index.html",
+    "href": "materials/presentations/index.html",
+    "title": "Presentations with Quarto",
+    "section": "",
+    "text": "Full Screen\n\n\nLearning goals\n\nIntroduce Revealjs presentations using Quarto\nDescribe YAML options for presentations\nDescribe markdown syntax for creating slides\nIntroduce themes and describe how to customize themes using a SCSS file\nIntroduce advanced features to further customize the look and feel of presentation slides"
   },
   {
     "objectID": "prework.html",
@@ -503,5 +531,145 @@
     "title": "Prework",
     "section": "3. Install tinyTeX",
     "text": "3. Install tinyTeX\n\nTo render Quarto documents as a PDF, you will need to install a version of LaTex. You can do this by running the function below:\n\n\ntinytex::install_tinytex()"
+  },
+  {
+    "objectID": "materials/presentations/slides.html#revealjs",
+    "href": "materials/presentations/slides.html#revealjs",
+    "title": "Introduction\nto Quarto",
+    "section": "Revealjs",
+    "text": "Revealjs\n\n\n\nAn open source HTML presentation framework\nChange styles with CSS/SCSS\nCustomize with JavaScript\nMarkdown and LateX support\n\n\n\n\n\n\nAn open source HTML presentation framework\nChange styles with CSS/SCSS\nCustomize with JavaScript\nMarkdown and LateX support"
+  },
+  {
+    "objectID": "materials/presentations/slides.html#yaml-options",
+    "href": "materials/presentations/slides.html#yaml-options",
+    "title": "Introduction\nto Quarto",
+    "section": "YAML options",
+    "text": "YAML options"
+  },
+  {
+    "objectID": "materials/presentations/slides.html#themes",
+    "href": "materials/presentations/slides.html#themes",
+    "title": "Introduction\nto Quarto",
+    "section": "Themes",
+    "text": "Themes"
+  },
+  {
+    "objectID": "materials/presentations/slides.html#customizing-themes-scss",
+    "href": "materials/presentations/slides.html#customizing-themes-scss",
+    "title": "Introduction\nto Quarto",
+    "section": "Customizing themes: SCSS",
+    "text": "Customizing themes: SCSS\n\n\nYAML\n---\ntitle: \"My really cool presentation\"\nformat:\n  revealjs\n    theme: [default, custom.scss]\n---\n\ncustom.scss\n/*-- scss:defaults --*/\n\n// fonts\n$font-family-sans-serif: \"Palatino Linotype\", \"Book Antiqua\", Palatino,\n  FreeSerif, serif !default;\n\n// colors\n$body-bg: #f0f1eb !default;\n$body-color: #000 !default;\n$link-color: #51483d !default;\n$selection-bg: #26351c !default;\n\n// headings\n$presentation-heading-font: \"Palatino Linotype\", \"Book Antiqua\", Palatino,\n  FreeSerif, serif !default;\n$presentation-heading-color: #383d3d !default;"
+  },
+  {
+    "objectID": "materials/presentations/slides.html#advanced-features",
+    "href": "materials/presentations/slides.html#advanced-features",
+    "title": "Introduction\nto Quarto",
+    "section": "Advanced features",
+    "text": "Advanced features"
+  },
+  {
+    "objectID": "materials/presentations/slides.html#creating-slides",
+    "href": "materials/presentations/slides.html#creating-slides",
+    "title": "Introduction\nto Quarto",
+    "section": "Creating slides",
+    "text": "Creating slides\n\nSlides -Sections"
+  },
+  {
+    "objectID": "materials/presentations/slides.html#incremental-lists",
+    "href": "materials/presentations/slides.html#incremental-lists",
+    "title": "Introduction\nto Quarto",
+    "section": "Incremental lists",
+    "text": "Incremental lists"
+  },
+  {
+    "objectID": "materials/presentations/slides.html#columns",
+    "href": "materials/presentations/slides.html#columns",
+    "title": "Introduction\nto Quarto",
+    "section": "Columns",
+    "text": "Columns"
+  },
+  {
+    "objectID": "materials/presentations/slides.html#overflowing-content",
+    "href": "materials/presentations/slides.html#overflowing-content",
+    "title": "Introduction\nto Quarto",
+    "section": "Overflowing content",
+    "text": "Overflowing content"
+  },
+  {
+    "objectID": "materials/presentations/slides.html#speaker-notes",
+    "href": "materials/presentations/slides.html#speaker-notes",
+    "title": "Introduction\nto Quarto",
+    "section": "Speaker notes",
+    "text": "Speaker notes"
+  },
+  {
+    "objectID": "materials/presentations/slides.html#themes-1",
+    "href": "materials/presentations/slides.html#themes-1",
+    "title": "Introduction\nto Quarto",
+    "section": "Themes",
+    "text": "Themes\n\n\n---\ntitle: \"My really cool presentation\"\nformat: revealjs\n---\n\n\n\n\n\nReveal themes"
+  },
+  {
+    "objectID": "materials/presentations/slides.html#footers-and-logos",
+    "href": "materials/presentations/slides.html#footers-and-logos",
+    "title": "Introduction\nto Quarto",
+    "section": "Footers and logos",
+    "text": "Footers and logos"
+  },
+  {
+    "objectID": "materials/presentations/slides.html#code-block-options",
+    "href": "materials/presentations/slides.html#code-block-options",
+    "title": "Introduction\nto Quarto",
+    "section": "Code block options",
+    "text": "Code block options"
+  },
+  {
+    "objectID": "materials/presentations/slides.html#code-highlighting",
+    "href": "materials/presentations/slides.html#code-highlighting",
+    "title": "Introduction\nto Quarto",
+    "section": "Code highlighting",
+    "text": "Code highlighting"
+  },
+  {
+    "objectID": "materials/presentations/slides.html#code-output-location",
+    "href": "materials/presentations/slides.html#code-output-location",
+    "title": "Introduction\nto Quarto",
+    "section": "Code output location",
+    "text": "Code output location"
+  },
+  {
+    "objectID": "materials/presentations/slides.html#slide-background",
+    "href": "materials/presentations/slides.html#slide-background",
+    "title": "Introduction\nto Quarto",
+    "section": "Slide background",
+    "text": "Slide background"
+  },
+  {
+    "objectID": "materials/presentations/slides.html#embedding-websites",
+    "href": "materials/presentations/slides.html#embedding-websites",
+    "title": "Introduction\nto Quarto",
+    "section": "Embedding websites",
+    "text": "Embedding websites"
+  },
+  {
+    "objectID": "materials/presentations/slides.html#themes-2",
+    "href": "materials/presentations/slides.html#themes-2",
+    "title": "Introduction\nto Quarto",
+    "section": "Themes",
+    "text": "Themes\n\n\n---\ntitle: \"My really cool presentation\"\nformat:\n  revealjs:\n    theme: night\n---\n\n\n\n\n\nReveal themes"
+  },
+  {
+    "objectID": "materials/presentations/slides.html#themes-3",
+    "href": "materials/presentations/slides.html#themes-3",
+    "title": "Introduction\nto Quarto",
+    "section": "Themes",
+    "text": "Themes\n\n\n---\ntitle: \"My really cool presentation\"\nformat:\n  revealjs:\n    theme: solarized\n---\n\n\n\n\n\nReveal themes"
+  },
+  {
+    "objectID": "materials/presentations/slides.html#customizing-themes",
+    "href": "materials/presentations/slides.html#customizing-themes",
+    "title": "Introduction\nto Quarto",
+    "section": "Customizing themes",
+    "text": "Customizing themes\n\n\n\n\nYAML\n---\ntitle: \"My really cool presentation\"\nformat:\n  revealjs\n    theme: [default, custom.scss]\n---\n\ncustom.scss\n\n/*-- scss:defaults --*/\n\n// fonts\n$font-family-sans-serif: \"Palatino Linotype\", \"Book Antiqua\", Palatino,\n  FreeSerif, serif !default;\n\n// colors\n$body-bg: #f0f1eb !default;\n$body-color: #000 !default;\n$link-color: #51483d !default;\n$selection-bg: #26351c !default;\n\n// headings\n$presentation-heading-font: \"Palatino Linotype\", \"Book Antiqua\", Palatino,\n  FreeSerif, serif !default;\n$presentation-heading-color: #383d3d !default;"
   }
 ]

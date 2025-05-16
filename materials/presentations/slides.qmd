@@ -1,0 +1,224 @@
+---
+title: |
+   | Introduction 
+   | to Quarto
+subtitle: "Presentations"
+format: 
+  refuge-revealjs:
+    title-slide-attributes:
+      data-background-image: "images/plover_title.png"
+      data-background-size: 20%, cover
+      data-background-position: "60% 50%, center"
+    footer: "[Presentations](index.html){.small}"
+editor: source
+---
+
+```{r}
+#| echo: false
+library(countdown)
+```
+
+
+# Outline
+
+::: {.incremental}
+- Introduce Revealjs presentations using Quarto
+- Describe YAML options for presentations
+- Describe markdown syntax for creating slides
+- Introduce themes and describe how to customize themes using a SCSS file
+- Introduce advanced features to further customize the look and feel of presentation slides 
+:::
+
+::: {.notes}
+
+:::
+
+## Presentation formats  
+
+\
+
+::: {.center}
+
+![](images/yaml_revealjs.png){width=800 .drop fig-alt="YAML header with format: revealjs"}  
+![](images/yaml_beamer.png){width=800 .drop fig-alt="YAML header with format: beamer"}  
+![](images/yaml_powerpoint.png){width=800 .drop fig-alt="YAML header with format: pptx"}   
+
+:::
+
+## [Revealjs](https://revealjs.com/) format
+
+::: columns
+::: {.column width=50%}
+- An open source HTML presentation framework
+- Change styles with CSS/SCSS
+- Customize with JavaScript
+- Markdown and LateX support
+:::
+
+::: {.column width=50%}
+:::
+:::
+
+::: {.notes}
+- An open source HTML presentation framework
+- Change styles with CSS/SCSS
+- Customize with JavaScript
+- Markdown and LateX support
+:::
+
+# The Basics
+
+## Creating slides
+
+- Slides
+-Sections
+
+
+## Incremental lists
+
+## Columns
+
+## Overflowing content
+
+## Speaker notes
+
+## Themes
+
+# YAML options
+
+## Themes {auto-animate=true}
+
+::: columns
+::: {.column width=50%}
+```yaml
+---
+title: "My really cool presentation"
+format: revealjs
+---
+```
+:::
+
+::: {.column width=50%}
+![](images/slide_no_theme.png){width=800 .drop}
+:::
+:::
+
+
+::: {.notes}
+- [Reveal themes](https://quarto.org/docs/presentations/revealjs/themes.html)  
+:::
+
+## Themes {auto-animate=true}
+
+::: columns
+
+::: {.column width=50%}
+```yaml
+---
+title: "My really cool presentation"
+format:
+  revealjs:
+    theme: night
+---
+```
+:::
+
+::: {.column width=50%}
+![](images/slide_night_theme.png){width=800 .drop}
+:::
+:::
+
+::: {.notes}
+- [Reveal themes](https://quarto.org/docs/presentations/revealjs/themes.html)  
+:::
+
+
+## Themes {auto-animate=true}
+
+::: columns
+
+::: {.column width=50%}
+```yaml
+---
+title: "My really cool presentation"
+format:
+  revealjs:
+    theme: solarized
+---
+```
+:::
+
+::: {.column width=50%}
+![](images/slide_solarized_theme.png){width=800 .drop}
+:::
+:::
+
+::: {.notes}
+- [Reveal themes](https://quarto.org/docs/presentations/revealjs/themes.html)  
+:::
+
+
+## Footers and logos
+
+
+## Customizing themes
+
+\
+
+::: columns
+::: {.column width=40%}  
+### YAML
+
+```yaml
+---
+title: "My really cool presentation"
+format:
+  revealjs
+    theme: [default, custom.scss]
+---
+```
+:::
+
+::: {.column width=60%}  
+### custom.scss  
+
+::: {.small}
+```scss
+/*-- scss:defaults --*/
+
+// fonts
+$font-family-sans-serif: "Palatino Linotype", "Book Antiqua", Palatino,
+  FreeSerif, serif !default;
+
+// colors
+$body-bg: #f0f1eb !default;
+$body-color: #000 !default;
+$link-color: #51483d !default;
+$selection-bg: #26351c !default;
+
+// headings
+$presentation-heading-font: "Palatino Linotype", "Book Antiqua", Palatino,
+  FreeSerif, serif !default;
+$presentation-heading-color: #383d3d !default;
+```
+:::
+
+:::
+:::
+
+::: {notes}
+:::
+# Advanced features
+
+## Code block options
+
+## Code highlighting
+
+## Code output location
+
+## Slide background
+
+## Embedding websites
+
+
+

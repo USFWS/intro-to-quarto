@@ -25,7 +25,7 @@ library(countdown)
 [https://github.com/USFWS/intro-to-quarto](https://github.com/USFWS/intro-to-quarto) [{{< fa brands github >}}](https://github.com/USFWS/intro-to-quarto).
 
 ::: {.notes}
-
+- You can find the course materials at the website listed here.
 :::
 
 
@@ -38,14 +38,24 @@ library(countdown)
   - Code blocks
 
 ::: {.notes}
-
+- This workshop serves as an introduction to using Quarto to create reports.
+- During our time here, we will provide a brief overview of what Quarto is, what it can do for you, and how it compares to R Markdown. We will then dive into the anatomy of a Quarto file, which can be broken into three primary components: the YAML metadata, the document body, and code blocks (or code "chunks").
+- The workshop is a series of short presentations followed by hand-on exercises to practice what you've learned.
+- We will be available to provide help during the exercises, so let us know by raising your hand (in person or virtually!)
 :::
 
 
-# The powers of <br> ![](images/super_quarto.png){width=600 fig-alt="Superman holding a pencil with city buildings in the background and Quarto below him"} {.dark}
+# The powers of <br> ![](images/super_quarto.png){width=600 fig-alt="Superman holding a pencil with city buildings in the background and Quarto written below him"} {.dark}
 
 ::: {.notes}
-
+- Ok, let's dive into the world of creating documents using Quarto.
+- Quarto is a multi-language next generation version of R Markdown.
+- What can you do with Quarto?
+    - Generate dynamic output using R. Python, and other languages that can be regenerated when the data change.
+    - Has support for equations and citations.
+    - Integrates well into RStudio and other code editors
+    - Can create interactive documents by embedding html widgets and Shiny.
+- It's quite powerful!
 :::
 
 
@@ -56,7 +66,8 @@ library(countdown)
 :::
 
 ::: {.notes}
-
+- Quarto can produce high quality documents in HTML, PDF or MS Word
+- Has the ability to output content using standardized templates, as shown here for a refuge report.
 :::
 
 
@@ -67,7 +78,8 @@ library(countdown)
 ```
 
 ::: {.notes}
-
+- Quarto can also create websites, such as this Science Applications Metadata Guidance.
+- The course website that we are using today was created in Quarto.
 :::
 
 
@@ -78,7 +90,7 @@ library(countdown)
 ```
 
 ::: {.notes}
-
+- Quarto can also output professional-looking presentations as HTML-based Revealjs presentations or as PowerPoint. Templates are available online or with a little CSS code, you can create your own.
 :::
 
 
@@ -89,7 +101,11 @@ library(countdown)
 ```
 
 ::: {.notes}
+Finally, it's possible to write books using Quarto, such as the R for Data Science book shown here.
 
+- To summarize, Quarto is an open-source scientific and technical publishing system.
+- Instead of writing a report or presentation in Word, PowerPoint, etc.; then running code in an R script; then saving output and visualizations; and then pasting them in the report or the presentation
+- We can do it all in Quarto, a free system especially tailored to scientific and technical publishing. 
 :::
 
 
@@ -100,29 +116,25 @@ library(countdown)
 :::
 
 ::: {.notes}
-- Quarto is an open-source scientific and technical publishing system built on Pandoc.
-- Instead of writing a report or presentation in Word, PowerPoint, etc.; then running code in an R script; then saving output and visualizations; and then pasting them in the report or the presentation
-- We can do it all in Quarto, a free system especially tailored to scientific and technical publishing. 
-- If you are familiar with R Markdown, you are probably familiar with this pipeline.
-- When you knit an R Markdown .rmd file, the R package knitr converts your text and R code into a Markdown file and then uses Pandoc to produce whatever output you’ve specified.
+- How does it work? If you are familiar with R Markdown, you are probably familiar with this pipeline.
+- You start out with an R Markdown document, which includes text and R code.
 :::
 
 
 ## Quarto and R Markdown
 
-![](images/render2.png){height=800 fig-alt="A diagram showing the process of rendering a document using Quarto."}  
+![](images/render2.png){height=800 fig-alt="A diagram showing the process of rendering a document using R Markdown."}  
 
 ::: {.notes}
-- A Quarto .qmd file on the other hand can be composed of text and R, Python, and/or Julia code. 
+- When you knit an R Markdown file, a R package "knitr" calls the engine knitr to execute your R code, and create an Markdown file that include and then uses Pandoc to produce whatever output you’ve specified.
 :::
 
 ## Quarto and R Markdown
 
-![](images/render3.png){height=800 fig-alt="A diagram showing the process of rendering a document using Quarto."}  
+![](images/render3.png){height=800 fig-alt="A diagram showing the process of rendering a document using R Markdown."}  
 
 ::: {.notes}
-- Either the knitr or jupyter engines will then render your text and code into a Markdown file followed by Pandoc producing whatever output you’ve specified.
-Quarto accomplishes this by being fully separate from the R ecosystem. You can even run it from the command-line interface (i.e., the shell or terminal), if you want to. 
+
 :::
 
 
@@ -133,7 +145,7 @@ Quarto accomplishes this by being fully separate from the R ecosystem. You can e
 :::
 
 ::: {.notes}
-
+- A Quarto .qmd file on the other hand can be composed of text and R, Python, and/or Julia code. 
 :::
 
 
@@ -142,7 +154,8 @@ Quarto accomplishes this by being fully separate from the R ecosystem. You can e
 ![](images/render5.png){height=800 fig-alt="A diagram showing the process of rendering a document using Quarto."}  
 
 ::: {.notes}
-
+- Either the knitr or jupyter engines will then render your text and code into a Markdown file followed by Pandoc producing whatever output you’ve specified.
+Quarto accomplishes this by being fully separate from the R ecosystem. You can even run it from the command-line interface (i.e., the shell or terminal), if you want to. 
 :::
 
 

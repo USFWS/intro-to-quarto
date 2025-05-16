@@ -12,7 +12,7 @@
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.39">
 
-  <title>Introduction to Quarto – quarto-input7d8927598e066b53</title>
+  <title>Introduction to Quarto – quarto-input77bca997bdda366e</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -211,7 +211,9 @@ to Quarto</div></h1>
 <p><span class="large">Course materials can be found at:</span><br>
 <a href="https://github.com/USFWS/intro-to-quarto">https://github.com/USFWS/intro-to-quarto</a> <a href="https://github.com/USFWS/intro-to-quarto"><i class="fa-brands fa-github" aria-label="github"></i></a>.</p>
 <aside class="notes">
-
+<ul>
+<li>You can find the course materials at the website listed here.</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -236,7 +238,12 @@ to Quarto</div></h1>
 </ul></li>
 </ul>
 <aside class="notes">
-
+<ul>
+<li>This workshop serves as an introduction to using Quarto to create reports.</li>
+<li>During our time here, we will provide a brief overview of what Quarto is, what it can do for you, and how it compares to R Markdown. We will then dive into the anatomy of a Quarto file, which can be broken into three primary components: the YAML metadata, the document body, and code blocks (or code “chunks”).</li>
+<li>The workshop is a series of short presentations followed by hand-on exercises to practice what you’ve learned.</li>
+<li>We will be available to provide help during the exercises, so let us know by raising your hand (in person or virtually!)</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -251,9 +258,20 @@ to Quarto</div></h1>
 </section>
 <section>
 <section id="the-powers-of" class="title-slide slide level1 dark center">
-<h1>The powers of <br> <img data-src="images/super_quarto.png" alt="Superman holding a pencil with city buildings in the background and Quarto below him" width="600"></h1>
+<h1>The powers of <br> <img data-src="images/super_quarto.png" alt="Superman holding a pencil with city buildings in the background and Quarto written below him" width="600"></h1>
 <aside class="notes">
-
+<ul>
+<li>Ok, let’s dive into the world of creating documents using Quarto.</li>
+<li>Quarto is a multi-language next generation version of R Markdown.</li>
+<li>What can you do with Quarto?
+<ul>
+<li>Generate dynamic output using R. Python, and other languages that can be regenerated when the data change.</li>
+<li>Has support for equations and citations.</li>
+<li>Integrates well into RStudio and other code editors</li>
+<li>Can create interactive documents by embedding html widgets and Shiny.</li>
+</ul></li>
+<li>It’s quite powerful!</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -272,7 +290,10 @@ to Quarto</div></h1>
 <p><object data="images/example_report.pdf" type="application/pdf" width="75%" height="775"><a href="images/example_report.pdf" download="">Download PDF file.</a></object></p>
 </div>
 <aside class="notes">
-
+<ul>
+<li>Quarto can produce high quality documents in HTML, PDF or MS Word</li>
+<li>Has the ability to output content using standardized templates, as shown here for a refuge report.</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -289,7 +310,10 @@ to Quarto</div></h1>
 <h2>Output: <span class="gray-bold">Websites</span></h2>
 <iframe width="1600" height="800" src="https://usfws.github.io/Science_Applications_Metadata_Guidance/" title="USFWS Science Applications Metadata Guidance"></iframe>
 <aside class="notes">
-
+<ul>
+<li>Quarto can also create websites, such as this Science Applications Metadata Guidance.</li>
+<li>The course website that we are using today was created in Quarto.</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -306,7 +330,9 @@ to Quarto</div></h1>
 <h2>Outputs: <span class="gray-bold">Presentations</span></h2>
 <iframe width="1600" height="800" src="https://usfws.github.io/data-workflow-presentation/#/a-reproducible-data-workflow/" title="Presentation slides from a Reproducible Data Workflow presentation"></iframe>
 <aside class="notes">
-
+<ul>
+<li>Quarto can also output professional-looking presentations as HTML-based Revealjs presentations or as PowerPoint. Templates are available online or with a little CSS code, you can create your own.</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -323,7 +349,12 @@ to Quarto</div></h1>
 <h2>Outputs: <span class="gray-bold">Books</span></h2>
 <iframe width="1600" height="800" src="https://r4ds.hadley.nz/" title="R for Data Science ebook"></iframe>
 <aside class="notes">
-
+<p>Finally, it’s possible to write books using Quarto, such as the R for Data Science book shown here.</p>
+<ul>
+<li>To summarize, Quarto is an open-source scientific and technical publishing system.</li>
+<li>Instead of writing a report or presentation in Word, PowerPoint, etc.; then running code in an R script; then saving output and visualizations; and then pasting them in the report or the presentation</li>
+<li>We can do it all in Quarto, a free system especially tailored to scientific and technical publishing.</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -343,11 +374,8 @@ to Quarto</div></h1>
 </div>
 <aside class="notes">
 <ul>
-<li>Quarto is an open-source scientific and technical publishing system built on Pandoc.</li>
-<li>Instead of writing a report or presentation in Word, PowerPoint, etc.; then running code in an R script; then saving output and visualizations; and then pasting them in the report or the presentation</li>
-<li>We can do it all in Quarto, a free system especially tailored to scientific and technical publishing.</li>
-<li>If you are familiar with R Markdown, you are probably familiar with this pipeline.</li>
-<li>When you knit an R Markdown .rmd file, the R package knitr converts your text and R code into a Markdown file and then uses Pandoc to produce whatever output you’ve specified.</li>
+<li>How does it work? If you are familiar with R Markdown, you are probably familiar with this pipeline.</li>
+<li>You start out with an R Markdown document, which includes text and R code.</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -363,10 +391,10 @@ to Quarto</div></h1>
 </section>
 <section id="quarto-and-r-markdown-1" class="slide level2">
 <h2>Quarto and R Markdown</h2>
-<p><img data-src="images/render2.png" alt="A diagram showing the process of rendering a document using Quarto." height="800"></p>
+<p><img data-src="images/render2.png" alt="A diagram showing the process of rendering a document using R Markdown." height="800"></p>
 <aside class="notes">
 <ul>
-<li>A Quarto .qmd file on the other hand can be composed of text and R, Python, and/or Julia code.</li>
+<li>When you knit an R Markdown file, a R package “knitr” calls the engine knitr to execute your R code, and create an Markdown file that include and then uses Pandoc to produce whatever output you’ve specified.</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -382,11 +410,9 @@ to Quarto</div></h1>
 </section>
 <section id="quarto-and-r-markdown-2" class="slide level2">
 <h2>Quarto and R Markdown</h2>
-<p><img data-src="images/render3.png" alt="A diagram showing the process of rendering a document using Quarto." height="800"></p>
+<p><img data-src="images/render3.png" alt="A diagram showing the process of rendering a document using R Markdown." height="800"></p>
 <aside class="notes">
-<ul>
-<li>Either the knitr or jupyter engines will then render your text and code into a Markdown file followed by Pandoc producing whatever output you’ve specified. Quarto accomplishes this by being fully separate from the R ecosystem. You can even run it from the command-line interface (i.e., the shell or terminal), if you want to.</li>
-</ul>
+
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -405,7 +431,9 @@ to Quarto</div></h1>
 <p><img data-src="images/render4.png" alt="A diagram showing the process of rendering a document using Quarto." height="800"></p>
 </div>
 <aside class="notes">
-
+<ul>
+<li>A Quarto .qmd file on the other hand can be composed of text and R, Python, and/or Julia code.</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -422,7 +450,9 @@ to Quarto</div></h1>
 <h2>Quarto and R Markdown</h2>
 <p><img data-src="images/render5.png" alt="A diagram showing the process of rendering a document using Quarto." height="800"></p>
 <aside class="notes">
-
+<ul>
+<li>Either the knitr or jupyter engines will then render your text and code into a Markdown file followed by Pandoc producing whatever output you’ve specified. Quarto accomplishes this by being fully separate from the R ecosystem. You can even run it from the command-line interface (i.e., the shell or terminal), if you want to.</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -672,7 +702,7 @@ to Quarto</div></h1>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_6f4367af" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_606ceb77" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -859,7 +889,7 @@ to Quarto</div></h1>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_e0b556fa" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_b037ce1e" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1303,7 +1333,7 @@ Open <code>3-document_body.qmd</code> and make the following changes to the docu
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_ebf06ee7" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_ca987641" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1848,7 +1878,7 @@ Open <code>4_code_chunks.qmd</code> and make the following changes to the render
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_74d25bfc" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_ca3431f3" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1869,7 +1899,7 @@ Open <code>4_code_chunks.qmd</code> and make the following changes to the render
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_70d34fb5" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_295a1d81" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>

@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-08b70160fe01d5c01b0572230c2b7b20.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-a05ae0be7e5e2dbcc5f9767209e4c831.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -228,11 +228,21 @@ ul.task-list li input[type="checkbox"] {
 <li><label><input type="checkbox">Render the document using the RStudio GUI ( <img src="images/render_icon.png" class="img-fluid"> ).</label></li>
 <li><label><input type="checkbox">Render the document using the Quarto CLI.</label>
 <ul>
-<li><em>Hint</em>: In the terminal: <code>quarto render &lt;input file&gt;</code></li>
+<li><details>
+<summary>
+<strong>Hint</strong>
+</summary>
+In the terminal: <code>quarto render 1_rendering\&lt;input file name&gt;</code>
+</details></li>
 </ul></li>
 <li><label><input type="checkbox">Render the document using the <code>quarto</code> R package.</label>
 <ul>
-<li><em>Hint</em>: In the console: <code>quarto::quarto_render("&lt;input file&gt;")</code></li>
+<li><details>
+<summary>
+<strong>Hint</strong>
+</summary>
+In the console: <code>quarto::quarto_render("./1_rendering/&lt;input file&gt;")</code>
+</details></li>
 </ul></li>
 </ul>
 </section>
@@ -244,16 +254,28 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="tasks-1">Tasks</h3>
 <ul class="task-list">
 <li><label><input type="checkbox">Open <code>2_yaml_metadata.qmd</code> and render the document.</label></li>
-<li><label><input type="checkbox">Update the title and replace the author name with your name. Re-render it.</label></li>
-<li><label><input type="checkbox">Change the output to <code>html</code> and render it. Open the html to view the results.</label></li>
-<li><label><input type="checkbox">Now render it as a PDF. What did you notice?</label></li>
-<li><label><input type="checkbox">[<em>Bonus</em>] Render the document as both a PDF and HTML.</label>
+<li><label><input type="checkbox">Update the subtitle and replace the author name with your name. Re-render it.</label></li>
+<li><label><input type="checkbox">Change the output to a PDF and render it. What did you notice?</label></li>
+<li><label><input type="checkbox">Now render it as a MS Word document (<code>docx</code>). Open the file to view the results.<br>
+<strong>Bonus tasks</strong><br>
+</label></li>
+<li><label><input type="checkbox">Render the document as a Word document using the MS_Style.docx file in the templates folder.</label>
 <ul>
-<li><em>Hint</em>: <code>consider using the quarto::quarto_render("&lt;input filepath&gt;") function</code></li>
+<li><details>
+<summary>
+<strong>Hint</strong>
+</summary>
+<a href="https://quarto.org/docs/output-formats/ms-word-templates.html#using-templates">Using templates</a>
+</details></li>
 </ul></li>
-<li><label><input type="checkbox">[<em>Bonus</em>] Render the document as a Word document using the MS_Style.docx file in the templates folder.</label>
+<li><label><input type="checkbox">Render the document simultaneously as a Word document and a PDF</label>
 <ul>
-<li><em>Hint</em>: <code>see example below</code></li>
+<li><details>
+<summary>
+<strong>Hint</strong>
+</summary>
+Add <code>output_format = "all"</code> argument to <code>quarto::quarto_render()</code>
+</details></li>
 </ul></li>
 </ul>
 </section>
@@ -273,10 +295,7 @@ ul.task-list li input[type="checkbox"] {
 <ul class="task-list">
 <li><label><input type="checkbox">Create a new header named “My list”</label></li>
 <li><label><input type="checkbox">Make an ordered and unordered list</label></li>
-<li><label><input type="checkbox">Insert an image of the western snow plover below the “U.S. Fish and Wildlife Service” header</label>
-<ul>
-<li><em>Hint</em>: <code>image can be found in the images folder</code></li>
-</ul></li>
+<li><label><input type="checkbox">Insert an image of the western snow plover below the “U.S. Fish and Wildlife Service” header. The image can be found in the <code>./images</code> folder.</label></li>
 </ul>
 </section>
 </section>
