@@ -39,7 +39,7 @@ library(countdown)
 
 ::: {.center}
 
-![](images/yaml_revealjs.png){width=800 .drop fig-alt="YAML header with format: revealjs"}  
+![HTML](images/yaml_revealjs.png){width=800 .drop fig-alt="YAML header with format: revealjs"}  
 ![](images/yaml_beamer.png){width=800 .drop fig-alt="YAML header with format: beamer"}  
 ![](images/yaml_powerpoint.png){width=800 .drop fig-alt="YAML header with format: pptx"}   
 

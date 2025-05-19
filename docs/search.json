@@ -158,14 +158,14 @@
     "href": "materials/1-overview/slides.html#exercise-1-rendering",
     "title": "Introduction\nto Quarto",
     "section": "Exercise 1: Rendering",
-    "text": "Exercise 1: Rendering\n\n\nOpen 1_rendering.qmd. What are three main components of the file?\nRender the document using the RStudio GUI (  ).\nRender the document using the Quarto CLI.\n\nHint: In the terminal: quarto render &lt;input file&gt;\n\nRender the document using the quarto R package.\n\nHint: In the console: quarto::quarto_render(\"&lt;input file&gt;\")\n\n\n\n\n\n\n−+\n10:00"
+    "text": "Exercise 1: Rendering\n\n\n\n−+\n10:00"
   },
   {
     "objectID": "materials/1-overview/slides.html#yaml-header",
     "href": "materials/1-overview/slides.html#yaml-header",
     "title": "Introduction\nto Quarto",
     "section": "YAML header",
-    "text": "YAML header\nYet Another Markup Language = document metadata!\n\n\n\n\n---\ntitle: \"Dynamic Reporting with Quarto\"\nauthor: \"Jacob Cochran & Jason Ross\"\nformat: \n  revealjs:\n    theme: [default, refuge_light.scss]\n    subtitle: \"FWS Data Management Workshop\"\n    height: 900\n    width: 1600\neditor: source\n---\n\n\n\n\nStarts and ends with “---”\nUses key-value pairs: key: value\n\nPicky about spacing and indentations!\n\nProcessed during rendering\nIncluding options for:\n\nTitle, authors, date\nFile output(s) (e.g., html, docx)\nStyling (e.g., theme, fig-width)\nParameters"
+    "text": "YAML header\nYet Another Markup Language = document metadata!\n\n\n\n\n---\ntitle: \"Introduction to Quarto\"\nauthor: \"FWS staff\"\nformat: \n  revealjs:\n    theme: [default, refuge_light.scss]\n    subtitle: \"Overview\"\n    height: 900\n    width: 1600\neditor: source\n---\n\n\n\n\nStarts and ends with “---”\nUses key-value pairs: key: value\n\nPicky about spacing and indentations!\n\nProcessed during rendering\nIncluding options for:\n\nTitle, authors, date\nFile output(s) (e.g., html, docx)\nStyling (e.g., theme, fig-width)\nParameters"
   },
   {
     "objectID": "materials/1-overview/slides.html#yaml-header-options",
@@ -186,7 +186,7 @@
     "href": "materials/1-overview/slides.html#exercise-2-yaml-metadata",
     "title": "Introduction\nto Quarto",
     "section": "Exercise 2: YAML metadata",
-    "text": "Exercise 2: YAML metadata\n\n\nOpen 2_yaml_metadata.qmd and render the document.\nUpdate the title and replace the author name with your name. Re-render it.\nChange the output to html and render it. Open the html to view the results.\nNow render it as a PDF. What did you notice?\n[Bonus] Render the document as both a PDF and HTML.\n\nHint: Consider using the quarto::quarto_render(\"&lt;input filepath&gt;\") function.\n\n[Bonus] Render the document as a Word document using the MS_Style.docx file in the templates folder.\n\nHint: See example below.\n\n\n\n\n\n\n−+\n10:00"
+    "text": "Exercise 2: YAML metadata\n\n\n\n\n\n−+\n10:00"
   },
   {
     "objectID": "materials/1-overview/slides.html#text-body-markdown",
@@ -419,7 +419,7 @@
     "href": "materials/1-overview/exercises.html#sec-exercise2",
     "title": "Introduction to Quarto",
     "section": "Exercise 2: YAML metadata",
-    "text": "Exercise 2: YAML metadata\nA YAML (Yet Another Markup Language) header is a crucial component of Quarto documents that defines metadata for the document, typically enclosed within a pair of triple-dashed lines at the beginning of the file. It allows users to specify important information such as the document’s title, author, date, and output formats (like HTML, PDF, or Word). Additionally, YAML headers can include parameters to control formatting options and customize the behavior of the document, such as including bibliographies or setting specific themes. By using a YAML header, authors can ensure that their documents are well-organized and professionally presented.\n\nTasks\n\nOpen 2_yaml_metadata.qmd and render the document.\nUpdate the subtitle and replace the author name with your name. Re-render it.\nChange the output to a PDF and render it. What did you notice?\nNow render it as a MS Word document (docx). Open the file to view the results.\nBonus tasks\n\nRender the document as a Word document using the MS_Style.docx file in the templates folder.\n\n\n\nHint\n\nUsing templates\n\n\nRender the document simultaneously as a Word document and a PDF\n\n\n\nHint\n\nAdd output_format = \"all\" argument to quarto::quarto_render()",
+    "text": "Exercise 2: YAML metadata\nA YAML (Yet Another Markup Language) header is a crucial component of Quarto documents that defines metadata for the document, typically enclosed within a pair of triple-dashed lines at the beginning of the file. It allows users to specify important information such as the document’s title, author, date, and output formats (like HTML, PDF, or Word). Additionally, YAML headers can include parameters to control formatting options and customize the behavior of the document, such as including bibliographies or setting specific themes. By using a YAML header, authors can ensure that their documents are well-organized and professionally presented.\n\nTasks\n\nOpen 2_yaml_metadata.qmd and render the document.\nUpdate the subtitle and replace the author name with your name. Re-render it.\nChange the output to a PDF and render it. What did you notice?\nNow render it as a MS Word document (docx). Open the file to view the results.\nBonus tasks\n\nRender the document as a Word document using the MS_Style.docx file in the templates folder.\n\n\n\nHint\n\nUsing templates\n\n\nRender the document simultaneously as a Word document and a PDF.\n\n\n\nHint\n\nAdd output_format = \"all\" argument to quarto::quarto_render()",
     "crumbs": [
       "Overview of Quarto",
       "- Exercises"
@@ -671,5 +671,12 @@
     "title": "Introduction\nto Quarto",
     "section": "Customizing themes",
     "text": "Customizing themes\n\n\n\n\nYAML\n---\ntitle: \"My really cool presentation\"\nformat:\n  revealjs\n    theme: [default, custom.scss]\n---\n\ncustom.scss\n\n/*-- scss:defaults --*/\n\n// fonts\n$font-family-sans-serif: \"Palatino Linotype\", \"Book Antiqua\", Palatino,\n  FreeSerif, serif !default;\n\n// colors\n$body-bg: #f0f1eb !default;\n$body-color: #000 !default;\n$link-color: #51483d !default;\n$selection-bg: #26351c !default;\n\n// headings\n$presentation-heading-font: \"Palatino Linotype\", \"Book Antiqua\", Palatino,\n  FreeSerif, serif !default;\n$presentation-heading-color: #383d3d !default;"
+  },
+  {
+    "objectID": "materials/1-overview/slides.html#exercise-1",
+    "href": "materials/1-overview/slides.html#exercise-1",
+    "title": "Introduction\nto Quarto",
+    "section": "Exercise 1: Rendering",
+    "text": "Exercise 1: Rendering\n\n\n\n−+\n10:00"
   }
 ]

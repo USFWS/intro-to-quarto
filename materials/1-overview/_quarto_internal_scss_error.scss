@@ -107,7 +107,7 @@ $Cabin: "Cabin" san-serif;
 // Colors
 $body-bg: $white !default;
 $body-color: $blue !default;
-$link-color: $accent-light-blue !default;
+$link-color: $light-blue !default;
 $selection-bg: $accent-green !default;
 $presentation-heading-color: $blue !default;
 
@@ -2961,6 +2961,7 @@ img.drop {
     font-family: $Lato, serif;
   $link-color: $white
   }
+  $link-color: $accent-light-blue !default;
 }
 
 

@@ -279,23 +279,23 @@ You're at a crossroads! How do you decide whether to move from R Markdown to Qua
 
 ::: columns
 
-::: {.column width="33%" .center}
+::: {.column width="32%" .center}
 ::: {.fragment fragment-index=1}
 ### 1.  
 **RStudio GUI**
-![](images/quarto_render1.png){fig-alt="A screenshot of a Quarto document in RStudio. The Render button is circled in red"}
+![](images/quarto_render1.png){fig-alt="A screenshot of a Quarto document in RStudio. The Render button is circled in red" .drop}
 :::
 :::
 
-::: {.column width="34%" .center}
+::: {.column width="32%" .center}
 ::: {.fragment fragment-index=2}
 ### 2.   
 **Quarto command line interface (CLI)**
-![](images/quarto_render2.png){fig-alt="A screenshot of the command line terminal in RStudio. quarto render is typed in."}
+![](images/quarto_render2.png){fig-alt="A screenshot of the command line terminal in RStudio. quarto render is typed in." .drop}
 :::
 :::
 
-::: {.column width="33%" .center}
+::: {.column width="36%" .center}
 ::: {.fragment fragment-index=3}
 ### 3. 
 **Quarto R package**
@@ -321,11 +321,11 @@ quarto::quarto_render(input = ___,
 
 ::: columns
 ::: {.column width="50%" .center}
-![](images/source_pane.png)
+![](images/source_pane.png){fig-alt="A screenshot of a Quarto document in RStudio viewed as Source." .drop}
 :::
 
 ::: {.column width="50%" .center}
-![](images/visual_pane.png)
+![](images/visual_pane.png){fig-alt="A screenshot of a Quarto document in RStudio viewed as Visual." .drop}
 :::
 :::
 
@@ -334,19 +334,14 @@ quarto::quarto_render(input = ___,
 :::
 
 
-## Exercise 1: Rendering {.exercise}
+# Exercise 1: [Rendering](exercises.qmd#sec-exercise1) {.exercise}
 
-::: {.center-xy-container}
-- [ ] Open `1_rendering.qmd`. What are three main components of the file?
-- [ ] Render the document using the RStudio GUI ( ![](images/render_icon.png) ).
-- [ ] Render the document using the Quarto CLI.  
-    - *Hint*: In the terminal: `quarto render <input file>`
-- [ ] Render the document using the `quarto` R package.
-    - *Hint*: In the console: `quarto::quarto_render("<input file>")`
-:::
+\
+\
+\
 
 ```{r}
-countdown::countdown(10)
+countdown::countdown(10, bottom = 0)
 ```
 
 ::: {.notes}
@@ -382,12 +377,12 @@ countdown::countdown(10)
 #| eval: FALSE
 
 ---
-title: "Dynamic Reporting with Quarto"
-author: "Jacob Cochran & Jason Ross"
+title: "Introduction to Quarto"
+author: "FWS staff"
 format: 
   revealjs:
     theme: [default, refuge_light.scss]
-    subtitle: "FWS Data Management Workshop"
+    subtitle: "Overview"
     height: 900
     width: 1600
 editor: source
@@ -460,21 +455,15 @@ editor: source
 :::
 
 
-## Exercise 2: YAML metadata {.exercise}
 
-::: {.center-xy-container}
-- [ ] Open `2_yaml_metadata.qmd` and render the document.
-- [ ] Update the title and replace the author name with your name. Re-render it.
-- [ ] Change the output to `html` and render it. Open the html to view the results.
-- [ ] Now render it as a PDF. What did you notice?
-- [ ] \[*Bonus*\] Render the document as both a PDF and HTML.
-    - *Hint*: Consider using the `quarto::quarto_render("<input filepath>")` function.
-- [ ] \[*Bonus*\] Render the document as a Word document using the MS_Style.docx file in the templates folder.
-    - *Hint*: See example below.
-:::
+# Exercise 2: [YAML metadata](exercises.qmd#sec-exercise2) {.exercise}
+
+\
+\
+\
 
 ```{r}
-countdown::countdown(10)
+countdown::countdown(10, bottom = 0)
 ```
 
 ::: {.notes}
@@ -878,34 +867,26 @@ Moving along, we will describe something else.
 :::
 
 
-## Exercise 3: Document body {.exercise}
+# Exercise 3: [Document body](exercises.qmd#sec-exercise2) {.exercise}
+
 \
-Open `3-document_body.qmd` and make the following changes to the document:
-
-::: {.small}
-**Inline:**
-
-- [ ] Italicize the species name
-- [ ] Make the refuge name into a hyperlink to the refuge website
-
-**Block:**
-
-- [ ] Create a new header named "My list"
-- [ ] Make an ordered and unordered list
-- [ ] Insert an image of the western snow plover below the "U.S. Fish and Wildlife Service" header
-    - *Hint*: `image can be found in the images folder`
-:::
+\
+\
 
 ```{r}
-countdown::countdown(10)
+countdown::countdown(10, bottom = 0)
 ```
+
+::: {.notes}
+
+:::
 
 
 ## Code chunks: [Pandoc]{.gray-bold}
 
 ::: columns
 
-::: {.column width="50%"}
+::: {.column width="50%"}  
 ````markdown
 ```language
 Some code here

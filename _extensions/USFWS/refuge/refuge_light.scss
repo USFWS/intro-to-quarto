@@ -380,6 +380,9 @@ img.drop {
 // Exercises
 .reveal .exercise {
   color: $white;
+  a{
+    color: $accent-light-blue; // Hyperlink color
+  }
   .slide-background-content {
     background: $accent-green;
   }

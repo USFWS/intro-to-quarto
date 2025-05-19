@@ -12,7 +12,7 @@
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.39">
 
-  <title>Introduction to Quarto – quarto-input77bca997bdda366e</title>
+  <title>Introduction to Quarto – quarto-input7f773083f21e85fd</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -96,7 +96,7 @@
     code span.vs { color: #032f62; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-31bcd1744d3aef654fa087018a4efd45.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-13c1135c056b58e91d781aa8ba7c7273.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -628,17 +628,17 @@ to Quarto</div></h1>
 <p><br>
 </p>
 <div class="columns">
-<div class="column center" style="width:33%;">
+<div class="column center" style="width:32%;">
 <div class="fragment" data-fragment-index="1">
 <h3 id="section-2">1.</h3>
-<p><strong>RStudio GUI</strong> <img data-src="images/quarto_render1.png" alt="A screenshot of a Quarto document in RStudio. The Render button is circled in red"></p>
+<p><strong>RStudio GUI</strong> <img data-src="images/quarto_render1.png" class="drop" alt="A screenshot of a Quarto document in RStudio. The Render button is circled in red"></p>
 </div>
-</div><div class="column center" style="width:34%;">
+</div><div class="column center" style="width:32%;">
 <div class="fragment" data-fragment-index="2">
 <h3 id="section-3">2.</h3>
-<p><strong>Quarto command line interface (CLI)</strong> <img data-src="images/quarto_render2.png" alt="A screenshot of the command line terminal in RStudio. quarto render is typed in."></p>
+<p><strong>Quarto command line interface (CLI)</strong> <img data-src="images/quarto_render2.png" class="drop" alt="A screenshot of the command line terminal in RStudio. quarto render is typed in."></p>
 </div>
-</div><div class="column center" style="width:33%;">
+</div><div class="column center" style="width:36%;">
 <div class="fragment" data-fragment-index="3">
 <h3 id="section-4">3.</h3>
 <p><strong>Quarto R package</strong></p>
@@ -666,9 +666,9 @@ to Quarto</div></h1>
 <h2>Authoring: Source and Visual panes</h2>
 <div class="columns">
 <div class="column center" style="width:50%;">
-<p><img data-src="images/source_pane.png"></p>
+<p><img data-src="images/source_pane.png" class="drop" alt="A screenshot of a Quarto document in RStudio viewed as Source."></p>
 </div><div class="column center" style="width:50%;">
-<p><img data-src="images/visual_pane.png"></p>
+<p><img data-src="images/visual_pane.png" class="drop" alt="A screenshot of a Quarto document in RStudio viewed as Visual."></p>
 </div></div>
 <aside class="notes">
 
@@ -683,26 +683,16 @@ to Quarto</div></h1>
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section>
-<section id="exercise-1-rendering" class="slide level2 exercise">
-<h2>Exercise 1: Rendering</h2>
-<div class="center-xy-container">
-<ul class="task-list">
-<li><label><input type="checkbox">Open <code>1_rendering.qmd</code>. What are three main components of the file?</label></li>
-<li><label><input type="checkbox">Render the document using the RStudio GUI ( <img data-src="images/render_icon.png"> ).</label></li>
-<li><label><input type="checkbox">Render the document using the Quarto CLI.</label>
-<ul>
-<li><em>Hint</em>: In the terminal: <code>quarto render &lt;input file&gt;</code></li>
-</ul></li>
-<li><label><input type="checkbox">Render the document using the <code>quarto</code> R package.</label>
-<ul>
-<li><em>Hint</em>: In the console: <code>quarto::quarto_render("&lt;input file&gt;")</code></li>
-</ul></li>
-</ul>
-</div>
+</section></section>
+<section id="exercise-1-rendering" class="title-slide slide level1 exercise center">
+<h1>Exercise 1: <a href="../../materials/1-overview/exercises.html#sec-exercise1">Rendering</a></h1>
+<p><br>
+<br>
+<br>
+</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_606ceb77" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_52c5a2f7" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -721,7 +711,8 @@ to Quarto</div></h1>
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section></section>
+</section>
+
 <section>
 <section id="anatomy-of-a-quarto-file" class="title-slide slide level1 dark center">
 <h1>Anatomy of a Quarto File</h1>
@@ -763,12 +754,12 @@ to Quarto</div></h1>
 <div class="fragment">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource yml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a></a><span class="pp">---</span></span>
-<span id="cb2-2"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Dynamic Reporting with Quarto"</span></span>
-<span id="cb2-3"><a></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"Jacob Cochran &amp; Jason Ross"</span></span>
+<span id="cb2-2"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Introduction to Quarto"</span></span>
+<span id="cb2-3"><a></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"FWS staff"</span></span>
 <span id="cb2-4"><a></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
 <span id="cb2-5"><a></a><span class="at">  </span><span class="fu">revealjs</span><span class="kw">:</span></span>
 <span id="cb2-6"><a></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">default</span><span class="kw">,</span><span class="at"> refuge_light.scss</span><span class="kw">]</span></span>
-<span id="cb2-7"><a></a><span class="at">    </span><span class="fu">subtitle</span><span class="kw">:</span><span class="at"> </span><span class="st">"FWS Data Management Workshop"</span></span>
+<span id="cb2-7"><a></a><span class="at">    </span><span class="fu">subtitle</span><span class="kw">:</span><span class="at"> </span><span class="st">"Overview"</span></span>
 <span id="cb2-8"><a></a><span class="at">    </span><span class="fu">height</span><span class="kw">:</span><span class="at"> </span><span class="dv">900</span></span>
 <span id="cb2-9"><a></a><span class="at">    </span><span class="fu">width</span><span class="kw">:</span><span class="at"> </span><span class="dv">1600</span></span>
 <span id="cb2-10"><a></a><span class="fu">editor</span><span class="kw">:</span><span class="at"> source</span></span>
@@ -868,28 +859,17 @@ to Quarto</div></h1>
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section>
-<section id="exercise-2-yaml-metadata" class="slide level2 exercise">
-<h2>Exercise 2: YAML metadata</h2>
-<div class="center-xy-container">
-<ul class="task-list">
-<li><label><input type="checkbox">Open <code>2_yaml_metadata.qmd</code> and render the document.</label></li>
-<li><label><input type="checkbox">Update the title and replace the author name with your name. Re-render it.</label></li>
-<li><label><input type="checkbox">Change the output to <code>html</code> and render it. Open the html to view the results.</label></li>
-<li><label><input type="checkbox">Now render it as a PDF. What did you notice?</label></li>
-<li><label><input type="checkbox">[<em>Bonus</em>] Render the document as both a PDF and HTML.</label>
-<ul>
-<li><em>Hint</em>: Consider using the <code>quarto::quarto_render("&lt;input filepath&gt;")</code> function.</li>
-</ul></li>
-<li><label><input type="checkbox">[<em>Bonus</em>] Render the document as a Word document using the MS_Style.docx file in the templates folder.</label>
-<ul>
-<li><em>Hint</em>: See example below.</li>
-</ul></li>
-</ul>
-</div>
+</section></section>
+<section>
+<section id="exercise-2-yaml-metadata" class="title-slide slide level1 exercise center">
+<h1>Exercise 2: <a href="../../materials/1-overview/exercises.html#sec-exercise2">YAML metadata</a></h1>
+<p><br>
+<br>
+<br>
+</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_b037ce1e" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_a26cdf4c" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1310,35 +1290,35 @@ in fact, that we need to also include an image.</p>
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section>
-<section id="exercise-3-document-body" class="slide level2 exercise">
-<h2>Exercise 3: Document body</h2>
+</section></section>
+<section>
+<section id="exercise-3-document-body" class="title-slide slide level1 exercise center">
+<h1>Exercise 3: <a href="../../materials/1-overview/exercises.html#sec-exercise2">Document body</a></h1>
 <p><br>
-Open <code>3-document_body.qmd</code> and make the following changes to the document:</p>
-<div class="small">
-<p><strong>Inline:</strong></p>
-<ul class="task-list">
-<li><label><input type="checkbox">Italicize the species name</label></li>
-<li><label><input type="checkbox">Make the refuge name into a hyperlink to the refuge website</label></li>
-</ul>
-<p><strong>Block:</strong></p>
-<ul class="task-list">
-<li><label><input type="checkbox">Create a new header named “My list”</label></li>
-<li><label><input type="checkbox">Make an ordered and unordered list</label></li>
-<li><label><input type="checkbox">Insert an image of the western snow plover below the “U.S. Fish and Wildlife Service” header</label>
-<ul>
-<li><em>Hint</em>: <code>image can be found in the images folder</code></li>
-</ul></li>
-</ul>
-</div>
+<br>
+<br>
+</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_ca987641" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_e687d076" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="code-chunks-pandoc" class="slide level2">
 <h2>Code chunks: <span class="gray-bold">Pandoc</span></h2>
@@ -1878,7 +1858,7 @@ Open <code>4_code_chunks.qmd</code> and make the following changes to the render
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_ca3431f3" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_a1cce65f" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1899,7 +1879,7 @@ Open <code>4_code_chunks.qmd</code> and make the following changes to the render
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_295a1d81" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_2c1be7e5" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
