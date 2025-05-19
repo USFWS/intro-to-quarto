@@ -334,7 +334,7 @@ quarto::quarto_render(input = ___,
 :::
 
 
-# Exercise 1: [Rendering](exercises.qmd#sec-exercise1) {.exercise}
+# Exercise 1: [Rendering](exercises.qmd#sec-exercise1){target="_blank"} {.exercise}
 
 \
 \
@@ -456,7 +456,7 @@ editor: source
 
 
 
-# Exercise 2: [YAML metadata](exercises.qmd#sec-exercise2) {.exercise}
+# Exercise 2: [YAML metadata](exercises.qmd#sec-exercise2){target="_blank"} {.exercise}
 
 \
 \
@@ -867,7 +867,7 @@ Moving along, we will describe something else.
 :::
 
 
-# Exercise 3: [Document body](exercises.qmd#sec-exercise2) {.exercise}
+# Exercise 3: [Document body](exercises.qmd#sec-exercise3){target="_blank"} {.exercise}
 
 \
 \
@@ -1296,36 +1296,25 @@ execute:
 :::
 
 
-## Exercise 4: Code chunks {.exercise}
-\
-Open `4_code_chunks.qmd` and make the following changes to the rendered document:  
-\
+# Exercise 4: [Code chunks](exercises.qmd#sec-exercise4){target="_blank"} {.exercise}
 
-::: {.small}
-- [ ] Label the plot code chunk to help you differentiate from other chunks.
-- [ ] Update the figure caption to read "Mean monthly Western..."
-- [ ] Add `+ theme_classic()` to end of ggplot script to clean up plot. Re-render.
-- [ ] Remove the output of a code chunk. Change `include` option to `false` and re-render.
-:::
+\
+\
+\
 
 ```{r}
-countdown::countdown(10)
+countdown::countdown(10, bottom = 0)
 ```
 
 
-## Exercise 5: Your turn! {.exercise}
+# Exercise 5: [Your turn](exercises.qmd#sec-exercise5){target="_blank"} {.exercise}
 
-::: {.small}
-- [ ] Create a new Quarto document
-- [ ] Add this.. 
-- [ ] and..
-- [ ] this...
-- [ ] and..
-- [ ] this.
-:::
+\
+\
+\
 
 ```{r}
-countdown::countdown(10)
+countdown::countdown(10, bottom = 0)
 ```
 
 

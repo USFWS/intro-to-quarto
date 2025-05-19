@@ -354,14 +354,14 @@
     "href": "materials/1-overview/slides.html#exercise-4-code-chunks",
     "title": "Introduction\nto Quarto",
     "section": "Exercise 4: Code chunks",
-    "text": "Exercise 4: Code chunks\n\nOpen 4_code_chunks.qmd and make the following changes to the rendered document:\n\n\n\n\nLabel the plot code chunk to help you differentiate from other chunks.\nUpdate the figure caption to read “Mean monthly Western…”\nAdd + theme_classic() to end of ggplot script to clean up plot. Re-render.\nRemove the output of a code chunk. Change include option to false and re-render.\n\n\n\n\n\n−+\n10:00"
+    "text": "Exercise 4: Code chunks\n\n\n\n\n\n\n\n−+\n10:00"
   },
   {
     "objectID": "materials/1-overview/slides.html#exercise-5-your-turn",
     "href": "materials/1-overview/slides.html#exercise-5-your-turn",
     "title": "Introduction\nto Quarto",
-    "section": "Exercise 5: Your turn!",
-    "text": "Exercise 5: Your turn!\n\n\nCreate a new Quarto document\nAdd this..\nand..\nthis…\nand..\nthis.\n\n\n\n\n\n−+\n10:00"
+    "section": "Exercise 5: Your turn",
+    "text": "Exercise 5: Your turn\n\n\n\n\n\n\n\n−+\n10:00"
   },
   {
     "objectID": "materials/1-overview/slides.html#wrap-up",
