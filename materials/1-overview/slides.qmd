@@ -490,6 +490,20 @@ countdown::countdown(10, bottom = 0)
 :::
 
 ::: {.notes}
+- Now we are going to get into the body of our Quarto file
+- Everything in the body, aside from our code, which we will get to later, is written in the language Markdown
+  - Allows us to write our text and do our styling in a machine-readable fashion
+  - Luckily, it is pretty human-readable as well
+- Essentially, it is how we make our document pretty
+- Quarto uses Pandoc Markdown, which is very similar to but a little different from standard Markdown
+  - One of the key features of Pandoc Markdown
+  - Allows us to style inline elements without impacting surrounding text or other elements
+  - OR style whole blocks of the document at once
+  - And I’ll show you what I mean by this in a second
+- We view our Quarto file in Markdown language when we use the “Source Editor”
+  - And I’ll be walking through Quarto’s Markdown syntax
+  - However, it’s important to acknowledge that you can do the same things in the “Visual Editor” by highlighting things and clicking buttons much like you would when formatting your document in Microsoft word
+  - Both are acceptable, and you can toggle between them, but it’s always good to know the markdown because it gives you a little bit more control and can be really beneficial if your formatting gets wonky in the visual mode
 
 :::
 
@@ -509,12 +523,14 @@ countdown::countdown(10, bottom = 0)
 ### Block elements 
 
 - Paragraphs or sections of a document
-- Standalone images, figures, or figures
+- Standalone images, equations, or figures
 :::
 
 :::
 
 ::: {.notes}
+- If we want to style (such as italicizing) certain words within a sentence or paragraph, this would be inline styling
+- Aside from text, we can also include and style images, hyperlinks, equations, and code inline
 
 :::
 
@@ -558,13 +574,18 @@ and make something a superscript^1^.
 :::
 
 ::: {.notes}
+- Here’s an example showing a lot of the different options for customizing your text through inline changes
+- You can use ___ for ___, …
+  - Asterix, double asterix, backtick, double tilde, caret
+  - You can also have inline code that is actually executed, but that’s getting outside of markdown language and styling, so we’ll come back to that later
+  - Essentially you will add characters to denote certain types of styling and you want to place them at both the beginning and the end so that the computer knows where to start and stop the styling
 
 :::
 
 
 ## Inline elements: [Math]{.gray-bold}
 
-\
+with LaTex!
  
 ::: columns
 
@@ -592,7 +613,7 @@ and $\pi = 3.1415...$.
 :::
 
 ::: {.notes}
-
+- To make your equations look nice, you can use LaTex, which is coded using the dollar sign
 :::
 
 
@@ -615,7 +636,7 @@ check out the [Quarto webpage](www.quarto.com).
 ::: {.fragment fragment-index=2}
 ```markdown
 Here's an image that is inline with  
-my text ![icon](images/favicon.png).
+my text ![](images/favicon.png).
 ```
 :::
 
@@ -633,7 +654,7 @@ check out the [Quarto webpage](www.quarto.com).
 
 ::: {.fragment fragment-index=3}
 Here's an image that is inline with  
-my text ![icon](images/favicon.png){.center-inline}.
+my text ![](images/favicon.png){.center-inline}.
 :::
 :::
 
@@ -642,6 +663,11 @@ my text ![icon](images/favicon.png){.center-inline}.
 :::
 
 ::: {.notes}
+- Hyperlinks use square brackets for the display text, immediately followed by the URL in parentheses
+  - So, “Quarto Webpage” is now a clickable link
+- Images are similar, but require an exclamation mark at the beginning
+  - Adding text in the square brackets is optional if you want to add alt text, but it will not display
+  - In parentheses, we provide the path to the file
 
 :::
 
@@ -697,6 +723,16 @@ Here's an example of a block with custom formatting. Everything in this block ha
 
 
 ::: {.notes}
+- Spacing is really important in Markdown language
+- Creating paragraphs is super easy, you just need to remember to insert empty space between your blocks
+- To style a block of text (could be one paragraph, could be multiple), enclose them in triple colons to define the section, and provide styling information in curly braces
+- We’re not going to go deep into this, but if you have a custom styling scss file, you could apply a class you’ve defined to this block here
+  - In this example, we format this block as a callout block
+  - These callouts are just a built-in feature of Quarto
+    - There are 5 types of callouts (note, tip, warning, caution, and important) – this example is a tip
+    - And they all have their own color and icon
+    - When we add a header to the block, quarto knows to make that text the banner in the callout
+- In general, nesting styling is also possible. You can create blocks within blocks
 
 :::
 
@@ -716,6 +752,13 @@ Here's an example of a block with custom formatting. Everything in this block ha
 +---------------------+-----------------------------------+
 |     #### Header 4   | #### Header 4 {.heading-output}   |
 +---------------------+-----------------------------------+
+
+::: {.notes}
+- Headers are similar to headers in Word where there are different levels corresponding to text size and boldness
+- The header level is indicated by the number of hashtags you use
+  - So if you use 1 hashtag, it is a level 1 header, and so on
+
+:::
 
 
 ## Block elements: [Lists]{.gray-bold}
@@ -776,13 +819,17 @@ Here's an example of a block with custom formatting. Everything in this block ha
 :::
 
 ::: {.notes}
+- Lists are pretty straightforward
+  - A numbered list is made exactly how you would expect it to be
+  - Standard bullet points are indicated with dashes
+- You just want to be careful of spacing and choice of characters here
 
 :::
 
 
 ## Block elements: [Math]{.gray-bold}
 
-\
+with LaTex!
  
 ::: columns
 
@@ -824,6 +871,10 @@ is an upper bound on the inner product between two vectors in an inner product s
 :::
 
 ::: {.notes}
+- To write out more substantial equations, you do the same thing as before, but use double dollar signs to enclose the LaTex block
+- Everything within the block is actually not Markdown
+  - It’s LaTex code, which is another markup language
+  - So to know how to write out these equations, you’ll want to Google a LaTex guide
 
 :::
 
@@ -863,6 +914,8 @@ Moving along, we will describe something else.
 :::
 
 ::: {.notes}
+- To add an image on its own line, it is exactly the same as before
+- Just add empty lines before and after to make it clear that the image should be treated as its own block
 
 :::
 
