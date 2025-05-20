@@ -39,14 +39,14 @@
     "href": "materials/1-overview/slides.html#outline",
     "title": "Introduction\nto Quarto",
     "section": "Outline",
-    "text": "Outline\n\nOverview of Quarto\nComponents of a Quarto document\n\nYAML metadata\nDocument body\nCode blocks\n\n\n\n\nThis workshop serves as an introduction to using Quarto to create reports.\nDuring our time here, we will provide a brief overview of what Quarto is, what it can do for you, and how it compares to R Markdown. We will then dive into the anatomy of a Quarto file, which can be broken into three primary components: the YAML metadata, the document body, and code blocks (or code “chunks”).\nThe workshop is a series of short presentations followed by hand-on exercises to practice what you’ve learned.\nWe will be available to provide help during the exercises, so let us know by raising your hand (in person or virtually!)"
+    "text": "Outline\n\nOverview of Quarto (25 mins)\nYAML metadata (20 min)\n\nBREAK (10 min)\n\nDocument body (25 min)\nCode blocks (25 min)\n\nBREAK (10 min)\n\nFinal exercise and wrap-up (20 min)\n\n\n\nThis workshop serves as an introduction to using Quarto to create reports.\nDuring our time here, we will provide a brief overview of what Quarto is, what it can do for you, and how it compares to R Markdown. We will then dive into the anatomy of a Quarto file, which can be broken into three primary components: the YAML metadata, the document body, and code blocks (or code “chunks”).\nThe workshop is a series of short presentations followed by hand-on exercises to practice what you’ve learned.\nWe will be available to provide help during the exercises, so let us know by raising your hand (in person or virtually!)"
   },
   {
     "objectID": "materials/1-overview/slides.html#outputs-documents",
     "href": "materials/1-overview/slides.html#outputs-documents",
     "title": "Introduction\nto Quarto",
     "section": "Outputs: Documents",
-    "text": "Outputs: Documents\n\nDownload PDF file.\n\n\n\nQuarto can produce high quality documents in HTML, PDF or MS Word\nHas the ability to output content using standardized templates, as shown here for a refuge report."
+    "text": "Outputs: Documents\n\nDownload PDF file.\n\n\n\nQuarto can produce high quality documents in HTML, PDF or MS Word.\nHas the ability to output content using standardized templates, as shown here for a refuge report."
   },
   {
     "objectID": "materials/1-overview/slides.html#output-websites",
@@ -74,35 +74,35 @@
     "href": "materials/1-overview/slides.html#quarto-and-r-markdown",
     "title": "Introduction\nto Quarto",
     "section": "Quarto and R Markdown",
-    "text": "Quarto and R Markdown\n\n\n\n\n\nHow does it work? If you are familiar with R Markdown, you are probably familiar with this pipeline.\nYou start out with an R Markdown document, which includes text and R code."
+    "text": "Quarto and R Markdown\n\n\n\n\n\nHow does it work and how does it compare with R Markdown?\nIf you are familiar with R Markdown, you might be familiar with the two step rendering process.\nWith R Markdown, you start out with an R Markdown document, which includes text and R code."
   },
   {
     "objectID": "materials/1-overview/slides.html#quarto-and-r-markdown-1",
     "href": "materials/1-overview/slides.html#quarto-and-r-markdown-1",
     "title": "Introduction\nto Quarto",
     "section": "Quarto and R Markdown",
-    "text": "Quarto and R Markdown\n\n\n\nWhen you knit an R Markdown file, a R package “knitr” calls the engine knitr to execute your R code, and create an Markdown file that include and then uses Pandoc to produce whatever output you’ve specified."
+    "text": "Quarto and R Markdown\n\n\n\nWhen you knit an R Markdown file, an R package “knitr” calls the engine knitr to execute your R code, and create an Markdown file that include the original text and the output of your code."
   },
   {
     "objectID": "materials/1-overview/slides.html#quarto-and-r-markdown-2",
     "href": "materials/1-overview/slides.html#quarto-and-r-markdown-2",
     "title": "Introduction\nto Quarto",
     "section": "Quarto and R Markdown",
-    "text": "Quarto and R Markdown"
+    "text": "Quarto and R Markdown\n\n\n\nIn the final step, R Markdown calls on Pandoc, a universal document converter, to produce whatever output you’ve specified."
   },
   {
     "objectID": "materials/1-overview/slides.html#quarto-and-r-markdown-3",
     "href": "materials/1-overview/slides.html#quarto-and-r-markdown-3",
     "title": "Introduction\nto Quarto",
     "section": "Quarto and R Markdown",
-    "text": "Quarto and R Markdown\n\n\n\n\n\nA Quarto .qmd file on the other hand can be composed of text and R, Python, and/or Julia code."
+    "text": "Quarto and R Markdown\n\n\n\n\n\nThe process for rendering a Quarto document is similar to R Markdown, with a notable change. A Quarto .qmd file on the other hand can be composed of text and R, Python, and/or Julia code."
   },
   {
     "objectID": "materials/1-overview/slides.html#quarto-and-r-markdown-4",
     "href": "materials/1-overview/slides.html#quarto-and-r-markdown-4",
     "title": "Introduction\nto Quarto",
     "section": "Quarto and R Markdown",
-    "text": "Quarto and R Markdown\n\n\n\nEither the knitr or jupyter engines will then render your text and code into a Markdown file followed by Pandoc producing whatever output you’ve specified. Quarto accomplishes this by being fully separate from the R ecosystem. You can even run it from the command-line interface (i.e., the shell or terminal), if you want to."
+    "text": "Quarto and R Markdown\n\n\n\nDepending on the code language in the document, Quarto will then assign either the knitr or jupyter engine to render your text and code into a Markdown file followed by Pandoc producing whatever output you’ve specified. Quarto accomplishes this by being fully separated from the R ecosystem. You can even run it from the command-line interface (i.e., the shell or terminal), if you want to."
   },
   {
     "objectID": "materials/1-overview/slides.html#quarto-and-r-markdown-5",
@@ -116,14 +116,14 @@
     "href": "materials/1-overview/slides.html#when-to-use-quarto-and-r-markdown",
     "title": "Introduction\nto Quarto",
     "section": "When to use Quarto and R Markdown?",
-    "text": "When to use Quarto and R Markdown?\n\n\n\n\n\n\nWeave together text, plots, tables, and statistics\nFrequently re-create a standardized document\nReproduce your analyses\nGenerate comparable reports across multiple parameters (species, watershed, state)"
+    "text": "When to use Quarto and R Markdown?\n\n\n\n\n\n\nWeave together text, plots, tables, and statistics\nFrequently re-create a standardized document\nReproduce your analyses\nGenerate comparable reports across multiple parameters (species, watershed, state)\n\n\n\n\n\n\n\nNow we know what Quarto is and what it can do for us, you might be wondering, when should I use Quarto and when should I stick with my current approach? [click]\nAs I mentioned, Quarto is able to seamlessly weave together text and code output. Therefore, if you are working on reports that contain text, plots, tables and statistical results, you should consider using Quarto. [click]\nWith Quarto, you can easily update output when the data are updated.Therefore, if you find yourself recreating annual reports, then Quarto could improve your efficiency. [click]\nSimilarly, if you need to reproduce an analysis, Quarto would be your friend. [click]\nFinally, you might be in a situation when you need to regenerate a standardize report for different species or across different regions. The layout and analysis are unchanged, but the data input do change. Quarto can do this by specifying what’s called “parameters”."
   },
   {
     "objectID": "materials/1-overview/slides.html#section-1",
     "href": "materials/1-overview/slides.html#section-1",
     "title": "Introduction\nto Quarto",
     "section": "",
-    "text": "You’re at a crossroads! How do you decide whether to move from R Markdown to Quarto?"
+    "text": "If you are coming as an R Markdown user, you’re at a crossroads! How do you decide whether to move from R Markdown to Quarto? I’ll touch on some of the advantages of each system."
   },
   {
     "objectID": "materials/1-overview/slides.html#advantage-of-r-markdown",
@@ -137,7 +137,7 @@
     "href": "materials/1-overview/slides.html#advantages-of-quarto",
     "title": "Introduction\nto Quarto",
     "section": "Advantages of Quarto",
-    "text": "Advantages of Quarto\n\n\n\n\nNo requirement for R\nFewer package dependencies\nrevealjs slides are easier to work with\nBetter cross referencing of figures, tables, and citations\nQuarto extensions allow for easier customization\nQuarto projects make it easier to customize websites and collaborate\nThe future\n\n\n\n\n\n\n\nThat said, there are a number of advantage to using Quarto, including:\n\nNo requirement for R (multilingual)\n\nR, Python, Julia, Javascript\n\nMore streamline and less R package dependencies\n\nUse revealjs directly for pretty slides, rather than relying on R packages.\n\nCross referencing tables and tables in the text is more straightforward, as is inserting and managing citations.\nA growing number of Quarto extensions add functionality\n\nAllow you use customized templates and\n\nQuarto projects\n\nEasier to create websites, books, collaborate on projects, etc.\n\nMost active development has moved from R Markdown to Quarto. It will only get better with time."
+    "text": "Advantages of Quarto\n\n\n\n\nNo requirement for R\nFewer package dependencies\nRevealjs slides are easier to work with\nBetter cross referencing of figures, tables, and citations\nQuarto extensions allow for easier customization\nQuarto projects make it easier to customize websites, create books, and collaborate\nIt’s the future! \n\n\n\n\n\n\n\nThat said, there are a number of advantage to using Quarto, including:\n\nNo requirement for R (multilingual)\n\nR, Python, Julia, Javascript\n\nMore streamline and less R package dependencies\n\nUse revealjs directly for pretty slides, rather than relying on host of R packages.\n\nCross referencing figures and tables in the text is more straightforward, as is inserting and managing citations.\nA growing number of Quarto extensions add functionality\n\nAllow you use customized templates and\n\nQuarto projects\n\nEasier to create websites, books, collaborate on projects, etc.\n\nMost active development has moved from R Markdown to Quarto. It will only get better with time."
   },
   {
     "objectID": "materials/1-overview/slides.html#three-ways-to-render-quarto",
@@ -165,14 +165,14 @@
     "href": "materials/1-overview/slides.html#yaml-header",
     "title": "Introduction\nto Quarto",
     "section": "YAML header",
-    "text": "YAML header\nYet Another Markup Language = document metadata!\n\n\n\n\n---\ntitle: \"Introduction to Quarto\"\nauthor: \"FWS staff\"\nformat: \n  revealjs:\n    theme: [default, refuge_light.scss]\n    subtitle: \"Overview\"\n    height: 900\n    width: 1600\neditor: source\n---\n\n\n\n\nStarts and ends with “---”\nUses key-value pairs: key: value\n\nPicky about spacing and indentations!\n\nProcessed during rendering\nIncluding options for:\n\nTitle, authors, date\nFile output(s) (e.g., html, docx)\nStyling (e.g., theme, fig-width)\nParameters"
+    "text": "YAML header\nYet Another Markup Language = document metadata!\n\n\n\n---\ntitle: \"Introduction to Quarto\"\nauthor: \"FWS staff\"\nformat: \n  revealjs:\n    theme: [default, refuge_light.scss]\n    subtitle: \"Overview\"\n    height: 900\n    width: 1600\neditor: source\n---\n\n\n\nStarts and ends with “---”\nUses key-value pairs: key: value that can nest\nPicky about spacing and indentations!\nProcessed during rendering\nIncluding options for:\n\nTitle, authors, date\nFile output(s) (e.g., html, docx)\nStyling (e.g., theme, fig-width)\nParameters\nAnd more…\n\n\n\n\n\nThe YAML provides document level metadata.\nIt is a language that follows a standard syntax."
   },
   {
     "objectID": "materials/1-overview/slides.html#yaml-header-options",
     "href": "materials/1-overview/slides.html#yaml-header-options",
     "title": "Introduction\nto Quarto",
     "section": "YAML header: Options",
-    "text": "YAML header: Options\n\n\nOptions are dependent on the file output (many options )\n\nSearch the Quarto guidance within your specified file format:"
+    "text": "YAML header: Options\n\n\nOptions are dependent on the file output (many options )\n\nSearch the Quarto guidance within your specified file format:\n\n\n\n\n\n\n\nThe options available in the YAML are dependent on the file format that you select.\nThere are a ton of options!\nTo give you an idea, here’s the Quarto guidance that shows YAML options for a Quarto document rendered to MS Word."
   },
   {
     "objectID": "materials/1-overview/slides.html#yaml-header-options-1",
@@ -678,5 +678,117 @@
     "title": "Introduction\nto Quarto",
     "section": "Exercise 1: Rendering",
     "text": "Exercise 1: Rendering\n\n\n\n−+\n10:00"
+  },
+  {
+    "objectID": "materials/1-overview/slides.html#logistics",
+    "href": "materials/1-overview/slides.html#logistics",
+    "title": "Introduction\nto Quarto",
+    "section": "Logistics",
+    "text": "Logistics"
+  },
+  {
+    "objectID": "materials/1-overview/slides.html#in-person",
+    "href": "materials/1-overview/slides.html#in-person",
+    "title": "Introduction\nto Quarto",
+    "section": "In-person",
+    "text": "In-person"
+  },
+  {
+    "objectID": "materials/1-overview/slides.html#exercises",
+    "href": "materials/1-overview/slides.html#exercises",
+    "title": "Introduction\nto Quarto",
+    "section": "Exercises",
+    "text": "Exercises\n\nYour time to practice what you’ve learned"
+  },
+  {
+    "objectID": "materials/1-overview/slides.html#getting-help",
+    "href": "materials/1-overview/slides.html#getting-help",
+    "title": "Introduction\nto Quarto",
+    "section": "Getting help",
+    "text": "Getting help"
+  },
+  {
+    "objectID": "materials/1-overview/slides.html#sticky-notes",
+    "href": "materials/1-overview/slides.html#sticky-notes",
+    "title": "Introduction\nto Quarto",
+    "section": "Sticky notes",
+    "text": "Sticky notes\n\n\n\nRed\n“Help!”\n\n\nBlue\n“All done!”\n\n\n\n\n\nWe are available to offer help during the exercises.\nFor the in-person participants: If you have a question or need help, raise your hand or put a red sticky note on your laptop.\nPut a blue sticky note on your laptop to tell us that you are done with the exercise.\nFor online participants- raise your virtual hand or send a message.\nFeel free to work together on exercises!"
+  },
+  {
+    "objectID": "materials/1-overview/slides.html#red---help",
+    "href": "materials/1-overview/slides.html#red---help",
+    "title": "Introduction\nto Quarto",
+    "section": "Red -> “Help!”",
+    "text": "Red -&gt; “Help!”"
+  },
+  {
+    "objectID": "materials/1-overview/slides.html#blue---done",
+    "href": "materials/1-overview/slides.html#blue---done",
+    "title": "Introduction\nto Quarto",
+    "section": "Blue -> “Done!”",
+    "text": "Blue -&gt; “Done!”"
+  },
+  {
+    "objectID": "materials/1-overview/slides.html#advantages-of-r-markdown",
+    "href": "materials/1-overview/slides.html#advantages-of-r-markdown",
+    "title": "Introduction\nto Quarto",
+    "section": "Advantages of R Markdown",
+    "text": "Advantages of R Markdown\n\n\n\n\n\nHave existing R Markdown code that works for you\nCustom tools built around R Markdown that are not yet available in Quarto\n\n\n\n\n\n\n\n\n\n\nIf you like using R Markdown, there’s no need to switch! R Markdown will continue to be supported and work as it always has been. You’re welcome to try Quarto if you like, but there’s no need to switch. [click]\nIf you have a R Markdown file that includes custom tools, there is a chance that they might not yet in available in Quarto. If this is the case, you’re of course welcome to stick with R Markdown. As they say, if it ain’t broke, don’t fix it."
+  },
+  {
+    "objectID": "materials/1-overview/slides.html#authoring-source-and-visual-editors",
+    "href": "materials/1-overview/slides.html#authoring-source-and-visual-editors",
+    "title": "Introduction\nto Quarto",
+    "section": "Authoring: Source and Visual editors",
+    "text": "Authoring: Source and Visual editors\n\n\nSource editor\n\n\nVisual editor"
+  },
+  {
+    "objectID": "materials/1-overview/slides.html#three-ways-to-render-quarto-documents",
+    "href": "materials/1-overview/slides.html#three-ways-to-render-quarto-documents",
+    "title": "Introduction\nto Quarto",
+    "section": "Three ways to render Quarto documents",
+    "text": "Three ways to render Quarto documents\n\n\n\n\n\n1.\nRStudio GUI \n\n\n\n\n2.\nQuarto command line interface (CLI) \n\n\n\n3.\nQuarto R package\n\nquarto::quarto_render(input = ___, \n                      output_format = ___)\n\n\n\n\n\nCreating output from a Quarto document is called “rendering”.\nIt is something that you will do repeatedly to view updates to a Quarto file, and make sure that everything is running properly.\nTherefore, it’s worth noting now that there are 3 different approaches to rendering a Quarto file.\n\n\nThe first and most common method is through the Rstudio application interface. After you open a Quarto file, you will see a button on the top menu call “render”.\nAnother approach is render directly to the Quarto program using the command line interface. To do this, click on the “Terminal” menu in RStudio and type “quarto render”. You can type “quarto preview”, which will both render the document and open a preview window to view the output.\nThe 3rd approach is to render a Quarto document using the Quarto R package. To do this, install and load the Quarto R package in RStudio. In the console, type (quarto_render(some arguments…))."
+  },
+  {
+    "objectID": "materials/1-overview/slides.html#for-our-purposes-we-will-be-using-rstudio-to-edit-quarto-documents.-within-rstudio-there-are-two-editors-available-to-make-changes-to-quarto-documents-the-source-editor-and-the-visual-editor",
+    "href": "materials/1-overview/slides.html#for-our-purposes-we-will-be-using-rstudio-to-edit-quarto-documents.-within-rstudio-there-are-two-editors-available-to-make-changes-to-quarto-documents-the-source-editor-and-the-visual-editor",
+    "title": "Introduction\nto Quarto",
+    "section": "For our purposes, we will be using RStudio to edit Quarto documents. Within RStudio, there are two editors available to make changes to Quarto documents: the Source editor and the Visual editor",
+    "text": "For our purposes, we will be using RStudio to edit Quarto documents. Within RStudio, there are two editors available to make changes to Quarto documents: the Source editor and the Visual editor"
+  },
+  {
+    "objectID": "materials/1-overview/slides.html#authoring-in-rstudio",
+    "href": "materials/1-overview/slides.html#authoring-in-rstudio",
+    "title": "Introduction\nto Quarto",
+    "section": "Authoring in RStudio",
+    "text": "Authoring in RStudio\n\n\nSource editor\n\n\nVisual editor\n\n\n\n\nFor our purposes, we will be using RStudio to edit Quarto documents. Within RStudio, there are two editors available to make changes to Quarto documents: the Source editor and the Visual editor.\nThe source editor displays the raw Quarto document. It is traditional approach to editing documents and most used by those familiar with Quarto.\n\nThe Visual editor shows changes in real time and previews what the document looks like without re-rendering it. It also provides a menu with buttons for things like support for inserting tables, figures, and citations; and formatting fonts and headers. It provides an easier interface for those learning Quarto who are familiar with word processing software like Word."
+  },
+  {
+    "objectID": "materials/1-overview/slides.html#section-5",
+    "href": "materials/1-overview/slides.html#section-5",
+    "title": "Introduction\nto Quarto",
+    "section": "",
+    "text": "Here’s an example of a Quarto document. It shows 3 basic components of Quarto documents: metadata (YAML header), the document body, and code. In the next 3 presentations, we will cover how each of these components come together to create a Quarto document."
+  },
+  {
+    "objectID": "materials/1-overview/slides.html#yaml",
+    "href": "materials/1-overview/slides.html#yaml",
+    "title": "Introduction\nto Quarto",
+    "section": "YAML",
+    "text": "YAML\nYet Another Markup Language = document metadata!\n\n\n\n---\ntitle: \"Introduction to Quarto\"\nauthor: \"FWS staff\"\nformat: \n  revealjs:\n    theme: [default, refuge_light.scss]\neditor: source\n---\n\n\n\nStarts and ends with “---”\nUses key-value pairs: key: value that can nest\nPicky about spacing and indentations!\nProcessed during rendering\nIncluding options for:\n\nTitle, authors, date\nFile output(s) (e.g., html, docx)\nStyling (e.g., theme, fig-width)\nParameters\nAnd more…\n\n\n\n\n\nThe YAML provides document level metadata.\nIt is a language that follows a standard syntax."
+  },
+  {
+    "objectID": "materials/1-overview/slides.html#yaml-metadata-options",
+    "href": "materials/1-overview/slides.html#yaml-metadata-options",
+    "title": "Introduction\nto Quarto",
+    "section": "YAML metadata: Options",
+    "text": "YAML metadata: Options\n\n\nOptions are dependent on the file output (many options )\n\nSearch the Quarto guidance within your specified file format:\n\n\n\n\n\n\n\nThe options available in the YAML are dependent on the file format that you select.\nThere are a ton of options!\nTo give you an idea, here’s the Quarto guidance that shows YAML options for a Quarto document rendered to MS Word."
+  },
+  {
+    "objectID": "materials/1-overview/slides.html#yaml-metadata-options-1",
+    "href": "materials/1-overview/slides.html#yaml-metadata-options-1",
+    "title": "Introduction\nto Quarto",
+    "section": "YAML metadata: Options",
+    "text": "YAML metadata: Options\n\n\n\n\n\n\n\n\nAnother option: Use your friendly assistant!\n\n\n\nStart a word and hit tab to complete or …\nType Ctrl+space to see available options."
   }
 ]

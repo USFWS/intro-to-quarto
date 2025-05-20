@@ -12,7 +12,7 @@
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.39">
 
-  <title>Introduction to Quarto – quarto-input9b4cf90fcd797969</title>
+  <title>Introduction to Quarto – quarto-inpute3b0346b782bb94</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -226,17 +226,21 @@ to Quarto</div></h1>
           display:block!important;
       }</style></aside>
 </section>
-<section id="outline" class="slide level2 center">
+<section id="outline" class="slide level2">
 <h2>Outline</h2>
-<ul>
-<li>Overview of Quarto</li>
-<li>Components of a Quarto document
-<ul>
-<li>YAML metadata</li>
-<li>Document body</li>
-<li>Code blocks</li>
-</ul></li>
-</ul>
+<ol type="1">
+<li>Overview of Quarto (25 mins)</li>
+<li>YAML metadata (20 min)</li>
+</ol>
+<p>BREAK (10 min)</p>
+<ol start="3" type="1">
+<li>Document body (25 min)</li>
+<li>Code blocks (25 min)</li>
+</ol>
+<p>BREAK (10 min)</p>
+<ol start="5" type="1">
+<li>Final exercise and wrap-up (20 min)</li>
+</ol>
 <aside class="notes">
 <ul>
 <li>This workshop serves as an introduction to using Quarto to create reports.</li>
@@ -257,12 +261,64 @@ to Quarto</div></h1>
       }</style></aside>
 </section>
 <section>
+<section id="exercises" class="title-slide slide level1 exercise center">
+<h1>Exercises</h1>
+<aside class="notes">
+<p>When we get to the green Exercises page like this, it will be your turn to practice what you’ve just learned. These slides include a link to the exercise instructions on the workshop website.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="sticky-notes" class="slide level2">
+<h2>Sticky notes</h2>
+<div class="center">
+<div class="columns">
+<div class="column" style="width:40%;">
+<h3 id="red"><span style="color:red;">Red</span></h3>
+<p>“Help!”</p>
+<p><img data-src="images/sticky_note.png" class="drop" alt="A person sitting at a desk at a laptop computer. The laptop has a red sticky note attached to the back of the monitor." width="600"></p>
+</div><div class="column" style="width:60%;">
+<h3 id="blue"><span style="color:blue;">Blue</span></h3>
+<p>“All done!”</p>
+<p><img data-src="images/sticky_note_blue.png" class="drop" alt="A person sitting at a desk at a laptop computer. The laptop has a red sticky note attached to the back of the monitor." width="600"></p>
+</div></div>
+</div>
+<aside class="notes">
+<ul>
+<li><p>We are available to offer help during the exercises.</p></li>
+<li><p>For the in-person participants: If you have a question or need help, raise your hand or put a red sticky note on your laptop.</p></li>
+<li><p>Put a blue sticky note on your laptop to tell us that you are done with the exercise.</p></li>
+<li><p>For online participants- raise your virtual hand or send a message.</p></li>
+<li><p>Feel free to work together on exercises!</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
 <section id="the-powers-of" class="title-slide slide level1 dark center">
 <h1>The powers of <br> <img data-src="images/super_quarto.png" alt="Superman holding a pencil with city buildings in the background and Quarto written below him" width="600"></h1>
 <aside class="notes">
 <ul>
 <li>Ok, let’s dive into the world of creating documents using Quarto.</li>
-<li>Quarto is a multi-language next generation version of R Markdown.</li>
+<li>Quarto is an open-source scientific and technical publishing system.</li>
+<li>Allows you to analyze data, weave together code output with text, and publish your story in multiple formats.</li>
 <li>What can you do with Quarto?
 <ul>
 <li>Generate dynamic output using R. Python, and other languages that can be regenerated when the data change.</li>
@@ -270,6 +326,7 @@ to Quarto</div></h1>
 <li>Integrates well into RStudio and other code editors</li>
 <li>Can create interactive documents by embedding html widgets and Shiny.</li>
 </ul></li>
+<li>It solves the problem of moving between multiple software during your data workflow.</li>
 <li>It’s quite powerful!</li>
 </ul>
 <style type="text/css">
@@ -291,7 +348,7 @@ to Quarto</div></h1>
 </div>
 <aside class="notes">
 <ul>
-<li>Quarto can produce high quality documents in HTML, PDF or MS Word</li>
+<li>Quarto can produce high quality documents in HTML, PDF or MS Word.</li>
 <li>Has the ability to output content using standardized templates, as shown here for a refuge report.</li>
 </ul>
 <style type="text/css">
@@ -374,8 +431,9 @@ to Quarto</div></h1>
 </div>
 <aside class="notes">
 <ul>
-<li>How does it work? If you are familiar with R Markdown, you are probably familiar with this pipeline.</li>
-<li>You start out with an R Markdown document, which includes text and R code.</li>
+<li>How does it work and how does it compare with R Markdown?</li>
+<li>If you are familiar with R Markdown, you might be familiar with the two step rendering process.</li>
+<li>With R Markdown, you start out with an R Markdown document, which includes text and R code.</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -394,7 +452,7 @@ to Quarto</div></h1>
 <p><img data-src="images/render2.png" alt="A diagram showing the process of rendering a document using R Markdown." height="800"></p>
 <aside class="notes">
 <ul>
-<li>When you knit an R Markdown file, a R package “knitr” calls the engine knitr to execute your R code, and create an Markdown file that include and then uses Pandoc to produce whatever output you’ve specified.</li>
+<li>When you knit an R Markdown file, an R package “knitr” calls the engine knitr to execute your R code, and create an Markdown file that include the original text and the output of your code.</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -412,7 +470,9 @@ to Quarto</div></h1>
 <h2>Quarto and R Markdown</h2>
 <p><img data-src="images/render3.png" alt="A diagram showing the process of rendering a document using R Markdown." height="800"></p>
 <aside class="notes">
-
+<ul>
+<li>In the final step, R Markdown calls on Pandoc, a universal document converter, to produce whatever output you’ve specified.</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -432,7 +492,7 @@ to Quarto</div></h1>
 </div>
 <aside class="notes">
 <ul>
-<li>A Quarto .qmd file on the other hand can be composed of text and R, Python, and/or Julia code.</li>
+<li>The process for rendering a Quarto document is similar to R Markdown, with a notable change. A Quarto .qmd file on the other hand can be composed of text and R, Python, and/or Julia code.</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -451,7 +511,7 @@ to Quarto</div></h1>
 <p><img data-src="images/render5.png" alt="A diagram showing the process of rendering a document using Quarto." height="800"></p>
 <aside class="notes">
 <ul>
-<li>Either the knitr or jupyter engines will then render your text and code into a Markdown file followed by Pandoc producing whatever output you’ve specified. Quarto accomplishes this by being fully separate from the R ecosystem. You can even run it from the command-line interface (i.e., the shell or terminal), if you want to.</li>
+<li>Depending on the code language in the document, Quarto will then assign either the knitr or jupyter engine to render your text and code into a Markdown file followed by Pandoc producing whatever output you’ve specified. Quarto accomplishes this by being fully separated from the R ecosystem. You can even run it from the command-line interface (i.e., the shell or terminal), if you want to.</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -506,7 +566,13 @@ to Quarto</div></h1>
 <p><img data-src="images/plover_thinking.png" alt="An cartoon of a snowy plover thinking. There is a question mark above it's head." height="800"></p>
 </div></div>
 <aside class="notes">
-
+<ul>
+<li>Now we know what Quarto is and what it can do for us, you might be wondering, when should I use Quarto and when should I stick with my current approach? [click]</li>
+<li>As I mentioned, Quarto is able to seamlessly weave together text and code output. Therefore, if you are working on reports that contain text, plots, tables and statistical results, you should consider using Quarto. [click]</li>
+<li>With Quarto, you can easily update output when the data are updated.Therefore, if you find yourself recreating annual reports, then Quarto could improve your efficiency. [click]</li>
+<li>Similarly, if you need to reproduce an analysis, Quarto would be your friend. [click]</li>
+<li>Finally, you might be in a situation when you need to regenerate a standardize report for different species or across different regions. The layout and analysis are unchanged, but the data input do change. Quarto can do this by specifying what’s called “parameters”.</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -522,7 +588,7 @@ to Quarto</div></h1>
 <section id="section-1" class="slide level2" data-background-image="images/plover_decision.png" data-background-size="contain">
 <h2></h2>
 <aside class="notes">
-<p>You’re at a crossroads! How do you decide whether to move from R Markdown to Quarto?</p>
+<p>If you are coming as an R Markdown user, you’re at a crossroads! How do you decide whether to move from R Markdown to Quarto? I’ll touch on some of the advantages of each system.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -535,8 +601,8 @@ to Quarto</div></h1>
           display:block!important;
       }</style></aside>
 </section>
-<section id="advantage-of-r-markdown" class="slide level2">
-<h2>Advantage of R Markdown</h2>
+<section id="advantages-of-r-markdown" class="slide level2">
+<h2>Advantages of R Markdown</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
 <p><br>
@@ -554,7 +620,7 @@ to Quarto</div></h1>
 </div></div>
 <aside class="notes">
 <ul>
-<li>If you like using R Markdown, there’s no need to switch! R Markdown will continue to be supported and work as it always has been. You’re welcome to try Quarto if you like, but there’s no need to switch.</li>
+<li>If you like using R Markdown, there’s no need to switch! R Markdown will continue to be supported and work as it always has been. You’re welcome to try Quarto if you like, but there’s no need to switch. [click]</li>
 <li>If you have a R Markdown file that includes custom tools, there is a chance that they might not yet in available in Quarto. If this is the case, you’re of course welcome to stick with R Markdown. As they say, if it ain’t broke, don’t fix it.</li>
 </ul>
 <style type="text/css">
@@ -577,11 +643,11 @@ to Quarto</div></h1>
 <ul>
 <li class="fragment">No requirement for R</li>
 <li class="fragment">Fewer package dependencies</li>
-<li class="fragment">revealjs slides are easier to work with</li>
+<li class="fragment">Revealjs slides are easier to work with</li>
 <li class="fragment">Better cross referencing of figures, tables, and citations</li>
-<li class="fragment">Quarto extensions allow for easier customization</li>
-<li class="fragment">Quarto projects make it easier to customize websites and collaborate</li>
-<li class="fragment">The future</li>
+<li class="fragment">Quarto <a href="https://quarto.org/docs/extensions/" target="_blank">extensions</a> allow for easier customization</li>
+<li class="fragment">Quarto projects make it easier to customize websites, create books, and collaborate</li>
+<li class="fragment">It’s the future! <i class="fa-solid fa-rocket" aria-label="rocket"></i></li>
 </ul>
 </div>
 </div><div class="column" style="width:40%;">
@@ -597,9 +663,9 @@ to Quarto</div></h1>
 </ul></li>
 <li>More streamline and less R package dependencies
 <ul>
-<li>Use revealjs directly for pretty slides, rather than relying on R packages.</li>
+<li>Use revealjs directly for pretty slides, rather than relying on host of R packages.</li>
 </ul></li>
-<li>Cross referencing tables and tables in the text is more straightforward, as is inserting and managing citations.</li>
+<li>Cross referencing figures and tables in the text is more straightforward, as is inserting and managing citations.</li>
 <li>A growing number of Quarto extensions add functionality
 <ul>
 <li>Allow you use customized templates and</li>
@@ -623,8 +689,8 @@ to Quarto</div></h1>
           display:block!important;
       }</style></aside>
 </section>
-<section id="three-ways-to-render-quarto" class="slide level2">
-<h2>Three ways to render Quarto</h2>
+<section id="three-ways-to-render-quarto-documents" class="slide level2">
+<h2>Three ways to render Quarto documents</h2>
 <p><br>
 </p>
 <div class="columns">
@@ -632,6 +698,7 @@ to Quarto</div></h1>
 <div class="fragment" data-fragment-index="1">
 <h3 id="section-2">1.</h3>
 <p><strong>RStudio GUI</strong> <img data-src="images/quarto_render1.png" class="drop" alt="A screenshot of a Quarto document in RStudio. The Render button is circled in red"></p>
+<p><img data-src="images/render_icon.png" class="drop" alt="The render icon in RStudio." width="200"></p>
 </div>
 </div><div class="column center" style="width:32%;">
 <div class="fragment" data-fragment-index="2">
@@ -649,7 +716,16 @@ to Quarto</div></h1>
 </div>
 </div></div>
 <aside class="notes">
-
+<ul>
+<li>Creating output from a Quarto document is called “rendering”.</li>
+<li>It is something that you will do repeatedly to view updates to a Quarto file, and make sure that everything is running properly.</li>
+<li>Therefore, it’s worth noting now that there are 3 different approaches to rendering a Quarto file.</li>
+</ul>
+<ol type="1">
+<li>The first and most common method is through the Rstudio application interface. After you open a Quarto file, you will see a button on the top menu call “render”.</li>
+<li>Another approach is render directly to the Quarto program using the command line interface. To do this, click on the “Terminal” menu in RStudio and type “quarto render”. You can type “quarto preview”, which will both render the document and open a preview window to view the output.</li>
+<li>The 3rd approach is to render a Quarto document using the Quarto R package. To do this, install and load the Quarto R package in RStudio. In the console, type (quarto_render(some arguments…)).</li>
+</ol>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -662,16 +738,23 @@ to Quarto</div></h1>
           display:block!important;
       }</style></aside>
 </section>
-<section id="authoring-source-and-visual-panes" class="slide level2">
-<h2>Authoring: Source and Visual panes</h2>
+<section id="authoring-in-rstudio" class="slide level2">
+<h2>Authoring in RStudio</h2>
 <div class="columns">
 <div class="column center" style="width:50%;">
+<h3 id="source-editor">Source editor</h3>
 <p><img data-src="images/source_pane.png" class="drop" alt="A screenshot of a Quarto document in RStudio viewed as Source."></p>
 </div><div class="column center" style="width:50%;">
+<h3 id="visual-editor">Visual editor</h3>
 <p><img data-src="images/visual_pane.png" class="drop" alt="A screenshot of a Quarto document in RStudio viewed as Visual."></p>
 </div></div>
 <aside class="notes">
-
+<ul>
+<li>For our purposes, we will be using RStudio to edit Quarto documents. Within RStudio, there are two editors available to make changes to Quarto documents: the Source editor and the Visual editor.</li>
+<li>The source editor displays the raw Quarto document. It is traditional approach to editing documents and most used by those familiar with Quarto.<br>
+</li>
+<li>The Visual editor shows changes in real time and previews what the document looks like without re-rendering it. It also provides a menu with buttons for things like support for inserting tables, figures, and citations; and formatting fonts and headers. It provides an easier interface for those learning Quarto who are familiar with word processing software like Word.</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -692,7 +775,7 @@ to Quarto</div></h1>
 </p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_369acfb4" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_b909e160" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -717,7 +800,10 @@ to Quarto</div></h1>
 <section id="anatomy-of-a-quarto-file" class="title-slide slide level1 dark center">
 <h1>Anatomy of a Quarto File</h1>
 <aside class="notes">
-
+<ul>
+<li>In the last section, I introduced Quarto as an approach to creating dynamic documents that combine code and text. I outlined the process for rendering a Quarto document and discussed how that compares to R Markdown. I showed 3 approaches for rendering a Quarto document and two options for editing a Quarto document.</li>
+<li>We will now move on to describing the component that make up all Quarto documents.</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -733,7 +819,9 @@ to Quarto</div></h1>
 <section id="section-5" class="slide level2">
 <h2><img data-src="images/quarto_example1.png"></h2>
 <aside class="notes">
-
+<ul>
+<li>Here’s an example of a Quarto document. It shows 3 basic components of Quarto documents: metadata (YAML header), the document body, and code. In the next 3 presentations, we will cover how each of these components come together to create a Quarto document.</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -746,12 +834,11 @@ to Quarto</div></h1>
           display:block!important;
       }</style></aside>
 </section>
-<section id="yaml-header" class="slide level2">
-<h2>YAML header</h2>
+<section id="yaml" class="slide level2">
+<h2>YAML</h2>
 <p><strong>Y</strong>et <strong>A</strong>nother <strong>M</strong>arkup <strong>L</strong>anguage = document metadata!</p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="fragment">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource yml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a></a><span class="pp">---</span></span>
 <span id="cb2-2"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Introduction to Quarto"</span></span>
@@ -759,20 +846,14 @@ to Quarto</div></h1>
 <span id="cb2-4"><a></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
 <span id="cb2-5"><a></a><span class="at">  </span><span class="fu">revealjs</span><span class="kw">:</span></span>
 <span id="cb2-6"><a></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">default</span><span class="kw">,</span><span class="at"> refuge_light.scss</span><span class="kw">]</span></span>
-<span id="cb2-7"><a></a><span class="at">    </span><span class="fu">subtitle</span><span class="kw">:</span><span class="at"> </span><span class="st">"Overview"</span></span>
-<span id="cb2-8"><a></a><span class="at">    </span><span class="fu">height</span><span class="kw">:</span><span class="at"> </span><span class="dv">900</span></span>
-<span id="cb2-9"><a></a><span class="at">    </span><span class="fu">width</span><span class="kw">:</span><span class="at"> </span><span class="dv">1600</span></span>
-<span id="cb2-10"><a></a><span class="fu">editor</span><span class="kw">:</span><span class="at"> source</span></span>
-<span id="cb2-11"><a></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<span id="cb2-7"><a></a><span class="fu">editor</span><span class="kw">:</span><span class="at"> source</span></span>
+<span id="cb2-8"><a></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column small" style="width:50%;">
 <ul>
 <li class="fragment">Starts and ends with “---”</li>
-<li class="fragment">Uses key-value pairs: <code>key: value</code>
-<ul>
+<li class="fragment">Uses key-value pairs: <code>key: value</code> that can nest</li>
 <li class="fragment"><em>Picky about spacing and indentations!</em></li>
-</ul></li>
 <li class="fragment">Processed during rendering</li>
 <li class="fragment">Including options for:
 <ul>
@@ -780,11 +861,18 @@ to Quarto</div></h1>
 <li class="fragment">File output(s) (e.g., <code>html</code>, <code>docx</code>)</li>
 <li class="fragment">Styling (e.g., <code>theme</code>, <code>fig-width</code>)</li>
 <li class="fragment">Parameters</li>
+<li class="fragment">And more…</li>
 </ul></li>
 </ul>
 </div></div>
 <aside class="notes">
-
+<ul>
+<li>The YAML provides document level metadata.</li>
+<li>It is a language that follows a standard syntax.
+<ul>
+<li></li>
+</ul></li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -797,8 +885,8 @@ to Quarto</div></h1>
           display:block!important;
       }</style></aside>
 </section>
-<section id="yaml-header-options" class="slide level2">
-<h2>YAML header: <span class="gray-bold">Options</span></h2>
+<section id="yaml-metadata-options" class="slide level2">
+<h2>YAML metadata: <span class="gray-bold">Options</span></h2>
 <div>
 <ul>
 <li class="fragment">Options are dependent on the file output (<strong>many</strong> options <i class="fa-solid fa-face-flushed" aria-label="face-flushed"></i>)<br>
@@ -806,11 +894,15 @@ to Quarto</div></h1>
 <li class="fragment">Search the <a href="https://quarto.org/docs/reference/">Quarto guidance</a> within your specified file format:</li>
 </ul>
 <div class="fragment">
-<iframe width="1600" height="500" src="https://quarto.org/docs/reference/formats/docx.html" title="Quarto HTML Options guidance"></iframe>
+<iframe width="1600" height="600" src="https://quarto.org/docs/reference/formats/docx.html" title="Quarto HTML Options guidance"></iframe>
 </div>
 </div>
 <aside class="notes">
-
+<ul>
+<li>The options available in the YAML are dependent on the file format that you select.</li>
+<li>There are a <strong>ton</strong> of options!</li>
+<li>To give you an idea, here’s the Quarto guidance that shows YAML options for a Quarto document rendered to MS Word.</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -823,8 +915,8 @@ to Quarto</div></h1>
           display:block!important;
       }</style></aside>
 </section>
-<section id="yaml-header-options-1" class="slide level2">
-<h2>YAML header: <span class="gray-bold">Options</span></h2>
+<section id="yaml-metadata-options-1" class="slide level2">
+<h2>YAML metadata: <span class="gray-bold">Options</span></h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="callout callout-tip callout-titled callout-style-default">
@@ -844,7 +936,7 @@ to Quarto</div></h1>
 </div>
 </div>
 </div><div class="column" style="width:50%&quot;;">
-<p><img data-src="images/yml_assistant.png" alt="A screenshot of a yaml for a quarto document in RStudio showing the drop-down menu with options available."></p>
+<p><img data-src="images/yml_assistant.png" class="drop" alt="A screenshot of a yaml for a quarto document in RStudio showing the drop-down menu with options available." width="700"></p>
 </div></div>
 <aside class="notes">
 
@@ -869,7 +961,7 @@ to Quarto</div></h1>
 </p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_219e5ff8" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_1bde6a27" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1300,7 +1392,7 @@ in fact, that we need to also include an image.</p>
 </p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_7d3069ab" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_bf4a3143" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1850,7 +1942,7 @@ in fact, that we need to also include an image.</p>
 </p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_2ec3c987" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_484e3d49" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1867,7 +1959,7 @@ in fact, that we need to also include an image.</p>
 </p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_f9333941" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_5645ebf0" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
