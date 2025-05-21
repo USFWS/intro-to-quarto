@@ -529,6 +529,8 @@ countdown::countdown(10, bottom = 0)
 
 ### Markdown  
 
+\
+
 ```{.markdown}
 This is an example of how you could change    
 inline elements of text body Markdown in a FWS  
@@ -1260,7 +1262,7 @@ ggplot(iris, aes(x = Petal.Width,
 :::
 
 ::: {.notes}
-Let's add a caption to our figue using the fig-cap option. 
+Let's add a caption to our figure using the fig-cap option. 
 :::
 
 
@@ -1329,7 +1331,48 @@ execute:
 :::
 
 
-# Exercise 4: [Code chunks](exercises.qmd#sec-exercise4){target="_blank"} {.exercise}
+## Inline elements: [Code]{.gray-bold}
+
+\
+
+::: columns
+
+::: {.column width="50%"}
+### Source code  
+
+```{source code}
+#| echo: TRUE
+#| eval: FALSE
+
+This is an example of how you could use
+code to calculate and report that the species
+in the iris dataset with the longest sepal 
+length is the 
+`r iris[which.max(iris$Sepal.Length), "Species"]`.
+```
+:::
+
+::: {.column width="50%"}
+
+### Output  
+::: {.fragment}
+::: {.small}
+This is an example of how you could use
+code to calculate and report that species
+in the iris dataset with the longest sepal
+length is the `r iris[which.max(iris$Sepal.Length), "Species"]`.
+:::
+:::
+
+:::
+
+:::
+
+::: {.notes}
+The final concept we'll cover regarding code is inline code. Previously, we explored inline elements to modify font styles, embed images, and add hyperlinks; however, we can also incorporate code directly within the text of the document. To achieve this, we enclose the code in single backticks. After the initial backtick, we specify the code language, allowing Quarto to understand how to process the code. By using both inline code and code chunks, Quarto documents become highly dynamic and powerful tools for presenting information.
+:::
+
+# Exercise 4: [Code](exercises.qmd#sec-exercise4){target="_blank"} {.exercise}
 
 \
 \
