@@ -545,6 +545,8 @@ countdown::countdown(10, bottom = 0)
 
 ### Markdown  
 
+\
+
 ```{.markdown}
 This is an example of how you could change    
 inline elements of text body Markdown in a FWS  
@@ -958,7 +960,15 @@ Some code here
 :::
 
 ::: {.notes}
+In this section, we'll delve into one of the final elements of a Quarto document: inline code and code blocks, commonly known as code chunks.
 
+These components enable us to seamlessly integrate data analyses, visualizations, and computations right within the Quarto document, enhancing the interactive experience and improving reproducibility.
+
+Let's break down the structure of a code chunk and walk through its processing:
+
+Code chunks are defined by enclosing the code within three backticks (```). This notation signals to Pandoc that the content between these backticks is code and should not be treated as regular text. 
+
+Following the initial three backticks, we indicate the programming language of the code. This helps Pandoc understand how to interpret the code.
 :::
 
 
@@ -977,14 +987,16 @@ Some code here
 - Code chunk surrounded by a "fence" of three backticks ` ``` `  
 - Specifying the language allows for syntax highlighting.
 - ~~Code is displayed but not executed~~ Code executes unless you specify as an option -> brackets`{}`
-- Chunk options are a comma-seperated list (R syntax)
+- Chunk options are a comma-separated list (R syntax)
 :::
 :::
 
 :::
 
 ::: {.notes}
+The language specification must be enclosed in curly brackets to denote which programming language is being used for execution.
 
+For those of you familiar with RMarkdown, you might recall that code chunk options were traditionally included in the curly brackets after specifying the r language, using commas to separate each option.
 :::
 
 
@@ -1014,7 +1026,9 @@ Some code here
 :::
 
 ::: {.notes}
+In Quarto, while the language is still specified in the curly brackets, the chunk options are organized in a YAML format within the cell. Each option is placed on its own line, prefaced by hashtags and pipes, making the code chunk more readable and supporting a variety of programming languages.
 
+For those of you not familiar with code chunk options, don't worry, we'll cover these in a minute. 
 :::
 
 
@@ -1051,7 +1065,11 @@ This can cause problems when rendering to PDF with LaTeX. {{< fa face-smile-wink
 :::
 
 ::: {.notes}
+Another significant improvement in Quarto is the inclusion of code chunk labels within the YAML of the cell instead of the curly brackets. 
 
+Labeling chunks enhances document organization, simplifies debugging, and facilitates referencing code chunk outputs in the text, which is especially valuable for creating figures and tables in manuscripts or reports.
+
+A best practice to keep in mind is to refrain from using underscores in code chunk labels, as this can lead to rendering issues, particularly with LaTeX.
 :::
 
 
@@ -1078,6 +1096,15 @@ This can cause problems when rendering to PDF with LaTeX. {{< fa face-smile-wink
 :::
 :::
 
+::: {.notes}
+Code chunk options are parameters that modify the behavior of code chunks in your Quarto documents. 
+
+If the code throws and error or warning would you like them to be included in the resulting document? If your code produces a figure or table would you like them to be displayed? 
+
+These options can control various aspects of code execution and output display.
+
+Having trouble remembering all of the options available to you? In Rstudio if you hit the tab key after the hashpipe a dropdown menu with available options is provided.
+:::
 
 ## Execution options: [Figures]{.gray-bold} {auto-animate="true"}
 
@@ -1111,7 +1138,11 @@ ggplot(iris, aes(x = Petal.Width,
 
 
 ::: {.notes}
+Let's walk through an example together.
 
+In this code chunk we specify our coding language as r and use the ggplot package to plot petal width vs. petal length using the iris data.
+
+When we render this document our output will produce the code, the figure the code generated, and any error or warnings the code could encounter.
 :::
 
 
@@ -1149,7 +1180,9 @@ ggplot(iris, aes(x = Petal.Width,
 
 
 ::: {.notes}
+Let's run that same code chunk again but this time we'll include the echo = false code chunk option.
 
+By adding our echo option and specifying it as false, our output no longer includes the source code.
 :::
 
 
@@ -1193,6 +1226,8 @@ ggplot(iris, aes(x = Petal.Width,
 
 
 ::: {.notes}
+We can also use code chunk options to adjust the width and height of the figure.
+Here we set the figure width to 3 and the figure height to 2. 
 :::
 
 
@@ -1235,7 +1270,7 @@ ggplot(iris, aes(x = Petal.Width,
 
 
 ::: {.notes}
-
+Or we can make the figure larger by setting the figure width and height to 5.
 :::
 
 
@@ -1280,7 +1315,7 @@ ggplot(iris, aes(x = Petal.Width,
 :::
 
 ::: {.notes}
-
+Let's add a caption to our figure using the fig-cap option. 
 :::
 
 
@@ -1310,7 +1345,7 @@ format: html
 :::
 
 :::{.notes}
-
+If you'd like to apply the same code chunk options to all code chunks throughout the document, you can add them in the document's YAML rather than adding them to every code chunk.
 :::
 
 
@@ -1349,7 +1384,48 @@ execute:
 :::
 
 
-# Exercise 4: [Code chunks](exercises.qmd#sec-exercise4){target="_blank"} {.exercise}
+## Inline elements: [Code]{.gray-bold}
+
+\
+
+::: columns
+
+::: {.column width="50%"}
+### Source code  
+
+```{source code}
+#| echo: TRUE
+#| eval: FALSE
+
+This is an example of how you could use
+code to calculate and report that the species
+in the iris dataset with the longest sepal 
+length is the 
+`r iris[which.max(iris$Sepal.Length), "Species"]`.
+```
+:::
+
+::: {.column width="50%"}
+
+### Output  
+::: {.fragment}
+::: {.small}
+This is an example of how you could use
+code to calculate and report that species
+in the iris dataset with the longest sepal
+length is the `r iris[which.max(iris$Sepal.Length), "Species"]`.
+:::
+:::
+
+:::
+
+:::
+
+::: {.notes}
+The final concept we'll cover regarding code is inline code. Previously, we explored inline elements to modify font styles, embed images, and add hyperlinks; however, we can also incorporate code directly within the text of the document. To achieve this, we enclose the code in single backticks. After the initial backtick, we specify the code language, allowing Quarto to understand how to process the code. By using both inline code and code chunks, Quarto documents become highly dynamic and powerful tools for presenting information.
+:::
+
+# Exercise 4: [Code](exercises.qmd#sec-exercise4){target="_blank"} {.exercise}
 
 \
 \
