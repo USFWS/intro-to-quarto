@@ -49,8 +49,10 @@ A **YAML** (**Y**et **A**nother **M**arkup **L**anguage) header is a crucial com
 - [ ] Open `2_yaml_metadata.qmd` and render the document.
 - [ ] Update the subtitle and replace the author name with your name. Re-render it.
 - [ ] Change the output to a PDF and render it. What did you notice?
-- [ ] Now render it as a MS Word document (`docx`). Open the file to view the results.  
-**Bonus tasks**  
+- [ ] Now render it as a MS Word document (`docx`). Open the file to view the results.
+
+**Bonus tasks**
+
 - [ ] Render the document as a Word document using the MS_Style.docx file in the templates folder.
     - <details>
       <summary>**Hint**</summary>
@@ -100,11 +102,35 @@ Open `4_code_chunks.qmd` and make the following changes to the rendered document
 
 You have now learned how to render a Quarto document and how to change the look and feel of a Quarto document by customizing the YAML metadata, inline and block elements of the text body, and code chunks. Now it is time to apply these skills by creating a Quarto document from scratch.
 
+Do your best to recreate the document below. When rendered as a `.html`, your file should look exactly the same aside from the publishing date. Use the **Tasks** as a guide.
+
+![](images/from_scratch.png)
+
 ### Tasks 
 
-- [ ] Create a Quarto document
-- [ ] Add this.. 
-- [ ] and..
-- [ ] this...
-- [ ] and..
-- [ ] this.
+- [ ] Create a new Quarto document.
+<details>
+<summary>**Hint**</summary>
+*File* > *New File* > *Quarto Document*
+</details>
+- [ ] Edit the YAML to match the title and *today's* date. Any time your file renders, it should display the current day. Add a [parameter](https://quarto.org/docs/computations/parameters.html#knitr) called `alpha`, and set `alpha` to a value of 20.
+- [ ] Write out your headers and fill in the report content. Don't forget to match styling (e.g., bold, italics, lists) where applicable.
+- [ ] In the **Results** section, use inline R code for the survey year. You can use the following code to obtain the current year: `format(Sys.Date(), '%Y')`
+- [ ] Compute the plover index using inline R code. The formula for the imaginary plover index is $\pi \alpha$, where $\alpha$ is the parameter you defined in the YAML.
+- [ ] Use a code block and the function `hist()` to generate a histogram of male plover counts. Make sure to add your figure caption and ensure that the code chunk does not display when you render. Below, you will find some helpful code to get the list of male counts, named `plovers`, from your data file:
+```{r}
+#| eval: false
+data <- read.csv("data/plover_data.csv")
+plovers <- data$Males
+```
+
+<details>
+<summary>**Hint**</summary>
+The chunk options you are looking for are `echo` and `fig-cap`.
+Use `hist(plovers)` to generate the plot.
+</details>
+
+**Bonus tasks**
+
+- [ ] Replace "Many" in the **Results** section with the true total of male counts from the `plovers` list. Suggestion: use the `sum()` function.
+- [ ] Your supervisor tells you that the $\alpha$ value for your calculations is actually 30. Update and re-render your file without changing the document body. Your supervisor also tells you she wants you to send her a Word document of the report but upload a PDF to ServCat. Render both formats.
