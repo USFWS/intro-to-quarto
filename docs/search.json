@@ -25,7 +25,7 @@
     "href": "materials/presentations/slides.html#revealjs-format",
     "title": "Introduction\nto Quarto",
     "section": "Revealjs format",
-    "text": "Revealjs format\n\n\n\nAn open source HTML presentation framework\nChange styles with CSS/SCSS\nCustomize with JavaScript\nMarkdown and LateX support\n\n\n\n\n\n\nAn open source HTML presentation framework\nChange styles with CSS/SCSS\nCustomize with JavaScript\nMarkdown and LateX support"
+    "text": "Revealjs format\n\n\n\nAn open source HTML presentation framework\nChange styles with CSS/SCSS\nCustomize with JavaScript\nMarkdown and LateX support\n\n\n\n\n\n\n\nAn open source HTML presentation framework\nChange styles with CSS/SCSS\nCustomize with JavaScript\nMarkdown and LateX support"
   },
   {
     "objectID": "materials/1-overview/slides.html#section",
@@ -130,21 +130,21 @@
     "href": "materials/1-overview/slides.html#advantage-of-r-markdown",
     "title": "Introduction\nto Quarto",
     "section": "Advantage of R Markdown",
-    "text": "Advantage of R Markdown\n\n\n\n\n\nHave existing R Markdown code that works for you\nCustom tools built around R Markdown that are not yet available in Quarto\n\n\n\n\n\n\n\n\n\n\nIf you like using R Markdown, there’s no need to switch! R Markdown will continue to be supported and work as it always has been. You’re welcome to try Quarto if you like, but there’s no need to switch.\nIf you have a R Markdown file that includes custom tools, there is a chance that they might not yet in available in Quarto. If this is the case, you’re of course welcome to stick with R Markdown. As they say, if it ain’t broke, don’t fix it."
+    "text": "Advantage of R Markdown\n\n\n\n\n\nHave existing R Markdown code that works for you\nCustom tools built around R Markdown that are not yet available in Quarto\n\n\n\n\n\n\n\n\n\n\n\nIf you like using R Markdown, there’s no need to switch! R Markdown will continue to be supported and work as it always has been. You’re welcome to try Quarto if you like, but there’s no need to switch.\nIf you have a R Markdown file that includes custom tools, there is a chance that they might not yet in available in Quarto. If this is the case, you’re of course welcome to stick with R Markdown. As they say, if it ain’t broke, don’t fix it."
   },
   {
     "objectID": "materials/1-overview/slides.html#advantages-of-quarto",
     "href": "materials/1-overview/slides.html#advantages-of-quarto",
     "title": "Introduction\nto Quarto",
     "section": "Advantages of Quarto",
-    "text": "Advantages of Quarto\n\n\n\n\nNo requirement for R\nFewer package dependencies\nrevealjs slides are easier to work with\nBetter cross referencing of figures, tables, and citations\nQuarto extensions allow for easier customization\nQuarto projects make it easier to customize websites and collaborate\nThe future\n\n\n\n\n\n\n\nThat said, there are a number of advantage to using Quarto, including:\n\nNo requirement for R (multilingual)\n\nR, Python, Julia, Javascript\n\nMore streamline and less R package dependencies\n\nUse revealjs directly for pretty slides, rather than relying on R packages.\n\nCross referencing tables and tables in the text is more straightforward, as is inserting and managing citations.\nA growing number of Quarto extensions add functionality\n\nAllow you use customized templates and\n\nQuarto projects\n\nEasier to create websites, books, collaborate on projects, etc.\n\nMost active development has moved from R Markdown to Quarto. It will only get better with time."
+    "text": "Advantages of Quarto\n\n\n\n\nNo requirement for R\nFewer package dependencies\nrevealjs slides are easier to work with\nBetter cross referencing of figures, tables, and citations\nQuarto extensions allow for easier customization\nQuarto projects make it easier to customize websites and collaborate\nThe future\n\n\n\n\n\n\n\n\nThat said, there are a number of advantage to using Quarto, including:\n\nNo requirement for R (multilingual)\n\nR, Python, Julia, Javascript\n\nMore streamline and less R package dependencies\n\nUse revealjs directly for pretty slides, rather than relying on R packages.\n\nCross referencing tables and tables in the text is more straightforward, as is inserting and managing citations.\nA growing number of Quarto extensions add functionality\n\nAllow you use customized templates and\n\nQuarto projects\n\nEasier to create websites, books, collaborate on projects, etc.\n\nMost active development has moved from R Markdown to Quarto. It will only get better with time."
   },
   {
     "objectID": "materials/1-overview/slides.html#three-ways-to-render-quarto",
     "href": "materials/1-overview/slides.html#three-ways-to-render-quarto",
     "title": "Introduction\nto Quarto",
     "section": "Three ways to render Quarto",
-    "text": "Three ways to render Quarto\n\n\n\n\n\n1.\nRStudio GUI \n\n\n\n2.\nQuarto command line interface (CLI) \n\n\n\n3.\nQuarto R package\n\nquarto::quarto_render(input = ___, \n                      output_format = ___)"
+    "text": "Three ways to render Quarto\n\n\n\n\n\n\n1.\nRStudio GUI \n\n\n\n\n2.\nQuarto command line interface (CLI) \n\n\n\n\n3.\nQuarto R package\n\nquarto::quarto_render(input = ___, \n                      output_format = ___)"
   },
   {
     "objectID": "materials/1-overview/slides.html#authoring-source-and-visual-panes",
@@ -193,70 +193,70 @@
     "href": "materials/1-overview/slides.html#text-body-markdown",
     "title": "Introduction\nto Quarto",
     "section": "Text body: Markdown",
-    "text": "Text body: Markdown\n\n\n\n\n\nMarkdown is a markup language (e.g., HTML, teX, XML)\n\nAdd syntax to the text to change it’s look\nMix text with markup instructions\n\nQuarto uses Pandoc Markdown\n\nInline or block elements"
+    "text": "Text body: Markdown\n\n\n\n\n\nMarkdown is a markup language (e.g., HTML, teX, XML)\n\nAdd syntax to the text to change it’s look\nMix text with markup instructions\n\nQuarto uses Pandoc Markdown\n\nInline or block elements\n\n\n\n\n\n\nNow we are going to get into the body of our Quarto file\nEverything in the body, aside from our code, which we will get to later, is written in the language Markdown\n\nAllows us to write our text and do our styling in a machine-readable fashion\nLuckily, it is pretty human-readable as well\n\nEssentially, it is how we make our document pretty\nQuarto uses Pandoc Markdown, which is very similar to but a little different from standard Markdown\n\nOne of the key features of Pandoc Markdown\nAllows us to style inline elements without impacting surrounding text or other elements\nOR style whole blocks of the document at once\nAnd I’ll show you what I mean by this in a second\n\nWe view our Quarto file in Markdown language when we use the “Source Editor”\n\nAnd I’ll be walking through Quarto’s Markdown syntax\nHowever, it’s important to acknowledge that you can do the same things in the “Visual Editor” by highlighting things and clicking buttons much like you would when formatting your document in Microsoft word\nBoth are acceptable, and you can toggle between them, but it’s always good to know the markdown because it gives you a little bit more control and can be really beneficial if your formatting gets wonky in the visual mode"
   },
   {
     "objectID": "materials/1-overview/slides.html#text-body",
     "href": "materials/1-overview/slides.html#text-body",
     "title": "Introduction\nto Quarto",
     "section": "Text body",
-    "text": "Text body\n\n\nInline elements\n\nIndividual words in a sentence\nImages, links, equations, or code in a sentence\n\n\nBlock elements\n\nParagraphs or sections of a document\nStandalone images, figures, or figures"
+    "text": "Text body\n\n\nInline elements\n\nIndividual words in a sentence\nImages, links, equations, or code in a sentence\n\n\nBlock elements\n\nParagraphs or sections of a document\nStandalone images, equations, or figures\n\n\n\n\n\nIf we want to style (such as italicizing) certain words within a sentence or paragraph, this would be inline styling\nAside from text, we can also include and style images, hyperlinks, equations, and code inline"
   },
   {
     "objectID": "materials/1-overview/slides.html#inline-elements-text",
     "href": "materials/1-overview/slides.html#inline-elements-text",
     "title": "Introduction\nto Quarto",
     "section": "Inline elements: Text",
-    "text": "Inline elements: Text\n\n\n\n\nMarkdown\nThis is an example of how you could change    \ninline elements of text body Markdown in a FWS  \nreport. You can make a word *italicized* or  \n**bold**. You can also display code, such as \n`exp(10) + 1`. You can even ~~strikethrough~~  \nand make something a superscript^1^.\n\nOutput\n\n\nThis is an example of how you could change\ninline elements of text body Markdown in a FWS report. You can make a word italicized or\nbold. You can also display code, such as\nexp(10) + 1. You can even strikethrough\nand make something a superscript1."
+    "text": "Inline elements: Text\n\n\n\n\nMarkdown\n\n\nThis is an example of how you could change    \ninline elements of text body Markdown in a FWS  \nreport. You can make a word *italicized* or  \n**bold**. You can also display code, such as \n`exp(10) + 1`. You can even ~~strikethrough~~  \nand make something a superscript^1^.\n\nOutput\n\n\nThis is an example of how you could change\ninline elements of text body Markdown in a FWS report. You can make a word italicized or\nbold. You can also display code, such as\nexp(10) + 1. You can even strikethrough\nand make something a superscript1.\n\n\n\n\n\n\nHere’s an example showing a lot of the different options for customizing your text through inline changes\nYou can use ___ for ___, …\n\nAsterix, double asterix, backtick, double tilde, caret\nYou can also have inline code that is actually executed, but that’s getting outside of markdown language and styling, so we’ll come back to that later\nEssentially you will add characters to denote certain types of styling and you want to place them at both the beginning and the end so that the computer knows where to start and stop the styling"
   },
   {
     "objectID": "materials/1-overview/slides.html#inline-elements-math",
     "href": "materials/1-overview/slides.html#inline-elements-math",
     "title": "Introduction\nto Quarto",
     "section": "Inline elements: Math",
-    "text": "Inline elements: Math\n\n\n\n\nMarkdown\nThe solution to $sqrt(x) = 26$ is $x = 676$ and  \n$\\pi = 3.1415...$.\n\nOutput\n\n\nThe solution to \\(sqrt(x) = 26\\) is \\(x = 676\\) and \\(\\pi = 3.1415...\\)."
+    "text": "Inline elements: Math\nwith LaTex!\n\n\nMarkdown\nThe solution to $sqrt(x) = 26$ is $x = 676$ and  \n$\\pi = 3.1415...$.\n\nOutput\n\n\nThe solution to \\(sqrt(x) = 26\\) is \\(x = 676\\) and \\(\\pi = 3.1415...\\).\n\n\n\n\n\n\nTo make your equations look nice, you can use LaTex, which is coded using the dollar sign"
   },
   {
     "objectID": "materials/1-overview/slides.html#inline-elements-hyperlinks-and-images",
     "href": "materials/1-overview/slides.html#inline-elements-hyperlinks-and-images",
     "title": "Introduction\nto Quarto",
     "section": "Inline elements: Hyperlinks and images",
-    "text": "Inline elements: Hyperlinks and images\n\n\n\n\nMarkdown\nFor more information on how to use Quarto,  \ncheck out the [Quarto webpage](www.quarto.com).\n\n\n\nHere's an image that is inline with  \nmy text ![icon](images/favicon.png).\n\n\nOutput\n\n\nFor more information on how to use Quarto,\ncheck out the Quarto webpage.\n\n\n\n\nHere’s an image that is inline with\nmy text ."
+    "text": "Inline elements: Hyperlinks and images\n\n\n\n\nMarkdown\nFor more information on how to use Quarto,  \ncheck out the [Quarto webpage](www.quarto.com).\n\n\n\nHere's an image that is inline with  \nmy text ![](images/favicon.png).\n\n\nOutput\n\n\nFor more information on how to use Quarto,\ncheck out the Quarto webpage.\n\n\n\n\nHere’s an image that is inline with\nmy text .\n\n\n\n\n\n\nHyperlinks use square brackets for the display text, immediately followed by the URL in parentheses\n\nSo, “Quarto Webpage” is now a clickable link\n\nImages are similar, but require an exclamation mark at the beginning\n\nAdding text in the square brackets is optional if you want to add alt text, but it will not display\nIn parentheses, we provide the path to the file"
   },
   {
     "objectID": "materials/1-overview/slides.html#block-elements-paragraphs",
     "href": "materials/1-overview/slides.html#block-elements-paragraphs",
     "title": "Introduction\nto Quarto",
     "section": "Block elements: Paragraphs",
-    "text": "Block elements: Paragraphs\n\n\nMarkdown\nHere's a paragraph. To separate it from the next  \nparagraph, you need to add one or more empty lines.\n\nThis is a new paragraph. You can format each  \nparagraph independently. A paragraph is an  \nexamine  of a block element.\n\n::: {.callout-tip}\n## Custom block element  \n\nHere's an example of a block with custom \nformatting. Everything in this block has \nthis format.\n:::\n\nOutput\n\n\nHere’s a paragraph. To separate it from the next paragraph, you need to add one or more empty lines.\nThis is a new paragraph. You can format each paragraph independently. A paragraph is an examine of a block element.\n\n\n\n\n\n\nCustom block element\n\n\nHere’s an example of a block with custom formatting. Everything in this block has this format."
+    "text": "Block elements: Paragraphs\n\n\nMarkdown\nHere's a paragraph. To separate it from the next  \nparagraph, you need to add one or more empty lines.\n\nThis is a new paragraph. You can format each  \nparagraph independently. A paragraph is an  \nexamine  of a block element.\n\n::: {.callout-tip}\n## Custom block element  \n\nHere's an example of a block with custom \nformatting. Everything in this block has \nthis format.\n:::\n\nOutput\n\n\nHere’s a paragraph. To separate it from the next paragraph, you need to add one or more empty lines.\nThis is a new paragraph. You can format each paragraph independently. A paragraph is an examine of a block element.\n\n\n\n\n\n\nCustom block element\n\n\nHere’s an example of a block with custom formatting. Everything in this block has this format.\n\n\n\n\n\n\n\n\n\nSpacing is really important in Markdown language\nCreating paragraphs is super easy, you just need to remember to insert empty space between your blocks\nTo style a block of text (could be one paragraph, could be multiple), enclose them in triple colons to define the section, and provide styling information in curly braces\nWe’re not going to go deep into this, but if you have a custom styling scss file, you could apply a class you’ve defined to this block here\n\nIn this example, we format this block as a callout block\nThese callouts are just a built-in feature of Quarto\n\nThere are 5 types of callouts (note, tip, warning, caution, and important) – this example is a tip\nAnd they all have their own color and icon\nWhen we add a header to the block, quarto knows to make that text the banner in the callout\n\n\nIn general, nesting styling is also possible. You can create blocks within blocks"
   },
   {
     "objectID": "materials/1-overview/slides.html#block-elements-headers",
     "href": "materials/1-overview/slides.html#block-elements-headers",
     "title": "Introduction\nto Quarto",
     "section": "Block elements: Headers",
-    "text": "Block elements: Headers\n\n\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n# Header 1\nHeader 1\n\n\n## Header 2\nHeader 2\n\n\n### Header 3\nHeader 3\n\n\n#### Header 4\nHeader 4"
+    "text": "Block elements: Headers\n\n\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n# Header 1\nHeader 1\n\n\n## Header 2\nHeader 2\n\n\n### Header 3\nHeader 3\n\n\n#### Header 4\nHeader 4\n\n\n\n\n\nHeaders are similar to headers in Word where there are different levels corresponding to text size and boldness\nThe header level is indicated by the number of hashtags you use\n\nSo if you use 1 hashtag, it is a level 1 header, and so on"
   },
   {
     "objectID": "materials/1-overview/slides.html#block-elements-lists",
     "href": "materials/1-overview/slides.html#block-elements-lists",
     "title": "Introduction\nto Quarto",
     "section": "Block elements: Lists",
-    "text": "Block elements: Lists\n\n\n\n\nMarkdown\n**Ordered List**\n\n1. This item first\n2. Then this one\n3. And finally this\n \n\n**Unordered List**\n\n- Kodiak Refuge\n- Togiak Refuge\n- Arctic Refuge\n\n\nOutput\n\n\nOrdered List\n\nThis item first\nThen this one\nAnd finally this\n\n\n\nUnordered List\n\nKodiak Refuge\nTogiak Refuge\nArctic Refuge"
+    "text": "Block elements: Lists\n\n\n\n\nMarkdown\n**Ordered List**\n\n1. This item first\n2. Then this one\n3. And finally this\n \n\n**Unordered List**\n\n- Kodiak Refuge\n- Togiak Refuge\n- Arctic Refuge\n\n\nOutput\n\n\nOrdered List\n\nThis item first\nThen this one\nAnd finally this\n\n\n\nUnordered List\n\nKodiak Refuge\nTogiak Refuge\nArctic Refuge\n\n\n\n\n\n\n\nLists are pretty straightforward\n\nA numbered list is made exactly how you would expect it to be\nStandard bullet points are indicated with dashes\n\nYou just want to be careful of spacing and choice of characters here"
   },
   {
     "objectID": "materials/1-overview/slides.html#block-elements-math",
     "href": "materials/1-overview/slides.html#block-elements-math",
     "title": "Introduction\nto Quarto",
     "section": "Block elements: Math",
-    "text": "Block elements: Math\n\n\n\n\nMarkdown\nThe Cauchy-Schwarz Inequality\n\n$$\n\\left( \\sum_{k=1}^n a_k b_k \\right)^2 \n\\leq \n\\left( \\sum_{k=1}^n a_k^2 \\right) \n\\left( \\sum_{k=1}^n b_k^2 \\right)\n$$\nis an upper bound on the inner product between  \ntwo vectors in an inner product space in terms  \nof the product of the vector norms.\n\nOutput\n\n\nThe Cauchy-Schwarz Inequality\n\\[\n\\left( \\sum_{k=1}^n a_k b_k \\right)^2 \\leq \\left( \\sum_{k=1}^n a_k^2 \\right) \\left( \\sum_{k=1}^n b_k^2 \\right)\n\\] is an upper bound on the inner product between two vectors in an inner product space in terms of the product of the vector norms."
+    "text": "Block elements: Math\nwith LaTex!\n\n\nMarkdown\nThe Cauchy-Schwarz Inequality\n\n$$\n\\left( \\sum_{k=1}^n a_k b_k \\right)^2 \n\\leq \n\\left( \\sum_{k=1}^n a_k^2 \\right) \n\\left( \\sum_{k=1}^n b_k^2 \\right)\n$$\nis an upper bound on the inner product between  \ntwo vectors in an inner product space in terms  \nof the product of the vector norms.\n\nOutput\n\n\nThe Cauchy-Schwarz Inequality\n\\[\n\\left( \\sum_{k=1}^n a_k b_k \\right)^2 \\leq \\left( \\sum_{k=1}^n a_k^2 \\right) \\left( \\sum_{k=1}^n b_k^2 \\right)\n\\] is an upper bound on the inner product between two vectors in an inner product space in terms of the product of the vector norms.\n\n\n\n\n\n\nTo write out more substantial equations, you do the same thing as before, but use double dollar signs to enclose the LaTex block\nEverything within the block is actually not Markdown\n\nIt’s LaTex code, which is another markup language\nSo to know how to write out these equations, you’ll want to Google a LaTex guide"
   },
   {
     "objectID": "materials/1-overview/slides.html#block-elements-images",
     "href": "materials/1-overview/slides.html#block-elements-images",
     "title": "Introduction\nto Quarto",
     "section": "Block elements: Images",
-    "text": "Block elements: Images\n\n\n\n\nMarkdown\nHere's a paragraph of text. We describe\nsomething of great importance. So great,\nin fact, that we need to also include an image. \n\n![](images/bear_singing.png)\n\nMoving along, we will describe something else. \n\nOutput\n\nHere’s a paragraph of text. We describe\nsomething of great importance. So great,\nin fact, that we need to also include an image.\n\nMoving along, we will describe something else."
+    "text": "Block elements: Images\n\n\n\n\nMarkdown\nHere's a paragraph of text. We describe\nsomething of great importance. So great,\nin fact, that we need to also include an image. \n\n![](images/bear_singing.png)\n\nMoving along, we will describe something else. \n\nOutput\n\nHere’s a paragraph of text. We describe\nsomething of great importance. So great,\nin fact, that we need to also include an image.\n\nMoving along, we will describe something else.\n\n\n\n\n\nTo add an image on its own line, it is exactly the same as before\nJust add empty lines before and after to make it clear that the image should be treated as its own block"
   },
   {
     "objectID": "materials/1-overview/slides.html#exercise-3-document-body",
@@ -270,77 +270,77 @@
     "href": "materials/1-overview/slides.html#code-chunks-pandoc",
     "title": "Introduction\nto Quarto",
     "section": "Code chunks: Pandoc",
-    "text": "Code chunks: Pandoc\n\n\n```language\nSome code here\n```\n\n\n\nCode chunk surrounded by a “fence” of three backticks ```\nSpecifying the language allows for syntax highlighting.\nCode is displayed but not executed"
+    "text": "Code chunks: Pandoc\n\n\n```language\nSome code here\n```\n\n\n\nCode chunk surrounded by a “fence” of three backticks ```\nSpecifying the language allows for syntax highlighting.\nCode is displayed but not executed\n\n\n\n\n\nIn this section, we’ll delve into one of the final elements of a Quarto document: inline code and code blocks, commonly known as code chunks.\nThese components enable us to seamlessly integrate data analyses, visualizations, and computations right within the Quarto document, enhancing the interactive experience and improving reproducibility.\nLet’s break down the structure of a code chunk and walk through its processing:\nCode chunks are defined by enclosing the code within three backticks (```). This notation signals to Pandoc that the content between these backticks is code and should not be treated as regular text.\nFollowing the initial three backticks, we indicate the programming language of the code. This helps Pandoc understand how to interpret the code."
   },
   {
     "objectID": "materials/1-overview/slides.html#code-chunks-r-markdown",
     "href": "materials/1-overview/slides.html#code-chunks-r-markdown",
     "title": "Introduction\nto Quarto",
     "section": "Code chunks: R Markdown",
-    "text": "Code chunks: R Markdown\n\n\n```{r, echo=FALSE}\nSome code here\n```\n\n\n\nCode chunk surrounded by a “fence” of three backticks ```\n\nSpecifying the language allows for syntax highlighting.\nCode is displayed but not executed Code executes unless you specify as an option -&gt; brackets{}\nChunk options are a comma-seperated list (R syntax)"
+    "text": "Code chunks: R Markdown\n\n\n```{r, echo=FALSE}\nSome code here\n```\n\n\n\nCode chunk surrounded by a “fence” of three backticks ```\n\nSpecifying the language allows for syntax highlighting.\nCode is displayed but not executed Code executes unless you specify as an option -&gt; brackets{}\nChunk options are a comma-separated list (R syntax)\n\n\n\n\n\nThe language specification must be enclosed in curly brackets to denote which programming language is being used for execution.\nFor those of you familiar with RMarkdown, you might recall that code chunk options were traditionally included in the curly brackets after specifying the r language, using commas to separate each option."
   },
   {
     "objectID": "materials/1-overview/slides.html#code-chunks-quarto",
     "href": "materials/1-overview/slides.html#code-chunks-quarto",
     "title": "Introduction\nto Quarto",
     "section": "Code chunks: Quarto",
-    "text": "Code chunks: Quarto\n\n\n```{language}\n#| echo: false\n\nSome code here\n```\n\n\n\nCode chunk surrounded by a “fence” of three backticks ```\nSpecifying the language allows for syntax highlighting.\nCode is displayed but not executed Code executes unless you specify as an option -&gt; brackets{}\nChunk options are a comma-seperated list (R syntax) Chunk options moved to a YAML in the cell after a hash pipe #|\n\nWider language support\nEasier to read"
+    "text": "Code chunks: Quarto\n\n\n```{language}\n#| echo: false\n\nSome code here\n```\n\n\n\nCode chunk surrounded by a “fence” of three backticks ```\nSpecifying the language allows for syntax highlighting.\nCode is displayed but not executed Code executes unless you specify as an option -&gt; brackets{}\nChunk options are a comma-seperated list (R syntax) Chunk options moved to a YAML in the cell after a hash pipe #|\n\nWider language support\nEasier to read\n\n\n\n\n\n\nIn Quarto, while the language is still specified in the curly brackets, the chunk options are organized in a YAML format within the cell. Each option is placed on its own line, prefaced by hashtags and pipes, making the code chunk more readable and supporting a variety of programming languages.\nFor those of you not familiar with code chunk options, don’t worry, we’ll cover these in a minute."
   },
   {
     "objectID": "materials/1-overview/slides.html#code-chunks-labels",
     "href": "materials/1-overview/slides.html#code-chunks-labels",
     "title": "Introduction\nto Quarto",
     "section": "Code chunks: Labels",
-    "text": "Code chunks: Labels\n\n\n\n\n\nIdentifies code chunks\n\nMakes debugging easier\nCan reference code chunk outputs in the text\n\n\n\n\n\n```{r}\nlabel: summary-plot\n\nSome code to generate a plot...\n```\n\n\n\n\n\n\n\n\n\n\n\nAvoid using underscores (_) in labels and IDs.\n\n\nThis can cause problems when rendering to PDF with LaTeX."
+    "text": "Code chunks: Labels\n\n\n\n\n\nIdentifies code chunks\n\nMakes debugging easier\nCan reference code chunk outputs in the text\n\n\n\n\n\n```{r}\nlabel: summary-plot\n\nSome code to generate a plot...\n```\n\n\n\n\n\n\n\n\n\n\n\n\nAvoid using underscores (_) in labels and IDs.\n\n\nThis can cause problems when rendering to PDF with LaTeX. \n\n\n\n\n\n\nAnother significant improvement in Quarto is the inclusion of code chunk labels within the YAML of the cell instead of the curly brackets.\nLabeling chunks enhances document organization, simplifies debugging, and facilitates referencing code chunk outputs in the text, which is especially valuable for creating figures and tables in manuscripts or reports.\nA best practice to keep in mind is to refrain from using underscores in code chunk labels, as this can lead to rendering issues, particularly with LaTeX."
   },
   {
     "objectID": "materials/1-overview/slides.html#execution-options-outputs",
     "href": "materials/1-overview/slides.html#execution-options-outputs",
     "title": "Introduction\nto Quarto",
     "section": "Execution options: Outputs",
-    "text": "Execution options: Outputs\n\n\n\n\n\n\n\n\n\n\nOption\nDescription\n\n\n\n\neval\nEvaluate the code chunk (if false, just echos the code into the output).\n\n\necho\nInclude the source code in output\n\n\noutput\nInclude the results of executing the code in the output (true, false, or asis to indicate that the output is raw markdown and should not have any of Quarto’s standard enclosing markdown).\n\n\nwarning\nInclude warnings in the output.\n\n\nerror\nInclude errors in the output.\n\n\ninclude\nCatch all for preventing any output (code or results) from being included (e.g. include: false suppresses all output from the code block).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTab Completion is your friend!"
+    "text": "Execution options: Outputs\n\n\n\n\n\n\n\n\n\n\nOption\nDescription\n\n\n\n\neval\nEvaluate the code chunk (if false, just echos the code into the output).\n\n\necho\nInclude the source code in output\n\n\noutput\nInclude the results of executing the code in the output (true, false, or asis to indicate that the output is raw markdown and should not have any of Quarto’s standard enclosing markdown).\n\n\nwarning\nInclude warnings in the output.\n\n\nerror\nInclude errors in the output.\n\n\ninclude\nCatch all for preventing any output (code or results) from being included (e.g. include: false suppresses all output from the code block).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTab Completion is your friend!\n\n\n\n\n\n\n\n\n\nCode chunk options are parameters that modify the behavior of code chunks in your Quarto documents.\nIf the code throws and error or warning would you like them to be included in the resulting document? If your code produces a figure or table would you like them to be displayed?\nThese options can control various aspects of code execution and output display.\nHaving trouble remembering all of the options available to you? In Rstudio if you hit the tab key after the hashpipe a dropdown menu with available options is provided."
   },
   {
     "objectID": "materials/1-overview/slides.html#execution-options-figures",
     "href": "materials/1-overview/slides.html#execution-options-figures",
     "title": "Introduction\nto Quarto",
     "section": "Execution options: Figures",
-    "text": "Execution options: Figures\n\n\n```{r}\nlibrary(ggplot2)\n\nggplot(iris, aes(x = Petal.Width, \n                 y = Petal.Length)) +\n  geom_point() +\n  labs(x = \"Petal width\",\n       y = \"Petal length\")\n```\n\n\nlibrary(ggplot2)\n\nggplot(iris, aes(x = Petal.Width, \n                 y = Petal.Length)) +\n  geom_point() +\n  labs(x = \"Petal width\",\n       y = \"Petal length\")"
+    "text": "Execution options: Figures\n\n\n```{r}\nlibrary(ggplot2)\n\nggplot(iris, aes(x = Petal.Width, \n                 y = Petal.Length)) +\n  geom_point() +\n  labs(x = \"Petal width\",\n       y = \"Petal length\")\n```\n\n\nlibrary(ggplot2)\n\nggplot(iris, aes(x = Petal.Width, \n                 y = Petal.Length)) +\n  geom_point() +\n  labs(x = \"Petal width\",\n       y = \"Petal length\")\n\n\n\n\n\n\n\n\n\n\n\nLet’s walk through an example together.\nIn this code chunk we specify our coding language as r and use the ggplot package to plot petal width vs. petal length using the iris data.\nWhen we render this document our output will produce the code, the figure the code generated, and any error or warnings the code could encounter."
   },
   {
     "objectID": "materials/1-overview/slides.html#execution-options-figures-1",
     "href": "materials/1-overview/slides.html#execution-options-figures-1",
     "title": "Introduction\nto Quarto",
     "section": "Execution options: Figures",
-    "text": "Execution options: Figures\n\n\n```{r}\n#| echo: false\n\nlibrary(ggplot2)\n\nggplot(iris, aes(x = Petal.Width, \n                 y = Petal.Length)) +\n  geom_point() +\n  labs(x = \"Petal width\",\n       y = \"Petal length\")\n```"
+    "text": "Execution options: Figures\n\n\n```{r}\n#| echo: false\n\nlibrary(ggplot2)\n\nggplot(iris, aes(x = Petal.Width, \n                 y = Petal.Length)) +\n  geom_point() +\n  labs(x = \"Petal width\",\n       y = \"Petal length\")\n```\n\n\n\n\n\n\n\n\n\n\n\n\n\nLet’s run that same code chunk again but this time we’ll include the echo = false code chunk option.\nBy adding our echo option and specifying it as false, our output no longer includes the source code."
   },
   {
     "objectID": "materials/1-overview/slides.html#execution-options-figures-2",
     "href": "materials/1-overview/slides.html#execution-options-figures-2",
     "title": "Introduction\nto Quarto",
     "section": "Execution options: Figures",
-    "text": "Execution options: Figures\n\n\n```{r}\n#| echo: false\n#| fig-width: 3\n#| fig-height: 2\n\nlibrary(ggplot2)\n\nggplot(iris, aes(x = Petal.Width, \n                 y = Petal.Length)) +\n  geom_point() +\n  labs(x = \"Petal width\",\n       y = \"Petal length\")\n\n```"
+    "text": "Execution options: Figures\n\n\n```{r}\n#| echo: false\n#| fig-width: 3\n#| fig-height: 2\n\nlibrary(ggplot2)\n\nggplot(iris, aes(x = Petal.Width, \n                 y = Petal.Length)) +\n  geom_point() +\n  labs(x = \"Petal width\",\n       y = \"Petal length\")\n\n```\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe can also use code chunk options to adjust the width and height of the figure. Here we set the figure width to 3 and the figure height to 2."
   },
   {
     "objectID": "materials/1-overview/slides.html#execution-options-figures-3",
     "href": "materials/1-overview/slides.html#execution-options-figures-3",
     "title": "Introduction\nto Quarto",
     "section": "Execution options: Figures",
-    "text": "Execution options: Figures\n\n\n```{r}\n#| echo: false\n#| fig-width: 5\n#| fig-height: 5\n\nlibrary(ggplot2)\n\nggplot(iris, aes(x = Petal.Width, \n                 y = Petal.Length)) +\n  geom_point() +\n  labs(x = \"Petal width\",\n       y = \"Petal length\")\n```"
+    "text": "Execution options: Figures\n\n\n```{r}\n#| echo: false\n#| fig-width: 5\n#| fig-height: 5\n\nlibrary(ggplot2)\n\nggplot(iris, aes(x = Petal.Width, \n                 y = Petal.Length)) +\n  geom_point() +\n  labs(x = \"Petal width\",\n       y = \"Petal length\")\n```\n\n\n\n\n\n\n\n\n\n\n\n\n\nOr we can make the figure larger by setting the figure width and height to 5."
   },
   {
     "objectID": "materials/1-overview/slides.html#execution-options-figures-4",
     "href": "materials/1-overview/slides.html#execution-options-figures-4",
     "title": "Introduction\nto Quarto",
     "section": "Execution options: Figures",
-    "text": "Execution options: Figures\n\n\n```{r}\n#| echo: false\n#| fig-width: 5\n#| fig-height: 5\n#| fig-cap: \"This is my really neat plot.\"\n\nlibrary(ggplot2)\n\nggplot(iris, aes(x = Petal.Width, \n                 y = Petal.Length)) +\n  geom_point() +\n  labs(x = \"Petal width\",\n       y = \"Petal length\")\n\n```\n\n\n\n\n\n\nThis is my really neat plot."
+    "text": "Execution options: Figures\n\n\n```{r}\n#| echo: false\n#| fig-width: 5\n#| fig-height: 5\n#| fig-cap: \"This is my really neat plot.\"\n\nlibrary(ggplot2)\n\nggplot(iris, aes(x = Petal.Width, \n                 y = Petal.Length)) +\n  geom_point() +\n  labs(x = \"Petal width\",\n       y = \"Petal length\")\n\n```\n\n\n\n\n\n\nThis is my really neat plot.\n\n\n\n\n\n\n\nLet’s add a caption to our figure using the fig-cap option."
   },
   {
     "objectID": "materials/1-overview/slides.html#execution-options-yaml",
     "href": "materials/1-overview/slides.html#execution-options-yaml",
     "title": "Introduction\nto Quarto",
     "section": "Execution options: YAML",
-    "text": "Execution options: YAML\n\n\n\n\n\n\n\n\n\n\n\nExecution options at the document level in the YAML\n\n\nAvoids having to reapply options for each code chunk! \n\n\n\n\n\n---\ntitle: \"My FWS Report\"\nauthor: Jane Biologist\nformat: html\n---"
+    "text": "Execution options: YAML\n\n\n\n\n\n\n\n\n\n\n\nExecution options at the document level in the YAML\n\n\nAvoids having to reapply options for each code chunk! \n\n\n\n\n\n---\ntitle: \"My FWS Report\"\nauthor: Jane Biologist\nformat: html\n---\n\n\n\nIf you’d like to apply the same code chunk options to all code chunks throughout the document, you can add them in the document’s YAML rather than adding them to every code chunk."
   },
   {
     "objectID": "materials/1-overview/slides.html#execution-options-yaml-1",
@@ -419,7 +419,7 @@
     "href": "materials/1-overview/exercises.html#sec-exercise2",
     "title": "Introduction to Quarto",
     "section": "Exercise 2: YAML metadata",
-    "text": "Exercise 2: YAML metadata\nA YAML (Yet Another Markup Language) header is a crucial component of Quarto documents that defines metadata for the document, typically enclosed within a pair of triple-dashed lines at the beginning of the file. It allows users to specify important information such as the document’s title, author, date, and output formats (like HTML, PDF, or Word). Additionally, YAML headers can include parameters to control formatting options and customize the behavior of the document, such as including bibliographies or setting specific themes. By using a YAML header, authors can ensure that their documents are well-organized and professionally presented.\n\nTasks\n\nOpen 2_yaml_metadata.qmd and render the document.\nUpdate the subtitle and replace the author name with your name. Re-render it.\nChange the output to a PDF and render it. What did you notice?\nNow render it as a MS Word document (docx). Open the file to view the results.\nBonus tasks\n\nRender the document as a Word document using the MS_Style.docx file in the templates folder.\n\n\n\nHint\n\nUsing templates\n\n\nRender the document simultaneously as a Word document and a PDF.\n\n\n\nHint\n\nAdd output_format = \"all\" argument to quarto::quarto_render()",
+    "text": "Exercise 2: YAML metadata\nA YAML (Yet Another Markup Language) header is a crucial component of Quarto documents that defines metadata for the document, typically enclosed within a pair of triple-dashed lines at the beginning of the file. It allows users to specify important information such as the document’s title, author, date, and output formats (like HTML, PDF, or Word). Additionally, YAML headers can include parameters to control formatting options and customize the behavior of the document, such as including bibliographies or setting specific themes. By using a YAML header, authors can ensure that their documents are well-organized and professionally presented.\n\nTasks\n\nOpen 2_yaml_metadata.qmd and render the document.\nUpdate the subtitle and replace the author name with your name. Re-render it.\nChange the output to a PDF and render it. What did you notice?\nNow render it as a MS Word document (docx). Open the file to view the results.\n\nBonus tasks\n\nRender the document as a Word document using the MS_Style.docx file in the templates folder.\n\n\n\nHint\n\nUsing templates\n\n\nRender the document simultaneously as a Word document and a PDF.\n\n\n\nHint\n\nAdd output_format = \"all\" argument to quarto::quarto_render()",
     "crumbs": [
       "Overview of Quarto",
       "- Exercises"
@@ -452,7 +452,7 @@
     "href": "materials/1-overview/exercises.html#sec-exercise5",
     "title": "Introduction to Quarto",
     "section": "Exercise 5: Your turn!",
-    "text": "Exercise 5: Your turn!\nYou have now learned how to render a Quarto document and how to change the look and feel of a Quarto document by customizing the YAML metadata, inline and block elements of the text body, and code chunks. Now it is time to apply these skills by creating a Quarto document from scratch.\n\nTasks\n\nCreate a Quarto document\nAdd this..\nand..\nthis…\nand..\nthis.",
+    "text": "Exercise 5: Your turn!\nYou have now learned how to render a Quarto document and how to change the look and feel of a Quarto document by customizing the YAML metadata, inline and block elements of the text body, and code chunks. Now it is time to apply these skills by creating a Quarto document from scratch.\nDo your best to recreate the document below. When rendered as a .html, your file should look exactly the same aside from the publishing date. Use the Tasks as a guide.\n\n\nTasks\n\nCreate a new Quarto document.\n\n\nHint\n\nFile &gt; New File &gt; Quarto Document\n\nEdit the YAML to match the title and today’s date. Any time your file renders, it should display the current day. Add a parameter called alpha, and set alpha to a value of 20.\nWrite out your headers and fill in the report content. Don’t forget to match styling (e.g., bold, italics, lists) where applicable.\nIn the Results section, use inline R code for the survey year. You can use the following code to obtain the current year: format(Sys.Date(), '%Y')\nCompute the plover index using inline R code. The formula for the imaginary plover index is \\(\\pi \\alpha\\), where \\(\\alpha\\) is the parameter you defined in the YAML.\nUse a code block and the function hist() to generate a histogram of male plover counts. Make sure to add your figure caption and ensure that the code chunk does not display when you render. Below, you will find some helpful code to get the list of male counts, named plovers, from your data file:\n\n\ndata &lt;- read.csv(\"data/plover_data.csv\")\nplovers &lt;- data$Males\n\n\n\nHint\n\nThe chunk options you are looking for are echo and fig-cap. Use hist(plovers) to generate the plot.\n\nBonus tasks\n\nReplace “Many” in the Results section with the true total of male counts from the plovers list. Suggestion: use the sum() function.\nYour supervisor tells you that the \\(\\alpha\\) value for your calculations is actually 30. Update and re-render your file without changing the document body. Your supervisor also tells you she wants you to send her a Word document of the report but upload a PDF to ServCat. Render both formats.",
     "crumbs": [
       "Overview of Quarto",
       "- Exercises"
@@ -607,7 +607,7 @@
     "href": "materials/presentations/slides.html#themes-1",
     "title": "Introduction\nto Quarto",
     "section": "Themes",
-    "text": "Themes\n\n\n---\ntitle: \"My really cool presentation\"\nformat: revealjs\n---\n\n\n\n\n\nReveal themes"
+    "text": "Themes\n\n\n---\ntitle: \"My really cool presentation\"\nformat: revealjs\n---\n\n\n\n\n\n\nReveal themes"
   },
   {
     "objectID": "materials/presentations/slides.html#footers-and-logos",
@@ -649,21 +649,21 @@
     "href": "materials/presentations/slides.html#embedding-websites",
     "title": "Introduction\nto Quarto",
     "section": "Embedding websites",
-    "text": "Embedding websites"
+    "text": "Embedding websites\n\n\n\nPresentations"
   },
   {
     "objectID": "materials/presentations/slides.html#themes-2",
     "href": "materials/presentations/slides.html#themes-2",
     "title": "Introduction\nto Quarto",
     "section": "Themes",
-    "text": "Themes\n\n\n---\ntitle: \"My really cool presentation\"\nformat:\n  revealjs:\n    theme: night\n---\n\n\n\n\n\nReveal themes"
+    "text": "Themes\n\n\n---\ntitle: \"My really cool presentation\"\nformat:\n  revealjs:\n    theme: night\n---\n\n\n\n\n\n\nReveal themes"
   },
   {
     "objectID": "materials/presentations/slides.html#themes-3",
     "href": "materials/presentations/slides.html#themes-3",
     "title": "Introduction\nto Quarto",
     "section": "Themes",
-    "text": "Themes\n\n\n---\ntitle: \"My really cool presentation\"\nformat:\n  revealjs:\n    theme: solarized\n---\n\n\n\n\n\nReveal themes"
+    "text": "Themes\n\n\n---\ntitle: \"My really cool presentation\"\nformat:\n  revealjs:\n    theme: solarized\n---\n\n\n\n\n\n\nReveal themes"
   },
   {
     "objectID": "materials/presentations/slides.html#customizing-themes",
@@ -678,5 +678,19 @@
     "title": "Introduction\nto Quarto",
     "section": "Exercise 1: Rendering",
     "text": "Exercise 1: Rendering\n\n\n\n−+\n10:00"
+  },
+  {
+    "objectID": "materials/1-overview/slides.html#section-6",
+    "href": "materials/1-overview/slides.html#section-6",
+    "title": "Introduction\nto Quarto",
+    "section": "",
+    "text": "Intro to Quarto"
+  },
+  {
+    "objectID": "materials/1-overview/slides.html#inline-elements-code",
+    "href": "materials/1-overview/slides.html#inline-elements-code",
+    "title": "Introduction\nto Quarto",
+    "section": "Inline elements: Code",
+    "text": "Inline elements: Code\n\n\n\n\nSource code\n\nThis is an example of how you could use\ncode to calculate and report that the species\nin the iris dataset with the longest sepal \nlength is the \n`r iris[which.max(iris$Sepal.Length), \"Species\"]`.\n\n\nOutput\n\n\nThis is an example of how you could use code to calculate and report that species in the iris dataset with the longest sepal length is the virginica.\n\n\n\n\n\nThe final concept we’ll cover regarding code is inline code. Previously, we explored inline elements to modify font styles, embed images, and add hyperlinks; however, we can also incorporate code directly within the text of the document. To achieve this, we enclose the code in single backticks. After the initial backtick, we specify the code language, allowing Quarto to understand how to process the code. By using both inline code and code chunks, Quarto documents become highly dynamic and powerful tools for presenting information."
   }
 ]
