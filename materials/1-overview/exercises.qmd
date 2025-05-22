@@ -36,7 +36,7 @@ Rendering in Quarto documents refers to the process of converting a Quarto file,
 - [ ] Render the document using the `quarto` R package.
     - <details>
       <summary>**Hint**</summary>
-      In the console: `quarto::quarto_render("./1_rendering/<input file>")`
+      In the console: `quarto::quarto_render("./1_rendering/<input file name>")`
       </details> 
 
 
@@ -72,13 +72,13 @@ Open `3-document_body.qmd` and make the following changes to the document:
 
 **Inline:**
 
-- [ ] Italicize the species name
-- [ ] Make the refuge name into a hyperlink to the refuge website
+- [ ] Italicize the species name.
+- [ ] Make "western snowy plover" a hyperlink to the FWS page or Wikipedia page for western snowy plover.
 
 **Block:**
 
-- [ ] Create a new header named "My list"
-- [ ] Make an ordered and unordered list
+- [ ] Create a new header named "My List".
+- [ ] Make an ordered and unordered list.
 - [ ] Insert an image of the western snow plover below the "U.S. Fish and Wildlife Service" header. The image can be found in the `./images` folder.
 
 
