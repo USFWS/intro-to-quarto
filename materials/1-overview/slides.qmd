@@ -29,13 +29,19 @@ library(countdown)
 :::
 
 
-## Outline {.center}
+## Outline
 
-- Overview of Quarto
-- Components of a Quarto document
-  - YAML metadata
-  - Document body
-  - Code blocks
+1. Overview of Quarto (25 mins)
+2. YAML metadata (20 min)  
+  
+BREAK (10 min)
+
+3. Document body (25 min)
+4. Code blocks (25 min)  
+  
+BREAK (10 min)
+
+5. Final exercise and wrap-up (20 min)
 
 ::: {.notes}
 - This workshop serves as an introduction to using Quarto to create reports.
@@ -45,16 +51,60 @@ library(countdown)
 :::
 
 
+# Exercises {.exercise}
+
+::: {.notes}
+When we get to the green Exercises page like this, it will be your turn to practice what you've just learned. These slides include a link to the exercise instructions on the workshop website.
+:::
+
+
+## Sticky notes
+
+::: {.center}
+
+::: columns
+
+::: {.column width="40%"}
+
+### [Red]{style="color:red;"}  
+"Help!"  
+
+![](images/sticky_note.png){width=600 fig-alt="A person sitting at a desk at a laptop computer. The laptop has a red sticky note attached to the back of the monitor." .drop}
+:::
+
+::: {.column width="60%"}
+
+### [Blue]{style="color:blue;"}  
+"All done!"
+
+![](images/sticky_note_blue.png){width=600 fig-alt="A person sitting at a desk at a laptop computer. The laptop has a red sticky note attached to the back of the monitor." .drop}
+:::
+:::
+
+:::
+
+::: {.notes}
+- We are available to offer help during the exercises.
+- For the in-person participants: If you have a question or need help, raise your hand or put a red sticky note on your laptop.
+- Put a blue sticky note on your laptop to tell us that you are done with the exercise.
+- For online participants- raise your virtual hand or send a message.
+
+- Feel free to work together on exercises!
+:::
+
+
 # The powers of <br> ![](images/super_quarto.png){width=600 fig-alt="Superman holding a pencil with city buildings in the background and Quarto written below him"} {.dark}
 
 ::: {.notes}
 - Ok, let's dive into the world of creating documents using Quarto.
-- Quarto is a multi-language next generation version of R Markdown.
+- Quarto is an open-source scientific and technical publishing system.
+- Allows you to analyze data, weave together code output with text, and publish your story in multiple formats.
 - What can you do with Quarto?
     - Generate dynamic output using R. Python, and other languages that can be regenerated when the data change.
     - Has support for equations and citations.
     - Integrates well into RStudio and other code editors
     - Can create interactive documents by embedding html widgets and Shiny.
+- It solves the problem of moving between multiple software during your data workflow.
 - It's quite powerful!
 :::
 
@@ -66,7 +116,7 @@ library(countdown)
 :::
 
 ::: {.notes}
-- Quarto can produce high quality documents in HTML, PDF or MS Word
+- Quarto can produce high quality documents in HTML, PDF or MS Word.
 - Has the ability to output content using standardized templates, as shown here for a refuge report.
 :::
 
@@ -116,8 +166,9 @@ Finally, it's possible to write books using Quarto, such as the R for Data Scien
 :::
 
 ::: {.notes}
-- How does it work? If you are familiar with R Markdown, you are probably familiar with this pipeline.
-- You start out with an R Markdown document, which includes text and R code.
+- How does it work and how does it compare with R Markdown? 
+- If you are familiar with R Markdown, you might be familiar with the two step rendering process.
+- With R Markdown, you start out with an R Markdown document, which includes text and R code.
 :::
 
 
@@ -126,7 +177,7 @@ Finally, it's possible to write books using Quarto, such as the R for Data Scien
 ![](images/render2.png){height=800 fig-alt="A diagram showing the process of rendering a document using R Markdown."}  
 
 ::: {.notes}
-- When you knit an R Markdown file, a R package "knitr" calls the engine knitr to execute your R code, and create an Markdown file that include and then uses Pandoc to produce whatever output you’ve specified.
+- When you knit an R Markdown file, an R package "knitr" calls the engine knitr to execute your R code, and create an Markdown file that include the original text and the output of your code. 
 :::
 
 ## Quarto and R Markdown
@@ -134,7 +185,7 @@ Finally, it's possible to write books using Quarto, such as the R for Data Scien
 ![](images/render3.png){height=800 fig-alt="A diagram showing the process of rendering a document using R Markdown."}  
 
 ::: {.notes}
-
+- In the final step, R Markdown calls on Pandoc, a universal document converter, to produce whatever output you’ve specified.
 :::
 
 
@@ -145,7 +196,7 @@ Finally, it's possible to write books using Quarto, such as the R for Data Scien
 :::
 
 ::: {.notes}
-- A Quarto .qmd file on the other hand can be composed of text and R, Python, and/or Julia code. 
+- The process for rendering a Quarto document is similar to R Markdown, with a notable change. A Quarto .qmd file on the other hand can be composed of text and R, Python, and/or Julia code. 
 :::
 
 
@@ -154,8 +205,8 @@ Finally, it's possible to write books using Quarto, such as the R for Data Scien
 ![](images/render5.png){height=800 fig-alt="A diagram showing the process of rendering a document using Quarto."}  
 
 ::: {.notes}
-- Either the knitr or jupyter engines will then render your text and code into a Markdown file followed by Pandoc producing whatever output you’ve specified.
-Quarto accomplishes this by being fully separate from the R ecosystem. You can even run it from the command-line interface (i.e., the shell or terminal), if you want to. 
+- Depending on the code language in the document, Quarto will then assign either the knitr or jupyter engine to render your text and code into a Markdown file followed by Pandoc producing whatever output you’ve specified.
+Quarto accomplishes this by being fully separated from the R ecosystem. You can even run it from the command-line interface (i.e., the shell or terminal), if you want to. 
 :::
 
 
@@ -201,17 +252,25 @@ Quarto accomplishes this by being fully separate from the R ecosystem. You can e
 :::
 
 ::: {.notes}
-
+- Now we know what Quarto is and what it can do for us, you might be wondering, when should I use Quarto and when should I stick with my current approach?
+[click]
+- As I mentioned, Quarto is able to seamlessly weave together text and code output. Therefore, if you are working on reports that contain text, plots, tables and statistical results, you should consider using Quarto.
+[click]
+- With Quarto, you can easily update output when the data are updated.Therefore, if you find yourself recreating annual reports, then Quarto could improve your efficiency.
+[click]
+- Similarly, if you need to reproduce an analysis, Quarto would be your friend.
+[click]
+- Finally, you might be in a situation when you need to regenerate a standardize report for different species or across different regions. The layout and analysis are unchanged, but the data input do change. Quarto can do this by specifying what's called "parameters".
 :::
 
 
 ## {background-image="images/plover_decision.png" background-size=contain}
 
 ::: {.notes}
-You're at a crossroads! How do you decide whether to move from R Markdown to Quarto?
+If you are coming as an R Markdown user, you're at a crossroads! How do you decide whether to move from R Markdown to Quarto? I'll touch on some of the advantages of each system.
 :::
 
-## Advantage of R Markdown
+## Advantages of R Markdown
 
 ::: columns
 
@@ -230,6 +289,7 @@ You're at a crossroads! How do you decide whether to move from R Markdown to Qua
 
 ::: {.notes}
 - If you like using R Markdown, there’s no need to switch! R Markdown will continue to be supported and work as it always has been. You’re welcome to try Quarto if you like, but there’s no need to switch. 
+[click]
 - If you have a R Markdown file that includes custom tools, there is a chance that they might not yet in available in Quarto. If this is the case, you're of course welcome to stick with R Markdown. As they say, if it ain't broke, don't fix it.
 :::
 
@@ -243,11 +303,11 @@ You're at a crossroads! How do you decide whether to move from R Markdown to Qua
 :::{.incremental}
 - No requirement for R
 - Fewer package dependencies
-- revealjs slides are easier to work with
+- Revealjs slides are easier to work with
 - Better cross referencing of figures, tables, and citations
-- Quarto extensions allow for easier customization
-- Quarto projects make it easier to customize websites and collaborate
-- The future
+- Quarto [extensions](https://quarto.org/docs/extensions/){target="_blank"} allow for easier customization
+- Quarto projects make it easier to customize websites, create books, and collaborate
+- It's the future! {{< fa rocket >}}
 :::
 
 :::
@@ -263,8 +323,8 @@ You're at a crossroads! How do you decide whether to move from R Markdown to Qua
   - No requirement for R (multilingual)
     - R, Python, Julia, Javascript
   - More streamline and less R package dependencies
-    - Use revealjs directly for pretty slides, rather than relying on R packages.
-  - Cross referencing tables and tables in the text is more straightforward, as is inserting and managing citations.
+    - Use revealjs directly for pretty slides, rather than relying on host of R packages.
+  - Cross referencing figures and tables in the text is more straightforward, as is inserting and managing citations.
   - A growing number of Quarto extensions add functionality
     - Allow you use customized templates and 
   - Quarto projects
@@ -273,7 +333,7 @@ You're at a crossroads! How do you decide whether to move from R Markdown to Qua
 :::
 
 
-## Three ways to render Quarto
+## Three ways to render Quarto documents
 
 \
 
@@ -284,6 +344,8 @@ You're at a crossroads! How do you decide whether to move from R Markdown to Qua
 ### 1.  
 **RStudio GUI**
 ![](images/quarto_render1.png){fig-alt="A screenshot of a Quarto document in RStudio. The Render button is circled in red" .drop}
+
+![](images/render_icon.png){width=200 .drop fig-alt="The render icon in RStudio."}
 :::
 :::
 
@@ -313,24 +375,37 @@ quarto::quarto_render(input = ___,
 :::
 
 ::: {.notes}
-
+- Creating output from a Quarto document is called "rendering".
+- It is something that you will do repeatedly to view updates to a Quarto file, and make sure that everything is running properly.
+- Therefore, it's worth noting now that there are 3 different approaches to rendering a Quarto file.
+1. The first and most common method is through the Rstudio application interface. After you open a Quarto file, you will see a button on the top menu call "render".
+2. Another approach is render directly to the Quarto program using the command line interface. To do this, click on the "Terminal" menu in RStudio and type "quarto render". You can type "quarto preview", which will both render the document and open a preview window to view the output.
+3. The 3rd approach is to render a Quarto document using the Quarto R package. To do this, install and load the Quarto R package in RStudio. In the console, type (quarto_render(some arguments...)).
 :::
 
 
-## Authoring: Source and Visual panes
+## Authoring in RStudio
 
 ::: columns
 ::: {.column width="50%" .center}
+
+### Source editor
+
 ![](images/source_pane.png){fig-alt="A screenshot of a Quarto document in RStudio viewed as Source." .drop}
 :::
 
 ::: {.column width="50%" .center}
+
+### Visual editor
+
 ![](images/visual_pane.png){fig-alt="A screenshot of a Quarto document in RStudio viewed as Visual." .drop}
 :::
 :::
 
 ::: {.notes}
-
+- For our purposes, we will be using RStudio to edit Quarto documents. Within RStudio, there are two editors available to make changes to Quarto documents: the Source editor and the Visual editor. 
+- The source editor displays the raw Quarto document. It is traditional approach to editing documents and most used by those familiar with Quarto.  
+- The Visual editor shows changes in real time and previews what the document looks like without re-rendering it. It also provides a menu with buttons for things like support for inserting tables, figures, and citations; and formatting fonts and headers. It provides an easier interface for those learning Quarto who are familiar with word processing software like Word.
 :::
 
 
@@ -352,26 +427,25 @@ countdown::countdown(10, bottom = 0)
 # Anatomy of a Quarto File {.dark}
 
 ::: {.notes}
-
+- In the last section, I introduced Quarto as an approach to creating dynamic documents that combine code and text. I outlined the process for rendering a Quarto document and discussed how that compares to R Markdown. I showed 3 approaches for rendering a Quarto document and two options for editing a Quarto document. 
+- We will now move on to describing the component that make up all Quarto documents.
 :::
 
 
 ## ![](images/quarto_example1.png)
 
 ::: {.notes}
-
+- Here's an example of a Quarto document. It shows 3 basic components of Quarto documents: metadata (YAML header), the document body, and code. In the next 3 presentations, we will cover how each of these components come together to create a Quarto document.
 :::
 
 
-## YAML header
+## YAML
 
 **Y**et **A**nother **M**arkup **L**anguage = document metadata!
 
 ::: columns
 
 ::: {.column width="50%"}
-
-::: {.fragment}
 ```{yml}
 #| echo: TRUE
 #| eval: FALSE
@@ -382,37 +456,35 @@ author: "FWS staff"
 format: 
   revealjs:
     theme: [default, refuge_light.scss]
-    subtitle: "Overview"
-    height: 900
-    width: 1600
 editor: source
 ---
 ```
 :::
 
-:::
-
 ::: {.column width="50%" .small .incremental}
 - Starts and ends with "\-\-\-"
-- Uses key-value pairs: `key: value`
-  - *Picky about spacing and indentations!*
+- Uses key-value pairs: `key: value` that can nest
+- *Picky about spacing and indentations!*
 - Processed during rendering
 - Including options for:
   - Title, authors, date
   - File output(s) (e.g., `html`, `docx`)
   - Styling (e.g., `theme`, `fig-width`)
   - Parameters
+   - And more...
 :::
 
 :::
 
 
 ::: {.notes}
-
+- The YAML provides document level metadata. 
+- It is a language that follows a standard syntax.
+    - 
 :::
 
 
-## YAML header: [Options]{.gray-bold} 
+## YAML metadata: [Options]{.gray-bold} 
 
 ::: {.incremental}
 - Options are dependent on the file output (**many** options {{< fa face-flushed >}})  
@@ -420,18 +492,20 @@ editor: source
 
 ::: {.fragment}
 ```{=html}
-<iframe width="1600" height="500" src="https://quarto.org/docs/reference/formats/docx.html" title="Quarto HTML Options guidance"></iframe>
+<iframe width="1600" height="600" src="https://quarto.org/docs/reference/formats/docx.html" title="Quarto HTML Options guidance"></iframe>
 ```
 :::
 
 :::
 
 ::: {.notes}
-
+- The options available in the YAML are dependent on the file format that you select.
+- There are a **ton** of options!
+- To give you an idea, here's the Quarto guidance that shows YAML options for a Quarto document rendered to MS Word.
 :::
 
 
-## YAML header: [Options]{.gray-bold}
+## YAML metadata: [Options]{.gray-bold}
 
 ::: columns
 
@@ -445,7 +519,7 @@ editor: source
 
 ::: {.column width=50%"}
 
-![](images/yml_assistant.png){fig-alt="A screenshot of a yaml for a quarto document in RStudio showing the drop-down menu with options available."}
+![](images/yml_assistant.png){width=700 fig-alt="A screenshot of a yaml for a quarto document in RStudio showing the drop-down menu with options available." .drop}
 :::
 
 :::

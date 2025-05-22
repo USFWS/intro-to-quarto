@@ -7,13 +7,12 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-0626ff4d7a71b55c8707dcae1d04a9b6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.553">
+  <meta name="generator" content="quarto-1.6.39">
 
-  <title>Introduction to Quarto - | Introduction | to Quarto</title>
+  <title>Introduction to Quarto – quarto-input4fe0236f9cdb6d9b</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -44,7 +43,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -97,209 +96,11 @@
     code span.vs { color: #032f62; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-13c1135c056b58e91d781aa8ba7c7273.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-  <style type="text/css">
-
-  .callout {
-    margin-top: 1em;
-    margin-bottom: 1em;  
-    border-radius: .25rem;
-  }
-
-  .callout.callout-style-simple { 
-    padding: 0em 0.5em;
-    border-left: solid #acacac .3rem;
-    border-right: solid 1px silver;
-    border-top: solid 1px silver;
-    border-bottom: solid 1px silver;
-    display: flex;
-  }
-
-  .callout.callout-style-default {
-    border-left: solid #acacac .3rem;
-    border-right: solid 1px silver;
-    border-top: solid 1px silver;
-    border-bottom: solid 1px silver;
-  }
-
-  .callout .callout-body-container {
-    flex-grow: 1;
-  }
-
-  .callout.callout-style-simple .callout-body {
-    font-size: 1rem;
-    font-weight: 400;
-  }
-
-  .callout.callout-style-default .callout-body {
-    font-size: 0.9rem;
-    font-weight: 400;
-  }
-
-  .callout.callout-titled.callout-style-simple .callout-body {
-    margin-top: 0.2em;
-  }
-
-  .callout:not(.callout-titled) .callout-body {
-      display: flex;
-  }
-
-  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
-    padding-left: 1.6em;
-  }
-
-  .callout.callout-titled .callout-header {
-    padding-top: 0.2em;
-    margin-bottom: -0.2em;
-  }
-
-  .callout.callout-titled .callout-title  p {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-  }
-    
-  .callout.callout-titled.callout-style-simple .callout-content  p {
-    margin-top: 0;
-  }
-
-  .callout.callout-titled.callout-style-default .callout-content  p {
-    margin-top: 0.7em;
-  }
-
-  .callout.callout-style-simple div.callout-title {
-    border-bottom: none;
-    font-size: .9rem;
-    font-weight: 600;
-    opacity: 75%;
-  }
-
-  .callout.callout-style-default  div.callout-title {
-    border-bottom: none;
-    font-weight: 600;
-    opacity: 85%;
-    font-size: 0.9rem;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-  }
-
-  .callout.callout-style-default div.callout-content {
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-  }
-
-  .callout.callout-style-simple .callout-icon::before {
-    height: 1rem;
-    width: 1rem;
-    display: inline-block;
-    content: "";
-    background-repeat: no-repeat;
-    background-size: 1rem 1rem;
-  }
-
-  .callout.callout-style-default .callout-icon::before {
-    height: 0.9rem;
-    width: 0.9rem;
-    display: inline-block;
-    content: "";
-    background-repeat: no-repeat;
-    background-size: 0.9rem 0.9rem;
-  }
-
-  .callout-title {
-    display: flex
-  }
-    
-  .callout-icon::before {
-    margin-top: 1rem;
-    padding-right: .5rem;
-  }
-
-  .callout.no-icon::before {
-    display: none !important;
-  }
-
-  .callout.callout-titled .callout-body > .callout-content > :last-child {
-    padding-bottom: 0.5rem;
-    margin-bottom: 0;
-  }
-
-  .callout.callout-titled .callout-icon::before {
-    margin-top: .5rem;
-    padding-right: .5rem;
-  }
-
-  .callout:not(.callout-titled) .callout-icon::before {
-    margin-top: 1rem;
-    padding-right: .5rem;
-  }
-
-  /* Callout Types */
-
-  div.callout-note {
-    border-left-color: #4582ec !important;
-  }
-
-  div.callout-note .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
-  }
-
-  div.callout-note.callout-style-default .callout-title {
-    background-color: #dae6fb
-  }
-
-  div.callout-important {
-    border-left-color: #d9534f !important;
-  }
-
-  div.callout-important .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
-  }
-
-  div.callout-important.callout-style-default .callout-title {
-    background-color: #f7dddc
-  }
-
-  div.callout-warning {
-    border-left-color: #f0ad4e !important;
-  }
-
-  div.callout-warning .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
-  }
-
-  div.callout-warning.callout-style-default .callout-title {
-    background-color: #fcefdc
-  }
-
-  div.callout-tip {
-    border-left-color: #02b875 !important;
-  }
-
-  div.callout-tip .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
-  }
-
-  div.callout-tip.callout-style-default .callout-title {
-    background-color: #ccf1e3
-  }
-
-  div.callout-caution {
-    border-left-color: #fd7e14 !important;
-  }
-
-  div.callout-caution .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
-  }
-
-  div.callout-caution.callout-style-default .callout-title {
-    background-color: #ffe5d0
-  }
-
-  </style>
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -425,17 +226,21 @@ to Quarto</div></h1>
           display:block!important;
       }</style></aside>
 </section>
-<section id="outline" class="slide level2 center">
+<section id="outline" class="slide level2">
 <h2>Outline</h2>
-<ul>
-<li>Overview of Quarto</li>
-<li>Components of a Quarto document
-<ul>
-<li>YAML metadata</li>
-<li>Document body</li>
-<li>Code blocks</li>
-</ul></li>
-</ul>
+<ol type="1">
+<li>Overview of Quarto (25 mins)</li>
+<li>YAML metadata (20 min)</li>
+</ol>
+<p>BREAK (10 min)</p>
+<ol start="3" type="1">
+<li>Document body (25 min)</li>
+<li>Code blocks (25 min)</li>
+</ol>
+<p>BREAK (10 min)</p>
+<ol start="5" type="1">
+<li>Final exercise and wrap-up (20 min)</li>
+</ol>
 <aside class="notes">
 <ul>
 <li>This workshop serves as an introduction to using Quarto to create reports.</li>
@@ -456,12 +261,64 @@ to Quarto</div></h1>
       }</style></aside>
 </section>
 <section>
+<section id="exercises" class="title-slide slide level1 exercise center">
+<h1>Exercises</h1>
+<aside class="notes">
+<p>When we get to the green Exercises page like this, it will be your turn to practice what you’ve just learned. These slides include a link to the exercise instructions on the workshop website.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="sticky-notes" class="slide level2">
+<h2>Sticky notes</h2>
+<div class="center">
+<div class="columns">
+<div class="column" style="width:40%;">
+<h3 id="red"><span style="color:red;">Red</span></h3>
+<p>“Help!”</p>
+<p><img data-src="images/sticky_note.png" class="drop" alt="A person sitting at a desk at a laptop computer. The laptop has a red sticky note attached to the back of the monitor." width="600"></p>
+</div><div class="column" style="width:60%;">
+<h3 id="blue"><span style="color:blue;">Blue</span></h3>
+<p>“All done!”</p>
+<p><img data-src="images/sticky_note_blue.png" class="drop" alt="A person sitting at a desk at a laptop computer. The laptop has a red sticky note attached to the back of the monitor." width="600"></p>
+</div></div>
+</div>
+<aside class="notes">
+<ul>
+<li><p>We are available to offer help during the exercises.</p></li>
+<li><p>For the in-person participants: If you have a question or need help, raise your hand or put a red sticky note on your laptop.</p></li>
+<li><p>Put a blue sticky note on your laptop to tell us that you are done with the exercise.</p></li>
+<li><p>For online participants- raise your virtual hand or send a message.</p></li>
+<li><p>Feel free to work together on exercises!</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
 <section id="the-powers-of" class="title-slide slide level1 dark center">
 <h1>The powers of <br> <img data-src="images/super_quarto.png" alt="Superman holding a pencil with city buildings in the background and Quarto written below him" width="600"></h1>
 <aside class="notes">
 <ul>
 <li>Ok, let’s dive into the world of creating documents using Quarto.</li>
-<li>Quarto is a multi-language next generation version of R Markdown.</li>
+<li>Quarto is an open-source scientific and technical publishing system.</li>
+<li>Allows you to analyze data, weave together code output with text, and publish your story in multiple formats.</li>
 <li>What can you do with Quarto?
 <ul>
 <li>Generate dynamic output using R. Python, and other languages that can be regenerated when the data change.</li>
@@ -469,6 +326,7 @@ to Quarto</div></h1>
 <li>Integrates well into RStudio and other code editors</li>
 <li>Can create interactive documents by embedding html widgets and Shiny.</li>
 </ul></li>
+<li>It solves the problem of moving between multiple software during your data workflow.</li>
 <li>It’s quite powerful!</li>
 </ul>
 <style type="text/css">
@@ -490,7 +348,7 @@ to Quarto</div></h1>
 </div>
 <aside class="notes">
 <ul>
-<li>Quarto can produce high quality documents in HTML, PDF or MS Word</li>
+<li>Quarto can produce high quality documents in HTML, PDF or MS Word.</li>
 <li>Has the ability to output content using standardized templates, as shown here for a refuge report.</li>
 </ul>
 <style type="text/css">
@@ -573,8 +431,9 @@ to Quarto</div></h1>
 </div>
 <aside class="notes">
 <ul>
-<li>How does it work? If you are familiar with R Markdown, you are probably familiar with this pipeline.</li>
-<li>You start out with an R Markdown document, which includes text and R code.</li>
+<li>How does it work and how does it compare with R Markdown?</li>
+<li>If you are familiar with R Markdown, you might be familiar with the two step rendering process.</li>
+<li>With R Markdown, you start out with an R Markdown document, which includes text and R code.</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -593,7 +452,7 @@ to Quarto</div></h1>
 <p><img data-src="images/render2.png" alt="A diagram showing the process of rendering a document using R Markdown." height="800"></p>
 <aside class="notes">
 <ul>
-<li>When you knit an R Markdown file, a R package “knitr” calls the engine knitr to execute your R code, and create an Markdown file that include and then uses Pandoc to produce whatever output you’ve specified.</li>
+<li>When you knit an R Markdown file, an R package “knitr” calls the engine knitr to execute your R code, and create an Markdown file that include the original text and the output of your code.</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -611,7 +470,9 @@ to Quarto</div></h1>
 <h2>Quarto and R Markdown</h2>
 <p><img data-src="images/render3.png" alt="A diagram showing the process of rendering a document using R Markdown." height="800"></p>
 <aside class="notes">
-
+<ul>
+<li>In the final step, R Markdown calls on Pandoc, a universal document converter, to produce whatever output you’ve specified.</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -631,7 +492,7 @@ to Quarto</div></h1>
 </div>
 <aside class="notes">
 <ul>
-<li>A Quarto .qmd file on the other hand can be composed of text and R, Python, and/or Julia code.</li>
+<li>The process for rendering a Quarto document is similar to R Markdown, with a notable change. A Quarto .qmd file on the other hand can be composed of text and R, Python, and/or Julia code.</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -650,7 +511,7 @@ to Quarto</div></h1>
 <p><img data-src="images/render5.png" alt="A diagram showing the process of rendering a document using Quarto." height="800"></p>
 <aside class="notes">
 <ul>
-<li>Either the knitr or jupyter engines will then render your text and code into a Markdown file followed by Pandoc producing whatever output you’ve specified. Quarto accomplishes this by being fully separate from the R ecosystem. You can even run it from the command-line interface (i.e., the shell or terminal), if you want to.</li>
+<li>Depending on the code language in the document, Quarto will then assign either the knitr or jupyter engine to render your text and code into a Markdown file followed by Pandoc producing whatever output you’ve specified. Quarto accomplishes this by being fully separated from the R ecosystem. You can even run it from the command-line interface (i.e., the shell or terminal), if you want to.</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -703,10 +564,15 @@ to Quarto</div></h1>
 </div>
 </div><div class="column" style="width:60%;">
 <p><img data-src="images/plover_thinking.png" alt="An cartoon of a snowy plover thinking. There is a question mark above it's head." height="800"></p>
-</div>
-</div>
+</div></div>
 <aside class="notes">
-
+<ul>
+<li>Now we know what Quarto is and what it can do for us, you might be wondering, when should I use Quarto and when should I stick with my current approach? [click]</li>
+<li>As I mentioned, Quarto is able to seamlessly weave together text and code output. Therefore, if you are working on reports that contain text, plots, tables and statistical results, you should consider using Quarto. [click]</li>
+<li>With Quarto, you can easily update output when the data are updated.Therefore, if you find yourself recreating annual reports, then Quarto could improve your efficiency. [click]</li>
+<li>Similarly, if you need to reproduce an analysis, Quarto would be your friend. [click]</li>
+<li>Finally, you might be in a situation when you need to regenerate a standardize report for different species or across different regions. The layout and analysis are unchanged, but the data input do change. Quarto can do this by specifying what’s called “parameters”.</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -722,7 +588,7 @@ to Quarto</div></h1>
 <section id="section-1" class="slide level2" data-background-image="images/plover_decision.png" data-background-size="contain">
 <h2></h2>
 <aside class="notes">
-<p>You’re at a crossroads! How do you decide whether to move from R Markdown to Quarto?</p>
+<p>If you are coming as an R Markdown user, you’re at a crossroads! How do you decide whether to move from R Markdown to Quarto? I’ll touch on some of the advantages of each system.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -735,8 +601,8 @@ to Quarto</div></h1>
           display:block!important;
       }</style></aside>
 </section>
-<section id="advantage-of-r-markdown" class="slide level2">
-<h2>Advantage of R Markdown</h2>
+<section id="advantages-of-r-markdown" class="slide level2">
+<h2>Advantages of R Markdown</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
 <p><br>
@@ -751,11 +617,10 @@ to Quarto</div></h1>
 <p><img data-src="images/rmarkdown_packages.png" class="drop quarto-figure quarto-figure-center" height="750"></p>
 </figure>
 </div>
-</div>
-</div>
+</div></div>
 <aside class="notes">
 <ul>
-<li>If you like using R Markdown, there’s no need to switch! R Markdown will continue to be supported and work as it always has been. You’re welcome to try Quarto if you like, but there’s no need to switch.</li>
+<li>If you like using R Markdown, there’s no need to switch! R Markdown will continue to be supported and work as it always has been. You’re welcome to try Quarto if you like, but there’s no need to switch. [click]</li>
 <li>If you have a R Markdown file that includes custom tools, there is a chance that they might not yet in available in Quarto. If this is the case, you’re of course welcome to stick with R Markdown. As they say, if it ain’t broke, don’t fix it.</li>
 </ul>
 <style type="text/css">
@@ -778,17 +643,16 @@ to Quarto</div></h1>
 <ul>
 <li class="fragment">No requirement for R</li>
 <li class="fragment">Fewer package dependencies</li>
-<li class="fragment">revealjs slides are easier to work with</li>
+<li class="fragment">Revealjs slides are easier to work with</li>
 <li class="fragment">Better cross referencing of figures, tables, and citations</li>
-<li class="fragment">Quarto extensions allow for easier customization</li>
-<li class="fragment">Quarto projects make it easier to customize websites and collaborate</li>
-<li class="fragment">The future</li>
+<li class="fragment">Quarto <a href="https://quarto.org/docs/extensions/" target="_blank">extensions</a> allow for easier customization</li>
+<li class="fragment">Quarto projects make it easier to customize websites, create books, and collaborate</li>
+<li class="fragment">It’s the future! <i class="fa-solid fa-rocket" aria-label="rocket"></i></li>
 </ul>
 </div>
 </div><div class="column" style="width:40%;">
 <p><img data-src="images/quarto.png" class="drop"></p>
-</div>
-</div>
+</div></div>
 <aside class="notes">
 <ul>
 <li>That said, there are a number of advantage to using Quarto, including:
@@ -799,9 +663,9 @@ to Quarto</div></h1>
 </ul></li>
 <li>More streamline and less R package dependencies
 <ul>
-<li>Use revealjs directly for pretty slides, rather than relying on R packages.</li>
+<li>Use revealjs directly for pretty slides, rather than relying on host of R packages.</li>
 </ul></li>
-<li>Cross referencing tables and tables in the text is more straightforward, as is inserting and managing citations.</li>
+<li>Cross referencing figures and tables in the text is more straightforward, as is inserting and managing citations.</li>
 <li>A growing number of Quarto extensions add functionality
 <ul>
 <li>Allow you use customized templates and</li>
@@ -825,26 +689,24 @@ to Quarto</div></h1>
           display:block!important;
       }</style></aside>
 </section>
-<section id="three-ways-to-render-quarto" class="slide level2">
-<h2>Three ways to render Quarto</h2>
+<section id="three-ways-to-render-quarto-documents" class="slide level2">
+<h2>Three ways to render Quarto documents</h2>
 <p><br>
 </p>
 <div class="columns">
 <div class="column center" style="width:32%;">
 <div class="fragment" data-fragment-index="1">
-<!-- -->
 <h3 id="section-2">1.</h3>
 <p><strong>RStudio GUI</strong> <img data-src="images/quarto_render1.png" class="drop" alt="A screenshot of a Quarto document in RStudio. The Render button is circled in red"></p>
+<p><img data-src="images/render_icon.png" class="drop" alt="The render icon in RStudio." width="200"></p>
 </div>
 </div><div class="column center" style="width:32%;">
 <div class="fragment" data-fragment-index="2">
-<!-- -->
 <h3 id="section-3">2.</h3>
 <p><strong>Quarto command line interface (CLI)</strong> <img data-src="images/quarto_render2.png" class="drop" alt="A screenshot of the command line terminal in RStudio. quarto render is typed in."></p>
 </div>
 </div><div class="column center" style="width:36%;">
 <div class="fragment" data-fragment-index="3">
-<!-- -->
 <h3 id="section-4">3.</h3>
 <p><strong>Quarto R package</strong></p>
 <div class="small">
@@ -852,10 +714,18 @@ to Quarto</div></h1>
 <span id="cb1-2"><a></a>                      <span class="at">output_format =</span> ___)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 <aside class="notes">
-
+<ul>
+<li>Creating output from a Quarto document is called “rendering”.</li>
+<li>It is something that you will do repeatedly to view updates to a Quarto file, and make sure that everything is running properly.</li>
+<li>Therefore, it’s worth noting now that there are 3 different approaches to rendering a Quarto file.</li>
+</ul>
+<ol type="1">
+<li>The first and most common method is through the Rstudio application interface. After you open a Quarto file, you will see a button on the top menu call “render”.</li>
+<li>Another approach is render directly to the Quarto program using the command line interface. To do this, click on the “Terminal” menu in RStudio and type “quarto render”. You can type “quarto preview”, which will both render the document and open a preview window to view the output.</li>
+<li>The 3rd approach is to render a Quarto document using the Quarto R package. To do this, install and load the Quarto R package in RStudio. In the console, type (quarto_render(some arguments…)).</li>
+</ol>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -868,17 +738,23 @@ to Quarto</div></h1>
           display:block!important;
       }</style></aside>
 </section>
-<section id="authoring-source-and-visual-panes" class="slide level2">
-<h2>Authoring: Source and Visual panes</h2>
+<section id="authoring-in-rstudio" class="slide level2">
+<h2>Authoring in RStudio</h2>
 <div class="columns">
 <div class="column center" style="width:50%;">
+<h3 id="source-editor">Source editor</h3>
 <p><img data-src="images/source_pane.png" class="drop" alt="A screenshot of a Quarto document in RStudio viewed as Source."></p>
 </div><div class="column center" style="width:50%;">
+<h3 id="visual-editor">Visual editor</h3>
 <p><img data-src="images/visual_pane.png" class="drop" alt="A screenshot of a Quarto document in RStudio viewed as Visual."></p>
-</div>
-</div>
+</div></div>
 <aside class="notes">
-
+<ul>
+<li>For our purposes, we will be using RStudio to edit Quarto documents. Within RStudio, there are two editors available to make changes to Quarto documents: the Source editor and the Visual editor.</li>
+<li>The source editor displays the raw Quarto document. It is traditional approach to editing documents and most used by those familiar with Quarto.<br>
+</li>
+<li>The Visual editor shows changes in real time and previews what the document looks like without re-rendering it. It also provides a menu with buttons for things like support for inserting tables, figures, and citations; and formatting fonts and headers. It provides an easier interface for those learning Quarto who are familiar with word processing software like Word.</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -899,7 +775,7 @@ to Quarto</div></h1>
 </p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_8525c7bb" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_b3a01df7" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -924,7 +800,10 @@ to Quarto</div></h1>
 <section id="anatomy-of-a-quarto-file" class="title-slide slide level1 dark center">
 <h1>Anatomy of a Quarto File</h1>
 <aside class="notes">
-
+<ul>
+<li>In the last section, I introduced Quarto as an approach to creating dynamic documents that combine code and text. I outlined the process for rendering a Quarto document and discussed how that compares to R Markdown. I showed 3 approaches for rendering a Quarto document and two options for editing a Quarto document.</li>
+<li>We will now move on to describing the component that make up all Quarto documents.</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -940,7 +819,9 @@ to Quarto</div></h1>
 <section id="section-5" class="slide level2">
 <h2><img data-src="images/quarto_example1.png"></h2>
 <aside class="notes">
-
+<ul>
+<li>Here’s an example of a Quarto document. It shows 3 basic components of Quarto documents: metadata (YAML header), the document body, and code. In the next 3 presentations, we will cover how each of these components come together to create a Quarto document.</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -953,12 +834,11 @@ to Quarto</div></h1>
           display:block!important;
       }</style></aside>
 </section>
-<section id="yaml-header" class="slide level2">
-<h2>YAML header</h2>
+<section id="yaml" class="slide level2">
+<h2>YAML</h2>
 <p><strong>Y</strong>et <strong>A</strong>nother <strong>M</strong>arkup <strong>L</strong>anguage = document metadata!</p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="fragment">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource yml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a></a><span class="pp">---</span></span>
 <span id="cb2-2"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Introduction to Quarto"</span></span>
@@ -966,20 +846,14 @@ to Quarto</div></h1>
 <span id="cb2-4"><a></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
 <span id="cb2-5"><a></a><span class="at">  </span><span class="fu">revealjs</span><span class="kw">:</span></span>
 <span id="cb2-6"><a></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">default</span><span class="kw">,</span><span class="at"> refuge_light.scss</span><span class="kw">]</span></span>
-<span id="cb2-7"><a></a><span class="at">    </span><span class="fu">subtitle</span><span class="kw">:</span><span class="at"> </span><span class="st">"Overview"</span></span>
-<span id="cb2-8"><a></a><span class="at">    </span><span class="fu">height</span><span class="kw">:</span><span class="at"> </span><span class="dv">900</span></span>
-<span id="cb2-9"><a></a><span class="at">    </span><span class="fu">width</span><span class="kw">:</span><span class="at"> </span><span class="dv">1600</span></span>
-<span id="cb2-10"><a></a><span class="fu">editor</span><span class="kw">:</span><span class="at"> source</span></span>
-<span id="cb2-11"><a></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<span id="cb2-7"><a></a><span class="fu">editor</span><span class="kw">:</span><span class="at"> source</span></span>
+<span id="cb2-8"><a></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column small" style="width:50%;">
 <ul>
 <li class="fragment">Starts and ends with “---”</li>
-<li class="fragment">Uses key-value pairs: <code>key: value</code>
-<ul>
+<li class="fragment">Uses key-value pairs: <code>key: value</code> that can nest</li>
 <li class="fragment"><em>Picky about spacing and indentations!</em></li>
-</ul></li>
 <li class="fragment">Processed during rendering</li>
 <li class="fragment">Including options for:
 <ul>
@@ -987,12 +861,18 @@ to Quarto</div></h1>
 <li class="fragment">File output(s) (e.g., <code>html</code>, <code>docx</code>)</li>
 <li class="fragment">Styling (e.g., <code>theme</code>, <code>fig-width</code>)</li>
 <li class="fragment">Parameters</li>
+<li class="fragment">And more…</li>
 </ul></li>
 </ul>
-</div>
-</div>
+</div></div>
 <aside class="notes">
-
+<ul>
+<li>The YAML provides document level metadata.</li>
+<li>It is a language that follows a standard syntax.
+<ul>
+<li></li>
+</ul></li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1005,8 +885,8 @@ to Quarto</div></h1>
           display:block!important;
       }</style></aside>
 </section>
-<section id="yaml-header-options" class="slide level2">
-<h2>YAML header: <span class="gray-bold">Options</span></h2>
+<section id="yaml-metadata-options" class="slide level2">
+<h2>YAML metadata: <span class="gray-bold">Options</span></h2>
 <div>
 <ul>
 <li class="fragment">Options are dependent on the file output (<strong>many</strong> options <i class="fa-solid fa-face-flushed" aria-label="face-flushed"></i>)<br>
@@ -1014,11 +894,15 @@ to Quarto</div></h1>
 <li class="fragment">Search the <a href="https://quarto.org/docs/reference/">Quarto guidance</a> within your specified file format:</li>
 </ul>
 <div class="fragment">
-<iframe width="1600" height="500" src="https://quarto.org/docs/reference/formats/docx.html" title="Quarto HTML Options guidance"></iframe>
+<iframe width="1600" height="600" src="https://quarto.org/docs/reference/formats/docx.html" title="Quarto HTML Options guidance"></iframe>
 </div>
 </div>
 <aside class="notes">
-
+<ul>
+<li>The options available in the YAML are dependent on the file format that you select.</li>
+<li>There are a <strong>ton</strong> of options!</li>
+<li>To give you an idea, here’s the Quarto guidance that shows YAML options for a Quarto document rendered to MS Word.</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1031,8 +915,8 @@ to Quarto</div></h1>
           display:block!important;
       }</style></aside>
 </section>
-<section id="yaml-header-options-1" class="slide level2">
-<h2>YAML header: <span class="gray-bold">Options</span></h2>
+<section id="yaml-metadata-options-1" class="slide level2">
+<h2>YAML metadata: <span class="gray-bold">Options</span></h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="callout callout-tip callout-titled callout-style-default">
@@ -1052,9 +936,8 @@ to Quarto</div></h1>
 </div>
 </div>
 </div><div class="column" style="width:50%&quot;;">
-<p><img data-src="images/yml_assistant.png" alt="A screenshot of a yaml for a quarto document in RStudio showing the drop-down menu with options available."></p>
-</div>
-</div>
+<p><img data-src="images/yml_assistant.png" class="drop" alt="A screenshot of a yaml for a quarto document in RStudio showing the drop-down menu with options available." width="700"></p>
+</div></div>
 <aside class="notes">
 
 <style type="text/css">
@@ -1078,7 +961,7 @@ to Quarto</div></h1>
 </p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_a8907b5c" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_49a6567a" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1115,8 +998,7 @@ to Quarto</div></h1>
 <li class="fragment">Inline or block elements</li>
 </ul></li>
 </ul>
-</div>
-</div>
+</div></div>
 <aside class="notes">
 <ul>
 <li>Now we are going to get into the body of our Quarto file</li>
@@ -1167,8 +1049,7 @@ to Quarto</div></h1>
 <li>Paragraphs or sections of a document</li>
 <li>Standalone images, equations, or figures</li>
 </ul>
-</div>
-</div>
+</div></div>
 <aside class="notes">
 <ul>
 <li>If we want to style (such as italicizing) certain words within a sentence or paragraph, this would be inline styling</li>
@@ -1212,8 +1093,7 @@ inline elements of text body Markdown in a FWS report. You can make a word <em>i
 and make something a superscript<sup>1</sup>.</p>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 <aside class="notes">
 <ul>
 <li>Here’s an example showing a lot of the different options for customizing your text through inline changes</li>
@@ -1251,8 +1131,7 @@ and make something a superscript<sup>1</sup>.</p>
 <p>The solution to <span class="math inline">\(sqrt(x) = 26\)</span> is <span class="math inline">\(x = 676\)</span> and <span class="math inline">\(\pi = 3.1415...\)</span>.</p>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 <aside class="notes">
 <ul>
 <li>To make your equations look nice, you can use LaTex, which is coded using the dollar sign</li>
@@ -1298,8 +1177,7 @@ check out the <a href="www.quarto.com">Quarto webpage</a>.</p>
 my text <img data-src="images/favicon.png" class="center-inline">.</p>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 <aside class="notes">
 <ul>
 <li>Hyperlinks use square brackets for the display text, immediately followed by the URL in parentheses
@@ -1364,8 +1242,7 @@ my text <img data-src="images/favicon.png" class="center-inline">.</p>
 </div>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 <aside class="notes">
 <ul>
 <li>Spacing is really important in Markdown language</li>
@@ -1399,7 +1276,7 @@ my text <img data-src="images/favicon.png" class="center-inline">.</p>
 <h2>Block elements: <span class="gray-bold">Headers</span></h2>
 <p><br>
 </p>
-<table style="width:81%;">
+<table class="caption-top" style="width:81%;">
 <colgroup>
 <col style="width: 30%">
 <col style="width: 50%">
@@ -1489,8 +1366,7 @@ my text <img data-src="images/favicon.png" class="center-inline">.</p>
 </ul>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 <aside class="notes">
 <ul>
 <li>Lists are pretty straightforward
@@ -1539,8 +1415,7 @@ my text <img data-src="images/favicon.png" class="center-inline">.</p>
 \]</span> is an upper bound on the inner product between two vectors in an inner product space in terms of the product of the vector norms.</p>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 <aside class="notes">
 <ul>
 <li>To write out more substantial equations, you do the same thing as before, but use double dollar signs to enclose the LaTex block</li>
@@ -1585,8 +1460,7 @@ in fact, that we need to also include an image.</p>
 <p><img data-src="images/bear_singing.png" style="width:30.0%"></p>
 <p>Moving along, we will describe something else.</p>
 </div>
-</div>
-</div>
+</div></div>
 <aside class="notes">
 <ul>
 <li>To add an image on its own line, it is exactly the same as before</li>
@@ -1613,7 +1487,7 @@ in fact, that we need to also include an image.</p>
 </p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_5cd06c6b" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_20584843" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1648,8 +1522,7 @@ in fact, that we need to also include an image.</p>
 <li class="fragment">Code is displayed but not executed</li>
 </ul>
 </div>
-</div>
-</div>
+</div></div>
 <aside class="notes">
 <p>In this section, we’ll delve into one of the final elements of a Quarto document: inline code and code blocks, commonly known as code chunks.</p>
 <p>These components enable us to seamlessly integrate data analyses, visualizations, and computations right within the Quarto document, enhancing the interactive experience and improving reproducibility.</p>
@@ -1685,8 +1558,7 @@ in fact, that we need to also include an image.</p>
 <li>Chunk options are a comma-separated list (R syntax)</li>
 </ul>
 </div>
-</div>
-</div>
+</div></div>
 <aside class="notes">
 <p>The language specification must be enclosed in curly brackets to denote which programming language is being used for execution.</p>
 <p>For those of you familiar with RMarkdown, you might recall that code chunk options were traditionally included in the curly brackets after specifying the r language, using commas to separate each option.</p>
@@ -1724,8 +1596,7 @@ in fact, that we need to also include an image.</p>
 </ul></li>
 </ul>
 </div>
-</div>
-</div>
+</div></div>
 <aside class="notes">
 <p>In Quarto, while the language is still specified in the curly brackets, the chunk options are organized in a YAML format within the cell. Each option is placed on its own line, prefaced by hashtags and pipes, making the code chunk more readable and supporting a variety of programming languages.</p>
 <p>For those of you not familiar with code chunk options, don’t worry, we’ll cover these in a minute.</p>
@@ -1762,8 +1633,7 @@ in fact, that we need to also include an image.</p>
 <span id="cb19-3" class="hljs-ln-code"><a></a></span>
 <span id="cb19-4" class="hljs-ln-code"><a></a><span class="in">Some code to generate a plot...</span></span>
 <span id="cb19-5" class="hljs-ln-code"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
+</div></div>
 <p><br>
 </p>
 <div class="fragment">
@@ -1804,7 +1674,7 @@ in fact, that we need to also include an image.</p>
 <p><br>
 </p>
 <div class="small">
-<table>
+<table class="caption-top">
 <colgroup>
 <col style="width: 15%">
 <col style="width: 84%">
@@ -1909,8 +1779,7 @@ in fact, that we need to also include an image.</p>
 </div>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 <aside class="notes">
 <p>Let’s walk through an example together.</p>
 <p>In this code chunk we specify our coding language as r and use the ggplot package to plot petal width vs.&nbsp;petal length using the iris data.</p>
@@ -1952,8 +1821,7 @@ in fact, that we need to also include an image.</p>
 </div>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 <aside class="notes">
 <p>Let’s run that same code chunk again but this time we’ll include the echo = false code chunk option.</p>
 <p>By adding our echo option and specifying it as false, our output no longer includes the source code.</p>
@@ -1997,8 +1865,7 @@ in fact, that we need to also include an image.</p>
 </div>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 <aside class="notes">
 <p>We can also use code chunk options to adjust the width and height of the figure. Here we set the figure width to 3 and the figure height to 2.</p>
 <style type="text/css">
@@ -2040,8 +1907,7 @@ in fact, that we need to also include an image.</p>
 </div>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 <aside class="notes">
 <p>Or we can make the figure larger by setting the figure width and height to 5.</p>
 <style type="text/css">
@@ -2086,8 +1952,7 @@ in fact, that we need to also include an image.</p>
 </div>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 <aside class="notes">
 <p>Let’s add a caption to our figure using the fig-cap option.</p>
 <style type="text/css">
@@ -2129,8 +1994,7 @@ in fact, that we need to also include an image.</p>
 <span id="cb26-3" class="hljs-ln-code"><a></a><span class="fu">author</span><span class="kw">:</span><span class="at"> Jane Biologist</span></span>
 <span id="cb26-4" class="hljs-ln-code"><a></a><span class="fu">format</span><span class="kw">:</span><span class="at"> html</span></span>
 <span id="cb26-5" class="hljs-ln-code"><a></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
+</div></div>
 <aside class="notes">
 <p>If you’d like to apply the same code chunk options to all code chunks throughout the document, you can add them in the document’s YAML rather than adding them to every code chunk.</p>
 <style type="text/css">
@@ -2177,8 +2041,7 @@ in fact, that we need to also include an image.</p>
 <span id="cb27-8" class="hljs-ln-code"><a></a><span class="fu">execute</span><span class="kw">:</span></span>
 <span id="cb27-9" class="hljs-ln-code"><a></a><span class="at">  </span><span class="fu">echo</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
 <span id="cb27-10" class="hljs-ln-code"><a></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
+</div></div>
 <aside class="notes">
 
 <style type="text/css">
@@ -2214,8 +2077,7 @@ in fact, that we need to also include an image.</p>
 <p>This is an example of how you could use code to calculate and report that species in the iris dataset with the longest sepal length is the virginica.</p>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 <aside class="notes">
 <p>The final concept we’ll cover regarding code is inline code. Previously, we explored inline elements to modify font styles, embed images, and add hyperlinks; however, we can also incorporate code directly within the text of the document. To achieve this, we enclose the code in single backticks. After the initial backtick, we specify the code language, allowing Quarto to understand how to process the code. By using both inline code and code chunks, Quarto documents become highly dynamic and powerful tools for presenting information.</p>
 <style type="text/css">
@@ -2238,7 +2100,7 @@ in fact, that we need to also include an image.</p>
 </p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_2c89d85c" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_b612bc04" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -2255,7 +2117,7 @@ in fact, that we need to also include an image.</p>
 </p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_7326a6b6" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_aa10c86b" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -2278,20 +2140,19 @@ in fact, that we need to also include an image.</p>
 </ul></li>
 <li>Once you understand the basics, the sky’s the limit!</li>
 </ul>
-</div>
-</div>
+</div></div>
 </section>
 <section id="section-6" class="slide level2 center" data-background-image="images/plover_question.png" data-background-size="contain">
 <h2></h2>
 
-<div class="quarto-auto-generated-content">
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
 <p><a href="index.html" class="small">Intro to Quarto</a></p>
 </div>
-</div>
-</section></section>
-    </div>
-  </div>
+</div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
   <script src="../../site_libs/revealjs/dist/reveal.js"></script>
@@ -2320,7 +2181,8 @@ in fact, that we need to also include an image.</p>
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -2474,7 +2336,7 @@ in fact, that we need to also include an image.</p>
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -2608,18 +2470,7 @@ in fact, that we need to also include an image.</p>
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -2651,7 +2502,27 @@ in fact, that we need to also include an image.</p>
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp("https:\/\/usfws\.github\.io\/intro-to-quarto\/");
@@ -2659,7 +2530,7 @@ in fact, that we need to also include an image.</p>
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {
