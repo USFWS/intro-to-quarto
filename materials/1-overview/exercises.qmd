@@ -31,12 +31,12 @@ Rendering in Quarto documents refers to the process of converting a Quarto file,
 - [ ] Render the document using the Quarto CLI.  
     - <details>
       <summary>**Hint**</summary>
-      In the terminal: `quarto render 1_rendering\<input file name>`
+      In the terminal: `quarto render 1_rendering/<input file name>`
       </details>  
 - [ ] Render the document using the `quarto` R package.
     - <details>
       <summary>**Hint**</summary>
-      In the console: `quarto::quarto_render("./1_rendering/<input file>")`
+      In the console: `quarto::quarto_render("./1_rendering/<input file name>")`
       </details> 
 
 
@@ -74,13 +74,13 @@ Open `3-document_body.qmd` and make the following changes to the document:
 
 **Inline:**
 
-- [ ] Italicize the species name
-- [ ] Make the refuge name into a hyperlink to the refuge website
+- [ ] Italicize the species name.
+- [ ] Make "western snowy plover" into a hyperlink to the FWS page or Wikipedia page for the species.
 
 **Block:**
 
-- [ ] Create a new header named "My list"
-- [ ] Make an ordered and unordered list
+- [ ] Create a new header named "My List".
+- [ ] Make an ordered and an unordered list.
 - [ ] Insert an image of the western snow plover below the "U.S. Fish and Wildlife Service" header. The image can be found in the `./images` folder.
 
 
@@ -94,21 +94,23 @@ Open `4_code_chunks.qmd` and make the following changes to the rendered document
 
 - [ ] Label the plot code chunk to help you differentiate from other chunks.
 - [ ] Update the figure caption to read "Mean monthly Western..."
-- [ ] Add `+ theme_classic()` to end of ggplot script to clean up plot. Re-render.
-- [ ] Remove the output of a code chunk. Change `include` option to `false` and re-render.
+- [ ] Add `+ theme_classic()` to the end of the ggplot script to clean up the plot. Re-render.
+- [ ] Remove the output of a code chunk. Change the `include` option to `false` and re-render.
 
 
 ## Exercise 5: Your turn! {#sec-exercise5}
 
 You have now learned how to render a Quarto document and how to change the look and feel of a Quarto document by customizing the YAML metadata, inline and block elements of the text body, and code chunks. Now it is time to apply these skills by creating a Quarto document from scratch.
 
-Do your best to recreate the document below. When rendered as a `.html`, your file should look exactly the same aside from the publishing date. Use the **Tasks** as a guide.
+### Tasks
+
+Do your best to recreate the document below. When rendered as a `.html`, your file should look exactly the same aside from the publishing date.
 
 ![](images/from_scratch.png)
 
-### Tasks 
+Use the following steps to guide you:
 
-- [ ] Create a new Quarto document.
+- [ ] Create a new Quarto document, and save it to your Exercise 5 folder.
 <details>
 <summary>**Hint**</summary>
 *File* > *New File* > *Quarto Document*
