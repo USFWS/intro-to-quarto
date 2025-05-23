@@ -69,7 +69,7 @@ When we get to the green Exercises page like this, it will be your turn to pract
 ### [Red]{style="color:red;"}  
 "Help!"  
 
-![](images/sticky_note.png){width=600 fig-alt="A person sitting at a desk at a laptop computer. The laptop has a red sticky note attached to the back of the monitor." .drop}
+![](images/sticky_red.png){width=600 fig-alt="A person sitting at a desk at a laptop computer. The laptop has a red sticky note attached to the back of the monitor." .drop}
 :::
 
 ::: {.column width="60%"}
@@ -77,7 +77,7 @@ When we get to the green Exercises page like this, it will be your turn to pract
 ### [Blue]{style="color:blue;"}  
 "All done!"
 
-![](images/sticky_note_blue.png){width=600 fig-alt="A person sitting at a desk at a laptop computer. The laptop has a red sticky note attached to the back of the monitor." .drop}
+![](images/sticky_blue.png){width=600 fig-alt="A person sitting at a desk at a laptop computer. The laptop has a red sticky note attached to the back of the monitor." .drop}
 :::
 :::
 
