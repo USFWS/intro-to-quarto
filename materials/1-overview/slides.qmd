@@ -559,6 +559,8 @@ countdown::countdown(10, bottom = 0)
   - Mix text with markup instructions
 - Quarto uses Pandoc Markdown
     - Inline or block elements
+- Source (Markdown) vs. Visual (WYSIWYM)
+
 :::
 
 :::
@@ -566,18 +568,19 @@ countdown::countdown(10, bottom = 0)
 ::: {.notes}
 - Now we are going to get into the body of our Quarto file
 - Everything in the body, aside from our code, which we will get to later, is written in the language Markdown
-  - Allows us to write our text and do our styling in a machine-readable fashion
+  - Markdown is a markup language, which just means that it is a way for us to write out our document content in conjunction with instructions on how we want our content to look
+  - This allows us to style and assemble content, like text, in a machine-readable fashion
   - Luckily, it is pretty human-readable as well
-- Essentially, it is how we make our document pretty
-- Quarto uses Pandoc Markdown, which is very similar to but a little different from standard Markdown
-  - One of the key features of Pandoc Markdown
-  - Allows us to style inline elements without impacting surrounding text or other elements
+  - In short, it's how we make our product pretty
+- Quarto uses Pandoc Markdown, which is very similar to (but a little different from) standard Markdown
+  - One of the features of Pandoc Markdown is that it allows us to style inline elements (without impacting surrounding text or other elements)
   - OR style whole blocks of the document at once
   - And I’ll show you what I mean by this in a second
 - We view our Quarto file in Markdown language when we use the “Source Editor”
-  - And I’ll be walking through Quarto’s Markdown syntax
-  - However, it’s important to acknowledge that you can do the same things in the “Visual Editor” by highlighting things and clicking buttons much like you would when formatting your document in Microsoft word
-  - Both are acceptable, and you can toggle between them, but it’s always good to know the markdown because it gives you a little bit more control and can be really beneficial if your formatting gets wonky in the visual mode
+  - When you switch to the "Visual Editor" (which McCrea mentioned), you are no longer seeing Markdown but instead WYSIWYM (_?), which is just a fun way of saying "What You See is What You Mean"
+  - Today, I’ll be walking through Quarto’s Markdown syntax
+  - However, it’s important to acknowledge that you can do many of the same things in the “Visual Editor” by highlighting things and clicking buttons much like you would when formatting your document in Microsoft word
+  - Both are acceptable, and you can toggle between them, but it’s always good to know the markdown methods because it gives you a little bit more control, and I find it can be really beneficial if your formatting gets wonky in the visual mode
 
 :::
 
@@ -603,8 +606,12 @@ countdown::countdown(10, bottom = 0)
 :::
 
 ::: {.notes}
-- If we want to style (such as italicizing) certain words within a sentence or paragraph, this would be inline styling
-- Aside from text, we can also include and style images, hyperlinks, equations, and code inline
+- Inline elements are pretty self explanatory - they are in line with other elements
+  - It's content that is contiguous with other content
+  - Common inline elements are words or phrases within a larger set of text, small images (like icons), hyperlinks, equations, and short code snippets
+- Block elements, on the other hand, stand alone (these can be paragraphs, images, equations, or figures)
+- We can style inline elements independently of what surrounds them, and we can also style whole blocks at once
+  - But, inline and block styling look a little different from one another
 
 :::
 
@@ -622,12 +629,16 @@ countdown::countdown(10, bottom = 0)
 \
 
 ```{.markdown}
-This is an example of how you could change    
-inline elements of text body Markdown in a FWS  
+This is an example of how you could change  
+inline elements of text body Markdown in a FWS 
 report. You can make a word *italicized* or  
-**bold**. You can also display code, such as 
+**bold**. You can also display code, such as  
 `exp(10) + 1`. You can even ~~strikethrough~~  
-and make something a superscript^1^.
+and make something a subscript~1~ or
+superscript^1^. For more advanced customization, 
+you can use [spans]{.mark} to apply 
+custom-defined or built-in attributes to 
+[inline elements]{style="color:blue;"}.
 ```
 :::
 
@@ -641,7 +652,10 @@ inline elements of text body Markdown in a FWS
 report. You can make a word *italicized* or  
 **bold**. You can also display code, such as  
 `exp(10) + 1`. You can even ~~strikethrough~~  
-and make something a superscript^1^.
+and make something a subscript~1~ or superscript^1^.
+For more advanced customization, you can use 
+[spans]{.mark} to apply custom-defined or built-in 
+attributes to [inline elements]{style="color:blue;"}.
 :::
 :::
 
@@ -652,9 +666,14 @@ and make something a superscript^1^.
 ::: {.notes}
 - Here’s an example showing a lot of the different options for customizing your text through inline changes
 - You can use ___ for ___, …
-  - Asterix, double asterix, backtick, double tilde, caret
-  - You can also have inline code that is actually executed, but that’s getting outside of markdown language and styling, so we’ll come back to that later
-  - Essentially you will add characters to denote certain types of styling and you want to place them at both the beginning and the end so that the computer knows where to start and stop the styling
+  - Asterisk, double asterisks, back tick ....
+  - You can also have inline code that is actually executed (you’ll notice here that this expression is formatted in text that looks like code but is not actually evaluated), but that’s getting outside of markdown language and styling, so we’ll come back to that later
+  - You can also ..., double tilde, single tilde, caret - so many options
+- You'll notice a pattern here of adding different characters to indicate certain types of styling and they are placed at both the beginning and the end so that the computer knows where to start and stop the styling
+  - If you don’t know how to execute a certain type of formatting, Google is your friend – you don’t have to have all of this memorized. Most people don't.
+- For more advanced, ..., here we use a spans to add highlights and change our text color by applying class and key-value pair attributes
+  - If you have past HTML css experience, you may already be familiar with classes. If not, that is completely okay
+  - All you should know is that you can define a set of formatting rules (let's say I want bold and blue and Comic Sans text) - I can put a tag in curly braces here that says use my formatting rules I already defined somewhere else, and apply it to everything in the preceding square brackets
 
 :::
 
@@ -689,7 +708,11 @@ and $\pi = 3.1415...$.
 :::
 
 ::: {.notes}
-- To make your equations look nice, you can use LaTex, which is coded using the dollar sign
+- To make your equations look nice, you can use LaTex
+- and you define the inline snippet you want to use LaTex styling for with dollar signs
+- LaTex is actually another markup language, so anything within those dollar signs is NOT being evaluated as Markdown
+- And it's just what is commonly used for math styling and making your math look how it's supposed to
+
 :::
 
 
@@ -742,8 +765,8 @@ my text ![](images/favicon.png){.center-inline}.
 - Hyperlinks use square brackets for the display text, immediately followed by the URL in parentheses
   - So, “Quarto Webpage” is now a clickable link
 - Images are similar, but require an exclamation mark at the beginning
-  - Adding text in the square brackets is optional if you want to add alt text, but it will not display
-  - In parentheses, we provide the path to the file
+  - Adding text in the square brackets is optional if you want to add a caption, but, for inline images, it will not display
+  - And in parentheses, we provide the path to the file
 
 :::
 
@@ -756,18 +779,23 @@ my text ![](images/favicon.png){.center-inline}.
 
 ``` markdown
 Here's a paragraph. To separate it from the next  
-paragraph, you need to add one or more empty lines.
+paragraph, you need to add one or more empty 
+lines.
 
-This is a new paragraph. You can format each  
-paragraph independently. A paragraph is an  
-examine  of a block element.
+This is a new paragraph. A paragraph is an  
+example  of a block element. You can format each  
+paragraph (or a set of paragraphs) independently, 
+using divs to group regions of content and apply
+styling.
 
 ::: {.callout-tip}
 ## Custom block element  
 
 Here's an example of a block with custom 
-formatting. Everything in this block has 
-this format.
+formatting. Everything in this block has this 
+format. Specifically, this is a "callout block", 
+which is a built-in feature of Quarto that uses 
+div syntax.
 :::
 ```
 :::
@@ -779,16 +807,19 @@ this format.
 :::{.small}
 :::{.fragment}
 
-Here's a paragraph. To separate it from the next paragraph,
-you need to add one or more empty lines.
+Here's a paragraph. To separate it from the next 
+paragraph, you need to add one or more empty lines.
 
-This is a new paragraph. You can format each paragraph independently. 
-A paragraph is an examine of a block element.
+This is a new paragraph. A paragraph is an  
+example  of a block element. You can format each  
+paragraph (or a set of paragraphs) independently, 
+using divs to group regions of content and apply
+styling.
 
 ::: {.callout-tip}
 ## Custom block element
 
-Here's an example of a block with custom formatting. Everything in this block has this format.
+Here's an example of a block with custom formatting. Everything in this block has this format. Specifically, this is a "callout block", which is a built-in feature of Quarto that uses div syntax.
 :::
 
 :::
@@ -799,16 +830,21 @@ Here's an example of a block with custom formatting. Everything in this block ha
 
 
 ::: {.notes}
-- Spacing is really important in Markdown language
-- Creating paragraphs is super easy, you just need to remember to insert empty space between your blocks
-- To style a block of text (could be one paragraph, could be multiple), enclose them in triple colons to define the section, and provide styling information in curly braces
-- We’re not going to go deep into this, but if you have a custom styling scss file, you could apply a class you’ve defined to this block here
+- Now transitioning to block elements, I want to note that spacing is really important in Markdown language
+  - often, when things go wrong, it's a spacing issue
+- Creating something like paragraphs is super easy, you just need to remember to insert empty space between your blocks
+- To style a block (or multiple blocks) of text, you can use divs, which are essentially the block version of spans
+  - Instead of brackets, you use triple colons to define a section and provide styling directions at the top
   - In this example, we format this block as a callout block
-  - These callouts are just a built-in feature of Quarto
+  - These callouts are just a fun, little, built-in feature of Quarto
     - There are 5 types of callouts (note, tip, warning, caution, and important) – this example is a tip
     - And they all have their own color and icon
-    - When we add a header to the block, quarto knows to make that text the banner in the callout
-- In general, nesting styling is also possible. You can create blocks within blocks
+    - When we add a header to the block, Quarto knows to make that text the banner in the callout
+- Nesting styling is also possible. You can create divs within divs
+  - For example, this very slide
+  - Since this is a Quarto presentation, written entirely in a qmd file, the same rules apply
+  - We use colons to define a section to be a single presentation slide, and then we also define subsections to create each of these two columns within the slide
+  
 
 :::
 
@@ -831,7 +867,7 @@ Here's an example of a block with custom formatting. Everything in this block ha
 
 ::: {.notes}
 - Headers are similar to headers in Word where there are different levels corresponding to text size and boldness
-- The header level is indicated by the number of hashtags you use
+- The header level is indicated by the number of hashtags (or pound signs) you use
   - So if you use 1 hashtag, it is a level 1 header, and so on
 
 :::
@@ -948,8 +984,7 @@ is an upper bound on the inner product between two vectors in an inner product s
 
 ::: {.notes}
 - To write out more substantial equations, you do the same thing as before, but use double dollar signs to enclose the LaTex block
-- Everything within the block is actually not Markdown
-  - It’s LaTex code, which is another markup language
+- Again, everything within this block is LaTex code
   - So to know how to write out these equations, you’ll want to Google a LaTex guide
 
 :::
