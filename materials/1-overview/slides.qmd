@@ -1545,6 +1545,51 @@ countdown::countdown(10, bottom = 0)
 ```
 
 
+## Why and [HOW]{.gray-bold} Should I Use Quarto?
+
+::: columns
+
+::: {.column width="30%"}
+
+::: {layout="[[-1], [1], [-1]]"}
+![](images/whatsnext.png){height="90%" fig-alt="A notebook that says 'What's Next' with a large question mark atop a yellow desk. Licensed under Creative Commons."}
+:::
+
+:::
+
+::: {.column width="70%" .small}
+### Practical Applications for FWS Biologists
+- Generate reusable, **automated reports**
+- Utilize shareable, **standardized templates**
+- **Annotate code** for interpretability, collaboration, and longevity
+- Track and collaborate with **version control**
+- Seamlessly **integrate figures, tables, and citations** into your works
+- Create dynamic, **interactive visualizations**
+- Publish across **multiple formats** from a single source
+- Build script-based **data pipelines** - from data collection to reporting
+
+**Leading to...** efficiency, standardization, reduced error, reproducible science, innovation!
+
+:::
+
+:::
+
+::: {.notes}
+- So why should you use Quarto and what could it look like for you?
+- It can look like automated, reusable reports for repeated monitoring surveys
+  - Where you swap input files and generate all new calculations, summaries, and figures for the next year in an instant
+  - You can also generate exploratory data analysis reports, not just final survey reports
+- You can use templates for standardized Refuge reports or for your manuscripts for journal submission
+- Being able to annotate code in a really human-readable format is really powerful and means you can be more collaborative with your code. The code can be used by others and its interpretability won't be lost with time or turnover
+- Quarto makes it easy to collaborate and incorporate version control with Git and GitHub, which is always a best practice and good for findability if you make discoverable repos
+- You can much more easily configure and update your figures and tables within documents, plus seamlessly embed citations and references
+- You can create dynamic reports or presentations with interactive maps, plots, and other features, which is super cool and pretty exclusive to Quarto
+- You can render multiple types of products and formats from a single qmd file for different audiences
+- And you can build up a super efficient data pipeline, that goes all the way from beginning to end, especially if you use data collection apps that can feed into something like this, you auto-generate a quarto report, and that auto-updates a servcat reference - you can create a smooth, consistent workflow
+-If you listened to all this and are still thinking: "I'm never going to use this" - too bad! Because you are going to make your first quarto document from scratch right now.
+
+:::
+
 # Exercise 5: [Your turn](exercises.qmd#sec-exercise5){target="_blank"} {.exercise}
 
 \
