@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.39">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -71,10 +71,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-a05ae0be7e5e2dbcc5f9767209e4c831.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -259,7 +259,7 @@ window.Quarto = {
 <div class="toc-actions"><ul><li><a href="https://github.com/USFWS/intro-to-quarto/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../materials/1-overview/index.html">Overview of Quarto</a></li><li class="breadcrumb-item"><a href="../../materials/1-overview/exercises.html">- Exercises</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content">
 
 
 
@@ -295,7 +295,7 @@ window.Quarto = {
 <summary>
 <strong>Hint</strong>
 </summary>
-In the terminal: <code>quarto render 1_rendering\&lt;input file name&gt;</code>
+In the terminal: <code>quarto render 1_rendering/&lt;input file name&gt;</code>
 </details></li>
 </ul></li>
 <li><label><input type="checkbox">Render the document using the <code>quarto</code> R package.</label>
@@ -304,7 +304,7 @@ In the terminal: <code>quarto render 1_rendering\&lt;input file name&gt;</code>
 <summary>
 <strong>Hint</strong>
 </summary>
-In the console: <code>quarto::quarto_render("./1_rendering/&lt;input file&gt;")</code>
+In the console: <code>quarto::quarto_render("./1_rendering/&lt;input file name&gt;")</code>
 </details></li>
 </ul></li>
 </ul>
@@ -352,13 +352,13 @@ Add <code>output_format = "all"</code> argument to <code>quarto::quarto_render()
 <p>Open <code>3-document_body.qmd</code> and make the following changes to the document:</p>
 <p><strong>Inline:</strong></p>
 <ul class="task-list">
-<li><label><input type="checkbox">Italicize the species name</label></li>
-<li><label><input type="checkbox">Make the refuge name into a hyperlink to the refuge website</label></li>
+<li><label><input type="checkbox">Italicize the species name.</label></li>
+<li><label><input type="checkbox">Make “western snowy plover” into a hyperlink to the FWS page or Wikipedia page for the species.</label></li>
 </ul>
 <p><strong>Block:</strong></p>
 <ul class="task-list">
-<li><label><input type="checkbox">Create a new header named “My list”</label></li>
-<li><label><input type="checkbox">Make an ordered and unordered list</label></li>
+<li><label><input type="checkbox">Create a new header named “My List”.</label></li>
+<li><label><input type="checkbox">Make an ordered and an unordered list.</label></li>
 <li><label><input type="checkbox">Insert an image of the western snow plover below the “U.S. Fish and Wildlife Service” header. The image can be found in the <code>./images</code> folder.</label></li>
 </ul>
 </section>
@@ -372,20 +372,21 @@ Add <code>output_format = "all"</code> argument to <code>quarto::quarto_render()
 <ul class="task-list">
 <li><label><input type="checkbox">Label the plot code chunk to help you differentiate from other chunks.</label></li>
 <li><label><input type="checkbox">Update the figure caption to read “Mean monthly Western…”</label></li>
-<li><label><input type="checkbox">Add <code>+ theme_classic()</code> to end of ggplot script to clean up plot. Re-render.</label></li>
-<li><label><input type="checkbox">Remove the output of a code chunk. Change <code>include</code> option to <code>false</code> and re-render.</label></li>
+<li><label><input type="checkbox">Add <code>+ theme_classic()</code> to the end of the ggplot script to clean up the plot. Re-render.</label></li>
+<li><label><input type="checkbox">Remove the output of a code chunk. Change the <code>include</code> option to <code>false</code> and re-render.</label></li>
 </ul>
 </section>
 </section>
 <section id="sec-exercise5" class="level2">
 <h2 class="anchored" data-anchor-id="sec-exercise5">Exercise 5: Your turn!</h2>
 <p>You have now learned how to render a Quarto document and how to change the look and feel of a Quarto document by customizing the YAML metadata, inline and block elements of the text body, and code chunks. Now it is time to apply these skills by creating a Quarto document from scratch.</p>
-<p>Do your best to recreate the document below. When rendered as a <code>.html</code>, your file should look exactly the same aside from the publishing date. Use the <strong>Tasks</strong> as a guide.</p>
-<p><img src="images/from_scratch.png" class="img-fluid"></p>
 <section id="tasks-4" class="level3">
 <h3 class="anchored" data-anchor-id="tasks-4">Tasks</h3>
+<p>Do your best to recreate the document below. When rendered as a <code>.html</code>, your file should look exactly the same aside from the publishing date.</p>
+<p><img src="images/from_scratch.png" class="img-fluid"></p>
+<p>Use the following steps to guide you:</p>
 <ul class="task-list">
-<li><label><input type="checkbox">Create a new Quarto document.</label>
+<li><label><input type="checkbox">Create a new Quarto document, and save it to your Exercise 5 folder.</label>
 <details>
 <summary>
 <strong>Hint</strong>
@@ -501,6 +502,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -611,6 +614,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
+      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
