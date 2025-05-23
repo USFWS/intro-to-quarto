@@ -52,11 +52,11 @@ Jason is a data manager with the FWS Midwest Fisheries Center Data Branch that p
 ::: columns
  
 ::: {.column width="25%"}
-![](assets/images/placeholder.png){fig-alt="Photo of Emma Schillerstrom." width=150}
+![](assets/images/emma.png){fig-alt="Photo of Emma Schillerstrom." width=150}
 :::
  
 ::: {.column width="75%"}
-Emma is a data management technician with the FWS Refuge Inventory and Monitoring Program based in Anchorage, Alaska. 
+Emma is a data management technician with the FWS Refuge Inventory and Monitoring (I&M) Program based in Anchorage, Alaska. She enjoys working with all kinds of wildlife data and is passionate about introducing automation and code-based solutions into long-term monitoring workflows. You can learn more about Emma and the rest of the Alaska I&M Team [here](https://doimspp.sharepoint.com/sites/AlaskaInventoryandMonitoring2/SitePages/Home-Alaska-Inventory-and-Monitoring.aspx). 
 :::
 
 :::
