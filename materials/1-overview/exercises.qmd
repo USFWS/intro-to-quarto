@@ -1,6 +1,9 @@
 ---
 sidebar: true
 toc: true
+format: 
+    pdf: default
+    html: default
 ---
 
 # Exercises: Introduction to Quarto
@@ -9,6 +12,7 @@ toc: true
 #| echo: false
 #| warning: false
 #| message: false
+#| eval: !expr knitr::is_html_output()
 
 library(downloadthis)
 
