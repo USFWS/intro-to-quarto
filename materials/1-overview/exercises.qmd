@@ -13,7 +13,7 @@ toc: true
 library(downloadthis)
 
 downloadthis::download_link(
-  link = "https://github.com/USFWS/intro-to-quarto/tree/main/materials/1-overview/exercises.pdf",
+  link = "https://usfws.github.io/intro-to-quarto/materials/1-overview/exercises.pdf",
   button_label = "Download as PDF",
   has_icon = TRUE,
   icon = "fa fa-save",
