@@ -53,6 +53,8 @@ BREAK (10 min)
 
 # Exercises {.exercise}
 
+![](images/exercises_qrcode.png){width=8 .center fig-alt="QR code to the exercises website."}
+
 ::: {.notes}
 When we get to the green Exercises page like this, it will be your turn to practice what you've just learned. These slides include a link to the exercise instructions on the workshop website.
 :::
@@ -411,7 +413,7 @@ quarto::quarto_render(input = ___,
 
 # Exercise 1: [Rendering](exercises.qmd#sec-exercise1){target="_blank"} {.exercise}
 
-\
+![](images/exercises_qrcode.png){fig-alt="QR code to the exercises website."}
 \
 \
 
@@ -534,7 +536,7 @@ editor: source
 
 # Exercise 2: [YAML metadata](exercises.qmd#sec-exercise2){target="_blank"} {.exercise}
 
-\
+![](images/exercises_qrcode.png){fig-alt="QR code to the exercises website."}
 \
 \
 
@@ -1035,7 +1037,7 @@ Moving along, we will describe something else.
 
 # Exercise 3: [Document body](exercises.qmd#sec-exercise3){target="_blank"} {.exercise}
 
-\
+![](images/exercises_qrcode.png){fig-alt="QR code to the exercises website."}
 \
 \
 
@@ -1538,7 +1540,7 @@ The final concept we'll cover regarding code is inline code. Previously, we expl
 
 # Exercise 4: [Code](exercises.qmd#sec-exercise4){target="_blank"} {.exercise}
 
-\
+![](images/exercises_qrcode.png){fig-alt="QR code to the exercises website."}
 \
 \
 
@@ -1594,7 +1596,7 @@ countdown::countdown(10, bottom = 0)
 
 # Exercise 5: [Your turn](exercises.qmd#sec-exercise5){target="_blank"} {.exercise}
 
-\
+![](images/exercises_qrcode.png){fig-alt="QR code to the exercises website."}
 \
 \
 
