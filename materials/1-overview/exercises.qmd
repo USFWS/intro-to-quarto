@@ -3,6 +3,23 @@ sidebar: true
 toc: true
 ---
 
+# Exercises: Introduction to Quarto
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(downloadthis)
+
+downloadthis::download_link(
+  link = "https://github.com/USFWS/intro-to-quarto/tree/main/materials/1-overview/exercises.pdf",
+  button_label = "Download as PDF",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  self_contained = FALSE)
+```
+
 ## Overview {#sec-exercise-overview}
 
 These exercises introduce you to key elements of Quarto documents. You will have the opportunity to explore how these elements enable you to create quality documents that effectively communicate and document your analyses and findings.

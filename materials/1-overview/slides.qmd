@@ -416,6 +416,8 @@ quarto::quarto_render(input = ___,
 \
 
 ```{r}
+#| echo: false
+
 countdown::countdown(10, bottom = 0)
 ```
 
