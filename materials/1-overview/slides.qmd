@@ -469,7 +469,6 @@ editor: source
 - Starts and ends with "\-\-\-"
 - Uses key-value pairs: `key: value` that can nest
 - *Picky about spacing and indentations!*
-- Processed during rendering
 - Including options for:
   - Title, authors, date
   - File output(s) (e.g., `html`, `docx`)
@@ -482,9 +481,20 @@ editor: source
 
 
 ::: {.notes}
-- The YAML provides document level metadata. 
-- It is a language that follows a standard syntax.
-    - 
+- YAML stands for "Yet Another Markup Language"
+- The purpose of the YAML header of a Quarto document is to provide document level metadata.
+- Like all programming languages, it follows a standard syntax.  
+[click]
+-  You can recognize a YAML because it starts and ends with three dashes.
+- Although a Quarto document can have multiple YAMLs, most often there is only one and it is generally located at the top of the document.  
+[click]  
+- As shown here, YAMLs follow a standard syntax that is composed of key value pairs.
+- A simple YAML might have single key value pairs, but it is worth understanding that more complex document level formatting will often require nested key value pairs. You can see an example of that here under the format option. In our example here, we want to render the Quarto document as a revealjs presentation. Within that format, we have nested options that define a template that customizes the look of our presentation slides.   
+[click]
+- YAML are quite picky about spacing and indentations. If you run into YAML errors when trying to render a Quarto document, it is often due to missing spaces or indentations.
+- There are many options that can be defined in a YAML. Some of the more common ones that you will use regularly include the document tile, author, date, and the desired file output. 
+- Document level styles are also defined in the YAML. This includes things like the font type, sizes, and colors and the size and layout of figures.
+Finally, the YAML is where you can define custom parameters. Parameters are used to create different variations of a document. For example, you might want to have seperate reports to portions of a refuge, or you might want to show results that cover a specific time period. You would define these values as parameters in the YAML header.
 :::
 
 
@@ -503,9 +513,9 @@ editor: source
 :::
 
 ::: {.notes}
-- The options available in the YAML are dependent on the file format that you select.
-- There are a **ton** of options!
-- To give you an idea, here's the Quarto guidance that shows YAML options for a Quarto document rendered to MS Word.
+- Some YAML options available are dependent on the file format that you select. In other words, if you define the output file format as HTML, you will have certain other options available to select, but if you define the output file format as a MS Word document, there will be other options available. 
+- Overall, there are a **ton** of YAML options available!
+- To give you an idea, here's the Quarto guidance that shows YAML options for a Quarto document rendered to MS Word. I encourage you to visit the Quarto guidance for your selected file format to explore what options are available.
 :::
 
 
@@ -529,7 +539,10 @@ editor: source
 :::
 
 ::: {.notes}
-
+- Because there are so many YAML options, it might feel a little overwhelming at first to figure out how to find what you are looking for.
+- To help navigate your options, I want to mention two helpful features to consider using.
+- The first tip is to use autocompletion. For those not familiar, autocompletion is a feature that fills in words that you start typing. In RStudio, autocompletion of YAML options is activated when you can press Tab after starting to type an option. Using tab completion can save you time and helps avoid YAML's picky spelling and spacing issues.
+- A second tip is to view your YAML options. You can see what YAML options are available by typing Control and Space after you have entered a key value. Like you see in the image here, Control and space will bring up a dropdown menu of options to select. In this case, you see that html is an option for format.
 :::
 
 
@@ -545,7 +558,7 @@ countdown::countdown(10, bottom = 0)
 ```
 
 ::: {.notes}
-
+That bring us to the end of workshop presentation on YAML headers. We will now break for a 10 minute exercise to apply what you've learned. As always, the instructions are available on the GitHub page. If you have the slides open, you can click of the text to link to the instructions. If you have a phone, you can access the instructions using the QR code. 
 :::
 
 
