@@ -11,5 +11,5 @@ title: Overview of Quarto
 ### Learning goals
 
 - Introduce Quarto and it’s applications
-- Describe the three components of a Quarto file: QML metadata, text body, and code blocks
+- Describe the three components of a Quarto file: YAML metadata, text body, and code blocks
 - Provide opportunities to explore the components of a Quarto file through in-class exercises
