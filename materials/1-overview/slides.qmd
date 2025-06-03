@@ -1099,6 +1099,8 @@ countdown::countdown(10, bottom = 0)
 
 ## Code chunks: [Pandoc]{.gray-bold}
 
+\
+
 ::: columns
 
 ::: {.column width="50%"}  
@@ -1134,6 +1136,8 @@ Following the initial three backticks, we indicate the programming language of t
 
 ## Code chunks: [R Markdown]{.gray-bold} {auto-animate="true"}
 
+\
+
 ::: columns
 
 ::: {.column width="50%"}
@@ -1161,6 +1165,8 @@ For those of you familiar with RMarkdown, you might recall that code chunk optio
 
 
 ## Code chunks: [Quarto]{.gray-bold} {auto-animate="true"}
+
+\
 
 ::: columns
 
@@ -1268,6 +1274,8 @@ Having trouble remembering all of the options available to you? In Rstudio if yo
 
 ## Execution options: [Figures]{.gray-bold} {auto-animate="true"}
 
+\
+
 ::: columns
 ::: {.column width="50%"}
 ```{{r}}
@@ -1308,6 +1316,8 @@ When we render this document our output will produce the code, the figure the co
 
 ## Execution options: [Figures]{.gray-bold} {auto-animate="true"}
 
+\
+
 ::: columns
 ::: {.column width="50%"}
 ```{{r}}
@@ -1347,6 +1357,8 @@ By adding our echo option and specifying it as false, our output no longer inclu
 
 
 ## Execution options: [Figures]{.gray-bold} {auto-animate="true"}
+
+\
 
 ::: columns
 ::: {.column width="50%"}
@@ -1393,6 +1405,8 @@ Here we set the figure width to 3 and the figure height to 2.
 
 ## Execution options: [Figures]{.gray-bold} {auto-animate="true"}
 
+\
+
 ::: columns
 ::: {.column width="50%"}
 ```{{r}}
@@ -1435,6 +1449,8 @@ Or we can make the figure larger by setting the figure width and height to 5.
 
 
 ## Execution options: [Figures]{.gray-bold} {auto-animate="true"}
+
+\
 
 ::: columns
 ::: {.column width="50%"}
