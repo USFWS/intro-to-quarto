@@ -1050,7 +1050,7 @@ to Quarto</div></h1>
 </p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_dd310dc0" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_6222782b" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1255,7 +1255,7 @@ to Quarto</div></h1>
 </p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_c0db97de" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_2a27e237" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1829,7 +1829,7 @@ in fact, that we need to also include an image.</p>
 </p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_d252bbe5" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_c0be352e" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1870,10 +1870,10 @@ in fact, that we need to also include an image.</p>
 </div>
 <aside class="notes">
 <p>In this section, we’ll delve into one of the final elements of a Quarto document: inline code and code blocks, commonly known as code chunks.</p>
-<p>These components enable us to seamlessly integrate data analyses, visualizations, and computations right within the Quarto document, enhancing the interactive experience and improving reproducibility.</p>
-<p>Let’s break down the structure of a code chunk and walk through its processing:</p>
-<p>Code chunks are defined by enclosing the code within three backticks (```). This notation signals to Pandoc that the content between these backticks is code and should not be treated as regular text.</p>
-<p>Following the initial three backticks, we indicate the programming language of the code. This helps Pandoc understand how to interpret the code.</p>
+<p>These components enable us to seamlessly integrate data analyses, visualizations, and computations right within the Quarto document, enhancing our interactive capabilities and improving reproducibility.</p>
+<p>Let’s break down the structure of a code chunk and walk through how its processed:</p>
+<p>Earlier, we saw that by surrounding our YAML header with three hyphens we signaled to Pandoc that the text should be interpreted as a YAML header rather than regular text. Similarly, with code chunks we need to signal to Pandoc that the text in our code chunk is code and not regular text. We do this by surrounding our code chunk three backticks (```).</p>
+<p>We also need to tell Pandoc what coding language the text within our code chunk uses so we include the programming language after the initial three backticks.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1908,7 +1908,7 @@ in fact, that we need to also include an image.</p>
 </div>
 </div>
 <aside class="notes">
-<p>The language specification must be enclosed in curly brackets to denote which programming language is being used for execution.</p>
+<p>By including the programming language, Pandoc will be able to read the code chunk but the language must be enclosed in curly brackets for the code to be executed unless otherwise specified in the code chunk options.</p>
 <p>For those of you familiar with RMarkdown, you might recall that code chunk options were traditionally included in the curly brackets after specifying the r language, using commas to separate each option.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -1949,7 +1949,7 @@ in fact, that we need to also include an image.</p>
 </div>
 </div>
 <aside class="notes">
-<p>In Quarto, while the language is still specified in the curly brackets, the chunk options are organized in a YAML format within the cell. Each option is placed on its own line, prefaced by hashtags and pipes, making the code chunk more readable and supporting a variety of programming languages.</p>
+<p>In Quarto, the language is still specified in the curly brackets; however, the chunk options are organized in a YAML format within the code chunk. Each code chunk option is placed on its own line, prefaced by a hashtag and pipe. This update supports a variety of programming languages and makes the code chunk easier to read.</p>
 <p>For those of you not familiar with code chunk options, don’t worry, we’ll cover these in a minute.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -2007,7 +2007,7 @@ in fact, that we need to also include an image.</p>
 </div>
 <aside class="notes">
 <p>Another significant improvement in Quarto is the inclusion of code chunk labels within the YAML of the cell instead of the curly brackets.</p>
-<p>Labeling chunks enhances document organization, simplifies debugging, and facilitates referencing code chunk outputs in the text, which is especially valuable for creating figures and tables in manuscripts or reports.</p>
+<p>Labels should be short and descriptive; providing reader’s context about what’s contained in the code chunk or what it does. Labeling chunks enhances document organization, simplifies debugging, and facilitates referencing code chunk outputs in the text, which is especially valuable when creating and referencing figures and tables in manuscripts or reports.</p>
 <p>A best practice to keep in mind is to refrain from using underscores in code chunk labels, as this can lead to rendering issues, particularly with LaTeX.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -2085,10 +2085,14 @@ in fact, that we need to also include an image.</p>
 </div>
 </div>
 <aside class="notes">
-<p>Code chunk options are parameters that modify the behavior of code chunks in your Quarto documents.</p>
-<p>If the code throws and error or warning would you like them to be included in the resulting document? If your code produces a figure or table would you like them to be displayed?</p>
-<p>These options can control various aspects of code execution and output display.</p>
-<p>Having trouble remembering all of the options available to you? In Rstudio if you hit the tab key after the hashpipe a dropdown menu with available options is provided.</p>
+<p>I mentioned code chunk options earlier and want to circle back to these to provide more information. Code chunk options are parameters that modify the behavior of code chunks in your Quarto documents.</p>
+<p>Code chunk options can control various aspects of code execution and output display.</p>
+<p>Would you like the code in your code chunk to be run? If not, set eval equal to FALSE.</p>
+<p>Would you like the source code to be displayed in the output? If not, set the option equal to FALSE.</p>
+<p>Maybe your code produces a figure or table, you can designate whether or not they are displayed in the rendered document using the output option.</p>
+<p>Warnings and errors produced by your code will be rendered unless you update the warning and error options.</p>
+<p>Or, you can set the “include” parameter to “FALSE” and all output from the code will be suppressed.</p>
+<p>Having trouble remembering all of the code chunk options available? In Rstudio if you hit the tab key after the hashpipe a dropdown menu with all available options will be listed.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -2137,8 +2141,9 @@ in fact, that we need to also include an image.</p>
 </div>
 <aside class="notes">
 <p>Let’s walk through an example together.</p>
-<p>In this code chunk we specify our coding language as r and use the ggplot package to plot petal width vs.&nbsp;petal length using the iris data.</p>
-<p>When we render this document our output will produce the code, the figure the code generated, and any error or warnings the code could encounter.</p>
+<p>First, we surround our code in three backticks to let Pandoc know the text in this chunk is code and not regular text. Then, we specify our coding language as r between curly brackets after the first three backticks.</p>
+<p>Our code then loads the ggplot2 package and plots petal width vs.&nbsp;petal length using the iris data.</p>
+<p>When we render this document, our output will produce the code, the figure the code generated, and any error or warnings the code could encounter.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -2365,6 +2370,7 @@ in fact, that we need to also include an image.</p>
 </div>
 <aside class="notes">
 <p>If you’d like to apply the same code chunk options to all code chunks throughout the document, you can add them in the document’s YAML rather than adding them to every code chunk.</p>
+<p>Here’s an example of a very basic YAML header.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -2412,7 +2418,7 @@ in fact, that we need to also include an image.</p>
 </div>
 </div>
 <aside class="notes">
-
+<p>Now lets update our header to specify that we don’t want source code included in the output of any of our code chunks by setting echo to false and that any figures created should have a height and width set to 5.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -2449,7 +2455,9 @@ in fact, that we need to also include an image.</p>
 </div>
 </div>
 <aside class="notes">
-<p>The final concept we’ll cover regarding code is inline code. Previously, we explored inline elements to modify font styles, embed images, and add hyperlinks; however, we can also incorporate code directly within the text of the document. To achieve this, we enclose the code in single backticks. After the initial backtick, we specify the code language, allowing Quarto to understand how to process the code. By using both inline code and code chunks, Quarto documents become highly dynamic and powerful tools for presenting information.</p>
+<p>The final concept we’ll cover regarding code is inline code. Previously, we explored inline elements to modify font styles, embed images, and add hyperlinks; however, we can also incorporate code directly within the text of the document.</p>
+<p>Similar to our code chunks, we need to tell Pandoc that the text we’re adding is code and not regular text. To achieve this, we wrap our code in single backticks. After the initial backtick, we specify our coding language, allowing Quarto to understand how to process the code.</p>
+<p>By using both inline code and code chunks, Quarto documents become highly dynamic and powerful tools for presenting information.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -2470,7 +2478,7 @@ in fact, that we need to also include an image.</p>
 </p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_9878f1fb" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_7bbee4bb" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -2544,7 +2552,7 @@ in fact, that we need to also include an image.</p>
 </p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_3abc9054" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_8fdc0a29" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
