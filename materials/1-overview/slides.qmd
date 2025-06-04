@@ -180,16 +180,18 @@ library(countdown)
 ::: {.notes}
 - When you render an R Markdown file, an R package named "knitr" calls a similarly named engine to execute your R code.
 - The result is a Markdown file that include your original text and the output of your code. 
-:::
+- Markdown is a human-readable language that allows you to add formatting (like headings, paragraphs and images) to a plain text document.
+::: 
 
 
 # ![](images/render4.png){height=1000 fig-alt="A diagram showing the process of rendering a document using Quarto."}  
 
 ::: {.notes}
-- The process for rendering a Quarto document is similar to R Markdown, with some notable changes. 
+- The first step of rendering a Quarto document is similar to R Markdown, with some notable differences. 
 - Like R Markdown, a Quarto file can be composed of text and code.
-- However, there is more flexible to directly execute additional languages, including Python and Julia. 
+- However, there is more flexible in Quarto to directly execute additional languages, including Python and Julia. 
 - It is not R focused.
+- How does it do this?
 :::
 
 
@@ -197,9 +199,9 @@ library(countdown)
 
 ::: {.notes}
 - When you render a Quarto document, Quarto assigns an engine to execute code.
-- The engine is either knitr, like R Markdown, if the code is R, or Jupyter, if other coding languages like Python are detected in the Quarto file.
-- By directly calling jupyter, Quarto avoids having use the R packages to run non-R code.
-- Similar to R Markdown, the text and output of your code are outputted as an Markdown file.
+- The engine will be either knitr, like R Markdown, if the code is R, or Jupyter, if other coding languages like Python are detected in the Quarto file.
+- By directly calling Jupyter to run Python code, Quarto avoids having use R packages to run non-R code.
+- Regardless of whether knitr or Jupyter are used, the text and output of your code are then outputted as an Markdown file, just like R Markdown.
 :::
 
 
@@ -207,10 +209,10 @@ library(countdown)
 
 ::: {.notes}
 - The final step in rendering a Quarto file is identical to R Markdown.
-- Quarto passes the Markdown document to a program called Pandoc that converts your Markdown file into whatever file format you’ve specified.
-- A notable different with Quarto though is that it accomplishes all these steps independently from the R ecosystem. You can even run Quarto directly from the command-line interface (i.e., the shell or terminal), if you want to. 
+- Quarto passes the Markdown document to a program called Pandoc that converts your Markdown file into whatever file format you’ve specified, like a PDF or Word doc.
+- A notable difference with Quarto though is that it accomplishes all these steps independently from the R ecosystem. You can even run Quarto directly from the command-line interface (i.e., the shell or terminal), if you want to. 
 - This feature provides the advantages of freeing Quarto of R and the many of the R package dependencies that tie R Markdown to R.
-
+- It also allows you to collaborate with your friends that only use Python, because they too can contribute code to a Quarto file.
 :::
 
 
@@ -247,7 +249,7 @@ library(countdown)
 - A second situation that FWS scientists commonly encounters is re-creating documents in a standard format. An example of this would be an annual survey report.
 - Using Quarto, you can easily re-create documents when data are updated. Therefore, if you currently find yourself spending time re-creating annual reports, then Quarto could improve your efficiency.
 [click]
-- You might have a need to create different formats of the same project. For example, you might need a PDF and Word version of a report, a presentation, and a website. While you could do that being using different software, all these tasks can be run simultaneously using Quarto.
+- You might have a need to create different formats of the same project. For example, you might need a PDF and Word version of a report, a presentation, and a website. While you could do using a handful of different software, all these tasks can be run simultaneously using Quarto.
 :::
 
 
@@ -275,7 +277,8 @@ library(countdown)
 :::
 
 ::: {.notes}
-- A Quarto file are essentially a text file, so they work well with version control software. If you find yourself wanting to track changes, record versions of a document, and collaborate through a system like GitHub, this can be easily done with Quarto.
+[click]  
+- A Quarto file are essentially a text file, so they work well with version control software. If you find yourself wanting to track changes, record versions of a document, and collaborate through a system like GitHub, this can be a challenge with MS Word, but it can be done easily with Quarto.
 [click]
 - If you have an interest in creating documents that have interactive visualizations, like a map that a reader can turn on and off layers, or a plot that a reader can zoom in on and get additional information by selecting parts of the image, these features can be implemented in Quarto.  
 [click]
@@ -310,9 +313,10 @@ library(countdown)
 :::
 
 ::: {.notes}
-- If you are currently using R Markdown and have existing R Markdown files, there’s no requirement to switch!
-- In the near term, R Markdown will continue to be supported and work as it always has been. 
-[click]
+[click]  
+- If you are currently using R Markdown and have existing R Markdown files, there’s no requirement to switch!  
+- In the near term, R Markdown will continue to be supported and work as it always has been.  
+[click]  
 - If you have an R Markdown file that includes custom tools, there is a chance that they might not yet in available in Quarto. If this is the case, you might want to stick with R Markdown for that effort. As they say, if it ain't broke, don't fix it.
 :::
 
@@ -349,8 +353,8 @@ library(countdown)
   1. First, there is no requirement for R. In other words, it is designed to be multilingual.
     - Quarto equally allows for R, Python, Julia, and Javascript
   2. Second, and related to number 1, Quarto is more streamline and independent of R packages
-    - As a result you can use things like revealjs directly for pretty slides, rather than relying on host of R packages that risk becoming deprecated over time.
-  3. Third, cross referencing figures and tables in the text is more straightforward in Quarto, as is inserting and managing citations.
+    - As a result you can create things well formated revealjs slides **directly**, rather than **relying** on host of R packages that risk becoming deprecated over time.
+  3. Third. Much of our work requires referencing figures in a document and inserting citations. Cross referencing figures and tables in the text is more straightforward in Quarto, as is inserting and managing citations.
   4. Fourth, Quarto has a growing number of extensions that add functionality
     - Extensions allow you extend the behavior of Quarto, including providing access to custom document templates and file formats, and adding additional features not available in R Markdown.
   5. Fifth, Quarto supports what's called projects.
@@ -410,9 +414,9 @@ quarto::quarto_render(input = ___,
 [click]
 1. The first and most common approach is through the Rstudio application interface. After you open a Quarto file in RStudio, you will see a button on the top menu called "render". Clicking on that button will render the Quarto file and, if successful, display a preview of the output.
 [click]
-2. Another approach to rendering is directly calling the Quarto software using the command line interface in RStudio. To do this, switch from the R console menu to the "Terminal" menu in RStudio (usually located at the bottom righthand side of the R Studio window). Within the terminal, you type and enter "quarto render", as circled in the center image. Alternatively, you can enter "quarto preview", which will both render the document and open a preview window to view the output. This approach works free of R and RStudio. A reason that you might eventually use this approach is when you want to render a document on a schedule, using Window's task scheduler. 
+2. Another approach to rendering is directly calling the Quarto software using the command line interface in RStudio. To do this, switch from the R console menu to the "Terminal" menu in RStudio (usually located at the bottom righthand side of the RStudio window). Within the terminal, you type and enter "quarto render", as circled in the center image. Alternatively, you can enter "quarto preview", which will both render the document and open a preview window to view the output. This approach works free of R and (if you wanted) RStudio. A reason that you might eventually use this approach is when you want to render a document on a schedule, using Window's task scheduler. 
 [click]
-3. The 3rd way to render a Quarto is using the Quarto R package. To do this, you load the Quarto R package in RStudio. Then, in the console, you would type quarto_render along with an argument in the parentheses that provide a file path to your input Quarto file and the file path where you want the output saved. You might find yourself using this approach if you want to have your document render programmatically within another function. For example, maybe you want to create an R package with a function to render your reports. Or, maybe you have a Shiny app and you want to include the ability for a user to render a Quarto report when they click a button in the app. 
+3. The 3rd way to render a Quarto file is using the Quarto R package. To do this, you load the Quarto R package in RStudio. Then, in the console, you would type quarto_render along with an argument in the parentheses that provide a file path to your input Quarto file and the file path where you want the output saved. You might find yourself using this approach if you want to have your document render programmatically within another function. For example, maybe you want to create an R package with a function to render your reports. Or, maybe you have a Shiny app and you want to include the ability for a user to render a Quarto report when they click a button in the app. 
 :::
 
 
@@ -436,9 +440,14 @@ quarto::quarto_render(input = ___,
 
 ::: {.notes}
 
-- For our purposes, we will be using RStudio to edit Quarto files Within RStudio, there are two editors available to make changes to Quarto files: the Source editor, shown on the left and the Visual editor shown on the right. You can toggle between editor modes by clicking on the buttons circled in red. 
-- The source editor displays the raw Quarto document. It is the traditional approach to editing documents and most used by those comfortable with creating Quarto files.
-- On the other hand, the Visual editor shows changes in real time and previews what the document will looks like without having to re-rendering it. It also provides a menu at the top of the window with buttons for things inserting tables, figures, and citations; and formatting fonts and headers. It provides an easier interface for those learning Quarto and who are familiar with word processing software like Word.
+- For our purposes, we will be using RStudio to edit Quarto files Within RStudio. 
+- There are two editors available to make changes to Quarto files: the Source editor, shown on the left and the Visual editor shown on the right. 
+- You can toggle between editor modes by clicking on the buttons circled in red. 
+- The source editor displays the raw Quarto file.
+- It is the traditional approach to editing documents and most used by those comfortable with creating Quarto files.
+- On the other hand, the Visual editor shows changes in real time and previews what the output will looks like without having to re-rendering it.
+- It also provides a menu at the top of the window with buttons for things inserting tables, figures, and citations; and formatting fonts and headers. 
+- It provides an easier interface for those learning Quarto and who are familiar with word processing software like Word.
 :::
 
 
@@ -456,7 +465,7 @@ countdown::countdown(10, bottom = 0)
 
 ::: {.notes}
 - That brings us to our first exercise of the day. 
-- During this exercise, you will have a chance to implement some of the concepts that we just covered, including approaches to rendering Quarto documents.
+- During this exercise, you will have a chance to implement some of the concepts that we just covered, including approaches to rendering Quarto files.
 - Instructors are available if you need any help or have questions.
 - After this exercise, we will dive into the 3 components of a Quarto file.
 :::
