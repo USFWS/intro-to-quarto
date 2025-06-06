@@ -240,16 +240,16 @@ library(countdown)
 :::
 
 ::: {.notes}
-- Now you have a sense of what Quarto is and what it can do for us, you might be wondering, when should I use Quarto and when should I stick with my current approach, such as using Microsoft Word, Excel, and PowerPoint?
-[click]
-- As I mentioned, a unique feature of Quarto is the ability to seamlessly weave together text and code output. 
+- Now you have a sense of what Quarto is and what it can do for us, you might be wondering, when should I use Quarto and when should I stick with my current approach, such as using Microsoft Word, Excel, and PowerPoint?  
+[click]  
+- As I mentioned, a unique feature of Quarto is the ability to seamlessly weave together text and code output.  
 - If your current project workflow involves combining text, tables, plots, and statistical output in a single document, then using Quarto can offer you a more efficient and reproducible approach then a traditional approach, which might look something like writing text in a Word document, creating figures and tables in R or Excel, creating maps in ArcGIS Pro, and then copy/pasting everything together back into Word.
-- Therefore, if you are working on reports that contain text, plots, tables and statistical results, you should consider using Quarto.
-[click]
+- Therefore, if you are working on reports that contain text, plots, tables and statistical results, you should consider using Quarto.  
+[click]  
 - A second situation that FWS scientists commonly encounters is re-creating documents in a standard format. An example of this would be an annual survey report.
-- Using Quarto, you can easily re-create documents when data are updated. Therefore, if you currently find yourself spending time re-creating annual reports, then Quarto could improve your efficiency.
-[click]
-- You might have a need to create different formats of the same project. For example, you might need a PDF and Word version of a report, a presentation, and a website. While you could do using a handful of different software, all these tasks can be run simultaneously using Quarto.
+- Using Quarto, you can easily re-create documents when data are updated. Therefore, if you currently find yourself spending time re-creating annual reports, then Quarto could improve your efficiency.  
+[click]  
+- You might have a need to create different formats of the same project. For example, you might need a PDF and Word version of a report, a presentation, and a website. While you could do using a handful of different software, all these tasks can be run simultaneously using Quarto.  
 :::
 
 
@@ -278,11 +278,16 @@ library(countdown)
 
 ::: {.notes}
 [click]  
-- A Quarto file are essentially a text file, so they work well with version control software. If you find yourself wanting to track changes, record versions of a document, and collaborate through a system like GitHub, this can be a challenge with MS Word, but it can be done easily with Quarto.
-[click]
-- If you have an interest in creating documents that have interactive visualizations, like a map that a reader can turn on and off layers, or a plot that a reader can zoom in on and get additional information by selecting parts of the image, these features can be implemented in Quarto.  
-[click]
-- Finally, you might be in a situation when you need to regenerate a standardized report for different species or across different regions. In this situation, the layout and analysis are unchanged, but the data input do change. Quarto can handle this by specifying what's called "parameters". We will briefly introduce how this works in the next section.
+
+- A Quarto file are essentially a text file, so they work well with version control software. If you find yourself wanting to track changes, record versions of a document, and collaborate through a system like GitHub, this can be a challenge with MS Word, but it can be done easily with Quarto.  
+
+[click]  
+
+- If you have an interest in creating documents that have interactive visualizations, like a map that a reader can turn on and off layers, or a plot that a reader can zoom in on and get additional information by selecting parts of the image, these features can be implemented in Quarto.   
+
+[click]  
+
+- Finally, you might be in a situation when you need to regenerate a standardized report for different species or across different regions. In this situation, the layout and analysis are unchanged, but the data input do change. Quarto can handle this by specifying what's called "parameters". We will briefly introduce how this works in the next section.  
 :::
 
 
@@ -314,9 +319,12 @@ library(countdown)
 
 ::: {.notes}
 [click]  
+
 - If you are currently using R Markdown and have existing R Markdown files, there’s no requirement to switch!  
 - In the near term, R Markdown will continue to be supported and work as it always has been.  
+
 [click]  
+
 - If you have an R Markdown file that includes custom tools, there is a chance that they might not yet in available in Quarto. If this is the case, you might want to stick with R Markdown for that effort. As they say, if it ain't broke, don't fix it.
 :::
 
@@ -411,11 +419,17 @@ quarto::quarto_render(input = ___,
 - The process of creating output from a Quarto file is called "rendering".
 - It is a step that you will do repeatedly to view how updates to your Quarto file affect the look of your output. It's also an important step to test that your file changes are running free of errors.
 - As a beginner Quarto user, you should be aware that there are 3 different approaches to rendering a Quarto file.
+
 [click]
+
 1. The first and most common approach is through the Rstudio application interface. After you open a Quarto file in RStudio, you will see a button on the top menu called "render". Clicking on that button will render the Quarto file and, if successful, display a preview of the output.
+
 [click]
+
 2. Another approach to rendering is directly calling the Quarto software using the command line interface in RStudio. To do this, switch from the R console menu to the "Terminal" menu in RStudio (usually located at the bottom righthand side of the RStudio window). Within the terminal, you type and enter "quarto render", as circled in the center image. Alternatively, you can enter "quarto preview", which will both render the document and open a preview window to view the output. This approach works free of R and (if you wanted) RStudio. A reason that you might eventually use this approach is when you want to render a document on a schedule, using Window's task scheduler. 
+
 [click]
+
 3. The 3rd way to render a Quarto file is using the Quarto R package. To do this, you load the Quarto R package in RStudio. Then, in the console, you would type quarto_render along with an argument in the parentheses that provide a file path to your input Quarto file and the file path where you want the output saved. You might find yourself using this approach if you want to have your document render programmatically within another function. For example, maybe you want to create an R package with a function to render your reports. Or, maybe you have a Shiny app and you want to include the ability for a user to render a Quarto report when they click a button in the app. 
 :::
 
@@ -464,7 +478,7 @@ countdown::countdown(10, bottom = 0)
 ```
 
 ::: {.notes}
-- That brings us to our first exercise of the day. 
+- That brings us to our first exercise. 
 - During this exercise, you will have a chance to implement some of the concepts that we just covered, including approaches to rendering Quarto files.
 - Instructors are available if you need any help or have questions.
 - After this exercise, we will dive into the 3 components of a Quarto file.
