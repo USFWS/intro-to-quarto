@@ -661,6 +661,8 @@ That bring us to the end of workshop presentation on YAML headers. We will now b
 
 ## Text body
 
+\
+ 
 ::: columns
 
 ::: {.column width="50%"}
@@ -1309,6 +1311,9 @@ Having trouble remembering all of the code chunk options available? In Rstudio i
 
 ::: columns
 ::: {.column width="50%"}
+
+### Markdown 
+
 ```{{r}}
 library(ggplot2)
 
@@ -1321,6 +1326,9 @@ ggplot(iris, aes(x = Petal.Width,
 :::
 
 ::: {.column width="50%" .fragment}
+
+### Output
+
 ```{r}
 #| echo: true
 
@@ -1353,6 +1361,9 @@ When we render this document, our output will produce the code, the figure the c
 
 ::: columns
 ::: {.column width="50%"}
+
+### Markdown 
+
 ```{{r}}
 #| echo: false
 
@@ -1367,6 +1378,9 @@ ggplot(iris, aes(x = Petal.Width,
 :::
 
 ::: {.column width="50%" .fragment}
+
+### Output 
+
 ```{r}
 #| echo: false
 
@@ -1395,6 +1409,9 @@ By adding our echo option and specifying it as false, our output no longer inclu
 
 ::: columns
 ::: {.column width="50%"}
+
+### Markdown 
+
 ```{{r}}
 #| echo: false
 #| fig-width: 3
@@ -1412,6 +1429,9 @@ ggplot(iris, aes(x = Petal.Width,
 :::
 
 ::: {.column width="50%" .fragment}
+
+### Output
+
 ```{r}
 #| echo: false
 #| fig-width: 3
@@ -1442,6 +1462,9 @@ Here we set the figure width to 3 and the figure height to 2.
 
 ::: columns
 ::: {.column width="50%"}
+
+### Markdown 
+
 ```{{r}}
 #| echo: false
 #| fig-width: 5
@@ -1458,6 +1481,9 @@ ggplot(iris, aes(x = Petal.Width,
 :::
 
 ::: {.column width="50%"}
+
+### Output
+
 ```{r}
 #| echo: false
 #| fig-width: 5
@@ -1487,6 +1513,9 @@ Or we can make the figure larger by setting the figure width and height to 5.
 
 ::: columns
 ::: {.column width="50%"}
+
+### Markdown 
+
 ```{{r}}
 #| echo: false
 #| fig-width: 5
@@ -1505,6 +1534,9 @@ ggplot(iris, aes(x = Petal.Width,
 :::
 
 ::: {.column width="50%" .fragment}
+
+### Output
+
 ```{r}
 #| echo: false
 #| fig-width: 5
@@ -1602,7 +1634,8 @@ Now lets update our header to specify that we don't want source code included in
 ::: columns
 
 ::: {.column width="50%"}
-### Source code  
+
+### Markdown 
 
 ```{source code}
 #| echo: TRUE
@@ -1619,6 +1652,7 @@ length is the
 ::: {.column width="50%"}
 
 ### Output  
+
 ::: {.fragment}
 ::: {.small}
 This is an example of how you could use
