@@ -619,6 +619,14 @@ That bring us to the end of workshop presentation on YAML headers. We will now b
 :::
 
 
+## ![](images/quarto_example1_body.png)
+
+::: {.notes}
+- Now we are going to get into the body of our Quarto file
+- Everything in the body, aside from our code, which we will get to later, is written in the language Markdown
+:::
+
+
 ## Text body: Markdown
 
 ::: columns
@@ -640,9 +648,7 @@ That bring us to the end of workshop presentation on YAML headers. We will now b
 :::
 
 ::: {.notes}
-- Now we are going to get into the body of our Quarto file
-- Everything in the body, aside from our code, which we will get to later, is written in the language Markdown
-  - Markdown is a markup language, which just means that it is a way for us to write out our document content in conjunction with instructions on how we want our content to look
+- Markdown is a markup language, which just means that it is a way for us to write out our document content in conjunction with instructions on how we want our content to look
   - This allows us to style and assemble content, like text, in a machine-readable fashion
   - Luckily, it is pretty human-readable as well
   - In short, it's how we make our product pretty
@@ -701,9 +707,6 @@ That bring us to the end of workshop presentation on YAML headers. We will now b
 ::: {.column width="50%"}
 
 ### Markdown  
-
-\
-
 ```{.markdown}
 This is an example of how you could change  
 inline elements of text body Markdown in a FWS 
@@ -1122,6 +1125,13 @@ countdown::countdown(10, bottom = 0)
 :::
 
 
+## ![](images/quarto_example1_codechunk.png)
+
+::: {.notes}
+Our last section of the workshop will focus on inline code and code chunks. 
+:::
+
+
 ## Code chunks: [Pandoc]{.gray-bold}
 
 \
@@ -1147,9 +1157,7 @@ Some code here
 :::
 
 ::: {.notes}
-In this section, we'll delve into one of the final elements of a Quarto document: inline code and code blocks, commonly known as code chunks.
-
-These components enable us to seamlessly integrate data analyses, visualizations, and computations right within the Quarto document, enhancing our interactive capabilities and improving reproducibility.
+Code blocks, commonly known as code chunks, and inline code enable us to seamlessly integrate data analyses, visualizations, and computations right within the Quarto document, enhancing our interactive capabilities and improving reproducibility.
 
 Let's break down the structure of a code chunk and walk through how its processed:
 
@@ -1159,14 +1167,14 @@ We also need to tell Pandoc what coding language the text within our code chunk 
 :::
 
 
-## Code chunks: [R Markdown]{.gray-bold} {auto-animate="true"}
+## Code chunks: [Quarto]{.gray-bold} {auto-animate="true"}
 
 \
 
 ::: columns
 
 ::: {.column width="50%"}
-    ```{{r, echo=FALSE}}
+    ```{{r}}
     Some code here
     ```
 :::
@@ -1176,7 +1184,6 @@ We also need to tell Pandoc what coding language the text within our code chunk 
 - Code chunk surrounded by a "fence" of three backticks ` ``` `  
 - Specifying the language allows for syntax highlighting.
 - ~~Code is displayed but not executed~~ Code executes unless you specify as an option -> brackets`{}`
-- Chunk options are a comma-separated list (R syntax)
 :::
 :::
 
@@ -1184,12 +1191,37 @@ We also need to tell Pandoc what coding language the text within our code chunk 
 
 ::: {.notes}
 By including the programming language, Pandoc will be able to read the code chunk but the language must be enclosed in curly brackets for the code to be executed unless otherwise specified in the code chunk options.
-
-For those of you familiar with RMarkdown, you might recall that code chunk options were traditionally included in the curly brackets after specifying the r language, using commas to separate each option.
 :::
 
 
-## Code chunks: [Quarto]{.gray-bold} {auto-animate="true"}
+## Code chunks: [Quarto]{.gray-bold}
+
+\
+
+::: columns
+
+::: {.column width="50%"}
+::: {.callout-tip}
+## Another option: Use your friendly assistant!
+- Use the built-in RStudio Code Chunk button or ...
+- Type <kbd>`Ctrl+Alt+I`</kbd> to add a code chunk.
+:::
+:::
+
+::: {.column width=50%"}
+
+![](images/addCodeChunk.png){fig-alt="A screenshot of RStudio with codechunk button highlighted" .drop}
+
+:::
+
+:::
+
+::: {.notes}
+Rstudio has some built in options to create code chunks. You can click the "insert code chunk" button available along the top of the source editor pane, or you can can use the hot keys control alt I to insert a code chunk. 
+:::
+
+
+## Code chunks: [Options]{.gray-bold} {auto-animate="true"}
 
 \
 
@@ -1217,50 +1249,13 @@ For those of you familiar with RMarkdown, you might recall that code chunk optio
 :::
 
 ::: {.notes}
-In Quarto, the language is still specified in the curly brackets; however, the chunk options are organized in a YAML format within the code chunk. Each code chunk option is placed on its own line, prefaced by a hashtag and pipe. This update supports a variety of programming languages and makes the code chunk easier to read.
-
-For those of you not familiar with code chunk options, don't worry, we'll cover these in a minute. 
-:::
+Now that we've got a code chunk set up, we can add options. What are code chunk options? They're parameters that modify the behavior of code chunks.
+Do you want the resulting quarto document to print out any errors or warnings? If the code chunk produces a plot, do you want it to be printed in the document? These are controlled by code chunk options. 
 
 
-## Code chunks: [Labels]{.gray-bold} {auto-animate="true"}
+In Quarto, chunk options are organized in a YAML format within the code chunk. Each code chunk option is placed on its own line, prefaced by a hashtag and pipe. For those of you familiar with RMarkdown, you might recall code chunk options were traditionally included in the curly brackets after specifying the r language, using commas to separate each option.
 
-\
-
-::: columns
-
-::: {.column width="50%"}
-- Identifies code chunks
-    - Makes debugging easier
-    - Can reference code chunk outputs in the text
-:::
-
-::: {.column width="50%" .fragment}
-\
-
-```{{r}}
-label: summary-plot
-
-Some code to generate a plot...
-```
-:::
-
-:::
-
-\
-
-::: {.fragment}
-:::{.callout-tip title="Avoid using underscores (_) in labels and IDs."}
-This can cause problems when rendering to PDF with LaTeX. {{< fa face-smile-wink >}}
-:::
-:::
-
-::: {.notes}
-Another significant improvement in Quarto is the inclusion of code chunk labels within the YAML of the cell instead of the curly brackets. 
-
-Labels should be short and descriptive; providing reader's context about what's contained in the code chunk or what it does. Labeling chunks enhances document organization, simplifies debugging, and facilitates referencing code chunk outputs in the text, which is especially valuable when creating and referencing figures and tables in manuscripts or reports.
-
-A best practice to keep in mind is to refrain from using underscores in code chunk labels, as this can lead to rendering issues, particularly with LaTeX.
+This update to the format of code chunk options helps support a variety of programming languages and makes the code chunk easier to read.
 :::
 
 
@@ -1288,15 +1283,13 @@ A best practice to keep in mind is to refrain from using underscores in code chu
 :::
 
 ::: {.notes}
-I mentioned code chunk options earlier and want to circle back to these to provide more information. Code chunk options are parameters that modify the behavior of code chunks in your Quarto documents. 
-
-Code chunk options can control various aspects of code execution and output display.
+Here's a table with code chunk options available to you.
 
 Would you like the code in your code chunk to be run? If not, set eval equal to FALSE.
 
 Would you like the source code to be displayed in the output? If not, set the option equal to FALSE.
 
-Maybe your code produces a figure or table, you can designate whether or not they are displayed in the rendered document using the output option. 
+Maybe your code produces a figure or table, you can designate whether or not they are displayed in the rendered document using the output option.
 
 Warnings and errors produced by your code will be rendered unless you update the warning and error options.
 
@@ -1304,6 +1297,7 @@ Or, you can set the "include" parameter to "FALSE" and all output from the code 
 
 Having trouble remembering all of the code chunk options available? In Rstudio if you hit the tab key after the hashpipe a dropdown menu with all available options will be listed.
 :::
+
 
 ## Execution options: [Figures]{.gray-bold} {auto-animate="true"}
 
@@ -1625,6 +1619,48 @@ execute:
 :::{.notes}
 Now lets update our header to specify that we don't want source code included in the output of any of our code chunks by setting echo to false and that any figures created should have a height and width set to 5. 
 :::
+
+
+## Code chunks: [Labels]{.gray-bold} {auto-animate="true"}
+
+\
+
+::: columns
+
+::: {.column width="50%"}
+- Identifies code chunks
+    - Makes debugging easier
+    - Can reference code chunk outputs in the text
+:::
+
+::: {.column width="50%" .fragment}
+\
+
+```{{r}}
+label: summary-plot
+
+Some code to generate a plot...
+```
+:::
+
+:::
+
+\
+
+::: {.fragment}
+:::{.callout-tip title="Avoid using underscores (_) in labels and IDs."}
+This can cause problems when rendering to PDF with LaTeX. {{< fa face-smile-wink >}}
+:::
+:::
+
+::: {.notes}
+In addition to code chunk options, we can add code chunk labels to our code chunks. Labeling chunks enhances document organization, simplifies debugging, and facilitates referencing code chunk outputs in the text, which is especially valuable when creating and referencing figures and tables in manuscripts or reports.
+
+Labels should be short and descriptive; providing reader's context about what's contained in the code chunk or what it does. 
+
+A best practice to keep in mind is to refrain from using underscores in code chunk labels, as this can lead to rendering issues, particularly with LaTeX.
+:::
+
 
 
 ## Inline elements: [Code]{.gray-bold}
