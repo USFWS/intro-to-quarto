@@ -46,7 +46,7 @@ Rendering in Quarto documents refers to the process of converting a Quarto file,
 
 ### Tasks
 
--   [ ] Open `intro_to_quarto.Rproj`. Within the Rproject, open `1_rendering.qmd`. What are three main components of the file?
+-   [ ] Open `intro_to_quarto-exercises.Rproj`. Within the Rproject, open `1_rendering.qmd`. What are three main components of the file?
 -   [ ] Render the document using the RStudio GUI ( ![](images/render_icon.png) ).
 -   [ ] Render the document using the Quarto command line interface (CLI).
     -   <details>
@@ -71,7 +71,7 @@ A **YAML** (**Y**et **A**nother **M**arkup **L**anguage) header is a crucial com
 
 ### Tasks
 
--   [ ] Open `2_yaml_metadata.qmd` and render the document.
+-   [ ] Open `2_yaml.qmd` and render the document.
 -   [ ] Update the subtitle to something new of your choosing and replace the author name with your name. Re-render the document.
 -   [ ] Change the yml header so the output with produce a PDF document rather than an HTML. Render the document. What did you notice?
 -   [ ] Now render it as a MS Word document (`docx`). Open the file to view the results.
@@ -101,7 +101,7 @@ The document body of a Quarto document is the main content area where the narrat
 
 ### Tasks
 
-Open `3-document_body.qmd` and make the following changes to the document:
+Open `3-document.qmd` and make the following changes to the document:
 
 **Inline:**
 
@@ -112,7 +112,7 @@ Open `3-document_body.qmd` and make the following changes to the document:
 
 -   [ ] Create a new header named "My List" after the Results section.
 -   [ ] Make an ordered and an unordered list.
--   [ ] Insert an image of the western snow plover below the "U.S. Fish and Wildlife Service" header. The image can be found in the `./images` folder.
+-   [ ] Insert an image of the western snow plover below the "U.S. Fish and Wildlife Service" header. The image can be found in the `images` folder.
 
 ## Exercise 4: Code chunks {#sec-exercise4}
 
@@ -120,7 +120,7 @@ Code chunks in a Quarto document are sections of embedded code, typically writte
 
 ### Tasks
 
-Open `4_code_chunks.qmd` and make the following changes to the rendered document:
+Open `4_code.qmd` and make the following changes to the rendered document:
 
 -   [ ] Add a label to the plot code chunk located toward the bottom of the document to help you differentiate it from other chunks.
 -   [ ] In the same code chunk, update the figure caption to read "Mean monthly Western..."
@@ -177,3 +177,6 @@ The chunk options you are looking for are `echo` and `fig-cap`. Use `hist(plover
 
 -   [ ] Replace "Many" in the **Results** section with the true total of male counts from the `plovers` list. Suggestion: use the `sum()` function.
 -   [ ] Your supervisor tells you that the $\alpha$ value for your calculations is actually 30. Update and re-render your file without changing the document body. Your supervisor also tells you she wants you to send her a Word document of the report but upload a PDF to ServCat. Render both formats.
+
+## Solutions {#sec-exercise-solutions}
+Check your work by comparing your .qmd files with those stored in the `solutions` directory.
