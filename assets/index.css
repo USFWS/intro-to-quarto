@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
 .content-block {
   padding-top: 20px;
   padding-bottom: 10px;
@@ -52,5 +54,6 @@
 }
 
 h2 {
+  font-family: "Special Elite", san-serif;
   font-size: 3.2rem;
 }
