@@ -1,7 +1,7 @@
 on:
   workflow_dispatch:
   push:
-    branches: mc-updates-post-kenai
+    branches: main
 
 name: Quarto Publish
 
