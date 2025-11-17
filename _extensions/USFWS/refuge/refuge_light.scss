@@ -22,10 +22,12 @@ $right-arrow: "\2192"; // Unicode character for right arrow
 // Import fonts (https://doimspp.sharepoint.com/sites/fws-FF09R00000/SitePages/Comms-Visual-Identity-Landing.aspx)
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import url(https://fonts.googleapis.com/css?family=Cabin:600,600i&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
 // Define fonts
 $Lato: "Lato", sans-serif;
-$Cabin: "Cabin" san-serif;
+$Cabin: "Cabin", san-serif;
+$Special-Elite: "Special Elite", san-serif;
 
 // Colors
 $body-bg: $white !default;
@@ -98,11 +100,13 @@ span.light-blue {
   text-align: left;
   .title {
     color: $body-color;
+    font-family: $Special-Elite, san-serif;
     font-size: 2.5em;
     font-weight: bold;
   }
   .subtitle {
     color: $light-blue;
+    font-family: $Special-Elite, san-serif;
     font-size: 1.2em;
     margin-top: 0.5em;
     font-weight: 400;
@@ -266,6 +270,7 @@ span.light-blue {
 // Table body
 .reveal table {
   // height: auto; /* Adjust table width to fit content up to the available slide space */
+  font-family: $Special-Elite, san-serif;
   margin: auto;
   border-collapse: collapse;
   border-spacing: 0;
@@ -391,11 +396,33 @@ img.drop {
   }
   h1 {
     color: $white;
-    font-family: $Lato, serif;
+    font-family: $Special-Elite, serif;
   }
   h2 {
     color: $white;
-    font-family: $Lato, serif;
+    font-family: $Special-Elite, serif;
+  }
+}
+
+// Demos
+.reveal .demo {
+  color: $white;
+  a{
+    color: $light-blue; // Hyperlink color
+  }
+  .slide-background-content {
+    background: $accent-light-green;
+  }
+  code {
+    color: $white;
+  }
+  h1 {
+    color: $white;
+    font-family: $Special-Elite, serif;
+  }
+  h2 {
+    color: $white;
+    font-family: $Special-Elite, serif;
   }
 }
 

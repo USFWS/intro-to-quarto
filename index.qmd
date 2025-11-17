@@ -5,22 +5,22 @@ css: assets/index.css
 ---
 
 
-::: {.grid}
+::: columns
 
-::: {.g-col-5}
-
+::: {.column width="55%"}
 ## Introduction <br> to <br> Quarto {style="text-align: center"}
-
-:::
-::: {.g-col-7}
-
-![](assets/images/plover_long.png){fig-alt="A snowy plover." width=450}
-:::
 :::
 
-<br>
+::: {.column width="45%"}
+\
+![](assets/images/plover_long.png){fig-align="center" fig-alt="A snowy plover." width=400}
+:::
 
-Welcome! This workshop provides an introduction of Quarto for intermediate to advanced R users seeking to develop automated reports. We present on the basics of Quarto and then walk through the three primary components of a Quarto file: the YML metdata, text, and code blocks. After describing each component, we offer brief exercises that provide participants with time to explore how these components customize documents. Participants will leave with foundational skills required to create a Quarto report.
+:::
+
+[Welcome!]{style="font-family: 'Special Elite';"} 
+
+This workshop provides an introduction of Quarto for intermediate to advanced R users seeking to develop automated reports. We present on the basics of Quarto and then walk through the three primary components of a Quarto file: the YML metdata, text, and code blocks. After describing each component, we offer brief exercises that provide participants with time to explore how these components customize documents. Participants will leave with foundational skills required to create a Quarto report.
 
 ### Materials
 

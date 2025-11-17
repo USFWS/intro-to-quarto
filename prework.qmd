@@ -1,42 +1,156 @@
 ---
 title: "Prework"
 sidebar: false
+format:
+  html:
+    toc: true
+    toc-depth: 2
+  typst:
+    toc: true
+    toc-depth: 2
+    papersize: us-letter
+format-links: 
+  - html
+  - format: typst
+    text: "PDF"
 ---
 
-## 1. Download the exercise materials
+# 🖥️ 1. Download and Install the Software
 
-- From FWS Apps-To-Go, install:
-    - R 4.4.2 or newer
-    - RStudio 2024.09.1 or newer
-- Open a new RStudio session. 
-- Download the exercise materials. This function creates a new RStudio project called "intro-to-quarto-exercises-main".
+Before the workshop, make sure you can open **R** and **RStudio** on your computer.
 
-::: {.small}
-``` r
+- From **FWS Apps-To-Go**, install:
+  - R 4.4.2 or newer
+  - RStudio 2024.09.1 or newer
+
+:::{.callout-note title="Check Your Versions"}
+- In RStudio, go to **Help → About RStudio** to confirm your version.
+- In the R console, type:
+  ```{.r}
+  R.version.string
+  ```
+If your versions are older, please update them.
+:::
+
+Once installed, open RStudio to make sure it launches without errors.
+
+---
+
+# 📂 2. Understanding RStudio Projects (for newer R users)
+
+We will work inside an **RStudio Project**, which is like a self-contained folder that keeps all your files and code organized.
+
+- An R Project keeps track of your working directory.
+- All the files for this workshop will live inside one project folder.
+- When you open the project, RStudio automatically sets that folder as your “home base.”
+
+:::{.callout-tip title="Why Projects Matter"}
+Think of an R Project as a **container** for your work. Instead of scattering files across your computer, everything you need is in one place.
+:::
+
+---
+
+# 📦 3. Download the Exercise Materials
+
+Open RStudio and run this in the Console:
+
+```{.r}
 if (!require("usethis")) install.packages("usethis")
 usethis::use_course("https://github.com/USFWS/intro-to-quarto-exercises/archive/refs/heads/main.zip")
 ```
+
+:::{.callout-note title="What Happens Next"}
+- RStudio may prompt you to open the new project folder — click **Yes**.
+- You should now see the RStudio title bar say: `intro-to-quarto-exercises-main`.
+- If not, find the `intro-to-quarto-exercises-main` folder and double-click the `.Rproj` file.
 :::
 
+---
 
-## 2. Install R package dependencies
+# 📚 4. Install R Package Dependencies
 
-- Open this new RStudio project, if it's not already open. 
-- Install the R package dependencies:
+With the project open, run:
 
-::: {.small}
-``` r
+```{.r}
 source("install_packages.R")
 ```
+
+:::{.callout-warning title="This May Take Time"}
+The first time you install packages, it may take several minutes. Make sure you’re connected to the internet.
+:::
+
+---
+
+# 📝 5. Install TinyTeX (for PDFs)
+
+To render Quarto documents as a PDF, you’ll need [LaTeX](https://www.latex-project.org/).
+
+Run:
+
+```{.r}
+tinytex::install_tinytex()
+```
+
+:::{.callout-tip title="Good to Know"}
+You only need to install TinyTeX once. If you already have LaTeX, you can skip this step.
+:::
+
+---
+
+# ✅ 6. Check Your Setup
+
+Before the workshop, confirm:
+
+- [ ] You can open RStudio without errors.
+- [ ] You can open the **intro-to-quarto-exercises-main** project.
+- [ ] Packages install without errors.
+- [ ] Quarto works — run:
+
+```{.r}
+quarto::quarto_check()
+```
+
+---
+
+# 🧑‍💻 7. Prework Assignment (Submit Before the Workshop)
+
+**Goal:** Confirm your setup works end-to-end by rendering a Quarto document.
+
+1. In RStudio (with the `intro-to-quarto-exercises-main` project open):
+   - Go to **File → New File → Quarto Document…**
+   - Choose **HTML** format and title it "Prework Check".
+
+2. Replace the starter text with:
+
+````{.markdown}
+# Hello Quarto!
+
+- **Name:** YOUR NAME
+- **Fun fact:** FUN FACT ABOUT YOU
+
+```{.r}
+#| echo: true
+#| message: false
+#| warning: false
+sessionInfo()
+```
+````
+
+3. Click **Render** to create the HTML output.
+4. (Optional) Also render to PDF:
+   - In the YAML header, add `format: pdf`.
+   - Render again to produce a PDF.
+
+:::{.callout-note title="What to Submit"}
+- The rendered **HTML** file (and PDF if you tried it).
+- A **screenshot of RStudio** showing:
+  - The project name `intro-to-quarto-exercises-main` in the title bar.
+  - The rendered output in the Viewer/Preview pane.
 :::
 
 
-## 3. Install [tinyTeX](https://yihui.org/tinytex/)
-
-- To render Quarto documents as a PDF, you will need to install a version of [LaTex](https://www.latex-project.org/). You can do this by running the function below:
-
-::: {.small}
-``` r
-tinytex::install_tinytex()
-```
+:::{.callout-tip title="Pass Criteria" icon=false}
+- HTML renders successfully (no errors).
+- If attempted, PDF renders successfully.
+- Screenshot clearly shows the correct project open.
 :::

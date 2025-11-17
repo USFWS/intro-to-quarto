@@ -8,7 +8,7 @@ format:
     title-slide-attributes:
       data-background-image: "images/plover_title.png"
       data-background-size: 20%, cover
-      data-background-position: "60% 50%, center"
+      data-background-position: "70% 40%, center"
     footer: "[Intro to Quarto](index.html){.small}"
 editor: source
 ---
@@ -19,10 +19,13 @@ library(countdown)
 ```
 
 
-## {.center}
+## Introduction to Quarto: Welcome!
 
-[Course materials can be found at:]{.large}  
-[https://github.com/USFWS/intro-to-quarto](https://github.com/USFWS/intro-to-quarto) [{{< fa brands github >}}](https://github.com/USFWS/intro-to-quarto).
+1. Course materials: <https://github.com/USFWS/intro-to-quarto>
+
+2. Everyone should have completed the Prework
+    - Install RStudio and Quarto
+    - Get the exercises: <https://github.com/USFWS/intro-to-quarto-exercises>
 
 ::: {.notes}
 - Welcome to Introduction to Quarto!
@@ -31,26 +34,73 @@ library(countdown)
 :::
 
 
-## Outline
+## Schedule
 
-1. Overview of Quarto (30 mins)
-2. YAML metadata (20 min)  
-3. Document body (30 min)
-4. Code blocks (30 min)  
-5. Final exercise and wrap-up (30 min)
+| Time          |                               |
+|---------------|-------------------------------|
+| 10:30 - 11:00 | Overview of Quarto            |
+| 12:30 - 13:30 | YAML metadata                 |
+| 15:00 - 15:30 | Document body                 |
+| 17:00         | Code blocks                   |
+| 17:00         | Final exercise and wrap-up    |
+
 
 ::: {.notes}
 - This workshop serves as an introduction to using Quarto to create scientific reports.
-- It is taylored toward the needs of FWS staff.
+- It is tailored toward the needs of FWS staff.
 - During our time here, we will provide a brief overview of what Quarto is, what it can do for you, and how it compares to R Markdown. We will then dive into the anatomy of a Quarto file, which can be broken into three primary components: the YAML metadata, the document body, and code blocks (or code "chunks").
 - The workshop structured as a series of four short presentations followed by hand-on exercises to practice what you've learned.
 - Instructors are available to provide help during the exercises, so let us know by raising your hand (in person or virtually!)
 :::
 
 
+## Instructors
+
+::: {.columns}
+::: {.column}
+
+\
+
+**McCrea** [{{< iconify fa7-brands:github >}}](https://github.com/mccrea-cobb) 
+
+*Biometrician*  
+
+::: {.small}
+Refuges  
+Alaska Region
+:::
+
+![](images/mccrea.png){fig-alt="Photo of McCrea." width=400}
+
+
+:::
+::: {.column}
+
+\
+
+**Jonah** [{{< iconify fa7-brands:github >}}](https://github.com/JonahWither-USFWS)
+
+*Data Manager*
+
+::: {.small}
+Fisheries and Ecological Services  
+Alaska Region
+:::
+
+![](images/jonah.png){fig-alt="Photo of Jonah Withers." width=400}
+
+:::
+:::
+
+
+# Demos {.demo}
+
+
 # Exercises {.exercise}
 
 ![](images/exercises_qrcode.png){width=8 .center fig-alt="QR code to the exercises website."}
+
+{{< countdown 5:00 >}}
 
 ::: {.notes}
 - When you see a green slide like this, it will be your turn to practice what you've just learned. 
@@ -59,35 +109,21 @@ library(countdown)
 :::
 
 
-## Sticky notes
+## My questions {visibility="hidden"}
 
-::: {.center}
+* Raise your hand if you use R for your job? Keep up if you use it monthly? weekly? daily?
 
-::: columns
+* Have you ever used R Markdown? Quarto?
+  
 
-::: {.column width="40%"}
+## Need help!
 
-### [Red]{style="color:red;"}  
-"Help!"  
+- Raise your (virtual) hand during the exercises
+- Talk to us during the break
 
-![](images/sticky_red.png){width=600 fig-alt="A person sitting at a desk at a laptop computer. The laptop has a red sticky note attached to the back of the monitor." .drop}
-:::
-
-::: {.column width="60%"}
-
-### [Blue]{style="color:blue;"}  
-"All done!"
-
-![](images/sticky_blue.png){width=600 fig-alt="A person sitting at a desk at a laptop computer. The laptop has a red sticky note attached to the back of the monitor." .drop}
-:::
-:::
-
-:::
 
 ::: {.notes}
 - As I mentioned earlier, instructors will be available to offer help during the exercises.
-- For in-person participants: If you have a question or need help, raise your hand or put a red sticky note on your laptop.
-- If you are done with the exercises, you can tell us by putting a blue sticky note on your laptop.
 - For online participants- raise your virtual hand or send a message if you are done.
 - You are welcome to work on your own or with a partner on exercises!
 :::
@@ -165,25 +201,6 @@ library(countdown)
 :::
 
 
-# ![](images/render1.png){height=1000 fig-alt="A diagram showing the process of rendering a document using R Markdown."}
-
-::: {.notes}
-- You may have heard of R Markdown as a tool for authoring documents from R. 
-- In fact, Quarto and R Markdown follow a similar process.
-- Therefore, let's look at how Quarto compares with R Markdown.
-- An R Markdown file contains text and generally R code. While it is possible to include other coding languages in an R Markdown file, using other languages in R Markdown, like Python, requires R package dependencies to interface with Python code.
-:::
-
-
-# ![](images/render2.png){height=1000 fig-alt="A diagram showing the process of rendering a document using R Markdown."}  
-
-::: {.notes}
-- When you render an R Markdown file, an R package named "knitr" calls a similarly named engine to execute your R code.
-- The result is a Markdown file that include your original text and the output of your code. 
-- Markdown is a human-readable language that allows you to add formatting (like headings, paragraphs and images) to a plain text document.
-::: 
-
-
 # ![](images/render4.png){height=1000 fig-alt="A diagram showing the process of rendering a document using Quarto."}  
 
 ::: {.notes}
@@ -216,7 +233,7 @@ library(countdown)
 :::
 
 
-## When and why to use Quarto
+## Why we <i class="fa-solid fa-heart" style="color: red;"></i> Quarto
 
 ::: columns
 
@@ -225,16 +242,47 @@ library(countdown)
 \
 \
 
-::: {.incremental}
-- [x] {{< fa code-merge >}} Weave together text, plots, tables, and statistics 
-- [x] {{< fa copy >}} Frequently re-create a standardized document 
-- [x] {{< fa file-export >}} Create multiple formats of a document 
+::: {.fragment .fade-in-then-semi-out fragment-index=1}
+{{< fa code-merge >}} Weave together text, plots, tables, and statistics 
+:::
+
+\
+
+::: {.fragment .fade-in-then-semi-out fragment-index=2}
+{{< fa copy >}} Frequently re-create a standardized document 
+:::
+
+\
+
+::: {.fragment .fade-in-then-semi-out fragment-index=3}
+{{< fa file-export >}} Create multiple formats of a document 
 :::
 
 :::
 
 ::: {.column width="60%"}
-![](images/plover_thinking.png){height=800 .center fig-alt="An cartoon of a snowy plover thinking. There is a question mark above it's head."}
+
+::: {.r-stack}
+
+::: {.fragment fragment-index=1}
+::: {.fragment .fade-out fragment-index=2}
+![](images/quarto_output1.png){height=700 .center fig-alt="An example of a Quarto PDF, showing text, figures, code and code blocks." .drop}
+:::
+:::
+
+::: {.fragment fragment-index=2}
+::: {.fragment .fade-out fragment-index=3}
+![](images/akalura_reports.png){height=700 .center fig-alt="Three refuges reports that look very similar."}
+:::
+:::
+
+::: {.fragment fragment-index=3}
+![](images/multiple_formats.png){height=700 .center fig-alt="The Quarto logo in the middle, with arrows extending to the HTML, PDF, Shiny, and Word logos."}
+:::
+
+
+:::
+
 :::
 
 :::
@@ -253,7 +301,7 @@ library(countdown)
 :::
 
 
-## When and why to use Quarto
+## Why we <i class="fa-solid fa-heart" style="color: red;"></i> Quarto
 
 ::: columns
 
@@ -262,16 +310,49 @@ library(countdown)
 \
 \
 
-::: {.incremental}
-- [x] {{< fa brands github >}} Use version control 
-- [x] {{< fa bolt >}} {{< fa chart-column >}} Create dynamic and interactive visualizations
-- [x] {{< fa crow >}} {{< fa kiwi-bird >}} Generate comparable reports across multiple parameters (species, watershed, state) 
+::: {.fragment .fade-in-then-semi-out fragment-index=1}
+{{< fa brands github >}} Use version control 
+:::
+
+\
+
+::: {.fragment .fade-in-then-semi-out fragment-index=2}
+{{< fa bolt >}} {{< fa chart-column >}} Create dynamic and interactive visualizations
+:::
+
+\
+
+::: {.fragment .fade-in-then-semi-out fragment-index=3}
+{{< fa crow >}} {{< fa kiwi-bird >}} Generate comparable reports across multiple parameters (species, watershed, state) 
 :::
 
 :::
 
 ::: {.column width="60%"}
-![](images/plover_thinking.png){height=800 .center fig-alt="An cartoon of a snowy plover thinking. There is a question mark above it's head."}
+
+::: {.r-stack}
+
+::: {.fragment fragment-index=1}
+::: {.fragment .fade-out fragment-index=2}
+![](images/octocat.png){ .center fig-alt="The Quarto logo in the middle, with arrows extending to the HTML, PDF, Shiny, and Word logos."}
+:::
+:::
+
+
+::: {.fragment fragment-index=2}
+::: {.fragment .fade-out fragment-index=3}
+```{=html}
+<iframe width="1000" height="800" src="https://quarto-dev.github.io/quarto-gallery/articles/html/html.html#interactivity" title="Example of interactive content produced by Quarto code."></iframe>
+```
+:::
+:::
+
+::: {.fragment fragment-index=3}
+![](images/multiple_formats.png){ .center fig-alt="The Quarto logo in the middle, with arrows extending to the HTML, PDF, Shiny, and Word logos."}
+:::
+
+:::
+
 :::
 
 :::
@@ -291,84 +372,34 @@ library(countdown)
 :::
 
 
-## {background-image="images/plover_decision.png" background-size=contain}
-
-::: {.notes}
-- Rmarkdown and Quarto might be new to many folks here.
-- But, I know that there are some folks that have been using R Markdown and might want to know whether they should transition from R Markdown to Quarto.
-- My take home answer is "it depends". This is no single answer for all scenerios.
-- I'll next expand upon that and touch on some of the advantages of each system.
-:::
-
-## Advantages of R Markdown
+## Authoring in RStudio
 
 ::: columns
+::: {.column width="50%" .center}
 
-::: {.column width="40%" .incremental}
-\
+### Source editor
 
-- Have existing R Markdown code that works for you
-- Custom tools built around R Markdown that are not yet available in Quarto
+![](images/source_pane.png){fig-alt="A screenshot of a Quarto document in RStudio viewed as Source." .drop}
 :::
 
-::: {.column width="60%"}
-![](images/rmarkdown_packages.png){fig-align=center height=750 .drop}
+::: {.column width="50%" .center}
+
+### Visual editor
+
+![](images/visual_pane.png){fig-alt="A screenshot of a Quarto document in RStudio viewed as Visual." .drop}
 :::
-
-:::
-
-::: {.notes}
-[click]  
-
-- If you are currently using R Markdown and have existing R Markdown files, there’s no requirement to switch!  
-- In the near term, R Markdown will continue to be supported and work as it always has been.  
-
-[click]  
-
-- If you have an R Markdown file that includes custom tools, there is a chance that they might not yet in available in Quarto. If this is the case, you might want to stick with R Markdown for that effort. As they say, if it ain't broke, don't fix it.
-:::
-
-
-## Advantages of Quarto
-
-::: columns
-
-::: {.column width="60%"}
-
-:::{.incremental}
-- No requirement for R, fewer package dependencies
-- Revealjs (HTML) slides are easier to work with
-- Better cross referencing of figures, tables, and citations
-- Quarto [extensions](https://quarto.org/docs/extensions/){target="_blank"} allow for easier customization
-- Quarto projects make it easier to customize websites, create books, and collaborate
-- It's the future! {{< fa rocket >}}
-:::
-
-:::
-
-::: {.column width="40%"}
-
-\
-\
-
-![](images/quarto.png){.drop}
-:::
-
 :::
 
 ::: {.notes}
-- All that said, there are a number of advantages to using Quarto over R Markdown.
-  1. First, there is no requirement for R. In other words, it is designed to be multilingual.
-    - Quarto equally allows for R, Python, Julia, and Javascript
-  2. Second, and related to number 1, Quarto is more streamline and independent of R packages
-    - As a result you can create things well formated revealjs slides **directly**, rather than **relying** on host of R packages that risk becoming deprecated over time.
-  3. Third. Much of our work requires referencing figures in a document and inserting citations. Cross referencing figures and tables in the text is more straightforward in Quarto, as is inserting and managing citations.
-  4. Fourth, Quarto has a growing number of extensions that add functionality
-    - Extensions allow you extend the behavior of Quarto, including providing access to custom document templates and file formats, and adding additional features not available in R Markdown.
-  5. Fifth, Quarto supports what's called projects.
-    - Projects make it easier to create more complex products like websites and books, can make it easier to collaborate larger efforts.
-  6. Finally, most active software development has moved from R Markdown to Quarto. It will only get better with time.  
-- For these reasons, Quarto is the future!
+
+- For our purposes, we will be using RStudio to edit Quarto files Within RStudio. 
+- There are two editors available to make changes to Quarto files: the Source editor, shown on the left and the Visual editor shown on the right. 
+- You can toggle between editor modes by clicking on the buttons circled in red. 
+- The source editor displays the raw Quarto file.
+- It is the traditional approach to editing documents and most used by those comfortable with creating Quarto files.
+- On the other hand, the Visual editor shows changes in real time and previews what the output will looks like without having to re-rendering it.
+- It also provides a menu at the top of the window with buttons for things inserting tables, figures, and citations; and formatting fonts and headers. 
+- It provides an easier interface for those learning Quarto and who are familiar with word processing software like Word.
 :::
 
 
@@ -434,35 +465,7 @@ quarto::quarto_render(input = ___,
 :::
 
 
-## Authoring in RStudio
-
-::: columns
-::: {.column width="50%" .center}
-
-### Source editor
-
-![](images/source_pane.png){fig-alt="A screenshot of a Quarto document in RStudio viewed as Source." .drop}
-:::
-
-::: {.column width="50%" .center}
-
-### Visual editor
-
-![](images/visual_pane.png){fig-alt="A screenshot of a Quarto document in RStudio viewed as Visual." .drop}
-:::
-:::
-
-::: {.notes}
-
-- For our purposes, we will be using RStudio to edit Quarto files Within RStudio. 
-- There are two editors available to make changes to Quarto files: the Source editor, shown on the left and the Visual editor shown on the right. 
-- You can toggle between editor modes by clicking on the buttons circled in red. 
-- The source editor displays the raw Quarto file.
-- It is the traditional approach to editing documents and most used by those comfortable with creating Quarto files.
-- On the other hand, the Visual editor shows changes in real time and previews what the output will looks like without having to re-rendering it.
-- It also provides a menu at the top of the window with buttons for things inserting tables, figures, and citations; and formatting fonts and headers. 
-- It provides an easier interface for those learning Quarto and who are familiar with word processing software like Word.
-:::
+# Demo 1: Rendering {.demo}
 
 
 # Exercise 1: [Rendering](exercises.qmd#sec-exercise1){target="_blank"} {.exercise}
@@ -483,6 +486,9 @@ countdown::countdown(10, bottom = 0)
 - Instructors are available if you need any help or have questions.
 - After this exercise, we will dive into the 3 components of a Quarto file.
 :::
+
+
+# Solutions: [Rendering](exercises.qmd#sec-exercise1){target="_blank"} {.exercise}
 
 
 # Anatomy of a Quarto File {.dark}
@@ -617,6 +623,9 @@ countdown::countdown(10, bottom = 0)
 ::: {.notes}
 That bring us to the end of workshop presentation on YAML headers. We will now break for a 10 minute exercise to apply what you've learned. As always, the instructions are available on the GitHub page. If you have the slides open, you can click of the text to link to the instructions. If you have a phone, you can access the instructions using the QR code. 
 :::
+
+
+## Exercise 2 Solutions: [YAML metadata](exercises.qmd#sec-exercise2){target="_blank"} {.exercise}
 
 
 ## Text body: Markdown
@@ -1685,51 +1694,6 @@ countdown::countdown(10, bottom = 0)
 ```
 
 
-## Why and [HOW]{.gray-bold} Should I Use Quarto?
-
-::: columns
-
-::: {.column width="30%"}
-
-::: {layout="[[-1], [1], [-1]]"}
-![](images/whatsnext.png){height="90%" fig-alt="A notebook that says 'What's Next' with a large question mark atop a yellow desk. Licensed under Creative Commons."}
-:::
-
-:::
-
-::: {.column width="70%" .small}
-### Practical Applications for FWS Biologists
-- Generate reusable, **automated reports**
-- Utilize shareable, **standardized templates**
-- **Annotate code** for interpretability, collaboration, and longevity
-- Track and collaborate with **version control**
-- Seamlessly **integrate figures, tables, and citations** into your works
-- Create dynamic, **interactive visualizations**
-- Publish across **multiple formats** from a single source
-- Build script-based **data pipelines** - from data collection to reporting
-
-**Leading to...** efficiency, standardization, reduced error, reproducible science, innovation!
-
-:::
-
-:::
-
-::: {.notes}
-- So why should you use Quarto and what could it look like for you?
-- It can look like automated, reusable reports for repeated monitoring surveys
-  - Where you swap input files and generate all new calculations, summaries, and figures for the next year in an instant
-  - You can also generate exploratory data analysis reports, not just final survey reports
-- You can use templates for standardized Refuge reports or for your manuscripts for journal submission
-- Being able to annotate code in a really human-readable format is really powerful and means you can be more collaborative with your code. The code can be used by others and its interpretability won't be lost with time or turnover
-- Quarto makes it easy to collaborate and incorporate version control with Git and GitHub, which is always a best practice and good for findability if you make discoverable repos
-- You can much more easily configure and update your figures and tables within documents, plus seamlessly embed citations and references
-- You can create dynamic reports or presentations with interactive maps, plots, and other features, which is super cool and pretty exclusive to Quarto
-- You can render multiple types of products and formats from a single qmd file for different audiences
-- And you can build up a super efficient data pipeline, that goes all the way from beginning to end, especially if you use data collection apps that can feed into something like this, you auto-generate a quarto report, and that auto-updates a servcat reference - you can create a smooth, consistent workflow
--If you listened to all this and are still thinking: "I'm never going to use this" - too bad! Because you are going to make your first quarto document from scratch right now.
-
-:::
-
 # Exercise 5: [Your turn](exercises.qmd#sec-exercise5){target="_blank"} {.exercise}
 
 ![](images/exercises_qrcode.png){fig-alt="QR code to the exercises website."}
@@ -1759,6 +1723,4 @@ countdown::countdown(10, bottom = 0)
 :::
 
 :::
-
-## {.center background-image="images/plover_question.png" background-size="contain"}
 

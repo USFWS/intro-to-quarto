@@ -23,3 +23,6 @@ DISCLAIMER.html
 NEWS.html
 /.quarto/
 *.docx
+**/*.quarto_ipynb
+# Rendered quarto website
+docs/
